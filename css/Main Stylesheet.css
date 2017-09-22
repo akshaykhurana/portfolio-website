@@ -72,13 +72,21 @@ body {
 }
 .mainContent {
     position: fixed;
-    top: 15%;
-    height:77.5%;
+    top: 15.5%;
+    height:76.5%;
     width: 100%;
 
     overflow-y: auto;
 
     z-index: 10;
+}
+
+.sidebar {
+    margin-top: 0%;
+}
+
+.projectPane {
+    margin-top: 1%;
 }
 
 .thumbsOuter {
@@ -92,7 +100,6 @@ body {
 }
 
 .sideTitle {
-    margin-top: 2%;
     text-align: right;     
 }
 
@@ -150,7 +157,7 @@ h3 {
     font-variant: "bold";
     color: #939EA5;
     font-size: 3em;
-    line-height: 0;
+    line-height: 0em;
 }
 
 strong {
@@ -160,16 +167,4 @@ strong {
     color: #939EA5;
     font-size: 1em;
 }
-
-/*
-[class*="col-"] {
-padding-top: 0em;
-padding-bottom: 0em;
-background-color: floralwhite;
-}*/
-
-
-
-
-
 
