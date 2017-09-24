@@ -15,17 +15,13 @@
     background-color: whitesmoke;
     border: 1% solid transparent;
     background-clip: content-box;
-
 }
-
-
 
 ::-webkit-scrollbar-thumb
 {
     /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);*/
     border-radius: 12px;
     background-color: dodgerblue;
-    
 }
 
 
@@ -72,8 +68,8 @@ body {
 }
 .mainContent {
     position: fixed;
-    top: 15.5%;
-    height:76.5%;
+    top: 15.25%;
+    height:77%;
     width: 100%;
 
     overflow-y: auto;
@@ -82,11 +78,11 @@ body {
 }
 
 .sidebar {
-    margin-top: 0%;
+    margin-top: 2%;
 }
 
 .projectPane {
-    margin-top: 1%;
+    margin-top: 3%;
 }
 
 .thumbsOuter {
@@ -95,8 +91,12 @@ body {
 
 .thumbsOuter>.thumbsInner {
 
-    background-color: azure;
-    box-shadow:  0px 1px 5px #888888;
+    background-color: green;
+    box-shadow:  0px .25em 1em #888888;
+}
+
+.thumbsInner>img{
+    width: 100%;
 }
 
 .sideTitle {
