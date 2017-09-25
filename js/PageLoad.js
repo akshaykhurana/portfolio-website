@@ -1,5 +1,44 @@
 //Initialise two variables for the two states and assign HTML elements
-var filter, listing, total, visibleIDs=[], PageLoad=0;
+var filter, listing, total, dataStatus = 0, PageLoad=0, visibleIDs = [];
+
+//Match with Excel
+var orderType=[  
+    {  
+        "SectionName":"Web",
+        "SectionDescription":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci."
+    },
+    {  
+        "SectionName":"Product",
+        "SectionDescription":"Aenean nec lorem. In porttitor. Donec laoreet nonummy augue. Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy. Fusce aliquet pede non pede. Suspendisse dapibus lorem pellentesque magna. Integer nulla."
+    },
+    {  
+        "SectionName":"Graphics",
+        "SectionDescription":"Donec blandit feugiat ligula. Donec hendrerit, felis et imperdiet euismod, purus ipsum pretium metus, in lacinia nulla nisl eget sapien. Donec ut est in lectus consequat consequat. Etiam eget dui. Aliquam erat volutpat. Sed at lorem in nunc porta tristique. Proin nec augue. Quisque aliquam tempor magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
+    },
+    {  
+        "SectionName":"Space",
+        "SectionDescription":"Nunc ac magna. Maecenas odio dolor, vulputate vel, auctor ac, accumsan id, felis. Pellentesque cursus sagittis felis. Pellentesque porttitor, velit lacinia egestas auctor, diam eros tempus arcu, nec vulputate augue magna vel risus. Cras non magna vel ante adipiscing rhoncus. Vivamus a mi. Morbi neque. Aliquam erat volutpat. Integer ultrices lobortis eros."
+    },
+    {  
+        "SectionName":"Others",
+        "SectionDescription":"Aenean nec lorem. In porttitor. Donec laoreet nonummy augue. Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy. Fusce aliquet pede non pede. Suspendisse dapibus lorem pellentesque magna. Integer nulla."
+    }
+];
+
+var orderChronology=[  
+    {  
+        "SectionName":"2017",
+        "SectionDescription":"Projects done in the year 2017 at NID"
+    },
+    {  
+        "SectionName":"2016",
+        "SectionDescription":"Projects done in the year 2016 at NID"
+    },
+    {  
+        "SectionName":"2015",
+        "SectionDescription":"Prior to NID"
+    }
+];
 
 //Set default filter behaviour
 filter = 'type';
@@ -8,8 +47,29 @@ filter = 'type';
 //Wait for Page Load
 $(document).ready(function() {
 
-    //Clear all divs while other resources load
-    // $(".mainContent").hide();
+    //Call for first data loading, auto calls refreshProjects
+    dataLoad();
+
+    //Buttons change type  
+    $("#fType").click(function() {
+        filter = "type";
+        refreshProjects(filter);
+    });
+
+    $("#fChronology").click(function() {
+        filter = "chronology";
+        refreshProjects(filter);
+    });
+
+    // console.log("Button toggles working");
+})
+
+
+
+//EXTERNAL FUNCTIONS
+
+//External function to call dat loading from JSON
+function dataLoad() {
 
     //Load local json file into local object
     $.getJSON("js/Listing.json", function(json) {
@@ -20,39 +80,9 @@ $(document).ready(function() {
         //Truncate invisible objects
         removeInvisible ();
 
-        //// Add projects one by one
-        for (i=0; i<total; i++) {
-            var ID = findID(listing[i], filter, ID);
-            console.log("Project loaded: " + (i + 1) + " " + listing[i].ProjectName + " at " + ID);
-
-            //Show data of this listing
-            showData (listing[i], ID);
-            console.log("Show data " + i +" done");
-        } 
-        console.log("IDs populated");
-        console.log(visibleIDs);
-
-
-
-        PageLoad = 1;
+        refreshProjects(filter);
     });
-
-
-
-    //Buttons change type  
-    $("#fType").click(function() {
-        filter = 'type';
-    });
-
-    $("#fChronology").click(function() {
-        filter = 'chronology';
-        showData(filter);
-    });
-
-    console.log("Button toggles working");
-});
-
-//EXTERNAL FUNCTIONS
+}
 
 //External function to remove invisible projects
 function removeInvisible () {
@@ -73,9 +103,59 @@ function removeInvisible () {
     console.log("Removed " + removed + " and displaying " + total + " projects");
 }
 
-//External Function to call first load of data
-function findID(entry, filter, ID) {
+//External function to refresh project list in view
+function refreshProjects(filter) {
+    // Clear previously held data, if any, clear visible IDs, clear visible sidebar entries
+    $(".thumbsInner").empty();
+    $(".sideTitle").empty();
+    $(".sideDescription").empty();
+    visibleIDs=[];
 
+    //Main variables
+    var ID = "";
+
+    // Add projects one by one
+    for (i=0; i<total; i++) {
+        ID = findID(listing[i], filter);
+        console.log("Project loaded: " + (i + 1) + " " + listing[i].ProjectName + " at " + ID);
+
+        //Show data of this listing
+        showData (listing[i], ID);
+        console.log("Show data for no." + (i +1) +" done");
+    }
+
+    // Refresh sidebar
+
+    switch (filter) {
+        case "type":
+            for ( i = 0; i<orderType.length; i++) {
+                ID = constructID (i+1,0,"SideTitle");
+                $(ID).append("<h3>" + orderType[i].SectionName + "</h3>");
+                // console.log("Title of section " + (i + 1) + " added to " +ID);
+                ID = constructID (i+1,0,"SideDescription");
+                 $(ID).append("<p><strong>" + orderType[i].SectionDescription + "</strong></p>");
+                // console.log("Description of section " + (i + 1) + " added to " +ID);
+            }
+            break;
+        case "chronology":
+            for ( i = 0; i<orderChronology.length; i++) {
+                ID = constructID (i+1, 0 , "SideTitle");
+                $(ID).append("<h3>" + orderChronology[i].SectionName + "</h3>");
+                ID = constructID (i+1, 0 , "SideDescription");
+                $(ID).append("<p><strong>" + orderChronology[i].SectionDescription + "</strong></p>");
+                //console.log("Description of section " + (i + 1) + " added to " +ID);
+            }
+            break;
+                  }
+
+    //console.log("IDs populated");
+    //console.log(visibleIDs);
+    return 1;
+}
+
+//External function to call first load of data
+function findID(entry, filter) {
+    //Local variables for storing locations to pass to constructID
     var sectionNo = 0, ProjectNo = 0;
 
     //Read filters
@@ -90,35 +170,47 @@ function findID(entry, filter, ID) {
             break;
                   }
 
-    ID = constructID (sectionNo, ProjectNo);
+    var ID = constructID (sectionNo, ProjectNo, "thumbs");
     visibleIDs.push(ID);
     console.log("Loading ID: " + ID);
 
     return ID;
 }
 
-//External function to show Data in ID
+//External function to show data in ID
 function showData(entry, ID) {
     var thumbPath = "";
-    
+
     console.log("trying to add data to " + ID);
     thumbPath=thumbPathFind(entry);
-    
-    $(ID).append("<img src=" + thumbPath + ">");
 
-    
+    $(ID).append("<img src=" + thumbPath + ">");
 }
 
 //External function to construct ID names
-function constructID(i, j) {
-    var temp = "#S" + i + "P" + j;
-    return temp;
+function constructID(i, j, classification) {
+    var temp = "";
+
+    switch(classification) {
+        case "thumbs": 
+            temp = "#S" + i + "P" + j;
+            return temp;  
+            break;
+        case "SideTitle":
+            temp = "#S" + i + "T";
+            return temp;  
+            break;
+        case "SideDescription":
+            temp = "#S" + i + "D";
+            return temp;  
+            break;
+                         }
 }
 
 //External function to create thumbnail paths
 function thumbPathFind(entry) {
-    
-var thumbPath = encodeURI("projects/" + entry.Type + "/" + entry.URL + "/thumbnail.jpeg");
-   console.log("Generated path: projects/" + entry.Type + "/" + entry.URL + "/thumbnail.jpeg"); 
-return thumbPath;
+
+    var thumbPath = encodeURI("projects/" + entry.Type + "/" + entry.URL + "/thumbnail.jpeg");
+    // console.log("Generated path: projects/" + entry.Type + "/" + entry.URL + "/thumbnail.jpeg"); 
+    return thumbPath;
 }

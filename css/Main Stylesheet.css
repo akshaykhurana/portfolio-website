@@ -90,7 +90,6 @@ body {
 }
 
 .thumbsOuter>.thumbsInner {
-
     background-color: green;
     box-shadow:  0px .25em 1em #888888;
 }
@@ -100,13 +99,12 @@ body {
 }
 
 .sideTitle {
-    text-align: right;     
+    text-align: left;     
 }
 
 .sideDescription {
     position: relative;
-    text-align: right; 
-    padding-left: 10%;
+    text-align: left; 
 }
 
 .footer {
@@ -156,7 +154,7 @@ h3 {
     font-family: "Open Sans", serif;
     font-variant: "bold";
     color: #939EA5;
-    font-size: 3em;
+    font-size: 2.5em;
     line-height: 0em;
 }
 
