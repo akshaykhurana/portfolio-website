@@ -32,6 +32,22 @@ body {
     overflow-y: hidden;
 }
 
+.LoadingScreen {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: 5;
+
+    background-color: white;
+}
+
+.IntroText {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
 .header {
     position: fixed;
     top: 0;
@@ -43,7 +59,7 @@ body {
 
     background-color: white;
 
-    z-index: 90;
+    z-index: 1;
 
     box-shadow: 0px .2em .75em #888888;
 }
@@ -74,15 +90,10 @@ body {
 
     overflow-y: auto;
 
-    z-index: 10;
+    z-index: 0;
 }
 
 .sidebar {
-    margin-top: 2%;
-}
-
-.projectPane {
-    margin-top: 3%;
 }
 
 .thumbsOuter {
@@ -103,18 +114,18 @@ body {
     position: absolute;
     bottom: 0;
     left: 0;
-    z-index: 10;    
+    z-index: 1;    
     margin-left: 3%;
     padding-left: 6%;
     padding-bottom: 2%;  
     margin-bottom: 3%;
-    
+
     border-top: solid;
     border-color: white;
     border-width: thin;
-    
+
     //background-color: cornflowerblue;
-    
+
 }
 
 .thumbTitle{
@@ -198,9 +209,10 @@ h4 {
 
 h5 {
     font-family: "Open Sans", serif;
-    font-variant: "semibold";
+    font-variant: "regular";
+    font-weight: 600;
     color: white;
-    font-size: .8em;
+    font-size: 1em;
     line-height: 0em;
 }
 
@@ -212,3 +224,12 @@ strong {
     font-size: 1em;
 }
 
+@media (min-width: 768px) {
+    .sidebar {
+        margin-top: 1%;
+        float: right;
+    }
+    .projectPane{
+        margin-top: 2%;
+    }
+}

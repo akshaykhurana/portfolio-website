@@ -47,8 +47,16 @@ filter = 'type';
 //Wait for Page Load
 $(document).ready(function() {
 
-    //Call for first data loading, auto calls refreshProjects
-    dataLoad();
+    //show Loading screen until a time
+    changeLoadingScreen(1);
+    var delayMillis = 1000; //1 second
+
+    setTimeout(function() {
+        //Call for first data loading, auto calls refreshProjects
+        dataLoad();    
+    }, delayMillis);
+
+
 
     //Buttons change type  
     $("#fType").click(function() {
@@ -61,6 +69,7 @@ $(document).ready(function() {
         refreshProjects(filter);
     });
 
+    
     // console.log("Button toggles working");
 })
 
@@ -154,10 +163,12 @@ function refreshProjects(filter) {
     for (i = 0; i<visibleIDs.length; i++) {
         $(visibleIDs[i]).show();
     }
-    
+
     //Hide descriptions by default
     $(".thumbDescription").hide();
 
+    //Remove loading screen
+    changeLoadingScreen(0);
 } //End of function
 
 //External function to call first load of data
@@ -228,4 +239,15 @@ function thumbPathFind(entry) {
     var thumbPath = encodeURI("projects/" + entry.Type + "/" + entry.URL + "/thumbnail.jpeg");
     // console.log("Generated path: projects/" + entry.Type + "/" + entry.URL + "/thumbnail.jpeg"); 
     return thumbPath;
+}
+
+function changeLoadingScreen(param){
+    switch (param) {
+        case 0:
+            $(".LoadingScreen").hide();
+            break;
+        case 1:
+            $(".LoadingScreen").show();
+            break;
+                 }
 }
