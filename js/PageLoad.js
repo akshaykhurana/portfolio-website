@@ -166,6 +166,12 @@ function refreshProjects(filter) {
 
     //Hide descriptions by default
     $(".thumbDescription").hide();
+    
+    //Remove extra horizontal seperators
+    if (filter=="chronology") {
+        $("#sep3").hide();
+        $("#sep4").hide();
+    }
 
     //Remove loading screen
     changeLoadingScreen(0);
