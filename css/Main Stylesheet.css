@@ -90,12 +90,42 @@ body {
 }
 
 .thumbsOuter>.thumbsInner {
-    background-color: green;
     box-shadow:  0px .25em 1em #888888;
 }
 
 .thumbsInner>img{
     width: 100%;
+    z-index: 10; 
+}
+
+.overlay {
+    width: 94%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 10;    
+    margin-left: 3%;
+    padding-left: 6%;
+    padding-bottom: 2%;  
+    margin-bottom: 3%;
+    
+    border-top: solid;
+    border-color: white;
+    border-width: thin;
+    
+    //background-color: cornflowerblue;
+    
+}
+
+.thumbTitle{
+    margin-top : -2%;
+}
+
+.thumbSubtitle{
+    margin-top: -5%;
+}
+.thumbDescription{
+    margin-top: -2%;
 }
 
 .sideTitle {
@@ -139,14 +169,14 @@ h1 {
     font-weight: 600;
     color: #5c6064;
     font-size: 2em;
-    letter-spacing: .2em;
+    letter-spacing: .25em;
 }
 
 h2 {
     font-family: "Open Sans", serif;
     font-weight: 600;
     color: #5c6064;
-    font-size: 1.1em;
+    font-size: 1.2em;
     letter-spacing: .25em;
 }
 
@@ -155,6 +185,22 @@ h3 {
     font-variant: "bold";
     color: #939EA5;
     font-size: 2.5em;
+    line-height: 0em;
+}
+
+h4 {
+    font-family: "Open Sans", serif;
+    font-variant: "bold";
+    color: white;
+    font-size: 1.25em;
+    line-height: 1em;
+}
+
+h5 {
+    font-family: "Open Sans", serif;
+    font-variant: "semibold";
+    color: white;
+    font-size: .8em;
     line-height: 0em;
 }
 

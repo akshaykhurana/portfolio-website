@@ -1,5 +1,5 @@
 //Initialise two variables for the two states and assign HTML elements
-var filter, listing, total, dataStatus = 0, PageLoad=0, visibleIDs = [];
+var filter, listing, total, noSections = 5, noProjects = 12,  dataStatus = 0, PageLoad=0, visibleIDs = [];
 
 //Match with Excel
 var orderType=[  
@@ -120,7 +120,7 @@ function refreshProjects(filter) {
         console.log("Project loaded: " + (i + 1) + " " + listing[i].ProjectName + " at " + ID);
 
         //Show data of this listing
-        showData (listing[i], ID);
+        showData (listing[i], ID, filter);
         console.log("Show data for no." + (i +1) +" done");
     }
 
@@ -133,7 +133,7 @@ function refreshProjects(filter) {
                 $(ID).append("<h3>" + orderType[i].SectionName + "</h3>");
                 // console.log("Title of section " + (i + 1) + " added to " +ID);
                 ID = constructID (i+1,0,"SideDescription");
-                 $(ID).append("<p><strong>" + orderType[i].SectionDescription + "</strong></p>");
+                $(ID).append("<p><strong>" + orderType[i].SectionDescription + "</strong></p>");
                 // console.log("Description of section " + (i + 1) + " added to " +ID);
             }
             break;
@@ -147,11 +147,18 @@ function refreshProjects(filter) {
             }
             break;
                   }
-
+    // Kill all invisible IDs as a precaution
     //console.log("IDs populated");
-    //console.log(visibleIDs);
-    return 1;
-}
+    console.log(visibleIDs);
+    $(".thumbsOuter").hide();
+    for (i = 0; i<visibleIDs.length; i++) {
+        $(visibleIDs[i]).show();
+    }
+    
+    //Hide descriptions by default
+    $(".thumbDescription").hide();
+
+} //End of function
 
 //External function to call first load of data
 function findID(entry, filter) {
@@ -178,13 +185,21 @@ function findID(entry, filter) {
 }
 
 //External function to show data in ID
-function showData(entry, ID) {
-    var thumbPath = "";
+function showData(entry, ID, filter) {
+    var thumbPath = "", projectSub = "";
 
     console.log("trying to add data to " + ID);
     thumbPath=thumbPathFind(entry);
-
-    $(ID).append("<img src=" + thumbPath + ">");
+    switch (filter) {
+        case "type":
+            projectSub = entry.Year;
+            break;
+        case "chronology":
+            projectSub = entry.Type;
+            break;
+                  }
+    $(ID + ">.thumbsInner").append("<img src=" + thumbPath + ">");
+    $(ID + ">.thumbsInner").append("<div class = \"overlay\"><div class = \"thumbTitle\"><h4>" + entry.ProjectName + "</h4></div><div class = \"thumbSubtitle\"><h5>" + projectSub + "</h5></div><div class = \"thumbDescription\">"  + entry.Description + "</div></div>");
 }
 
 //External function to construct ID names
