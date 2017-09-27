@@ -71,10 +71,10 @@ body {
     background-color: white;
 
     z-index: 1;
-
+    
     border-top: solid;
-    border-color: #939EA5;
     border-width: thin;
+    border-color: #939EA5;
 }
 .HFContainer {
     width: 100%;
@@ -135,7 +135,6 @@ body {
 }
 .thumbsOuter {
     padding: 1%;
-    margin-top: 0%;
 }
 .thumbsOuter>.thumbsInner {
     box-shadow:  0px .25em 1em #888888;
@@ -148,18 +147,21 @@ body {
     width: 94%;
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: ;
     z-index: 1;    
-    margin-left: 3%;
+    margin-left: 0%;
+    margin-right: 0%;
     padding-left: 6%;
+    padding-right: 6%;
     padding-bottom: 2%;  
     margin-bottom: 3%;
 
+    /*
     border-top: solid;
     border-color: white;
     border-width: thin;
 
-    //background-color: cornflowerblue;
+    background-color: cornflowerblue;*/
 
 }
 .thumbTitle{
@@ -171,6 +173,21 @@ body {
 .thumbDescription{
     margin-top: -2%;
 }
+/*Also modified in JS file*/
+
+.link:hover {
+    color: dodgerblue;
+}
+.link:active {
+    color: darkblue;
+}
+.thumbsOuter:hover{
+    background-color: dodgerblue;
+}
+a:hover{
+    text-decoration:  none;
+}
+
 
 /* FONTS */
 
@@ -196,7 +213,7 @@ h3 {
     color: #939EA5;
     font-size: 2.5em;
     font-weight: 700;
-    line-height: .25em;
+    line-height: 1em;
     text-transform: lowercase;
 }
 h4 {
@@ -218,7 +235,7 @@ p {
     font-family: 'Fjord One', serif;
     font-weight: 100;
     font-size: 1em;
-    color: blue;
+    color: darkgrey;
 }
 .sideDescription>p { 
     color: #939EA5;
@@ -265,7 +282,6 @@ p {
         letter-spacing: .25em;
     }
     h2 {
-
         font-size: 1.2em;
         letter-spacing: 0.15em;
     }
@@ -298,4 +314,9 @@ p {
 
 .Filter {
     text-align: right;
+}
+
+.aboutMe>img {
+    margin-top: 10%;
+    width: 100%;
 }

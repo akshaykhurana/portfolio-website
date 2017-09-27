@@ -58,17 +58,17 @@ $(document).ready(function() {
 
     //Buttons change type  
     $("#fType").click(function() {
+        $("#fChronology>h2").css('color' , '');
+        $("#fType>h2").css('color' , 'dodgerblue');
         filter = "type";
         refreshProjects(filter);
     });
 
     $("#fChronology").click(function() {
+        $("#fChronology>h2").css('color' , 'dodgerblue');
+        $("#fType>h2").css('color' , '');
         filter = "chronology";
         refreshProjects(filter);
-    });
-
-    $(window).on("load", function() {
-        // weave your magic here.
     });
 
     // console.log("Button toggles working");
@@ -89,8 +89,10 @@ function dataLoad() {
 
         //Truncate invisible objects
         removeInvisible ();
-
         refreshProjects(filter);
+        
+        //Set type as defualt blue colour
+        $("#fType>h2").css('color' , 'dodgerblue');
     });
 }
 
@@ -152,7 +154,7 @@ function refreshProjects(filter) {
                 ID = constructID (i+1, 0 , "SideTitle");
                 $(ID).append("<h3>" + orderChronology[i].SectionName + "</h3>");
                 ID = constructID (i+1, 0 , "SideDescription");
-                $(ID).append("<p><strong>" + orderChronology[i].SectionDescription + "</strong></p>");
+                $(ID).append("<p>" + orderChronology[i].SectionDescription + "</p>");
                 //console.log("Description of section " + (i + 1) + " added to " +ID);
             }
             break;
