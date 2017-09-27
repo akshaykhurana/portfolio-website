@@ -5,7 +5,6 @@
     width: .6em;
     background-color: #F0F0F0;
 }
-
 ::-webkit-scrollbar-track
 {
     -webkit-
@@ -16,7 +15,6 @@
     border: 1% solid transparent;
     background-clip: content-box;
 }
-
 ::-webkit-scrollbar-thumb
 {
     /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);*/
@@ -24,6 +22,7 @@
     background-color: dodgerblue;
 }
 
+/*Main div styling*/
 
 body {
     padding-top: 2rem;
@@ -31,7 +30,6 @@ body {
     background-color: white;
     overflow-y: hidden;
 }
-
 .LoadingScreen {
     position: fixed;
     height: 100vh;
@@ -40,14 +38,12 @@ body {
 
     background-color: white;
 }
-
 .IntroText {
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%,-50%);
     text-align: center;
 }
-
 .header {
     position: fixed;
     top: 0;
@@ -63,24 +59,53 @@ body {
 
     box-shadow: 0px .2em .75em #888888;
 }
+.footer {
+    position: fixed;
+    bottom: 0;
+    height: 7.5%;
+    width: 100%;
+    
+    margin:0;
+    padding: 0;
 
-#HeaderContainer {
+    background-color: white;
+        
+    z-index: 1;
+    
+    border-top: solid;
+    border-color: #939EA5;
+    border-width: thin;
+}
+.HFContainer {
+    width: 100%;
     position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 10px;
+    padding-right: 10px;
+    /*background-color: bisque;*/
+
+
 }
-
-
 .HeaderLogo {
-    float: left;
-}
-
-.HeaderContact {
-    display: inline-block;
     position: relative;
-    margin-top: 1em;
+
+    /*background-color: aqua;*/
+}
+.HeaderContact {
+    transform: translateY(30%);
+    margin-top: 0%;
+    text-align: right;
+    /*background-color: aquamarine;*/ 
+}
+.FooterNav {
+    position: relative;
+}
+.Filter {
+    display: inline-block;
+    padding-left:10%;
     float: right;
+    text-align: right;
 }
 .mainContent {
     position: fixed;
@@ -92,24 +117,37 @@ body {
 
     z-index: 0;
 }
-
-.sidebar {
-    margin-top: 0%;
+.sidebar{
+margin-top: -5%;
 }
-
+.sidebar:first-child {
+    margin-top: %;
+}
+.sideTitle {
+    text-align: left;     
+}
+.sideDescription {
+    margin-top: -5%;
+    position: relative;
+    text-align: left; 
+}
+.projectPane:first-child {
+    margin-top: 0%
+}
+.seperator{
+    margin-top: 12%;
+}
 .thumbsOuter {
     padding: 1%;
+    margin-top: 5%;
 }
-
 .thumbsOuter>.thumbsInner {
     box-shadow:  0px .25em 1em #888888;
 }
-
 .thumbsInner>img{
     width: 100%;
     z-index: 10; 
 }
-
 .overlay {
     width: 94%;
     position: absolute;
@@ -128,55 +166,14 @@ body {
     //background-color: cornflowerblue;
 
 }
-
 .thumbTitle{
     margin-top : -2%;
 }
-
 .thumbSubtitle{
     margin-top: -5%;
 }
 .thumbDescription{
     margin-top: -2%;
-}
-
-.sideTitle {
-    text-align: left;     
-}
-
-.sideDescription {
-    position: relative;
-    text-align: left; 
-}
-
-.footer {
-    position: fixed;
-    bottom: 0;
-    height: 7.5%;
-    width: inherit;
-    margin:0 auto;
-    padding: 0;
-
-    border-top: solid;
-    border-color: #939EA5;
-    border-width: .025em;
-
-    z-index: 90;
-}
-
-.seperator{
-    margin-top: 12%;
-    margin-bottom: 0%;
-}
-
-.Filter {
-    float: right;
-    display: inline-block;
-    margin-left: 2em;
-}
-
-.Filter>h2 {
-    color: #939EA5;
 }
 
 /* FONTS */
@@ -185,26 +182,27 @@ h1 {
     font-family: "Open Sans", serif;
     font-weight: 600;
     color: #5c6064;
-    font-size: 2em;
-    letter-spacing: .25em;
+    font-size: 1.5em;
+    letter-spacing: .1em;
 }
-
 h2 {
     font-family: "Open Sans", serif;
     font-weight: 600;
     color: #5c6064;
-    font-size: 1.2em;
+    font-size: .9em;
     letter-spacing: .25em;
 }
-
+.Filter>h2 {
+    color: #939EA5;
+}
 h3 {
     font-family: "Open Sans", serif;
-    font-variant: "bold";
     color: #939EA5;
     font-size: 2.5em;
-    line-height: 0em;
+    font-weight: 700;
+    line-height: .25em;
+    text-transform: lowercase;
 }
-
 h4 {
     font-family: "Open Sans", serif;
     font-variant: "bold";
@@ -212,7 +210,6 @@ h4 {
     font-size: 1.25em;
     line-height: 1em;
 }
-
 h5 {
     font-family: "Open Sans", serif;
     font-variant: "regular";
@@ -221,27 +218,70 @@ h5 {
     font-size: 1em;
     line-height: 0em;
 }
-
-strong {
+p {
     font-family: 'Fjord One', serif;
-    font-variant: "regular";
     font-weight: 100;
+    font-size: 1em;
+    color: blue;
+}
+.sideDescription>p { 
     color: #939EA5;
     font-size: 1em;
 }
 
 /* This handles Responsivity for non-mobile */
 
-@media (min-width: 768px) {
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
     .sidebar {
-        margin-top: 1%;
         float: right;
     }
-    .projectPane{
-        margin-top: 2%;
+    .sidebar:first-child {
+        margin-top: 5%;
+    }
+    .projectPane:first-child {
+        margin-top: 0%
     }
     .seperator{
         margin-top: 3%;
         margin-bottom: 0%;
     }
+    h1 {
+        font-family: "Open Sans", serif;
+        font-weight: 600;
+        color: #5c6064;
+        font-size: 1.2em;
+        letter-spacing: .05em;
+    }
+    h3 {
+        font-family: "Open Sans", serif;
+        font-variant: "lowercase";
+        color: #939EA5;
+        font-size: 2.5em;
+        line-height: 0em;
+    }
+}
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
+
+#FooterLeft {
+    float: left;
+}
+
+.Filter {
+    text-align: right;
 }

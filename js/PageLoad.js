@@ -69,7 +69,10 @@ $(document).ready(function() {
         refreshProjects(filter);
     });
 
-    
+    $(window).on("load", function() {
+        // weave your magic here.
+    });
+
     // console.log("Button toggles working");
 })
 
@@ -142,7 +145,7 @@ function refreshProjects(filter) {
                 $(ID).append("<h3>" + orderType[i].SectionName + "</h3>");
                 // console.log("Title of section " + (i + 1) + " added to " +ID);
                 ID = constructID (i+1,0,"SideDescription");
-                $(ID).append("<p><strong>" + orderType[i].SectionDescription + "</strong></p>");
+                $(ID).append("<p>" + orderType[i].SectionDescription + "</p>");
                 // console.log("Description of section " + (i + 1) + " added to " +ID);
             }
             break;
@@ -166,11 +169,15 @@ function refreshProjects(filter) {
 
     //Hide descriptions by default
     $(".thumbDescription").hide();
-    
+
     //Remove extra horizontal seperators
     if (filter=="chronology") {
         $("#sep3").hide();
         $("#sep4").hide();
+    }
+    else {
+        $("#sep3").show();
+        $("#sep4").show();
     }
 
     //Remove loading screen
@@ -253,7 +260,9 @@ function changeLoadingScreen(param){
             $(".LoadingScreen").hide();
             break;
         case 1:
-            $(".LoadingScreen").show();
+            $(window).on("load", function() {
+                $(".LoadingScreen").show(); 
+            })
             break;
                  }
 }
