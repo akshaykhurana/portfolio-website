@@ -56,8 +56,6 @@ $(document).ready(function() {
         dataLoad();    
     }, delayMillis);
 
-
-
     //Buttons change type  
     $("#fType").click(function() {
         filter = "type";
@@ -169,7 +167,6 @@ function refreshProjects(filter) {
 
     //Hide descriptions by default
     $(".thumbDescription").hide();
-<<<<<<< HEAD
 
     //Remove extra horizontal seperators
     if (filter=="chronology") {
@@ -180,8 +177,6 @@ function refreshProjects(filter) {
         $("#sep3").show();
         $("#sep4").show();
     }
-=======
->>>>>>> parent of 4b316dd... Added horizontal seperators
 
     //Remove loading screen
     changeLoadingScreen(0);

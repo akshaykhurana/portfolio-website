@@ -64,14 +64,14 @@ body {
     bottom: 0;
     height: 7.5%;
     width: 100%;
-    
+
     margin:0;
     padding: 0;
 
     background-color: white;
-        
+
     z-index: 1;
-    
+
     border-top: solid;
     border-color: #939EA5;
     border-width: thin;
@@ -89,14 +89,13 @@ body {
 }
 .HeaderLogo {
     position: relative;
-
     /*background-color: aqua;*/
 }
 .HeaderContact {
-    transform: translateY(30%);
+    transform: translateY(35%);
     margin-top: 0%;
     text-align: right;
-    /*background-color: aquamarine;*/ 
+    /*background-color: aquamarine;*/
 }
 .FooterNav {
     position: relative;
@@ -117,12 +116,11 @@ body {
 
     z-index: 0;
 }
-<<<<<<< HEAD
 .sidebar{
-margin-top: -5%;
+    margin-top: -5%;
 }
 .sidebar:first-child {
-    margin-top: %;
+    margin-top: 2%;
 }
 .sideTitle {
     text-align: left;     
@@ -132,19 +130,12 @@ margin-top: -5%;
     position: relative;
     text-align: left; 
 }
-.projectPane:first-child {
-    margin-top: 0%
-}
 .seperator{
     margin-top: 12%;
-=======
-
-.sidebar {
->>>>>>> parent of 4b316dd... Added horizontal seperators
 }
 .thumbsOuter {
     padding: 1%;
-    margin-top: 5%;
+    margin-top: 0%;
 }
 .thumbsOuter>.thumbsInner {
     box-shadow:  0px .25em 1em #888888;
@@ -181,58 +172,21 @@ margin-top: -5%;
     margin-top: -2%;
 }
 
-<<<<<<< HEAD
-=======
-.sideTitle {
-    text-align: left;     
-}
-
-.sideDescription {
-    position: relative;
-    text-align: left; 
-}
-
-.footer {
-    position: fixed;
-    bottom: 0;
-    height: 7.5%;
-    width: inherit;
-    margin:0 auto;
-    padding: 0;
-
-    border-top: solid;
-    border-color: #939EA5;
-    border-width: .025em;
-
-    z-index: 90;
-}
-
-.Filter {
-    float: right;
-    display: inline-block;
-    margin-left: 2em;
-}
-
-.Filter>h2 {
-    color: #939EA5;
-}
-
->>>>>>> parent of 4b316dd... Added horizontal seperators
 /* FONTS */
 
 h1 {
     font-family: "Open Sans", serif;
     font-weight: 600;
     color: #5c6064;
-    font-size: 1.5em;
-    letter-spacing: .1em;
+    font-size: 1.25em;
+    letter-spacing: 0.15em;
 }
 h2 {
     font-family: "Open Sans", serif;
     font-weight: 600;
     color: #5c6064;
-    font-size: .9em;
-    letter-spacing: .25em;
+    font-size: .8em;
+    letter-spacing: .1em;
 }
 .Filter>h2 {
     color: #939EA5;
@@ -271,7 +225,6 @@ p {
     font-size: 1em;
 }
 
-<<<<<<< HEAD
 /* This handles Responsivity for non-mobile */
 
 /* Extra Small Devices, Phones */ 
@@ -281,36 +234,50 @@ p {
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
-=======
-@media (min-width: 768px) {
->>>>>>> parent of 4b316dd... Added horizontal seperators
+
+    .HFContainer {
+        width: inherit;
+    }
     .sidebar {
         float: right;
     }
     .sidebar:first-child {
-        margin-top: 5%;
+        margin-top: 1%;
     }
-    .projectPane:first-child {
-        margin-top: 0%
+    .thumbTitle{
+        margin-top : 0%;
     }
-<<<<<<< HEAD
+    .thumbSubtitle{
+        margin-top: -5%;
+    }
+    .thumbDescription{
+        margin-top: -2%;
+    }
+    .projectPane {
+        margin-top: 2%
+    }
     .seperator{
-        margin-top: 3%;
+        margin-top: 4%;
         margin-bottom: 0%;
     }
     h1 {
-        font-family: "Open Sans", serif;
-        font-weight: 600;
-        color: #5c6064;
+        font-size: 2em;
+        letter-spacing: .25em;
+    }
+    h2 {
+
         font-size: 1.2em;
-        letter-spacing: .05em;
+        letter-spacing: 0.15em;
     }
     h3 {
-        font-family: "Open Sans", serif;
-        font-variant: "lowercase";
-        color: #939EA5;
-        font-size: 2.5em;
+        font-size: 3em;
         line-height: 0em;
+    }
+    h4{
+        font-size: 1.1em;
+    }
+    h5{
+        font-size: .8em;
     }
 }
 
@@ -331,6 +298,4 @@ p {
 
 .Filter {
     text-align: right;
-=======
->>>>>>> parent of 4b316dd... Added horizontal seperators
 }
