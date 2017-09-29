@@ -297,7 +297,7 @@ function animationHover(element, animation, timeOut){
     titleID = $(descID);
     var subID = element + " .thumbSubtitle";
     subID = $(descID);
-
+    var defaultHeight = overlayID.css('height');
     var overlayID = element + " .colorOverlay";
     overlayID = $(overlayID);
 
@@ -318,7 +318,7 @@ function animationHover(element, animation, timeOut){
             subID.fadeOut();
             
             window.setTimeout( function(){
-                overlayID.css('height', '20%');
+                overlayID.css(defaultHeight);
                 element.removeClass('animated ' + animation);
             }, timeOut); 
         });
