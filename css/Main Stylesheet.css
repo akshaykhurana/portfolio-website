@@ -32,16 +32,16 @@ body {
 }
 .LoadingScreen {
     position: fixed;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     z-index: 5;
 
     background-color: white;
 }
 .IntroText {
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%,-50%);
+    width: auto;
+    position: relative;
+    top: 40%;
     text-align: center;
 }
 .header {
@@ -55,7 +55,7 @@ body {
 
     background-color: white;
 
-    z-index: 1;
+    z-index: 5;
 
     box-shadow: 0px .2em .75em #888888;
 }
@@ -70,8 +70,8 @@ body {
 
     background-color: white;
 
-    z-index: 1;
-    
+    z-index: 5;
+
     border-top: solid;
     border-width: thin;
     border-color: #939EA5;
@@ -141,20 +141,31 @@ body {
 }
 .thumbsInner>img{
     width: 100%;
-    z-index: 10; 
+    z-index: 1; 
 }
-.overlay {
+.colorOverlay{
+    height: 20%;
+    width: 94%;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 3%;
+    background-color: black;
+    opacity: .75;
+    
+    z-index: 2; 
+}
+.textOverlay {
     width: 94%;
     position: absolute;
     bottom: 0;
     left: ;
-    z-index: 1;    
+    z-index: 3;    
     margin-left: 0%;
     margin-right: 0%;
     padding-left: 6%;
     padding-right: 6%;
     padding-bottom: 2%;  
-    margin-bottom: 3%;
+    margin-bottom: 1%;
 
     /*
     border-top: solid;
@@ -168,35 +179,43 @@ body {
     margin-top : -2%;
 }
 .thumbSubtitle{
-    margin-top: -5%;
+    margin-top: -3%;
 }
 .thumbDescription{
     margin-top: -2%;
 }
-/*Also modified in JS file*/
 
+/*Contact Page*/
+
+.aboutMe>img {
+    margin-top: 10%;
+    width: 100%;
+}
+
+/*Also modified in JS file*/
 .link:hover {
-    color: dodgerblue;
+    color: #00b3e4;
 }
 .link:active {
     color: darkblue;
 }
-.thumbsOuter:hover{
+.thumbsInner:hover{
     background-color: dodgerblue;
 }
 a:hover{
     text-decoration:  none;
 }
 
-
 /* FONTS */
-
 h1 {
     font-family: "Open Sans", serif;
     font-weight: 600;
     color: #5c6064;
     font-size: 1.25em;
     letter-spacing: 0.15em;
+}
+.IntroText>h1{
+    font-size: 1.5em;
 }
 h2 {
     font-family: "Open Sans", serif;
@@ -206,6 +225,12 @@ h2 {
     letter-spacing: .1em;
 }
 .Filter>h2 {
+    color: #939EA5;
+}
+.IntroText>h2{
+    margin-top: -3%;
+    font-size: .8em;
+    letter-spacing: .05em;
     color: #939EA5;
 }
 h3 {
@@ -241,6 +266,11 @@ p {
     color: #939EA5;
     font-size: 1em;
 }
+.thumbDescription>p { 
+    color: white;
+    font-size: 1em;
+    line-height: 1.2em;
+}
 
 /* This handles Responsivity for non-mobile */
 
@@ -251,7 +281,6 @@ p {
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
-
     .HFContainer {
         width: inherit;
     }
@@ -265,7 +294,7 @@ p {
         margin-top : 0%;
     }
     .thumbSubtitle{
-        margin-top: -5%;
+        margin-top: -3%;
     }
     .thumbDescription{
         margin-top: -2%;
@@ -295,9 +324,16 @@ p {
     h5{
         font-size: .8em;
     }
+    .IntroText>h1{
+        font-size: 2em;
+    }
+    .IntroText>h2{
+        margin-top: -1%;
+        font-size: 1.1em;
+        letter-spacing: .1em;
+        color: #939EA5;
+    }
 }
-
-
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
 
@@ -308,15 +344,3 @@ p {
 
 }
 
-#FooterLeft {
-    float: left;
-}
-
-.Filter {
-    text-align: right;
-}
-
-.aboutMe>img {
-    margin-top: 10%;
-    width: 100%;
-}
