@@ -25,174 +25,171 @@
 /*Main div styling*/
 
 body {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
     background-color: white;
     overflow-y: hidden;
 }
+.container{
+
+}
+.PortraitWarning{
+    display: none;
+}
 .LoadingScreen {
+    display: flex;
     position: fixed;
+    top : 0px;
+    left : 0px;
     height: 100%;
     width: 100%;
+
+    margin:0;
+    padding: 0;
+
     z-index: 10;
+
+    align-items: center;
 
     background-color: white;
 }
 .IntroText {
-    width: auto;
-    position: relative;
-    top: 40%;
     text-align: center;
 }
 .header {
+    display: flex;
     position: fixed;
-    top: 0;
-    height: 15%;
+    top: 0px;
+    left: 0px;
+    height: 10%;
     width: 100%;
 
     margin:0;
     padding: 0;
 
+    z-index: 5;
     background-color: white;
 
-    z-index: 5;
+    align-items: center;
 
     box-shadow: 0px .2em .75em #888888;
 }
 .footer {
+    display: flex;
     position: fixed;
-    bottom: 0;
+    bottom: 0px;
+    left: 0px;
     height: 7.5%;
     width: 100%;
 
-    margin:0;
+    margin: 0;
     padding: 0;
-
-    background-color: white;
 
     z-index: 5;
 
+    align-items: center;
+
     border-top: solid;
     border-width: thin;
-    border-color: #939EA5;
-}
-.HFContainer {
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    padding-left: 10px;
-    padding-right: 10px;
-    /*background-color: bisque;*/
+    border-color: #CCCCCC;
 
-
-}
-.HeaderLogo {
-    position: relative;
-    /*background-color: aqua;*/
-}
-.HeaderContact {
-    transform: translateY(35%);
-    margin-top: 0%;
-    text-align: right;
-    /*background-color: aquamarine;*/
-}
-.FooterNav {
-    position: relative;
-}
-.Filter {
-    display: inline-block;
-    padding-left:10%;
-    float: right;
-    text-align: right;
+    box-shadow: 0px -.025em .25em #CCCCCC;
 }
 .mainContent {
     position: fixed;
-    top: 15.25%;
-    height:77%;
+    top: 10.25%;
+    height:82%;
     width: 100%;
 
     overflow-y: auto;
 
     z-index: 0;
+    overflow-y: scroll;
 }
-.sidebar{
-    margin-top: -5%;
+.sections{
+    padding: 1.5em 0em 1.5em 0em;
 }
-.sidebar:first-child {
-    margin-top: 2%;
+.sections:last-child{
+    padding: 1em 0em 2em 0em;
+    border: none;
 }
-.sideTitle {
-    text-align: left;     
+.sideTitle{
+    padding: .5em .5em .5em 1em;
 }
-.sideDescription {
-    margin-top: -5%;
-    position: relative;
-    text-align: left; 
+.sideDescription{
+    padding: .5em .5em .5em 1em;
 }
-.seperator{
-    margin-top: 12%;
+.HFContainer{
+    align-items: baseline;
 }
-.thumbsOuter {
-    padding: 1%;
+.HeaderAbout, .Filter{
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: right;
 }
-.thumbsOuter>.thumbsInner {
-    box-shadow:  0px .25em 1em #888888;
+#fType, fChronology{
+    margin-left: 1.5em;
 }
-.thumbsInner>img{
-    width: 100%;
-    z-index: 1; 
-}
-.colorOverlay{
-    height: 25%;
-    width: 98%;
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 1%;
-    background-color: black;
-    opacity: .75;
-
-    z-index: 2; 
-}
-.textOverlay {
-    width: 94%;
-    position: absolute;
-    bottom: 0;
-    left: ;
-    z-index: 3;    
-    margin-left: 0%;
-    margin-right: 0%;
-    padding-left: 6%;
-    padding-right: 6%;
-    padding-bottom: 2%;  
-    margin-bottom: 1%;
-
-    /*
-    border-top: solid;
-    border-color: white;
+.card{
+    margin: 1.5em .25em;
+    padding: .5em;
+    border: dotted;
     border-width: thin;
-
-    background-color: cornflowerblue;*/
-
+    border-color: lightgrey;
+    border-radius: 0;
+    box-shadow: 2px 2px 10px #888888;
 }
-.thumbTitle{
-    margin-top : -2%;
+.card:hover{
+    cursor: pointer;
+    background-color: lightskyblue;
 }
-.thumbSubtitle{
-    margin-top: -3%;
+.card-project{
+    position: absolute;
+    top: 1em;;
+    right: 1em;
+    text-align: right;
+    z-index: 2;
 }
-.thumbDescription{
-    margin-top: -2%;
-}
+.card-number{
+    width: 1em;
+    font-size: 3em;
+    position: relative;
+    top: -1.25em;
+    left: -.5em;
 
-/*Contact Page*/
-
-.aboutMe>img {
-    margin-top: 10%;
+    z-index: 1;
+}
+.card-subtitle {
+    position: absolute;
+    top: 3em;
+    right: 1.2em;
+    text-align: right;
+}
+.card-description{
+    padding-left: .5em;
+}
+img{
     width: 100%;
 }
+.hoverMode {
+    display: none;
+    position: absolute;
+    height: 35%;
+    top: 55%;
 
-/*Also modified in JS file*/
+    text-align: right;
+    background-color: white;
+
+    box-shadow: 2px 2px 10px #888888;
+
+}
+.card .hoverMode {
+    
+    -webkit-animation-duration: .25s;
+    -webkit-animation-delay: 0s;
+   
+    -moz-animation-duration: .25s;
+    -moz-animation-delay: 0s;
+}
+/*Also modified in JS file for filters*/
 .link:hover {
     color: #00b3e4;
 }
@@ -206,17 +203,20 @@ a:hover{
     text-decoration:  none;
 }
 
+/* CONTACT PAGE */
+
 /* FONTS */
-h1 {
-    font-family: "Open Sans", serif;
+h1{
+    font-family: "Open Sans", "sans-serif";
     font-weight: 600;
+    font-size: 1.1em;
     color: #5c6064;
-    font-size: 1.25em;
-    letter-spacing: 0.15em;
+    letter-spacing: .1em;
 }
-.IntroText>h1{
+.IntroText h1{
     font-size: 1.5em;
 }
+
 h2 {
     font-family: "Open Sans", serif;
     font-weight: 600;
@@ -228,14 +228,14 @@ h2 {
     color: #939EA5;
 }
 .IntroText>h2{
-    margin-top: -3%;
+    margin-top: -2%;
     font-size: .8em;
     letter-spacing: .05em;
     color: #939EA5;
 }
 h3 {
     font-family: "Open Sans", serif;
-    color: #939EA5;
+    color: #9c9c9c;
     font-size: 2.5em;
     font-weight: 700;
     line-height: 1em;
@@ -243,109 +243,176 @@ h3 {
 }
 h4 {
     font-family: "Open Sans", serif;
-    font-variant: "bold";
-    color: white;
-    font-size: 1.25em;
-    line-height: 1em;
-}
-h5 {
-    font-family: "Open Sans", serif;
-    font-variant: "regular";
     font-weight: 600;
-    color: white;
-    font-size: 1em;
-    line-height: 0em;
+    color: #5c6064;
+    font-size: 1.1em;
+    line-height: 1em;
 }
 p {
     font-family: 'Fjord One', serif;
-    font-weight: 100;
-    font-size: 1em;
-    color: darkgrey;
-}
-.sideDescription>p { 
-    color: #939EA5;
-    font-size: 1em;
-}
-.thumbDescription>p { 
-    color: white;
-    font-size: 1em;
-    line-height: 1.2em;
+    font-weight: 400;
+    font-size: .9em;
+    color: #838383;
 }
 
-/* This handles Responsivity for non-mobile */
+/* CONTACT PAGE */
 
-/* Extra Small Devices, Phones */ 
-@media only screen and (min-width : 480px) {
 
+.rightPane {
+    margin-top:5%;
+    padding-left : 15px;
+    padding-left : 15px;
+}
+.leftPane {
+    margin-top:5%;
+}    
+.aboutMeDP{
+    width: 90%;
+}
+.aboutMeText {
+    margin-top: 1em;
+    margin-bottom: 2em;
+    height: auto;
 }
 
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
-    .HFContainer {
-        width: inherit;
+.specialText{
+    margin-top: .75em;
+    margin-bottom: 1em;
+    color: #838383;
+}
+.tataText{
+    text-align: right;
+}
+.socialMedia {
+    margin-top: .5em;
+}
+.socialMediaButtons {
+    padding: .6em .6em .6em 0em;
+}
+.mailer {
+    margin-top: 3em;
+}
+.aboutMeText h3 {
+    font-size: 2em;
+}
+.aboutMeText h2 {
+    font-size: 1.1em;
+    letter-spacing: .025em;
+}
+
+
+/* Media queries for other device sizes */
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    h1{
+        font-size: 1.5em;
     }
-    .sidebar {
-        float: right;
+    h2{
+        font-size: 1em;
     }
-    .sidebar:first-child {
-        margin-top: 1%;
+    .PortraitWarning{
+
+        display: flex;
+        position: fixed;
+        top : 0px;
+        left : 0px;
+        height: 100%;
+        width: 100%;
+
+        margin:0;
+        padding: 0;
+
+        z-index: 15;
+
+        align-items: center;
+
+        background-color: white;
+
     }
-    .colorOverlay{
-        height: 20%;
-        width: 94%;
-        margin-bottom: 3%; 
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .PortraitWarning{
+        display: none;
     }
-    .thumbTitle{
-        margin-top : 0%;
+    .sidebar:first-child, .projectPane:first-child {
+        margin-top: 2em;
     }
-    .thumbSubtitle{
-        margin-top: -3%;
+    .card-number{
+        width: auto;
+        font-size: 4em;
+        top: -.55em;
+        left: 0em;
+        color: darkgrey;
+        opacity: .5;
     }
-    .thumbDescription{
-        margin-top: -2%;
+    .card{
+        margin: 1em 0em;
+        padding: .75em;
+
     }
-    .projectPane {
-        margin-top: 2%
+    h1{
+        font-size: 1.5em;
+        font-size: 1.5em;
     }
-    .seperator{
-        margin-top: 4%;
-        margin-bottom: 0%;
-    }
-    h1 {
-        font-size: 2em;
-        letter-spacing: .25em;
-    }
-    h2 {
-        font-size: 1.2em;
-        letter-spacing: 0.15em;
-    }
-    h3 {
-        font-size: 3em;
-        line-height: 0em;
+    h2{
+        font-size: 1em;
     }
     h4{
-        font-size: 1.1em;
+        font-size: 1em;
     }
-    h5{
-        font-size: .8em;
-    }
-    .IntroText>h1{
-        font-size: 2em;
+    .IntroText h1{
+        font-size: 3em;
     }
     .IntroText>h2{
-        margin-top: -1%;
-        font-size: 1.1em;
-        letter-spacing: .1em;
+        margin-top: -.25%;
+        font-size: 1.6em;
+
         color: #939EA5;
     }
+    /*Contact Page*/
+    .aboutMeText{
+        margin-bottom: 0;
+    }
+    .aboutMeDP{
+        width: 75%;
+    }
+    .rightPane{
+        padding-left: 4em;
+        border-left: solid;
+        border-width: thin;
+        border-color: darkgrey;
+    }
+    .midSeperator{
+        display: none;
+    }
 }
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px) {
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    h1{
+        font-size: 1.6em;
+    }
+    h2{
+        font-size: 1.1em;
+    }
+
+    /*Contact Page*/
+    .leftPane{
+        margin-top: 1em;
+    }
+    .rightPane{
+        margin-top: 1em;
+    }
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
 
 }
 
-/* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px) {
-
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1500px) {
+    .container{
+        min-width: 1350px;
+    }    
 }
-

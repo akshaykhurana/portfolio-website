@@ -6,8 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-        <title>Akshay Khurana: Contact Page</title>
-        <meta name="description" content="This is the professional portfolio of Akshay Khurana.">
+        <title>Akshay Khurana: Portfolio</title>
+        <meta name="description" content="This is the portfolio of Akshay Khurana.">
         <meta name="keywords" content="portfolio, akshay, khurana, design, architect, designer, interaction design">
         <meta name="author" content="www.akshaykhurana.com">
 
@@ -18,7 +18,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
         <!-- Bootstrap -->
-        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap-reboot.css" rel="stylesheet">
+        <link href = "css/bootstrap-grid.css" rel="stylesheet">
+        <link href = "css/bootstrap.css" rel="stylesheet">
+
+        <!-- Animate.css -->
+        <link href="css/animate.css" rel="stylesheet">
 
         <!--Own Stylesheet and Fonts -->
         <link rel="stylesheet" href="css/Main Stylesheet.css" media="all">  
@@ -35,61 +40,102 @@
     </head>
 
     <body>
-        <div class = "LoadingScreen">
-            <div class="IntroText">
-                <h1> AKSHAY KHURANA</h1>
-                <h2>WEB | GRAPHICS | SPACE | PRODUCTS</h2>
+        <div class = "PortraitWarning">
+            <div class="container HFContainer">
+                <div class="row">
+                    <div class="col-12 IntroText">
+                        <a href="index.html"><h1 id="shiny2">AKSHAY KHURANA</h1></a>
+                    </div>
+                    <div class="col-12 IntroText">
+                        <h2>WEB . GRAPHICS . SPACE . PRODUCTS</h2>
+                    </div>
+                    <div class="col-8 offset-2 IntroText">
+                        <p>best viewed in portrait mode</p>
+                    </div>
+                </div>
             </div>
         </div>
         <div class = "header">
-            <div class = "container">
-                <div class="row sections HFContainer">
-                    <div class = "col-xs-9 HeaderLogo">
+            <div class="container">
+                <div class="row HFContainer">
+                    <div class="col-8 col-md-10 HeaderTitle">
                         <a href="index.html"><h1 class="link">AKSHAY KHURANA</h1></a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="mainContent">
+
+        <div class= "mainContent">
             <div class="container">
-                <div class= "row sections">
-                    <div class="col-xs-6 col-sm-3 col-md-4 scol-lg-4 aboutMe">
-                        <img src="\images\Display Picture.jpg">
-                        <h3>architect/designer</h3>
-                        <h2>jack of all trades, master of some</h2>
-
-                        <p>Some text goes here explaining my backstory</p>
+                <div class= "sections row">
+                    <div class="col-12 col-md-5 col-lg-5 leftPane">
+                        <div class="aboutMeDP">
+                            <img src="\images\Display Picture.jpg">
+                        </div>
+                        <div class= "aboutMeText">
+                            <h3>architect/designer</h3>
+                            <h2 class="specialText">jack of all trades, master of some</h2>
+                            <p>I studied architecture at the School of Planning and Architecture, New Delhi and Interaction Design at National Institute of Design, Bangalore.</p>
+                            <p>I pride myself on being a quick learner and love new challenges.</p>
+                        </div>
+                        <div  class="midSeperator"><hr></div>
                     </div>
-                    <div class="col-xs-12 col-sm-1 col-md-2 scol-lg-2 empty"></div>
-                    <div class="col-xs-12 col-sm-4 col-md-3 scol-lg-3 ContactDetails">
-                        <p>Contact details go here</p>
-                        <p>Social media links go here</p>
-                    </div>
-                    <div class="col-xs-12 col-sm-1 col-md-2 scol-lg-2 empty"></div>
-                </div>
-            </div> <!-- End of Main Content -->
-        </div>
-        <div class = "footer" >
-            <div class="container">
-                <div class="row sections HFContainer">
-                    <div class = "col-xs-3 col-sm-6 FooterNav" id="FooterLeft">
 
-                    </div>
-                    <div class = "col-xs-9 col-sm-6 FooterNav" id="FooterRight">
+                    <div class="col-12 col-md-5 col-lg-4 offset-md-1  rightPane">
+                        <div class="contactDetails">
+                            <h3>Say hi!</h3>
 
+                            <form class="mailer" action="mailto:a.k.shaykhurana@gmail.com" method="post" enctype="text/plain">
+                                <h2></h2>Name:<br>
+                                <input type="text" name="name"><br>
+                                E-mail:<br>
+                                <input type="text" name="mail"><br>
+                                Comment:<br>
+                                <input type="text" name="comment" size="35"><br><br>
+                                <input type="submit" value="Send">
+                                <input type="reset" value="Reset">
+                            </form>
+                            <hr>
+
+                        </div>
+                        <div class="socialMedia col-12">
+                            <div class="row">
+                                <div class="col-2 socialMediaButtons">
+                                    <a href="mybehance"><img src="images/behance.svg"></a>
+                                </div>
+                                <div class="col-2 socialMediaButtons">
+                                    <a href="linkedin"><img src="images/linkedin.svg"></a>
+                                </div>
+                                <div class="col-2 socialMediaButtons">
+                                    <a href="mybehance"><img src="images/youtube.svg"></a>
+                                </div>
+                                <div class="col-2 socialMediaButtons">
+                                    <a href="instagram"><img src="images/instagram.svg"></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class = "footer">
+            <div class="container">
+                <div class="row HFContainer">
+                    <div class="col-12">
+                        <h2 class="tataText">thanks for visiting!</h2>
+                    </div>
+                </div>
+            </div>
         </div>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
 
-    <!-- Import local javascripts -->
-    <script type="text/javascript" src="js\PageLoad.js"></script> 
+        <!-- Import local javascripts -->
+        <script type="text/javascript" src="js\PageLoad.js"></script> 
     </body>
 </html>

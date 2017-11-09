@@ -42,15 +42,17 @@ var orderChronology=[
 //Set default filter behaviour
 filter = 'type';
 
+
 //MAIN FUNCTIONS
 //Wait for Page Load
 $(document).ready(function() {
 
-    //show Loading screen
+    //show Loading screen and change default filter colour
     animateToggle(".Loading Screen", 1);
+    $("#fType").css('color' , 'dodgerblue');
 
     //Have a timeout before data loading
-    var delayMillis = 1000; //1 second
+    var delayMillis = 4000; //4 second
     setTimeout(function() {
         //Call for first data loading, callback refreshProjects with appropriate parameter
         dataLoad(refreshProjects);    
@@ -58,20 +60,41 @@ $(document).ready(function() {
 
     //Buttons change type  
     $("#fType").click(function() {
-        $("#fChronology>h2").css('color' , '');
-        $("#fType>h2").css('color' , 'dodgerblue');
+        $("#fChronology").css('color' , '');
+        $("#fType").css('color' , 'dodgerblue');
         filter = "type";
         refreshProjects(filter, animateToggle);
     });
 
     $("#fChronology").click(function() {
-        $("#fChronology>h2").css('color' , 'dodgerblue');
-        $("#fType>h2").css('color' , '');
+        $("#fChronology").css('color' , 'dodgerblue');
+        $("#fType").css('color' , '');
         filter = "chronology";
         refreshProjects(filter, animateToggle);
     });
-
     // console.log("Button toggles working");
+
+    // Shine elements
+    var shine1 = new Shine(document.getElementById('shiny1'));
+    var shine2 = new Shine(document.getElementById('shiny2'));
+
+    function update() {
+        window.requestAnimationFrame(update);
+        var time = new Date().getTime();
+        var speed = 0.00025;  // 1 = 1000 rotations/s
+        var phase = time * speed * 2.0 * Math.PI;
+        var radiusX = window.innerWidth * 0.5;
+        var radiusY = window.innerHeight * 0.5;
+        shine1.light.position.x = radiusX + radiusX * Math.cos(phase);
+        shine1.light.position.y = radiusY + radiusY * Math.sin(phase * 0.7);
+        shine1.draw();
+        shine2.light.position.x = radiusX + radiusX * Math.cos(phase);
+        shine2.light.position.y = radiusY + radiusY * Math.sin(phase * 0.7);
+        shine2.draw();
+    }
+
+    update();
+
 })
 
 
@@ -119,7 +142,7 @@ function removeInvisible () {
 //External function to refresh project list in view
 function refreshProjects(filter, screenRefreshCallback) {
     // Clear previously held data, if any, clear visible IDs, clear visible sidebar entries
-    $(".thumbsInner").empty();
+    $(".card").empty();
     $(".sideTitle").empty();
     $(".sideDescription").empty();
     visibleIDs=[];
@@ -132,8 +155,8 @@ function refreshProjects(filter, screenRefreshCallback) {
         ID = findID(listing[i], filter);
         console.log("Project loaded: " + (i + 1) + " " + listing[i].ProjectName + " at " + ID);
 
-        //Show data of this listing
-        showData (listing[i], ID, filter);
+        //Publish data of this listing
+        publishData (listing[i], ID, filter);
         console.log("Show data for no." + (i +1) +" done");
     }
 
@@ -163,29 +186,29 @@ function refreshProjects(filter, screenRefreshCallback) {
     // Kill all invisible IDs as a precaution
     //console.log("IDs populated");
     console.log(visibleIDs);
-    $(".thumbsOuter").hide();
+    $(".cardDiv").hide();
     for (i = 0; i<visibleIDs.length; i++) {
         $(visibleIDs[i]).show();
     }
 
     //Remove extra horizontal seperators
     if (filter=="chronology") {
-        $("#sep3").hide();
-        $("#sep4").hide();
+        $("#Sep3").hide();
+        $("#Sep4").hide();
     }
     else {
-        $("#sep3").show();
-        $("#sep4").show();
+        $("#Sep3").show();
+        $("#Sep4").show();
     }
 
-    //Hide descriptions by default then remove loading screen
+    // Remove loading screen
     console.log("Default load animations");
-    screenRefreshCallback(".thumbsOuter .thumbDescription",0);
     screenRefreshCallback(".LoadingScreen",0);
 
     //Execute animations
     console.log("trying to animate elements");
     animations();
+
 
 } //End of function
 
@@ -214,29 +237,39 @@ function findID(entry, filter) {
 }
 
 //External function to show data in ID
-function showData(entry, ID, filter) {
-    var thumbPath = "", projectSub = "";
+function publishData(entry, ID, filter) {
+    var thumbPath = "", projectSub = "", number;
 
     //console.log("trying to add data to " + ID);
     thumbPath=thumbPathFind(entry);
     switch (filter) {
         case "type":
             projectSub = entry.Year;
+            number=entry.TypeProject;
             break;
         case "chronology":
             projectSub = entry.Type;
+            number=entry.ChronoProject;
             break;
                   }
-    $(ID + ">.thumbsInner").append("<img src=" + thumbPath + ">");
-    $(ID + ">.thumbsInner").append("<div class = \"textOverlay\">" + 
-                                   "<div class = \"thumbTitle\"><h4>"
-                                   + entry.ProjectName
-                                   + "</h4></div>"+
-                                   "<div class = \"thumbSubtitle\"><h5>" 
-                                   + projectSub + "</h5></div>" + 
-                                   "<div class = \"thumbDescription\"><p>" + entry.Description + "</p></div>" 
-                                   + "</div>"
-                                  + "<div class = \"colorOverlay\"></div>");
+
+    $(ID + ">.card").append("<img class=\"card-img\" src=" 
+                            + thumbPath + ">");
+
+    $(ID + ">.card").append("<div class = \"card-img-overlay\">" 
+                            + "<h4 class=\"card-title card-project\">"
+                            + entry.ProjectName
+                            + "</h4>"
+                            + "<p class=\"card-text card-subtitle\">" 
+                            + projectSub + "</p>"
+                            + "<p class=\"card-text card-number\">" 
+                            + number + "</p>"
+                           );
+
+    $(ID + ">.card").append("<div class = \"card-img-overlay hoverMode\">"  
+                            + "<p class = \"card-text card-description\">" 
+                            + entry.Description + "</p>");
+
 }
 
 //External function to construct ID names
@@ -263,17 +296,18 @@ function constructID(i, j, classification) {
 function thumbPathFind(entry) {
 
     var thumbPath = encodeURI("projects/" + entry.Type + "/" + entry.URL + "/thumbnail.jpeg");
-    // console.log("Generated path: projects/" + entry.Type + "/" + entry.URL + "/thumbnail.jpeg"); 
+    console.log("Generated path: projects/" + entry.Type + "/" + entry.URL + "/thumbnail.jpeg"); 
     return thumbPath;
 }
 
 //schedule all animations
 function animations(){
-    for ( i=0; i<visibleIDs.length; i++) {
-        var tempID = visibleIDs[i];
-        //Hover animation on thumbs
-        animationHover(tempID, "fadeIn", 300);
-            }
+    $(".card").hover(function(){
+        $(this).children(".hoverMode").show();
+        $(this).children(".hoverMode").addClass('animated slideInUp');
+    }, function(){
+        $(this).children(".hoverMode").hide();
+    });
 }
 
 //Self written function to toggle on and off
@@ -287,39 +321,4 @@ function animateToggle(what, param){
             $(what).fadeIn(); 
             break;
                  }
-}
-
-//animate thumbs on hover
-function animationHover(element, animation, timeOut){
-    var descID = element + " .thumbDescription";
-    descID = $(descID);
-    var titleID = element + " .thumbTitle";
-    titleID = $(descID);
-    var subID = element + " .thumbSubtitle";
-    subID = $(descID);
-    var defaultHeight = overlayID.css('height');
-    var overlayID = element + " .colorOverlay";
-    overlayID = $(overlayID);
-
-    element= element + ">.thumbsInner";
-    element = $(element);
-    
-    
-    element.hover(
-        function() {
-            overlayID.css('height', '40%');
-            descID.fadeIn();            
-            element.addClass('animated ' + animation);        
-        },
-        function(){
-            //wait for animation to finish before removing classes
-            descID.fadeOut();
-            titleID.fadeOut();
-            subID.fadeOut();
-            
-            window.setTimeout( function(){
-                overlayID.css(defaultHeight);
-                element.removeClass('animated ' + animation);
-            }, timeOut); 
-        });
 }
