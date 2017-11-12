@@ -1,8 +1,9 @@
 //Global variables
-var filter, listing, total, noSections = 5, noProjects = 12, visibleIDs = [];
+var filter, listing, total, noSections = 5, noProjects = 12, visibleIDs = [], TypeDescriptions = [], ChronoDescriptions = [];
 
+/*
 //Match with Excel
-var orderType = [  
+var TypeDescriptions = [  
     {  
         "SectionName":"Web",
         "SectionDescription":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci."
@@ -24,7 +25,7 @@ var orderType = [
         "SectionDescription":"Aenean nec lorem. In porttitor. Donec laoreet nonummy augue. Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy. Fusce aliquet pede non pede. Suspendisse dapibus lorem pellentesque magna. Integer nulla."
     }
 ];
-var orderChronology=[  
+var ChronoDescriptions=[  
     {  
         "SectionName":"2017",
         "SectionDescription":"Projects done in the year 2017 at NID"
@@ -37,7 +38,7 @@ var orderChronology=[
         "SectionName":"2015",
         "SectionDescription":"Prior to NID"
     }
-];
+];*/
 
 //Set default filter behaviour
 filter = 'type';
@@ -51,28 +52,8 @@ $(document).ready(function() {
     animateToggle(".Loading Screen", 1);
     $("#fType").css('color' , 'dodgerblue');
 
-    //Have a timeout before data loading
-    var delayMillis = 4000; //4 second
-    setTimeout(function() {
-        //Call for first data loading, callback refreshProjects with appropriate parameter
-        dataLoad(refreshProjects);    
-    }, delayMillis);
-
-    //Buttons change type  
-    $("#fType").click(function() {
-        $("#fChronology").css('color' , '');
-        $("#fType").css('color' , 'dodgerblue');
-        filter = "type";
-        refreshProjects(filter, animateToggle);
-    });
-
-    $("#fChronology").click(function() {
-        $("#fChronology").css('color' , 'dodgerblue');
-        $("#fType").css('color' , '');
-        filter = "chronology";
-        refreshProjects(filter, animateToggle);
-    });
-    // console.log("Button toggles working");
+    //Immediately load data (loading screen removed in stack)
+    dataLoad(refreshProjects);
 
     // Shine elements
     var shine1 = new Shine(document.getElementById('shiny1'));
@@ -103,17 +84,32 @@ $(document).ready(function() {
 
 //External function to call dat loading from JSON
 function dataLoad(refreshCallback) {
-    //Load local json file into local object
-    $.getJSON("js/Listing.json", function(json) {
+    //Load Portfolio listing into local JSON
+    $.getJSON("js/PortfolioListing.json", function(json) {
         listing = json;
         console.log("JSON has been loaded locally");
         console.log(listing);
 
-        //Truncate invisible objects
+        //Truncate objects marked as invisible in Excel
         removeInvisible ();
 
-        //Set type as default blue colour
-        $("#fType>h2").css('color' , 'dodgerblue');
+        //Execute callback
+        refreshCallback(filter, animateToggle);
+    });
+    //Load Type Descriptions into local JSON
+    $.getJSON("js/TypeDescriptions.json", function(json) {
+        TypeDescriptions = json;
+        console.log("JSON has been loaded locally");
+        console.log(TypeDescriptions);
+
+        //Execute callback
+        refreshCallback(filter, animateToggle);
+    });
+    //Load Chrono Descriptions into local JSON
+    $.getJSON("js/ChronoDescriptions.json", function(json) {
+        ChronoDescriptions = json;
+        console.log("JSON has been loaded locally");
+        console.log(ChronoDescriptions);
 
         //Execute callback
         refreshCallback(filter, animateToggle);
@@ -153,39 +149,39 @@ function refreshProjects(filter, screenRefreshCallback) {
     // Add projects one by one
     for (i=0; i<total; i++) {
         ID = findID(listing[i], filter);
-        console.log("Project loaded: " + (i + 1) + " " + listing[i].ProjectName + " at " + ID);
+        // console.log("Project loaded: " + (i + 1) + " " + listing[i].ProjectName + " at " + ID);
 
         //Publish data of this listing
         publishData (listing[i], ID, filter);
-        console.log("Show data for no." + (i +1) +" done");
+        // console.log("Show data for no." + (i +1) +" done");
     }
 
     // Refresh sidebar
-
     switch (filter) {
         case "type":
-            for ( i = 0; i<orderType.length; i++) {
+            for ( i = 0; i<TypeDescriptions.length; i++) {
                 ID = constructID (i+1,0,"SideTitle");
-                $(ID).append("<h3>" + orderType[i].SectionName + "</h3>");
-                // console.log("Title of section " + (i + 1) + " added to " +ID);
-                ID = constructID (i+1,0,"SideDescription");
-                $(ID).append("<p>" + orderType[i].SectionDescription + "</p>");
+                $(ID).append("<h3>" + TypeDescriptions[i].SectionName + "</h3>");
+                ID = constructID (i+1, 0 , "SideDescription");
+                $(ID).append("<p>" + TypeDescriptions[i].SectionDescription + "</p>");
                 // console.log("Description of section " + (i + 1) + " added to " +ID);
             }
             break;
         case "chronology":
-            for ( i = 0; i<orderChronology.length; i++) {
+            for ( i = 0; i<ChronoDescriptions.length; i++) {
                 ID = constructID (i+1, 0 , "SideTitle");
-                $(ID).append("<h3>" + orderChronology[i].SectionName + "</h3>");
+                $(ID).append("<h3>" + ChronoDescriptions[i].SectionName + "</h3>");
                 ID = constructID (i+1, 0 , "SideDescription");
-                $(ID).append("<p>" + orderChronology[i].SectionDescription + "</p>");
+                $(ID).append("<p>" + ChronoDescriptions[i].SectionDescription + "</p>");
                 //console.log("Description of section " + (i + 1) + " added to " +ID);
             }
             break;
                   }
-    // Kill all invisible IDs as a precaution
+
+    // Checkpoint massage Remember: Kill all invisible IDs as a precaution
     //console.log("IDs populated");
-    console.log(visibleIDs);
+    //console.log(visibleIDs);
+
     $(".cardDiv").hide();
     for (i = 0; i<visibleIDs.length; i++) {
         $(visibleIDs[i]).show();
@@ -201,14 +197,17 @@ function refreshProjects(filter, screenRefreshCallback) {
         $("#Sep4").show();
     }
 
-    // Remove loading screen
-    console.log("Default load animations");
-    screenRefreshCallback(".LoadingScreen",0);
-
     //Execute animations
     console.log("trying to animate elements");
     animations();
 
+    // Remove loading screen
+    //Ensure timing for bare minimum animation
+    var delayMillis = 4000; //4 second
+    setTimeout(function() {
+        console.log("Loading screen removed after data load");
+        screenRefreshCallback(".LoadingScreen",0);       
+    }, delayMillis);
 
 } //End of function
 
@@ -296,18 +295,36 @@ function constructID(i, j, classification) {
 function thumbPathFind(entry) {
 
     var thumbPath = encodeURI("projects/" + entry.Type + "/" + entry.URL + "/thumbnail.jpeg");
-    console.log("Generated path: projects/" + entry.Type + "/" + entry.URL + "/thumbnail.jpeg"); 
+    //  console.log("Generated path: projects/" + entry.Type + "/" + entry.URL + "/thumbnail.jpeg"); 
     return thumbPath;
 }
 
 //schedule all animations
 function animations(){
+
+    //Set hover animations for cards
     $(".card").hover(function(){
         $(this).children(".hoverMode").show();
         $(this).children(".hoverMode").addClass('animated slideInUp');
     }, function(){
         $(this).children(".hoverMode").hide();
     });
+
+    //Animate filter buttons and set their ehaviours 
+    $("#fType").click(function() {
+        $("#fChronology").css('color' , '');
+        $("#fType").css('color' , 'dodgerblue');
+        filter = "type";
+        refreshProjects(filter, animateToggle);
+    });
+    $("#fChronology").click(function() {
+        $("#fChronology").css('color' , 'dodgerblue');
+        $("#fType").css('color' , '');
+        filter = "chronology";
+        refreshProjects(filter, animateToggle);
+    });
+    // console.log("Button toggles working");
+
 }
 
 //Self written function to toggle on and off
