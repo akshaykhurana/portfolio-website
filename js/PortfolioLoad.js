@@ -1,71 +1,43 @@
 //Global variables
 var filter, listing, total, noSections = 5, noProjects = 12, visibleIDs = [], TypeDescriptions = [], ChronoDescriptions = [];
 
-/*
-//Match with Excel
-var TypeDescriptions = [  
-    {  
-        "SectionName":"Web",
-        "SectionDescription":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci."
-    },
-    {  
-        "SectionName":"Product",
-        "SectionDescription":"Aenean nec lorem. In porttitor. Donec laoreet nonummy augue. Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy. Fusce aliquet pede non pede. Suspendisse dapibus lorem pellentesque magna. Integer nulla."
-    },
-    {  
-        "SectionName":"Graphics",
-        "SectionDescription":"Donec blandit feugiat ligula. Donec hendrerit, felis et imperdiet euismod, purus ipsum pretium metus, in lacinia nulla nisl eget sapien. Donec ut est in lectus consequat consequat. Etiam eget dui. Aliquam erat volutpat. Sed at lorem in nunc porta tristique. Proin nec augue. Quisque aliquam tempor magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
-    },
-    {  
-        "SectionName":"Space",
-        "SectionDescription":"Nunc ac magna. Maecenas odio dolor, vulputate vel, auctor ac, accumsan id, felis. Pellentesque cursus sagittis felis. Pellentesque porttitor, velit lacinia egestas auctor, diam eros tempus arcu, nec vulputate augue magna vel risus. Cras non magna vel ante adipiscing rhoncus. Vivamus a mi. Morbi neque. Aliquam erat volutpat. Integer ultrices lobortis eros."
-    },
-    {  
-        "SectionName":"Others",
-        "SectionDescription":"Aenean nec lorem. In porttitor. Donec laoreet nonummy augue. Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy. Fusce aliquet pede non pede. Suspendisse dapibus lorem pellentesque magna. Integer nulla."
-    }
-];
-var ChronoDescriptions=[  
-    {  
-        "SectionName":"2017",
-        "SectionDescription":"Projects done in the year 2017 at NID"
-    },
-    {  
-        "SectionName":"2016",
-        "SectionDescription":"Projects done in the year 2016 at NID"
-    },
-    {  
-        "SectionName":"2015",
-        "SectionDescription":"Prior to NID"
-    }
-];*/
-
 //Set default filter behaviour
 filter = 'type';
 
-
 //MAIN FUNCTIONS
 //Wait for Page Load
-$(document).ready(function() {
+$(document).ready(function () {
 
     //show Loading screen and change default filter colour
     animateToggle(".Loading Screen", 1);
-    $("#fType").css('color' , 'dodgerblue');
+    $("#fType").css('color', 'dodgerblue');
 
     //Immediately load data (loading screen removed in stack)
     dataLoad(refreshProjects);
 
     // Shine elements
-    var shine1 = new Shine(document.getElementById('shiny1'));
+
+    /*   var config = new shinejs.Config({
+        numSteps: 5,
+        opacity: 0.9,
+        shadowRGB: new shinejs.Color(20, 20, 20)
+    }); 
+       shine1.config = config;
+    shine2.config = config;
+    */
+
+    var shine1 = new Shine(document.getElementById('shiny1'),null,null,"textShadow");
     var shine2 = new Shine(document.getElementById('shiny2'));
+
 
     function update() {
         window.requestAnimationFrame(update);
-        var time = new Date().getTime();
-        var speed = 0.00025;  // 1 = 1000 rotations/s
-        var phase = time * speed * 2.0 * Math.PI;
-        var radiusX = window.innerWidth * 0.5;
-        var radiusY = window.innerHeight * 0.5;
+        var time, speed, phase, radiusX, radiusY;
+        time = new Date().getTime();
+        speed = 0.00025;  // 1 = 1000 rotations/s
+        phase = time * speed * 2.0 * Math.PI;
+        radiusX = window.innerWidth * 0.6;
+        radiusY = window.innerHeight * 0.6;
         shine1.light.position.x = radiusX + radiusX * Math.cos(phase);
         shine1.light.position.y = radiusY + radiusY * Math.sin(phase * 0.7);
         shine1.draw();
@@ -77,8 +49,6 @@ $(document).ready(function() {
     update();
 
 })
-
-
 
 //EXTERNAL FUNCTIONS
 
@@ -178,10 +148,6 @@ function refreshProjects(filter, screenRefreshCallback) {
             break;
                   }
 
-    // Checkpoint massage Remember: Kill all invisible IDs as a precaution
-    //console.log("IDs populated");
-    //console.log(visibleIDs);
-
     $(".cardDiv").hide();
     for (i = 0; i<visibleIDs.length; i++) {
         $(visibleIDs[i]).show();
@@ -237,10 +203,12 @@ function findID(entry, filter) {
 
 //External function to show data in ID
 function publishData(entry, ID, filter) {
-    var thumbPath = "", projectSub = "", number;
+    var thumbPath = "", projectSub = "", number, projectURL;
 
     //console.log("trying to add data to " + ID);
-    thumbPath=thumbPathFind(entry);
+    thumbPath = pathFind(entry, "thumbs");
+    projectURL = pathFind(entry, "links");
+
     switch (filter) {
         case "type":
             projectSub = entry.Year;
@@ -251,24 +219,28 @@ function publishData(entry, ID, filter) {
             number=entry.ChronoProject;
             break;
                   }
-
+    //Construct image path. Image will decide height of div
     $(ID + ">.card").append("<img class=\"card-img\" src=" 
-                            + thumbPath + ">");
-
-    $(ID + ">.card").append("<div class = \"card-img-overlay\">" 
+                            + thumbPath 
+                            + ">");
+    //Construct the always on text overlay
+    $(ID + ">.card").append("<a href = \""
+                            + projectURL
+                            + "\"><div class = \"card-img-overlay\">" 
                             + "<h4 class=\"card-title card-project\">"
                             + entry.ProjectName
                             + "</h4>"
                             + "<p class=\"card-text card-subtitle\">" 
                             + projectSub + "</p>"
                             + "<p class=\"card-text card-number\">" 
-                            + number + "</p>"
+                            + number + "</p></div></a>"
                            );
-
-    $(ID + ">.card").append("<div class = \"card-img-overlay hoverMode\">"  
+    //Construct the hovermode only description
+    $(ID + ">.card").append("<a href = \""
+                            + projectURL
+                            + "\"><div class = \"card-img-overlay hoverMode\">"  
                             + "<p class = \"card-text card-description\">" 
-                            + entry.Description + "</p>");
-
+                            + entry.Description + "</p></div></a>");
 }
 
 //External function to construct ID names
@@ -276,7 +248,7 @@ function constructID(i, j, classification) {
     var temp = "";
 
     switch(classification) {
-        case "thumbs": 
+        case "thumbs":
             temp = "#S" + i + "P" + j;
             return temp;  
             break;
@@ -292,11 +264,19 @@ function constructID(i, j, classification) {
 }
 
 //External function to create thumbnail paths
-function thumbPathFind(entry) {
+function pathFind(entry, what) {
+    var path;
 
-    var thumbPath = encodeURI("projects/" + entry.Type + "/" + entry.URL + "/thumbnail.jpeg");
-    //  console.log("Generated path: projects/" + entry.Type + "/" + entry.URL + "/thumbnail.jpeg"); 
-    return thumbPath;
+    switch(what) {
+        case "thumbs":
+            path = encodeURI("projects/" + entry.Type + "/" + entry.URL + "/thumbnail.jpeg");
+            //  console.log("Generated path: projects/" + entry.Type + "/" + entry.URL + "/thumbnail.jpeg"); 
+            return path;
+        case "links":
+            path = encodeURI("projects/" + entry.Type + "/" + entry.URL + "/projectPage.html");
+            //  console.log("Generated path: projects/" + entry.Type + "/" + entry.URL + "/projectPage.html"); 
+            return path;
+               }
 }
 
 //schedule all animations
@@ -304,10 +284,10 @@ function animations(){
 
     //Set hover animations for cards
     $(".card").hover(function(){
-        $(this).children(".hoverMode").show();
-        $(this).children(".hoverMode").addClass('animated slideInUp');
+        $(this).find(".hoverMode").show();
+        $(this).find(".hoverMode").addClass('animated slideInUp');
     }, function(){
-        $(this).children(".hoverMode").hide();
+        $(this).find(".hoverMode").hide();
     });
 
     //Animate filter buttons and set their ehaviours 
