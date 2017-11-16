@@ -153,16 +153,17 @@ body {
 }
 .card-number{
     width: 1em;
-    font-size: 3em;
+    font-size: 3.5em;
     position: relative;
-    top: -1.25em;
-    left: -.5em;
+    top: -.55em;
+    left: .15em;
 
     color: darkgrey;
     opacity: .5;
 
     z-index: 1;
 }
+
 .card-subtitle {
     position: absolute;
     top: 3em;
@@ -209,8 +210,6 @@ img{
 a:hover{
     text-decoration:  none;
 }
-
-/* CONTACT PAGE */
 
 /* FONTS */
 h1{
@@ -280,7 +279,6 @@ p {
     margin-bottom: 2em;
     height: auto;
 }
-
 .JackOf{
     margin-top: .75em;
     margin-bottom: 1em;
@@ -296,7 +294,12 @@ p {
     padding: .6em .6em .6em 0em;
 }
 .mailer {
+    display: flex;
+    flex-direction: column;
     margin-top: 3em;
+}
+.mailer>h4 {
+    margin-top: .75em;
 }
 .aboutMeText h3 {
     font-size: 2em;
@@ -305,6 +308,15 @@ p {
     font-size: 1.1em;
     letter-spacing: .025em;
 }
+.formButtons {
+    background-color: dodgerblue;
+    border: solid;
+    color: white;
+}
+.contactFields {
+    margin-bottom: .75em;
+}
+
 
 
 /* Media queries for other device sizes */
