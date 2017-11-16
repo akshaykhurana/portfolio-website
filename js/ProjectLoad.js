@@ -33,7 +33,7 @@ $(document).ready(function () {
 
     // Remove loading screen
     //Ensure timing for bare minimum animation
-    var delayMillis = 4000; //4 second
+    var delayMillis = 1000; //4 second
     setTimeout(function() {
         console.log("Loading screen removed after data load");
         animateToggle(".LoadingScreen", 0);   
