@@ -1,22 +1,9 @@
 ﻿[
  {
-   "ProjectName": "Karkat",
-   "Year": 2016,
-   "Type": "Web",
-   "ProjectVisible": "Yes",
-   "Description": "Screen based application to spread awareness about garbage segregation and persistence of solid waste",
-   "URL": "Karkat",
-   "LinkImage": "thumbnail.jpeg",
-   "TypeSection": 1,
-   "TypeProject": 1,
-   "ChronoSection": 2,
-   "ChronoProject": 2
- },
- {
    "ProjectName": "Radiohead DataViz",
    "Year": 2017,
    "Type": "Web",
-   "ProjectVisible": "Yes",
+   "ProjectVisible": "No",
    "Description": "A data visualisation of Radiohead's music ",
    "URL": "Radiohead Data Visualisation",
    "LinkImage": "thumbnail.jpeg",
@@ -29,20 +16,20 @@
    "ProjectName": "Delhi's Disappearing Heritage",
    "Year": 2017,
    "Type": "Web",
-   "ProjectVisible": "Yes",
+   "ProjectVisible": "No",
    "Description": "Visualisation of Delhi's disappearing data",
    "URL": "Delhi Mapping",
    "LinkImage": "thumbnail.jpeg",
    "TypeSection": 1,
    "TypeProject": 3,
    "ChronoSection": 1,
-   "ChronoProject": 4
+   "ChronoProject": 7
  },
  {
    "ProjectName": "OK Me",
    "Year": 2017,
    "Type": "Web",
-   "ProjectVisible": "Yes",
+   "ProjectVisible": "No",
    "Description": "Futures of a voice based personal assistant",
    "URL": "OK Me",
    "LinkImage": "thumbnail.jpeg",
@@ -88,7 +75,7 @@
    "TypeSection": 2,
    "TypeProject": 3,
    "ChronoSection": 1,
-   "ChronoProject": 5
+   "ChronoProject": 4
  },
  {
    "ProjectName": "Shower Gel Packaging",
@@ -104,20 +91,33 @@
    "ChronoProject": 3
  },
  {
-   "ProjectName": "Indo-Pak War",
-   "Year": 2015,
+   "ProjectName": "Inktober",
+   "Year": 2017,
    "Type": "Graphics",
    "ProjectVisible": "Yes",
-   "Description": "Exhibit and graphic design for the Signalling and Engineering corps of the Indian Army",
-   "URL": "War Exhibit",
+   "Description": "Illustrations from a pen and ink challenge for October 2017. All illustrations follow a prompt from the offcial Inktober 2017 list.",
+   "URL": "Inktober",
    "LinkImage": "thumbnail.jpeg",
    "TypeSection": 3,
-   "TypeProject": 1,
-   "ChronoSection": 3,
-   "ChronoProject": 3
+   "TypeProject": 2,
+   "ChronoSection": 1,
+   "ChronoProject": 5
  },
  {
-   "ProjectName": "Book Covers",
+   "ProjectName": "Karkat",
+   "Year": 2016,
+   "Type": "Web",
+   "ProjectVisible": "Yes",
+   "Description": "Screen based application to spread awareness about garbage segregation and persistence of solid waste",
+   "URL": "Karkat",
+   "LinkImage": "thumbnail.jpeg",
+   "TypeSection": 1,
+   "TypeProject": 1,
+   "ChronoSection": 2,
+   "ChronoProject": 2
+ },
+ {
+   "ProjectName": "Digital Book Covers",
    "Year": 2016,
    "Type": "Graphics",
    "ProjectVisible": "Yes",
@@ -125,7 +125,7 @@
    "URL": "Book Covers",
    "LinkImage": "thumbnail.jpeg",
    "TypeSection": 3,
-   "TypeProject": 2,
+   "TypeProject": 1,
    "ChronoSection": 2,
    "ChronoProject": 1
  },
@@ -138,54 +138,15 @@
    "URL": "Bass Foundry",
    "LinkImage": "thumbnail.jpeg",
    "TypeSection": 3,
-   "TypeProject": 4,
+   "TypeProject": 3,
    "ChronoSection": 2,
    "ChronoProject": 3
- },
- {
-   "ProjectName": "Inktober",
-   "Year": 2017,
-   "Type": "Graphics",
-   "ProjectVisible": "Yes",
-   "Description": "Illustrations from a pen and ink challenge for October 2017. All illustrations follow a prompt from the offcial Inktober 2017 list.",
-   "URL": "Inktober",
-   "LinkImage": "thumbnail.jpeg",
-   "TypeSection": 3,
-   "TypeProject": 3,
-   "ChronoSection": 1,
-   "ChronoProject": 7
- },
- {
-   "ProjectName": "High Rise Urbanism",
-   "Year": 2015,
-   "Type": "Space",
-   "ProjectVisible": "Yes",
-   "Description": "An attempt to rationalize FAR limitations in an underutilised transit corridor",
-   "URL": "High Rise Barakhamba",
-   "LinkImage": "thumbnail.jpeg",
-   "TypeSection": 4,
-   "TypeProject": 1,
-   "ChronoSection": 3,
-   "ChronoProject": 1
- },
- {
-   "ProjectName": "Skywalk",
-   "Year": 2015,
-   "Type": "Space",
-   "ProjectVisible": "Yes",
-   "Description": "Winning competition entry for a pedestrian overbridge in Pragati Maidan, New Delhi",
-   "URL": "Skywalk",
-   "LinkImage": "thumbnail.jpeg",
-   "TypeSection": 4,
-   "TypeProject": 2,
-   "ChronoSection": 3,
-   "ChronoProject": 2
  },
  {
    "ProjectName": "Store Design",
    "Year": 2016,
    "Type": "Space",
-   "ProjectVisible": "Yes",
+   "ProjectVisible": "No",
    "Description": "Store and fixture design for an established Delhi based manufacturer and retailer of musical instruments",
    "URL": "Raj Musicals",
    "LinkImage": "thumbnail.jpeg",
@@ -198,7 +159,7 @@
    "ProjectName": "Enough",
    "Year": 2016,
    "Type": "Others",
-   "ProjectVisible": "Yes",
+   "ProjectVisible": "No",
    "Description": "Short movie for a Swachh Bharat Initiative and the Indian railways",
    "URL": "Enough",
    "LinkImage": "thumbnail.jpeg",
@@ -206,5 +167,44 @@
    "TypeProject": 1,
    "ChronoSection": 2,
    "ChronoProject": 4
+ },
+ {
+   "ProjectName": "Indo-Pak War Exhibit",
+   "Year": 2015,
+   "Type": "Graphics",
+   "ProjectVisible": "No",
+   "Description": "Exhibit and graphic design for the Signalling and Engineering corps of the Indian Army",
+   "URL": "War Exhibit",
+   "LinkImage": "thumbnail.jpeg",
+   "TypeSection": 3,
+   "TypeProject": 4,
+   "ChronoSection": 3,
+   "ChronoProject": 3
+ },
+ {
+   "ProjectName": "High Rise Urbanism",
+   "Year": 2015,
+   "Type": "Space",
+   "ProjectVisible": "No",
+   "Description": "An attempt to rationalize FAR limitations in an underutilised transit corridor",
+   "URL": "High Rise Barakhamba",
+   "LinkImage": "thumbnail.jpeg",
+   "TypeSection": 4,
+   "TypeProject": 2,
+   "ChronoSection": 3,
+   "ChronoProject": 2
+ },
+ {
+   "ProjectName": "Skywalk",
+   "Year": 2015,
+   "Type": "Space",
+   "ProjectVisible": "Yes",
+   "Description": "Winning competition entry for a pedestrian overbridge in Pragati Maidan, New Delhi",
+   "URL": "Skywalk",
+   "LinkImage": "thumbnail.jpeg",
+   "TypeSection": 4,
+   "TypeProject": 1,
+   "ChronoSection": 3,
+   "ChronoProject": 1
  }
 ]

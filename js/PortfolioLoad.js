@@ -1,5 +1,5 @@
 //Global variables
-var filter, listing, total, noSections = 5, noProjects = 12, visibleIDs = [], TypeDescriptions = [], ChronoDescriptions = [];
+var filter, listing, total, visibleIDs = [], TypeDescriptions = [], ChronoDescriptions = [];
 
 //Set default filter behaviour
 filter = 'type';
@@ -17,18 +17,22 @@ $(document).ready(function () {
 
     // Shine elements
 
-    /*   var config = new shinejs.Config({
-        numSteps: 5,
-        opacity: 0.9,
+    var config = new shinejs.Config({
+        numSteps: 10,
+        opacity: 0.075,
+        opacityPow: 2,
+        offset: .15,
+        offsetPow: 1.8,
+        blur: 50,
+        blurPow: 1.5,
         shadowRGB: new shinejs.Color(20, 20, 20)
-    }); 
-       shine1.config = config;
-    shine2.config = config;
-    */
+    });  
 
     var shine1 = new Shine(document.getElementById('shiny1'),null,null,"textShadow");
     var shine2 = new Shine(document.getElementById('shiny2'));
 
+    shine1.config = config;
+    shine2.config = config;
 
     function update() {
         window.requestAnimationFrame(update);
@@ -52,7 +56,7 @@ $(document).ready(function () {
 
 //EXTERNAL FUNCTIONS
 
-//External function to call dat loading from JSON
+//External function to call data loading from JSON
 function dataLoad(refreshCallback) {
     //Load Portfolio listing into local JSON
     $.getJSON("js/PortfolioListing.json", function(json) {
@@ -146,7 +150,7 @@ function refreshProjects(filter, screenRefreshCallback) {
                 //console.log("Description of section " + (i + 1) + " added to " +ID);
             }
             break;
-                  }
+    }
 
     $(".cardDiv").hide();
     for (i = 0; i<visibleIDs.length; i++) {
@@ -192,7 +196,7 @@ function findID(entry, filter) {
             sectionNo = entry.ChronoSection;
             ProjectNo = entry.ChronoProject;
             break;
-                  }
+    }
 
     var ID = constructID (sectionNo, ProjectNo, "thumbs");
     visibleIDs.push(ID);
@@ -218,7 +222,7 @@ function publishData(entry, ID, filter) {
             projectSub = entry.Type;
             number=entry.ChronoProject;
             break;
-                  }
+    }
     //Construct image path. Image will decide height of div
     $(ID + ">.card").append("<img class=\"card-img\" src=" 
                             + thumbPath 
@@ -260,7 +264,7 @@ function constructID(i, j, classification) {
             temp = "#S" + i + "D";
             return temp;  
             break;
-                         }
+    }
 }
 
 //External function to create thumbnail paths
@@ -276,7 +280,7 @@ function pathFind(entry, what) {
             path = encodeURI("projects/" + entry.Type + "/" + entry.URL + "/projectPage.html");
             //  console.log("Generated path: projects/" + entry.Type + "/" + entry.URL + "/projectPage.html"); 
             return path;
-               }
+    }
 }
 
 //schedule all animations
@@ -317,5 +321,5 @@ function animateToggle(what, param){
         case 1:
             $(what).fadeIn(); 
             break;
-                 }
+    }
 }

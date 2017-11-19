@@ -33,7 +33,7 @@ $(document).ready(function () {
 
     // Remove loading screen
     //Ensure timing for bare minimum animation
-    var delayMillis = 1000; //4 second
+    var delayMillis = 2000; //1 second only
     setTimeout(function() {
         console.log("Loading screen removed after data load");
         animateToggle(".LoadingScreen", 0);   
@@ -41,18 +41,24 @@ $(document).ready(function () {
 
     // Shine elements
 
-    /*   var config = new shinejs.Config({
-        numSteps: 5,
-        opacity: 0.9,
+    // Shine elements
+
+    var config = new shinejs.Config({
+        numSteps: 10,
+        opacity: 0.075,
+        opacityPow: 2,
+        offset: .15,
+        offsetPow: 1.8,
+        blur: 50,
+        blurPow: 1.5,
         shadowRGB: new shinejs.Color(20, 20, 20)
-    }); 
-       shine1.config = config;
-    shine2.config = config;
-    */
+    });  
 
     var shine1 = new Shine(document.getElementById('shiny1'),null,null,"textShadow");
     var shine2 = new Shine(document.getElementById('shiny2'));
 
+    shine1.config = config;
+    shine2.config = config;
 
     function update() {
         window.requestAnimationFrame(update);
@@ -69,10 +75,8 @@ $(document).ready(function () {
         shine2.light.position.y = radiusY + radiusY * Math.sin(phase * 0.7);
         shine2.draw();
     }
+
     update();
 })
 
 //EXTERNAL FUNCTIONS
-
-
-
