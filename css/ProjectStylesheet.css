@@ -187,7 +187,7 @@ a:hover{
     margin: auto;
     display: block;
     width: 80%;
-    max-width: 700px;
+    max-width: 1200px;
 }
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
@@ -294,17 +294,17 @@ h5{
     margin-bottom: .75em;
 }
 h6{
-    font-family: "Fjord", serif;
+    font-family: "Open Sans", serif;
     font-weight: 600;
-    color: #5c6064;
-    font-size: 1em;
+    color: #636363;
+    font-size: .9em;
     line-height: 1em;
 }
 p {
     font-family: 'Fjord One', serif;
     font-weight: 400;
     font-size: .9em;
-    color: #838383;
+    color: #636363;
 }
 .imgCaption{
     padding-top: .5em; 
