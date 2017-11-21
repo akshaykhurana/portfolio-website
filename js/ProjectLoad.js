@@ -16,7 +16,7 @@ function animateToggle(what, param){
         case 1:
             $(what).fadeIn(); 
             break;
-                 }
+    }
 }
 
 //ANIMATIONS SCHEDULE
@@ -38,8 +38,6 @@ $(document).ready(function () {
         console.log("Loading screen removed after data load");
         animateToggle(".LoadingScreen", 0);   
     }, delayMillis);
-
-    // Shine elements
 
     // Shine elements
 
@@ -77,6 +75,33 @@ $(document).ready(function () {
     }
 
     update();
+
+    //Modal
+    var modal = document.getElementById('modalDiv');
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    $(".modalEnabled").click( function(){
+        var modalImgSrc = $(this).children("img").attr("src");
+        var captionText = $(this).children("img").attr("alt");
+        console.log("Caption is: " + captionText);
+        console.log(modalImgSrc);
+        modal.style.display = "block";
+
+        $("#modalImage").attr("src", modalImgSrc);
+        $("#modalCaption").empty();   
+        $("#modalCaption").append(captionText);   
+    });
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() { 
+        modal.style.display = "none";
+    }
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
 })
 
 //EXTERNAL FUNCTIONS

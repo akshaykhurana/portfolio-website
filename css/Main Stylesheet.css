@@ -463,6 +463,6 @@ p {
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1500px) {
     .container{
-        min-width: 1350px;
+        min-width: 1250px;
     }    
 }

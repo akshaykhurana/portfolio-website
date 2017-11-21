@@ -108,6 +108,9 @@ body {
 .sections{
     padding: 1.5em 0em 1.5em 0em;
 }
+.sections: first-child{
+    padding-top: 2em;
+}
 .sections:last-child{
     padding: 1em 0em 2em 0em;
     border: none;
@@ -123,8 +126,11 @@ body {
 .underConstruction>img {
     width: 60%;
 }
+.projectSubtitle{
+    margin-top: .75em;
+}
 .projectDescription {
-    margin-top: 1em;
+    margin: .5em 0em -2em 0em;
 }
 .behanceRedirect {
     padding-top: 1em;
@@ -139,6 +145,9 @@ body {
 .card {
     margin-bottom: 2.5em;
     border: none;
+}
+img{
+    width: 100%;
 }
 
 /*Also modified in JS file for filters*/
@@ -156,20 +165,24 @@ a:hover{
 }
 /* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    display: none; 
+    position: fixed; 
+    z-index: 20; 
+    padding-top: 100px; 
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    width: 100%; 
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.9); 
 }
 
 /* Modal Content (Image) */
+.modalEnabled{
+    cursor: pointer;
+}
+
 .modal-content {
     margin: auto;
     display: block;
@@ -178,7 +191,7 @@ a:hover{
 }
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
-#caption {
+.modal-caption {
     margin: auto;
     display: block;
     width: 80%;
@@ -266,14 +279,22 @@ h3 {
     text-transform: lowercase;
 }
 h4 {
-    font-family: "Open Sans", serif;
-    font-weight: 300;
-    color: #5c6064;
-    font-size: 1em;
-    line-height: 1em;
-}
+        font-family: "Open Sans", serif;
+        font-weight: 600;
+        color: #5c6064;
+        font-size: .9em;
+        line-height: 1.25em;
+    }
 h5{
     font-family: "Open Sans", serif;
+    font-weight: 600;
+    color: #5c6064;
+    font-size: 1.2em;
+    line-height: 1em;
+    margin-bottom: .75em;
+}
+h6{
+    font-family: "Fjord", serif;
     font-weight: 600;
     color: #5c6064;
     font-size: 1em;
@@ -288,6 +309,9 @@ p {
 .imgCaption{
     padding-top: .5em; 
     text-align :center;
+}
+.listed{
+    padding-left: 1em;
 }
 
 /* Media queries for other device sizes */
@@ -324,7 +348,7 @@ p {
     .PortraitWarning{
         display: none;
     }
-    .sidebar:first-child, .projectPane:first-child {
+    .sections:first-child {
         margin-top: 2em;
     }
     h1{
@@ -342,13 +366,7 @@ p {
         line-height: 1em;
         text-transform: lowercase;
     }
-    h4 {
-        font-family: "Open Sans", serif;
-        font-weight: 600;
-        color: #5c6064;
-        font-size: 1em;
-        line-height: 1em;
-    }
+    
     .IntroText h1{
         font-size: 3em;
     }
@@ -388,6 +406,10 @@ p {
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1500px) {
     .container{
-        min-width: 1350px;
+        min-width: 1250px;
     }    
+}
+
+.extraSpace {
+    padding-top: 1.5em;
 }
