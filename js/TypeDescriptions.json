@@ -1,22 +1,22 @@
 ﻿[
  {
    "SectionName": "web",
-   "SectionDescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci."
+   "SectionDescription": "Experiments with code, web development, UI and data visualisations. I have always been interested in code and developing web experiences but never had any education in the same before 2016. This section is a showcase of newly acquired skills from my education at NID, Bangalore."
  },
  {
    "SectionName": "product",
-   "SectionDescription": "Aenean nec lorem. In porttitor. Donec laoreet nonummy augue. Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy. Fusce aliquet pede non pede. Suspendisse dapibus lorem pellentesque magna. Integer nulla."
+   "SectionDescription": "Architects often take a break from designing built spaces to designing things at smaller scales, and I am no different. This section showcases ideas with a focus on industrial design, experience design and rapid prototyping."
  },
  {
    "SectionName": "graphics",
-   "SectionDescription": "Donec blandit feugiat ligula. Donec hendrerit, felis et imperdiet euismod, purus ipsum pretium metus, in lacinia nulla nisl eget sapien. Donec ut est in lectus consequat consequat. Etiam eget dui. Aliquam erat volutpat. Sed at lorem in nunc porta tristique. Proin nec augue. Quisque aliquam tempor magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
+   "SectionDescription": "I taught myself basic graphic design by making unending presentation drawings during my stint at architecture school. Over time, I've honed this ability by working in print design, web graphics and doing illustrations."
  },
  {
    "SectionName": "space",
-   "SectionDescription": "Nunc ac magna. Maecenas odio dolor, vulputate vel, auctor ac, accumsan id, felis. Pellentesque cursus sagittis felis. Pellentesque porttitor, velit lacinia egestas auctor, diam eros tempus arcu, nec vulputate augue magna vel risus. Cras non magna vel ante adipiscing rhoncus. Vivamus a mi. Morbi neque. Aliquam erat volutpat. Integer ultrices lobortis eros."
+   "SectionDescription": "You really can't take the education out of an architecture school graduate. This section is a selection of some of my best work as an architect/ space designer."
  },
  {
    "SectionName": "others",
-   "SectionDescription": "Aenean nec lorem. In porttitor. Donec laoreet nonummy augue. Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy. Fusce aliquet pede non pede. Suspendisse dapibus lorem pellentesque magna. Integer nulla."
+   "SectionDescription": "Four sections and still, there are things that don't fit into any category. This section is a collection of all the things that give a wide berth to anything listed above."
  }
 ]

@@ -148,6 +148,7 @@ body {
 }
 img{
     width: 100%;
+    object-fit: contain;
 }
 
 /*Also modified in JS file for filters*/
@@ -276,15 +277,14 @@ h3 {
     font-size: 2.5em;
     font-weight: 700;
     line-height: 1em;
-    text-transform: lowercase;
 }
 h4 {
-        font-family: "Open Sans", serif;
-        font-weight: 600;
-        color: #5c6064;
-        font-size: .9em;
-        line-height: 1.25em;
-    }
+    font-family: "Open Sans", serif;
+    font-weight: 600;
+    color: #5c6064;
+    font-size: .9em;
+    line-height: 1.25em;
+}
 h5{
     font-family: "Open Sans", serif;
     font-weight: 600;
@@ -358,15 +358,7 @@ p {
     h2{
         font-size: 1em;
     }
-    h3 {
-        font-family: "Open Sans", serif;
-        color: #9c9c9c;
-        font-size: 2.5em;
-        font-weight: 700;
-        line-height: 1em;
-        text-transform: lowercase;
-    }
-    
+
     .IntroText h1{
         font-size: 3em;
     }
@@ -380,7 +372,6 @@ p {
         font-size: 3em;
         font-weight: 700;
         line-height: 1em;
-        text-transform: lowercase;
     }
     h4 {
         font-size: 1.1em;
