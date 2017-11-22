@@ -112,8 +112,8 @@
                         <h4>Brief</h4>
                         <p>This is a reimagining of the data set published at <a href="http://www.rcharlie.com/img/posts/fitter-happier/album_chart.html">rcharlie's website</a> that looks at different Radiohead songs and categorises them based on the author's gloom index.
                         </p>
-                        <p><b>Gloom Index</b> is a calculation of two entities:<br><br>
-                            1. The song's <b>valence</b> which is a data point from Spotify's algorithm specifying the general mood of the song.<br><br>
+                        <p><b>Gloom Index</b> is a calculation of two entities:<br><br></p>
+                        <p class="listed">    1. The song's <b>valence</b> which is a data point from Spotify's algorithm specifying the general mood of the song.<br><br>
                             2. The song's <b>lyrical content and sadness</b> which in turn is defined by lyrial density as per an analysis by <a href="https://www.r-bloggers.com/everything-in-its-right-place-visualization-and-content-analysis-of-radiohead-lyrics/">Myles Harrison</a> and the R Charlie's own algorithm to classify words by sadness.</p>
                     </div>
                     <div class="card col-6 col-md-6 modalEnabled">
@@ -129,7 +129,8 @@
                         <h4>Redesign Strategy</h4>
                         <p>For this dataset, it would be interesting to visualise the number of listeners who have played through each song to recreate this data visualisation as a a sampling of people who listen to Radiohead. Also, for the uninitiated, it would be nice to have a summary of all tracks so that it can enable song discovery for those who might not be familiar with the artist. 
                         </p>
-                        <p>For this reason, I chose to add data from two sources:<br><br>
+                        <p>For this reason, I chose to add data from two sources:<br><br></p>
+                        <p class="listed">
                             1. <b>Last.fm</b> is an online catalogue of music that people can listen to for free. It maintains a total play count for all tracks and is easily accessible via a web browser. For an updated count please visit: <a href="https://www.last.fm/music/Radiohead/+tracks?date_preset=ALL"> last fm's Radiohead page</a><br><br>
                             2. <b>Vulture.com</b> is a website owned by New York(Magazine)which is an American biweekly magazine concerned with life, culture, politics, and style generally, and with a particular emphasis on New York City. Vulture, it's subsidiary did an article on all Radiohead tracks until its publication date giving brief summaries of all of their recorded songs. (Available <a href="http://www.vulture.com/2016/05/every-radiohead-song-ranked.html">here</a>)</p>
 
@@ -175,19 +176,47 @@
                 <div class="row sections">
                     <div class="col-12 col-md-6">
                         <h5>Process Sketches</h5>
+                        <p>I explored various formats as wireframes for the final data visualisation. While in the process, I realised the need to include an embedded music player and a summary of the band's members to add dimensionality to the final product.</p>
+                        <p>A few design decisions need explanation:</p>
+                        <p class="listed">
+                            1. The data is best visualised as a <b>scatterplot</b> similar to the original rendering on rcharlie's website. This is becasue some data points are closely spaced and the linear quality of the scatterplot on the album axis identifies songs as being part of the same series and temporality.<br><br>
+                            2. <b>Tooltips</b> work better than a static pane or sidebar to show additional content as this keeps users from constantly shifting gaze to other corners of the webpage.<br><br>
+                            3. The <b>identity of the band</b> is as important as the music they produce. For people who do not know of Radiohead, a brief overview of the band members is important to establish the context and creators of the music.
+                        </p>
                     </div>
                 </div>
                 <div class="sections row extraSpace">
-                    <div class="card col-6 col-md-6 modalEnabled">
-                        <img class="card-img-top" src="images/Tidy%20Radiohead%20Counts.png" alt="lastfm and rcharlie data concat">
+                    <div class="card col-6 col-md-4 offset-md-2 modalEnabled">
+                        <img class="card-img-top" src="images/chart%201.jpg" alt="Scatterplot style 1">
                         <div class="card-block">
-                            <h6 class="card-title imgCaption">Compilatoin of last.fm, youtube, rcharlie data</h6>
+                            <h6 class="card-title imgCaption">Scatterplot style 1</h6>
                         </div>
                     </div>
-                    <div class="card col-6 col-md-6 modalEnabled">
-                        <img class="card-img-top" src="images/Tidy%20Radiohead%20Summaries.png" alt="vulture summaries on Radiohead">
+                    <div class="card col-6 col-md-4 modalEnabled">
+                        <img class="card-img-top" src="images/chart%202.jpg" alt="Scatterplot style 2">
                         <div class="card-block">
-                            <h6 class="card-title imgCaption">Vulture summaries</h6>
+                            <h6 class="card-title imgCaption">Scatterplot style 2</h6>
+                        </div>
+                </div>
+                <div class="sections row extraSpace">
+                    
+                    </div>
+                    <div class="card col-6 col-md-4 modalEnabled">
+                        <img class="card-img-top" src="images/main%20vis.jpg" alt="visualisation style">
+                        <div class="card-block">
+                            <h6 class="card-title imgCaption">Main Visualisation Style</h6>
+                        </div>
+                    </div>
+                    <div class="card col-6 col-md-4 modalEnabled">
+                        <img class="card-img-top" src="images/dashboard%201.jpg" alt="Dashboard Style 1">
+                        <div class="card-block">
+                            <h6 class="card-title imgCaption">Dashboard Style 1</h6>
+                        </div>
+                    </div>
+                    <div class="card col-6 col-md-4 modalEnabled">
+                        <img class="card-img-top" src="images/dashboard%202.jpg" alt="Dashboard Style 2">
+                        <div class="card-block">
+                            <h6 class="card-title imgCaption">Dashboard Style 2</h6>
                         </div>
                     </div>
                 </div>
@@ -195,28 +224,41 @@
                 <div class="row sections">
                     <div class="col-12 col-md-6">
                         <h5>Interface</h5>
-                        <p>For the final visualisation, data from all three sources was compiled and tidied in Excel in anticipation of using it as a CSV file that can be parsed by a data visualisation tool like D3 or Vegalite.</p>
-                        <p>Screenshots from the final tidy data sets are as shown below:</p>
+                        <p>These screens were created in Adobe illustrator</p>
                     </div>
                 </div>
                 <div class="sections row extraSpace">
-                    <div class="card col-6 col-md-6 modalEnabled">
-                        <img class="card-img-top" src="images/Tidy%20Radiohead%20Counts.png" alt="lastfm and rcharlie data concat">
+                    <div class="card col-8 offset-2 modalEnabled">
+                        <img class="card-img-top" src="images/Final%20Screens-01.jpg" alt="interface">
                         <div class="card-block">
-                            <h6 class="card-title imgCaption">Compilatoin of last.fm, youtube, rcharlie data</h6>
+                            <h6 class="card-title imgCaption">Final interface</h6>
                         </div>
                     </div>
-                    <div class="card col-6 col-md-6 modalEnabled">
-                        <img class="card-img-top" src="images/Tidy%20Radiohead%20Summaries.png" alt="vulture summaries on Radiohead">
+                </div>
+                <div class="sections row extraSpace">
+                    <div class="card col-6 col-md-4 modalEnabled">
+                        <img class="card-img-top" src="images/Final%20Screens-02.jpg" alt="Song Tooltip">
                         <div class="card-block">
-                            <h6 class="card-title imgCaption">Vulture summaries</h6>
+                            <h6 class="card-title imgCaption">Song tooltip showing vulture data</h6>
+                        </div>
+                    </div>
+                    <div class="card col-6 col-md-4 modalEnabled">
+                        <img class="card-img-top" src="images/Final%20Screens-03.jpg" alt="Tooltip for band member profiles">
+                        <div class="card-block">
+                            <h6 class="card-title imgCaption">Band Members</h6>
+                        </div>
+                    </div>
+                    <div class="card col-6 col-md-4 modalEnabled">
+                        <img class="card-img-top" src="images/Final%20Screens-04.jpg" alt="Tooltip for album information">
+                        <div class="card-block">
+                            <h6 class="card-title imgCaption">Album information</h6>
                         </div>
                     </div>
                 </div>
                 <hr>
                 <div class="row sections">
                     <div class="col-12 col-md-6">
-                        <h5>Final data visualisation</h5>
+                        <h5>Final Data Visualisation</h5>
                         <p>Coming Soon</p>
                     </div>
                 </div>

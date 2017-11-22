@@ -3,7 +3,7 @@
    "ProjectName": "Data Driven Depression 2",
    "Year": 2017,
    "Type": "Web",
-   "ProjectVisible": "No",
+   "ProjectVisible": "Yes",
    "Description": "A data visualisation of Radiohead's music based on an existing visulisation onrcharlie.com",
    "URL": "Radiohead Data Visualisation",
    "LinkImage": "thumbnail.jpeg",
