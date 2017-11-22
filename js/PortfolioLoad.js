@@ -18,9 +18,9 @@ $(document).ready(function () {
     // Shine elements
     var config = new shinejs.Config({
         numSteps: 10,
-        opacity: 0.075,
+        opacity: 0.095,
         opacityPow: 2,
-        offset: .15,
+        offset: .10,
         offsetPow: 1.8,
         blur: 50,
         blurPow: 1.5,
@@ -168,6 +168,7 @@ function refreshProjects(filter) {
     if (filter=="chronology") {
         $("#Sep3").hide();
         $("#Sep4").hide();
+        $("#S4").hide();
     }
     else {
         $("#Sep3").show();
