@@ -110,11 +110,11 @@
                 <div class="sections row">
                     <div class="col-12 col-md-6">
                         <h4>Brief</h4>
-                        <p>This is a reimagining of the data set published at <a href="http://www.rcharlie.com/img/posts/fitter-happier/album_chart.html">rcharlie's website</a> that looks at different Radiohead songs and categorises them based on the author's gloom index.
+                        <p>This is a reimagining of the dataset published at <a href="http://www.rcharlie.com/img/posts/fitter-happier/album_chart.html">rcharlie's website</a> that looks at different Radiohead songs and categorises them based on the author's gloom index.
                         </p>
                         <p><b>Gloom Index</b> is a calculation of two entities:<br><br></p>
                         <p class="listed">    1. The song's <b>valence</b> which is a data point from Spotify's algorithm specifying the general mood of the song.<br><br>
-                            2. The song's <b>lyrical content and sadness</b> which in turn is defined by lyrial density as per an analysis by <a href="https://www.r-bloggers.com/everything-in-its-right-place-visualization-and-content-analysis-of-radiohead-lyrics/">Myles Harrison</a> and R Charlie's own algorithm to classify words by sadness.</p>
+                            2. The song's <b>lyrical content and sadness</b> which in turn is defined by lyrical density as per an analysis by <a href="https://www.r-bloggers.com/everything-in-its-right-place-visualization-and-content-analysis-of-radiohead-lyrics/">Myles Harrison</a> and R Charlie's own algorithm to classify words by sadness.</p>
                     </div>
                     <div class="card col-6 col-md-6 modalEnabled">
                         <img class="card-img-top" src="images/data%20driven%20depression%201.png" alt="data driven depression">
@@ -127,7 +127,7 @@
                 <div class="sections row">
                     <div class="col-12 col-md-6">
                         <h4>Redesign Strategy</h4>
-                        <p>For this dataset, it would be interesting to visualise the number of listeners who have played through each song to recreate this data visualisation as a a sampling of people who listen to Radiohead. Also, for the uninitiated, it would be nice to have a summary of all tracks so that it can enable song discovery for those who might not be familiar with the artist. 
+                        <p>For this dataset, it would be interesting to visualise the number of listeners who have played through each song to contrast the gloom index vs song popularity. Also, for the uninitiated, it would be nice to have a summary of all tracks so that it can enable song discovery for those who might not be familiar with the artist. 
                         </p>
                         <p>For this reason, I chose to add data from two sources:<br><br></p>
                         <p class="listed">
@@ -137,7 +137,7 @@
                     </div>
                     <div class="sections row extraSpace">
                         <div class="card col-6 col-md-6 modalEnabled">
-                            <img class="card-img-top" src="images/lastfm.jpg" alt="lastfm play counts for Radiohead">
+                            <img class="card-img-top" src="images/lastfm.jpg" alt="last.fm play counts for Radiohead">
                             <div class="card-block">
                                 <h6 class="card-title imgCaption">last.fm data</h6>
                             </div>
@@ -154,7 +154,7 @@
                 <div class="row sections">
                     <div class="col-12 col-md-6">
                         <h5>Tidy Datasets</h5>
-                        <p>For the final visualisation, data from all three sources was compiled and tidied in Excel in anticipation of using it as a CSV file that can be parsed by a data visualisation tool like D3 or Vegalite.</p>
+                        <p>For the final visualisation, data from all three sources were compiled and tidied in Excel in anticipation of using it as a CSV file that can be parsed by a data visualisation tool like D3 or Vegalite.</p>
                         <p>Screenshots from the final tidy data sets are as shown below:</p>
                     </div>
                 </div>
@@ -179,7 +179,7 @@
                         <p>I explored various formats as wireframes for the final data visualisation. While in the process, I realised the need to include an embedded music player and a summary of the band's members to add dimensionality to the final product.</p>
                         <p>A few design decisions need explanation:</p>
                         <p class="listed">
-                            1. The data is best visualised as a <b>scatterplot</b> similar to the original rendering on rcharlie's website. This is becasue some data points are closely spaced and the linear quality of the scatterplot on the album axis identifies songs as being part of the same series and temporality.<br><br>
+                            1. The data is best visualised as a <b>scatterplot</b> similar to the original rendering on rcharlie's website. This is because some data points are closely spaced and the linear quality of the scatterplot on the album axis identifies songs as being part of the same series and temporality.<br><br>
                             2. <b>Tooltips</b> work better than a static pane or sidebar to show additional content as this keeps users from constantly shifting gaze to other corners of the webpage.<br><br>
                             3. The <b>identity of the band</b> is as important as the music they produce. For people who do not know of Radiohead, a brief overview of the band members is important to establish the context and creators of the music.
                         </p>

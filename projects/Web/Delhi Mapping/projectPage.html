@@ -124,7 +124,7 @@
                         <h4>Brief</h4>
                         <br>
                         <p><b>INTACH</b> is short for <b>The Indian National Trust for Art and Cultural Heritage</b> is a non-profit charitable organisation registered under the Societies' Registration Act, 1860. The organisation aims to stimulate and spearhead heritage awareness and conservation in India. Over the years, INTACH has taken up restoration and protection of hundreds of monuments that fall outside the coverage of Archaeological Survey of India and other government agencies, and at times local authorities hand over the upkeep and restoration of heritage structures to INTACH directly.<br></p>
-                        <p>Their work as INTACH's Delhi chapter is important as it <b>maintains an exhaustive listing of some of Delhi's most important heritage structures</b> whether they be listed as ASI protected monuments or even smaller privately owned structures of historical or architectural significance.</p>
+                        <p>Their work as INTACH's Delhi chapter is important as it <b>maintains an exhaustive listing of some of Delhi's most important heritage structures</b> whether they are listed as ASI protected monuments or even smaller privately owned structures of historical or architectural significance.</p>
                         <p>For this project, I aim to bring light to the massive repository of heritage data available to the public and to show its rise and potential fall if not given due importance in public discussion.</p>
                         <p>This data for this visualisation was <b>originally available on the INTACH Delhi website. </b>It has since been published in a <b>book: "Delhi, The Built Heritage: A Listing"</b></p>
                     </div>
@@ -139,16 +139,16 @@
                 <div class="sections row">
                     <div class="col-12 col-md-6">
                         <h4>Data Gathering</h4>
-                        <p>Most of the data for this visualisation was copied from the now defunct INTACH flash based website that listed all the data publically. 
+                        <p>Most of the data for this visualisation was copied from the now-defunct INTACH flash based website that listed all the data publically. 
                         </p>
                         <p>It was later augmented with data from the book itself for updating the dataset to its current configuration.</p>
                         <p>Furthermore, the following tasks needed to be done:</p>
                         <p class="listed">
-                            1. <b>Find the actual latitude and longitude of the monuments</b> from the static maps given out by INTACH. This was done using Google Earth's custom maps and then converted to lat long coordiantes that were fed into the database on excel.<br><br>
-                            2. <b>Copy the data as is</b> for each listing in a database format that could be used for further development. For this, Microsoft Excel was used to create a complete csv file that listed the entire dataset in a format that could easily be read by a programming language like Javascript.<br><br>
-                            3. <b>Cross reference the images for each listing </b>from the dataset with appropriate images that could be used to identify the monument being listed.
+                            1. <b>Find the actual latitude and longitude of the monuments</b> from the static maps given out by INTACH. This was done using Google Earth's custom maps and then converted to latitude-longitude coordinates that were fed into the database on excel.<br><br>
+                            2. <b>Copy the data as is</b> for each listing in a database format that could be used for further development. For this, Microsoft Excel was used to create a complete CSV file that listed the entire dataset in a format that could easily be read by a programming language like Javascript.<br><br>
+                            3. <b>Cross-reference the images for each listing </b>from the dataset with appropriate images that could be used to identify the monument being listed.
                         </p>
-                        <p><b>All in all, a datset containing ~1300 entries of heritage sites across Delhi was generated.</b></p>
+                        <p><b>All in all, a dataset containing ~1300 entries of heritage sites across Delhi was generated.</b></p>
                     </div>
                     <div class="card col-6 col-md-6 modalEnabled">
                         <img class="card-img-top" src="images/screengrab%20flash%20website.png" alt="Screengrab from the old INTACH website">
@@ -161,7 +161,7 @@
                 <div class="row sections">
                     <div class="col-12 col-md-6">
                         <h5>Tidy Datasets</h5>
-                        <p>Data from all these sources was organised into a tidy, machine readable dataset for manipulation using a map based tool and a data visualisation tool liek D3 or Vegalite.</p>
+                        <p>Data from all these sources was organised into a tidy, machine-readable dataset for manipulation using a map-based tool and a data visualisation tool like D3 or Vegalite.</p>
                         <p>Screenshots from the final tidy data sets are as shown below:</p>
                     </div>
 
@@ -176,8 +176,8 @@
                 <div class="row sections">
                     <div class="col-12 col-md-6">
                         <h5>Data Exploration</h5>
-                        <p>Since this visualisation was primarilly an explorative exercise, it was important to  immediately create a map based visualisation for seeing trends that could later be highlighted in the final form.</p>
-                        <p>For this reason, <a href="https://www.mapbox.com/">mapbox's</a> maps API was a perfect fit for generating a study map to identify srattegies for visualising this data in a readable format.</p>
+                        <p>Since this visualisation was primarily an explorative exercise, it was important to  immediately create a map-based visualisation for seeing trends that could later be highlighted in the final form.</p>
+                        <p>For this reason, <a href="https://www.mapbox.com/">mapbox's</a> maps API was a perfect fit for generating a study map to identify strategies for visualising this data in a readable format.</p>
                         <p>The original web development for the same is embedded below:</p>
                     </div>
                 </div>
@@ -186,19 +186,55 @@
                 <div class="row sections">
                     <div class="col-12 col-md-6">
                         <h5>Process Sketches</h5>
+                        <br>
+                        <h6>Step 1: Layout</h6>
+                        <p>The very first thing to solve is the size of the actual map element of the visualisation with respect to the rest of the elements. Not knowing the sizes of the other elements, I decided to quickly iterate through a couple of variations on a sidebar + main visualisation space<br><br>
+                            <b>Observations</b></p>
+                        <p class="listed">
+                            1. Tooltips might work for the same reason as the first visualisation as they help users stay within the context and find information quickly. However, the <b>sheer volume of information to display makes tooltips impractical.</b> This will solve when the information schematic is more developed.<br><br>
+                            2. <b>Legends and Filters</b> need to be solved individually before integration with the rest of the visualisation</p>
                     </div>
-                </div>
-                <div class="sections row extraSpace">
                     <div class="card col-6 col-md-6 modalEnabled">
-                        <img class="card-img-top" src="images/Tidy%20Radiohead%20Counts.png" alt="lastfm and rcharlie data concat">
+                        <img class="card-img-top" src="images/interface%20layouts.jpg" alt="interface layouts">
                         <div class="card-block">
-                            <h6 class="card-title imgCaption">Compilation of last.fm, youtube, rcharlie data</h6>
+                            <h6 class="card-title imgCaption">Layout options</h6>
                         </div>
                     </div>
+                    <div class="col-12 col-md-6">
+                        <h6>Step 2: Map Element</h6>
+                        <p>This one is easier because the map tool itself solves a lot of organisational problems. The timeline feature needs special attention. Also, the map needs to read differently at different zoom levels - Clustered at high zoom levels and be able to display individual structures at closer zoom.
+                        </p>
+                        <p>The <b>glyphs themselves pose a problem</b>. Using glyphs makes the map extremely hard to read but on closer zoom levels, buildings do not have enough character to make visual distinctions easy.</p>
+                    </div>
                     <div class="card col-6 col-md-6 modalEnabled">
-                        <img class="card-img-top" src="images/Tidy%20Radiohead%20Summaries.png" alt="vulture summaries on Radiohead">
+                        <img class="card-img-top" src="images/map.jpg" alt="map layout">
                         <div class="card-block">
-                            <h6 class="card-title imgCaption">Vulture summaries</h6>
+                            <h6 class="card-title imgCaption">Map layout</h6>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h6>Step 3: Legends and Information Window</h6>
+                        <p>This step is the densest in terms of information to be displayed and needs some kind of bucketing to display the various kinds of information that are relevant.
+                        </p>
+                    </div>
+                    <div class="row extraSpace">
+                        <div class="card col-6 col-md-4 modalEnabled">
+                            <img class="card-img-top" src="images/Legend%20ideation.jpg" alt="Ideation for legends and filters">
+                            <div class="card-block">
+                                <h6 class="card-title imgCaption">Legends and Filters</h6>
+                            </div>
+                        </div>
+                        <div class="card col-6 col-md-4 modalEnabled">
+                            <img class="card-img-top" src="images/Legend%20options.jpg" alt="Legend Layout Options">
+                            <div class="card-block">
+                                <h6 class="card-title imgCaption">Legend Layout Options</h6>
+                            </div>
+                        </div>
+                        <div class="card col-6 col-md-3 offset-md-1 modalEnabled">
+                            <img class="card-img-top" src="images/Info%20card.jpg" alt="Information Window">
+                            <div class="card-block">
+                                <h6 class="card-title imgCaption">Information Window</h6>
+                            </div>
                         </div>
                     </div>
                 </div>
