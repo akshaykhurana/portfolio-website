@@ -1,5 +1,5 @@
 //Global variables
-var filter, listing, total, visibleIDs = [], TypeDescriptions = [], ChronoDescriptions = [];
+var filter, listing, total, visibleIDs = [], TypeDescriptions = [], ChronoDescriptions = [], loadingscreenActive=0;
 
 //Set default filter behaviour
 filter = 'type';
@@ -8,15 +8,14 @@ filter = 'type';
 //Wait for Page Load
 $(document).ready(function () {
 
-    //show Loading screen and change default filter colour
+    //Show Loading screen
     animateToggle(".Loading Screen", 1);
-    $("#fType").css('color', 'dodgerblue');
+    loadingscreenActive = 1;
 
     //Immediately load data (loading screen removed in stack)
     dataLoad(refreshProjects);
 
     // Shine elements
-
     var config = new shinejs.Config({
         numSteps: 10,
         opacity: 0.075,
@@ -33,7 +32,7 @@ $(document).ready(function () {
 
     shine1.config = config;
     shine2.config = config;
-
+    //Shine update function
     function update() {
         window.requestAnimationFrame(update);
         var time, speed, phase, radiusX, radiusY;
@@ -49,44 +48,54 @@ $(document).ready(function () {
         shine2.light.position.y = radiusY + radiusY * Math.sin(phase * 0.7);
         shine2.draw();
     }
-
     update();
 
+    console.log("Filtering called");
+    //Animate filter buttons and set their behaviours 
+    $("#fType").on('click',function() {
+        $("#fType").addClass("activeFilter");
+        $("#fChronology").removeClass("activeFilter");
+        filter = "type";
+        refreshProjects(filter, animateToggle);
+    });
+    $("#fChronology").on('click',function() {
+        $("#fChronology").addClass("activeFilter");
+        $("#fType").removeClass("activeFilter");
+        filter = "chronology";
+        refreshProjects(filter, animateToggle);
+    });
+    // console.log("Button toggles working");
+
+    //Execute non JS dependent animations
+    console.log("Queueing animations");
+    animations();
 })
 
 //EXTERNAL FUNCTIONS
 
 //External function to call data loading from JSON
-function dataLoad(refreshCallback) {
+function dataLoad(refreshViewCallback) {
     //Load Portfolio listing into local JSON
     $.getJSON("js/PortfolioListing.json", function(json) {
         listing = json;
-        console.log("JSON has been loaded locally");
+        console.log("JSON Listing has been loaded locally");
         console.log(listing);
-
         //Truncate objects marked as invisible in Excel
         removeInvisible ();
-
-        //Execute callback
-        refreshCallback(filter, animateToggle);
     });
     //Load Type Descriptions into local JSON
     $.getJSON("js/TypeDescriptions.json", function(json) {
         TypeDescriptions = json;
-        console.log("JSON has been loaded locally");
+        console.log("JSON Type has been loaded locally");
         console.log(TypeDescriptions);
-
-        //Execute callback
-        refreshCallback(filter, animateToggle);
     });
     //Load Chrono Descriptions into local JSON
     $.getJSON("js/ChronoDescriptions.json", function(json) {
         ChronoDescriptions = json;
-        console.log("JSON has been loaded locally");
+        console.log("JSON Chrono has been loaded locally");
         console.log(ChronoDescriptions);
-
         //Execute callback
-        refreshCallback(filter, animateToggle);
+        refreshViewCallback(filter);
     });
 }
 
@@ -110,13 +119,12 @@ function removeInvisible () {
 }
 
 //External function to refresh project list in view
-function refreshProjects(filter, screenRefreshCallback) {
+function refreshProjects(filter) {
     // Clear previously held data, if any, clear visible IDs, clear visible sidebar entries
     $(".card").empty();
     $(".sideTitle").empty();
     $(".sideDescription").empty();
     visibleIDs=[];
-
     //Main variables
     var ID = "";
 
@@ -129,7 +137,6 @@ function refreshProjects(filter, screenRefreshCallback) {
         publishData (listing[i], ID, filter);
         // console.log("Show data for no." + (i +1) +" done");
     }
-
     // Refresh sidebar
     switch (filter) {
         case "type":
@@ -167,17 +174,15 @@ function refreshProjects(filter, screenRefreshCallback) {
         $("#Sep4").show();
     }
 
-    //Execute animations
-    console.log("trying to animate elements");
-    animations();
-
     // Remove loading screen
     //Ensure timing for bare minimum animation
     var delayMillis = 4000; //4 second
-    setTimeout(function() {
-        console.log("Loading screen removed after data load");
-        screenRefreshCallback(".LoadingScreen",0);       
-    }, delayMillis);
+    if (loadingscreenActive==1) {setTimeout(function() {
+        console.log("Calling Loading screen removal");
+        animateToggle(".LoadingScreen",0);
+        loadingscreenActive=0;
+    }, delayMillis);}
+
 
 } //End of function
 
@@ -283,9 +288,8 @@ function pathFind(entry, what) {
     }
 }
 
-//schedule all animations
+//Schedule all non JS dependent animations
 function animations(){
-
     //Set hover animations for cards
     $(".card").hover(function(){
         $(this).find(".hoverMode").show();
@@ -293,27 +297,11 @@ function animations(){
     }, function(){
         $(this).find(".hoverMode").hide();
     });
-
-    //Animate filter buttons and set their ehaviours 
-    $("#fType").click(function() {
-        $("#fChronology").css('color' , '');
-        $("#fType").css('color' , 'dodgerblue');
-        filter = "type";
-        refreshProjects(filter, animateToggle);
-    });
-    $("#fChronology").click(function() {
-        $("#fChronology").css('color' , 'dodgerblue');
-        $("#fType").css('color' , '');
-        filter = "chronology";
-        refreshProjects(filter, animateToggle);
-    });
-    // console.log("Button toggles working");
-
 }
 
 //Self written function to toggle on and off
 function animateToggle(what, param){
-    console.log("Trying to animate: " + what + ", how: " + param);
+    //console.log("Trying to animate: " + what + ", how: " + param);
     switch (param) {
         case 0:
             $(what).fadeOut();

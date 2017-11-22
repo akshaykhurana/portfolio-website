@@ -84,7 +84,7 @@ $(document).ready(function () {
         var captionText = $(this).children("img").attr("alt");
         console.log("Caption is: " + captionText);
         console.log(modalImgSrc);
-        modal.style.display = "block";
+        modal.style.display = "flex";
 
         $("#modalImage").attr("src", modalImgSrc);
         $("#modalCaption").empty();   
