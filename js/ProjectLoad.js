@@ -82,9 +82,9 @@ $(document).ready(function () {
     $(".modalEnabled").click( function(){
         var modalImgSrc = $(this).children("img").attr("src");
         var captionText = $(this).children("img").attr("alt");
-        console.log("Caption is: " + captionText);
-        console.log(modalImgSrc);
-        modal.style.display = "flex";
+    //    console.log("Caption is: " + captionText);
+    //    console.log(modalImgSrc);
+        modal.style.display = "block";
 
         $("#modalImage").attr("src", modalImgSrc);
         $("#modalCaption").empty();   
