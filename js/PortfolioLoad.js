@@ -293,7 +293,7 @@ function pathFind(entry, what) {
 function animations(){
     //Set hover animations for cards
     $(".card").hover(function(){
-        $(this).find(".hoverMode").show();
+        $(this).find(".hoverMode").show().css('display','flex');
         $(this).find(".hoverMode").addClass('animated slideInUp');
     }, function(){
         $(this).find(".hoverMode").hide();

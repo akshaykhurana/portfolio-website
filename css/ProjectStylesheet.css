@@ -106,7 +106,7 @@ body {
     overflow-y: scroll;
 }
 .sections{
-    padding: 1.5rem 0rem 1.5rem 0rem;
+    padding: 1.5rem 0rem .5rem 0rem;
 }
 .sections: first-child{
     padding-top: 2rem;
@@ -127,7 +127,7 @@ body {
     width: 60%;
 }
 .projectSubtitle{
-    margin-top: .75rem;
+    padding-top: .75rem;
 }
 .projectDescription {
     margin: .5rem 0rem -2rem 0rem;
@@ -139,6 +139,7 @@ body {
 .behanceLogo {
     width: 100%;
 }
+
 #nextNav {
     text-align: right;
 }
@@ -149,17 +150,18 @@ body {
 img{
     width: 100%;
 }
-
-/*Also modified in JS file for filters*/
+/*Links and hovers*/
 .link:hover {
     color: #00b3e4;
 }
 .link:active {
     color: darkblue;
 }
-
 a:hover{
     text-decoration:  none;
+}
+a:visited{
+    color: #0b3561;
 }
 /* The Modal (background) */
 .modal {
@@ -259,7 +261,8 @@ h2 {
     font-size: .8rem;
     letter-spacing: .1rem;
 }
-.Filter>h2 {
+.bottomNavigation>h2 {
+    font-size: .8em;
     color: #939EA5;
 }
 .IntroText>h2{
@@ -272,15 +275,16 @@ h3 {
     font-family: "Open Sans", serif;
     color: #9c9c9c;
     font-size: 2.5rem;
+    letter-spacing: -.05rem;
     font-weight: 700;
-    line-height: 1rem;
+    line-height: 2.75rem;
 }
 h4 {
     font-family: "Open Sans", serif;
     font-weight: 600;
     color: #5c6064;
     font-size: .9rem;
-    line-height: 1.25rem;
+    line-height: 1.1rem;
 }
 h5{
     font-family: "Open Sans", serif;
@@ -300,7 +304,7 @@ h6{
 p {
     font-family: 'Fjord One', serif;
     font-weight: 400;
-    font-size: .9rem;
+    font-size: 1rem;
     color: #636363;
 }
 .imgCaption{
@@ -345,8 +349,14 @@ p {
     .PortraitWarning{
         display: none;
     }
+    .sections{
+        padding-bottom: 1.5rem;
+    }
     .sections:first-child {
         margin-top: 2rem;
+    }
+    .projectSubtitle{
+        padding-top: 2rem;
     }
     h1{
         font-size: 1.5rem;
@@ -365,6 +375,10 @@ p {
 
         color: #939EA5;
     }
+    .bottomNavigation>h2 {
+    font-size: .9em;
+}
+
     h3 {
         font-size: 3rem;
         font-weight: 700;
@@ -372,7 +386,7 @@ p {
     }
     h4 {
         font-size: 1.1rem;
-        line-height: 1rem;
+        line-height: 1.2rem;
     }
 }
 
@@ -383,6 +397,9 @@ p {
     }
     h2{
         font-size: 1.1rem;
+    }
+    p{
+        font-size: 1rem;
     }
 
 }

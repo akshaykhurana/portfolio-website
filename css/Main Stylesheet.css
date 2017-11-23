@@ -124,7 +124,7 @@ body {
 }
 .card{
     margin: 1.5rem .25rem;
-    padding: 1.5rem;
+    padding: .25rem;
     border: dotted;
     border-width: thick;
     border-color: white;
@@ -133,7 +133,7 @@ body {
 }
 .card:hover{
     /* cursor: pointer; */
-    padding: 1rem;
+    padding: 0rem;
     border: solid;
     border-color: lightskyblue;
     border-width: thick;
@@ -164,7 +164,7 @@ body {
     text-transform: lowercase;
 }
 .card-description{
-    padding-left: .5rem;
+    padding: 0rem .75rem 0rem .5rem ;
 }
 img{
     width: 90%;
@@ -176,9 +176,10 @@ img{
     height: 37.5%;
     top: 55%;
     padding: .75rem;
+    align-items: center;
     text-align: right;
     background-color: white;
-    box-shadow: 0px 5px 10px #888888;
+    box-shadow: 0px 2px 20px #888888;
 }
 .card .hoverMode {
     -webkit-animation-duration: .20s;
@@ -248,6 +249,9 @@ p {
     font-weight: 400;
     font-size: 1rem;
     color: #838383;
+}
+.hoverMode p{
+    font-size: .9rem;    
 }
 
 
@@ -335,6 +339,9 @@ p {
     .sidebar:first-child, .projectPane:first-child {
         margin-top: 2rem;
     }
+    .sideDescription{
+        padding-top: .5rem;
+    }
     .card{
         margin: 1rem 0rem;
         padding: .25rem;
@@ -400,6 +407,9 @@ p {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+    .sideDescription{
+        padding-top: 1.25rem;
+    }
     h1{
         font-size: 1.6rem;
     }
@@ -414,8 +424,8 @@ p {
         letter-spacing: 0rem;
     }
     p {
-    font-size: .9rem;
-}
+        font-size: .9rem;
+    }
     .card-number{
         font-size: 4rem;
         left: 0rem;
