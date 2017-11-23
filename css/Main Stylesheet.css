@@ -121,6 +121,7 @@ body {
 }
 #fType, #fChronology{
     margin-left: 1.5rem;
+    cursor: pointer;
 }
 .card{
     margin: 1.5rem .25rem;
@@ -191,6 +192,7 @@ img{
 /*Also modified in JS file for filters*/
 .link: hover {
     color: #00b3e4;
+    cursor: pointer;
 }
 .link:active {
     color: dodgerblue;
