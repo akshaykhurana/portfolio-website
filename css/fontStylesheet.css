@@ -4,10 +4,6 @@ h1 {
     font-size: 2rem;
 }
 
-.IntroText h1 {
-    font-size: 1.5rem;
-}
-
 h2 {
     font-family: "Lato", serif;
     font-weight: 600;
@@ -51,6 +47,28 @@ p {
     line-height: 1.5rem;
     padding-bottom: 1rem;
 }
+.carousel h4 {
+    font-size: 1.5rem;
+    padding: 0rem;
+}
+
+.carouselCatchy {
+    font-size: 1rem;
+    font-style: italic;
+}
+
+.carousel p {
+    font-size: .75rem;
+    padding-bottom: .5rem;
+}
+.carouselSub {
+    font-size: 1rem;
+}
+.carousel Desc{}
+
+.carouselLink p {
+    padding: 0px;
+}
 
 emphasis {
     font-weight: 600;
@@ -68,24 +86,15 @@ hr {
 .largerText {
     font-size: 1.2rem;
 }
-
+h6 {
+    font-size: 3rem;
+}
 #hi1,
 #hi2 {
     font-weight: 900;
 }
-.carousel h4 {
-    font-size: 2rem;
-}
-
-.carousel .carouselSub {
-    font-size: 1.25rem;
-}
-.carousel i{
-    font-size: 1.25rem;
-    
-}
-.carousel p{
-    font-size: 1rem;
+.introText p{
+    padding-bottom: .5rem;
 }
 .imgCaption {
     font-size: .9rem;
@@ -98,7 +107,8 @@ hr {
     letter-spacing: 0rem;
 }
 
-a {
+a,
+.carouselLink {
     text-decoration: none;
 }
 
@@ -112,13 +122,16 @@ a {
     color: inherit;
     text-decoration: underline;
 }
-a:hover{
+
+a:hover {
     text-decoration: none;
 }
+
 a:visited {
     text-decoration: line-through;
 }
-.homeButton a{
+
+.homeButton a {
     text-decoration: none;
 }
 
@@ -137,7 +150,8 @@ a:visited {
 
 /*Cards on All Page*/
 
-.card a, header a {
+.card a,
+header a {
     text-decoration: none;
 }
 
@@ -175,6 +189,23 @@ a:visited {
     /*Overlay Screen*/
     #hi1 {
         font-size: 4rem;
+    }
+    /*Carousel Fixes*/
+    .carousel h4 {
+        font-size: 2rem;
+    }
+
+    .carouselSub {
+        font-size: 1.25rem;
+    }
+
+    .carouselCatchy {
+        font-size: 1.25rem;
+        font-style: italic;
+    }
+
+    .carousel p {
+        font-size: 1rem;
     }
 }
 

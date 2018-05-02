@@ -21,8 +21,8 @@
     --containerDesktop: 800px;
     --containerLarge: 1200px;
     --container4k: 2400px;
-    --headerPhone: 35px;
-    --hideHeaderPhone: -35px;
+    --headerPhone: 40px;
+    --hideHeaderPhone: -45px;
     --headeriPad: 40px;
     --hideHeaderiPad: -45px;
     --headerDesktop: 45px;
@@ -190,7 +190,7 @@ header {
     position: fixed;
     height: var(--headerPhone);
     width: 100%;
-    z-index: 10;
+    z-index: 96;
 }
 
 header .container {
@@ -231,11 +231,117 @@ header .container {
     padding-left: 1rem;
 }
 
+#hamburger {
+    display: block;
+    z-index: 6;
+    background-color: mediumaquamarine;
+}
+
+#hamburger input {
+    display: block;
+    width: var(--headerPhone);
+    height: var(--headerPhone);
+    position: relative;
+    cursor: pointer;
+    opacity: 0;
+    /* hide and place over hamburger */
+    z-index: 7;
+    -webkit-touch-callout: none;
+    background-olor: aqua;
+}
+
+#hamburger span {
+    display: flex;
+width: 30px;
+    height: 3px;
+    margin-bottom: 6px;
+    position: relative;
+    top: -32px;
+    left: 3px;
+
+    background: #ffffff;
+    border-radius: 3px;
+    z-index: 6;
+
+    transform-origin: 3px 0px;
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    opacity 0.55s ease;
+}
+
+#hamburger span:first-child {
+    transform-origin: 0% 0%;
+}
+
+#hamburger span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+
+#hamburger input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg);
+    background: #ffffff;
+}
+#hamburger input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+
+#hamburger input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+    position: absolute;
+    top: var(--headerPhone);
+    right: 0px;
+    width: 200px;
+    padding: 10px;
+    list-style-type: none;
+    transform: translate(100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+#hamburger input:checked ~ ul
+{
+  transform: none;
+}
+
+#allPage {
+    z-index: 1;
+}
+
+#selectPage {
+    overflow-y: hidden;
+    z-index: 3;
+}
+
 /* Selected Page */
+
+.carousel {
+    position: absolute;
+    top: 0px;
+    left: -00vw;
+    display: flex;
+    direction: row;
+    width: 700%;
+    height: inherit;
+    margin: 0;
+    padding: 0;
+}
 
 .carouselGrid {
     display: grid;
-    grid-template-rows: 1fr 10fr 4fr 1fr;
+    grid-template-rows: 3fr 5fr;
     grid-template-areas: '.''carLeft''carRight''.';
 }
 
@@ -244,27 +350,28 @@ header .container {
     grid-area: carLeft;
 }
 
+.carouselLeft img {
+    padding: 0rem 2rem;
+}
+
 .carouselRight {
     align-self: center;
     grid-area: carRight;
     padding: 2rem;
 }
 
-.carousel {
-    position: absolute;
-    top: 0px;
-    left: -00vw;
-    display: flex;
-    direction: row;
-    width: 700vw;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-}
-
 .carouselItem {
     width: 100vw;
     height: 100vh;
+}
+
+/*Fixing the issue with the no click links*/
+
+.carouselLink > div {
+    width: 100%;
+    padding: .5rem 0rem;
+    text-align: center;
+    z-index: 5;
 }
 
 .carouselNav {
@@ -275,12 +382,13 @@ header .container {
     justify-content: space-between;
     height: 100%;
     width: 100%;
+    z-index: 4;
 }
 
 #carouselNavLeft,
 #carouselNavRight {
-    width: 70px;
-    height: 70px;
+    width: 30px;
+    height: 30px;
 }
 
 .carouselState {
@@ -312,15 +420,6 @@ header .container {
 
 .filterButtons {
     margin: 2rem 0rem 2rem 0rem;
-}
-
-#allPage {
-    z-index: 1;
-}
-
-#selectPage {
-    overflow-y: hidden;
-    z-index: 3;
 }
 
 .headerUp {
@@ -517,6 +616,8 @@ section h3 {
 
 /* Responsive Stuff */
 
+/*Fixing small phone problems with carousel*/
+
 @media (min-width: 576px) {
     #portraitWarning {
         display: flex;
@@ -550,17 +651,29 @@ section h3 {
     .toggleNav {
         display: flex;
     }
-    .hamburger {
+    #hamburger {
         display: none;
     }
     .logo Img {
         width: 300px;
     }
     .carouselGrid {
+        display: grid;
         grid-template-columns: 1fr 700px 1fr;
         grid-row-gap: 25px;
         grid-template-rows: 2fr 10fr 6fr 2fr;
         grid-template-areas: '. . .''.  carLeft .''.  carRight .''. . .';
+    }
+    .carouselLeft img {
+        max-height: inherit;
+    }
+    .carouselDesc {
+        display: block;
+    }
+    #carouselNavLeft,
+    #carouselNavRight {
+        width: 70px;
+        height: 70px;
     }
     /*All Page */
     .listing {
@@ -742,10 +855,12 @@ section h3 {
 }
 
 /*Override All*/
-.padTop{
+
+.padTop {
     padding-top: 3rem;
     padding-bottom: 0rem;
 }
+
 #modalDiv {
     display: none;
 }

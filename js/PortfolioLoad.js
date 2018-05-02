@@ -292,19 +292,22 @@ function publishCarousel(entry, ID) {
     //console.log("trying to add data to " + ID);
     selectThumbPath = pathFind(entry, "selectThumb");
     projectURL = pathFind(entry, "links");
-console.log(ID);
+    console.log(ID);
     projectTitle = entry.ProjectName;
     projectSub = entry.Year;
     projectDesc = entry.DescriptionLong;
+    projectCatchy = entry.DescriptionCatchy;
     //Construct the actual divs
     $(ID).append("<div class=\"carouselLeft\"><img class=\"carouselImg\" src=" +
-                 selectThumbPath +
-                 "></div>"+
-                "<div class=\"carouselRight\"><h4 class=\"carouselTitle\">" +
-                 projectTitle + "</h4><p class=\"carouselSub\">" +
-                 projectSub + "</p><p class=\"carouselDesc\">" +
-                 projectDesc + "</p></div>"
-                );
+        selectThumbPath +
+        "></div>" +
+        "<div class=\"carouselRight\"><h4 class=\"carouselTitle\">" +
+        projectTitle + "</h4><p class=\"carouselSub\">" +
+        projectSub + "</p><p class=\"carouselCatchy\">" +
+        projectCatchy + "<p class=\"carouselDesc\">" +
+        projectDesc + "</p><a class=\"carouselLink\" href=\"" +
+        projectURL + "\"><div><p>view project</p></div></a>"
+    );
 }
 //External function to show data in ID for All Page
 function publishDataAllPage(entry, ID, filter) {

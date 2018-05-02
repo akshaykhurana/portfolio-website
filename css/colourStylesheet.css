@@ -196,11 +196,12 @@ a:hover > h2,
 
 .whiteText p,
 .whiteText h4,
-.whiteText h5 {
-    color: white;
-}
-
+.whiteText h5,
 .carousel p,
 .carousel h4 {
     color: white;
+}
+.carouselLink>div{
+    border: solid;
+    border-color: white;
 }

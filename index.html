@@ -51,7 +51,24 @@
                             <h2>INFO.</h2>
                         </a>
                     </div>
-                    <div class="hamburger">M</div>
+                    <div id="hamburger">
+                        <input type="checkbox" />
+                        <!--spans acting like a hamburger menu-->
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <ul id="menu">
+                            <a href="#">
+                                <li>selected works</li>
+                            </a>
+                            <a href="#">
+                                <li>all projects</li>
+                            </a>
+                            <a href="/contact.html">
+                                <li>Info</li>
+                            </a>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -60,11 +77,10 @@
     <div class="overlayScreen" id="firstLoader">
         <div class="container gridLoader">
             <div class="DPContainer"><img class="circularImg" src="images/Display%20Picture.jpg"></div>
-            <div class="introText ">
+            <div class="introText">
                 <h6 id="hi1">Jello!</h6>
                 <p>That's me, Akshay Khurana.<br>
-                    <p>I am an Architect/Designer</p>
-                    <p>I studied at the School of Planning and Architecture, New Delhi and then at the National Institute of Design, Bangalore</p>
+                    <p>I am an Architect/Designer. I studied at the School of Planning and Architecture, New Delhi and then at the National Institute of Design, Bangalore</p>
                     <p>This website serves as a journal for my wanderings through this vast network of mazes we collectively refer to as 'Design'.</p>
                     <p class="tinyText">Last Updated: 30th April 2018</p>
             </div>
@@ -82,20 +98,13 @@
 
     <div class="selectPage" id="selectPage">
         <div class="carousel containerFull">
-            <div class="carouselItem carouselGrid" id="c1">
-            </div>
-            <div class="carouselItem carouselGrid" id="c2">
-                <div class="carouselRight">
-                    <h4 class="carouselTitle"></h4>
-                    <p class="carouselSub"></p>
-                    <p class="carouselDesc"></p>
-                </div>
-            </div>
-            <div class="carouselItem carouselGrid" id="c3">3</div>
-            <div class="carouselItem carouselGrid" id="c4">4</div>
-            <div class="carouselItem carouselGrid" id="c5">5</div>
-            <div class="carouselItem carouselGrid" id="c6">6</div>
-            <div class="carouselItem carouselGrid" id="c7">7</div>
+            <div class="carouselItem carouselGrid" id="c1"></div>
+            <div class="carouselItem carouselGrid" id="c2"></div>
+            <div class="carouselItem carouselGrid" id="c3"></div>
+            <div class="carouselItem carouselGrid" id="c4"></div>
+            <div class="carouselItem carouselGrid" id="c5"></div>
+            <div class="carouselItem carouselGrid" id="c6"></div>
+            <div class="carouselItem carouselGrid" id="c7"></div>
         </div>
         <div class="carouselNav hCenter">
             <div id="carouselNavLeft"><img src=/images/leftArrow.svg></div>

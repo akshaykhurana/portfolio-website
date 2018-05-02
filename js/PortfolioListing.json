@@ -5,7 +5,7 @@
     "Type": "Web",
     "GlobalVisibility": "No",
     "Description": "A radical new idea for the future of Real Estate Management in India.",
-    "DescriptionLong": "",
+    "": "",
     "URL": "HomeLife",
     "LinkImage": "thumbnail.jpeg",
     "SelectImage": "select.png",
@@ -13,7 +13,9 @@
     "TypeProject": 5,
     "ChronoSection": 1,
     "ChronoProject": 3,
-    "SelectedProject": 0
+    "SelectedProject": 0,
+    "DescriptionCatchy": "",
+    "DescriptionLong": ""
   },
   {
     "ProjectName": "Shelf Design",
@@ -21,7 +23,7 @@
     "Type": "Product",
     "GlobalVisibility": "No",
     "Description": "Redefining user experiences for a Quick Serving Retail Outlet.",
-    "DescriptionLong": "",
+    "": "",
     "URL": "SubsayBestShelf",
     "LinkImage": "thumbnail.jpeg",
     "SelectImage": "select.png",
@@ -29,7 +31,9 @@
     "TypeProject": 6,
     "ChronoSection": 2,
     "ChronoProject": 8,
-    "SelectedProject": 0
+    "SelectedProject": 0,
+    "DescriptionCatchy": "",
+    "DescriptionLong": ""
   },
   {
     "ProjectName": "Data Driven Depression 2",
@@ -37,7 +41,7 @@
     "Type": "Web",
     "GlobalVisibility": "No",
     "Description": "A data visualisation of Radiohead's music. Based on an existing visualisation on rcharlie.com.",
-    "DescriptionLong": "",
+    "": "",
     "URL": "RadioheadDataVisualisation",
     "LinkImage": "thumbnail.jpeg",
     "SelectImage": "select.png",
@@ -45,7 +49,9 @@
     "TypeProject": 3,
     "ChronoSection": 2,
     "ChronoProject": 9,
-    "SelectedProject": 0
+    "SelectedProject": 0,
+    "DescriptionCatchy": "",
+    "DescriptionLong": ""
   },
   {
     "ProjectName": "NID Exhibit",
@@ -53,7 +59,7 @@
     "Type": "Product",
     "GlobalVisibility": "No",
     "Description": "Prototyping tangible interfaces for the NID graduation exhibition.",
-    "DescriptionLong": "",
+    "": "",
     "URL": "NIDExhibit",
     "LinkImage": "thumbnail.jpeg",
     "SelectImage": "select.png",
@@ -61,7 +67,9 @@
     "TypeProject": 7,
     "ChronoSection": 3,
     "ChronoProject": 6,
-    "SelectedProject": 0
+    "SelectedProject": 0,
+    "DescriptionCatchy": "",
+    "DescriptionLong": ""
   },
   {
     "ProjectName": "High Rise Urbanism",
@@ -69,7 +77,7 @@
     "Type": "Space",
     "GlobalVisibility": "No",
     "Description": "Rationalizing FAR limitations in an underutilised transit corridor using procedural modelling",
-    "DescriptionLong": "",
+    "": "",
     "URL": "HighRiseBarakhamba",
     "LinkImage": "thumbnail.jpeg",
     "SelectImage": "select.png",
@@ -77,7 +85,9 @@
     "TypeProject": 2,
     "ChronoSection": 4,
     "ChronoProject": 2,
-    "SelectedProject": 0
+    "SelectedProject": 0,
+    "DescriptionCatchy": "",
+    "DescriptionLong": ""
   },
   {
     "ProjectName": "G.O.D.",
@@ -85,7 +95,7 @@
     "Type": "Product",
     "GlobalVisibility": "Yes",
     "Description": "Speculative design in a future of general AI and human augmentation",
-    "DescriptionLong": "",
+    "": "",
     "URL": "GOD",
     "LinkImage": "thumbnail.jpeg",
     "SelectImage": "select.png",
@@ -93,7 +103,9 @@
     "TypeProject": 5,
     "ChronoSection": 2,
     "ChronoProject": 5,
-    "SelectedProject": 0
+    "SelectedProject": 0,
+    "DescriptionCatchy": "",
+    "DescriptionLong": ""
   },
   {
     "ProjectName": "Inktober",
@@ -101,7 +113,7 @@
     "Type": "Graphics",
     "GlobalVisibility": "Yes",
     "Description": "Prompt based illustrations for a pen and ink challenge called Inktober (October 2017).",
-    "DescriptionLong": "",
+    "": "",
     "URL": "Inktober",
     "LinkImage": "thumbnail.jpeg",
     "SelectImage": "select.png",
@@ -109,7 +121,9 @@
     "TypeProject": 2,
     "ChronoSection": 2,
     "ChronoProject": 6,
-    "SelectedProject": 0
+    "SelectedProject": 0,
+    "DescriptionCatchy": "",
+    "DescriptionLong": ""
   },
   {
     "ProjectName": "dFrost 2017 Branding",
@@ -117,7 +131,7 @@
     "Type": "Graphics",
     "GlobalVisibility": "Yes",
     "Description": "Print and graphics design for NID Bengaluru's 2017 design fest dFrost: Beyond the Event Horizon",
-    "DescriptionLong": "",
+    "": "",
     "URL": "dFrost2017",
     "LinkImage": "thumbnail.jpeg",
     "SelectImage": "select.png",
@@ -125,7 +139,9 @@
     "TypeProject": 3,
     "ChronoSection": 2,
     "ChronoProject": 7,
-    "SelectedProject": 0
+    "SelectedProject": 0,
+    "DescriptionCatchy": "",
+    "DescriptionLong": ""
   },
   {
     "ProjectName": "Digital Book Covers",
@@ -133,7 +149,7 @@
     "Type": "Graphics",
     "GlobalVisibility": "Yes",
     "Description": "Book cover designs for a variety of publications on Juggernaut's app on android and iOS",
-    "DescriptionLong": "",
+    "": "",
     "URL": "BookCovers",
     "LinkImage": "thumbnail.jpeg",
     "SelectImage": "select.png",
@@ -141,7 +157,9 @@
     "TypeProject": 1,
     "ChronoSection": 3,
     "ChronoProject": 1,
-    "SelectedProject": 0
+    "SelectedProject": 0,
+    "DescriptionCatchy": "",
+    "DescriptionLong": ""
   },
   {
     "ProjectName": "Karkat",
@@ -149,7 +167,7 @@
     "Type": "Web",
     "GlobalVisibility": "Yes",
     "Description": "A gamified mobile application for the Swachh Bharat Initiative that aims to provide insight on urban waste",
-    "DescriptionLong": "",
+    "": "",
     "URL": "Karkat",
     "LinkImage": "thumbnail.jpeg",
     "SelectImage": "select.png",
@@ -157,7 +175,9 @@
     "TypeProject": 4,
     "ChronoSection": 3,
     "ChronoProject": 2,
-    "SelectedProject": 0
+    "SelectedProject": 0,
+    "DescriptionCatchy": "",
+    "DescriptionLong": ""
   },
   {
     "ProjectName": "Bass Foundry Logo",
@@ -165,7 +185,7 @@
     "Type": "Graphics",
     "GlobalVisibility": "Yes",
     "Description": "Creating new identities for the Delhi based duo of music producers Karma Selecta and Shivam Ghai",
-    "DescriptionLong": "",
+    "": "",
     "URL": "BassFoundry",
     "LinkImage": "thumbnail.jpeg",
     "SelectImage": "select.png",
@@ -173,7 +193,9 @@
     "TypeProject": 5,
     "ChronoSection": 3,
     "ChronoProject": 3,
-    "SelectedProject": 0
+    "SelectedProject": 0,
+    "DescriptionCatchy": "",
+    "DescriptionLong": ""
   },
   {
     "ProjectName": "Enough",
@@ -181,7 +203,7 @@
     "Type": "Others",
     "GlobalVisibility": "Yes",
     "Description": "Short movie for the Swachh Bharat Initiative and the Indian railways",
-    "DescriptionLong": "",
+    "": "",
     "URL": "Enough",
     "LinkImage": "thumbnail.jpeg",
     "SelectImage": "select.png",
@@ -189,7 +211,9 @@
     "TypeProject": 1,
     "ChronoSection": 3,
     "ChronoProject": 4,
-    "SelectedProject": 0
+    "SelectedProject": 0,
+    "DescriptionCatchy": "",
+    "DescriptionLong": ""
   },
   {
     "ProjectName": "Store Design",
@@ -197,7 +221,7 @@
     "Type": "Space",
     "GlobalVisibility": "Yes",
     "Description": "Store and fixture design for a Delhi based manufacturer and retailer of musical instruments",
-    "DescriptionLong": "",
+    "": "",
     "URL": "RajMusicals",
     "LinkImage": "thumbnail.jpeg",
     "SelectImage": "select.png",
@@ -205,7 +229,9 @@
     "TypeProject": 3,
     "ChronoSection": 3,
     "ChronoProject": 5,
-    "SelectedProject": 0
+    "SelectedProject": 0,
+    "DescriptionCatchy": "",
+    "DescriptionLong": ""
   },
   {
     "ProjectName": "Indo-Pak War Exhibit",
@@ -213,7 +239,7 @@
     "Type": "Graphics",
     "GlobalVisibility": "Yes",
     "Description": "Exhibit and graphic design for Shauryanjali. A celebration of the 50th anniversary of the 1965 Indo-Pak war",
-    "DescriptionLong": "",
+    "": "",
     "URL": "WarExhibit",
     "LinkImage": "thumbnail.jpeg",
     "SelectImage": "select.png",
@@ -221,7 +247,9 @@
     "TypeProject": 4,
     "ChronoSection": 4,
     "ChronoProject": 3,
-    "SelectedProject": 0
+    "SelectedProject": 0,
+    "DescriptionCatchy": "",
+    "DescriptionLong": ""
   },
   {
     "ProjectName": "Focus Pen",
@@ -229,7 +257,7 @@
     "Type": "Product",
     "GlobalVisibility": "Yes",
     "Description": "Redefining the future of note-taking and studying with a simple twist",
-    "DescriptionLong": "<i>Ever wished your pen could do more than just bleed on your  favourite white shirt?</i><br>We took a long look at how people take notes and came up with the perfect product for those that are neck deep in research. The focus pen aims to seamlessly integrate your digital and physical notes!",
+    "": "",
     "URL": "FocusPen",
     "LinkImage": "thumbnail.jpeg",
     "SelectImage": "select.png",
@@ -237,7 +265,9 @@
     "TypeProject": 1,
     "ChronoSection": 2,
     "ChronoProject": 2,
-    "SelectedProject": 1
+    "SelectedProject": 1,
+    "DescriptionCatchy": "Ever wished your pen could do more than just bleed on your  favourite white shirt?",
+    "DescriptionLong": "We took a long look at how people take notes and came up with the perfect product for those that are neck deep in research. The focus pen aims to seamlessly integrate your digital and physical notes!"
   },
   {
     "ProjectName": "CatchUp",
@@ -245,7 +275,7 @@
     "Type": "Web",
     "GlobalVisibility": "Yes",
     "Description": "An attempt to create an assitant for coordinating and simplifying group outings and activities",
-    "DescriptionLong": "<i>Do you have that one friend who always misses movie nights?</i><br>Catch Up is the app that coordinates all your friends when you need to 'catch-up'. Create your own events, check your RSVPs and let the assistant sort your reservations and travel plans.",
+    "": "",
     "URL": "CatchUp",
     "LinkImage": "thumbnail.jpeg",
     "SelectImage": "select.png",
@@ -253,7 +283,9 @@
     "TypeProject": 1,
     "ChronoSection": 1,
     "ChronoProject": 1,
-    "SelectedProject": 2
+    "SelectedProject": 2,
+    "DescriptionCatchy": "Do you have that one friend who always misses movie nights?",
+    "DescriptionLong": "Catch Up is the app that coordinates all your friends when you need to 'catch-up'. Create your own events, check your RSVPs and let the assistant sort your reservations and travel plans."
   },
   {
     "ProjectName": "Shower Gel Packaging",
@@ -261,7 +293,7 @@
     "Type": "Product",
     "GlobalVisibility": "Yes",
     "Description": "Winning entry for a shower gel packaging competition held by Fiama di Wills",
-    "DescriptionLong": "<i>Taking a shower at the beach?</i><br>Our design integrates a handy clip-on hook for those times when there's no shelf in a bathing stall. Also, it has a neat dispenser to always give you the right quantity of soapy goodness.",
+    "": "",
     "URL": "FiamaDiWills",
     "LinkImage": "thumbnail.jpeg",
     "SelectImage": "select.png",
@@ -269,7 +301,9 @@
     "TypeProject": 3,
     "ChronoSection": 2,
     "ChronoProject": 3,
-    "SelectedProject": 3
+    "SelectedProject": 3,
+    "DescriptionCatchy": "Taking a shower at the beach?",
+    "DescriptionLong": "Our design integrates a handy clip-on hook for those times when there's no shelf in a bathing stall. Also, it has a neat dispenser to always give you the right quantity of soapy goodness."
   },
   {
     "ProjectName": "Delhi's Disappearing Heritage",
@@ -277,7 +311,7 @@
     "Type": "Web",
     "GlobalVisibility": "Yes",
     "Description": "Visualisation of Delhi's disappearing heritage. Based on data collected by INTACH Delhi Chapter",
-    "DescriptionLong": "<i>This city is not what it used to be</i><br>INTACH Delhi Chapter maintains an exhaustive listing of all the heritage buildings in Delhi. Did you even know there's an old Mughal mosque right around the corner of the street? Did you also know that it is silently decaying to ruin?",
+    "": "",
     "URL": "DelhiMapping",
     "LinkImage": "thumbnail.jpeg",
     "SelectImage": "select.png",
@@ -285,7 +319,9 @@
     "TypeProject": 2,
     "ChronoSection": 2,
     "ChronoProject": 1,
-    "SelectedProject": 4
+    "SelectedProject": 4,
+    "DescriptionCatchy": "This city is not what it used to be �sigh",
+    "DescriptionLong": "INTACH Delhi Chapter maintains an exhaustive listing of all the heritage buildings in Delhi. Did you even know there's an old Mughal mosque right around the corner of the street? Did you also know that it is silently decaying to ruin?"
   },
   {
     "ProjectName": "The Instrument",
@@ -293,7 +329,7 @@
     "Type": "Product",
     "GlobalVisibility": "Yes",
     "Description": "A DIY arduino based music sequencer and instrument for the those who tinker",
-    "DescriptionLong": "<i>I need an intuitive way to make music</i><br>We got inspired by the theremin to create a proximity based music synthesizer and arpeggiator that any one can play. Skip the piano lessons maybe?",
+    "": "",
     "URL": "Instrument",
     "LinkImage": "thumbnail.jpeg",
     "SelectImage": "select.png",
@@ -301,7 +337,9 @@
     "TypeProject": 4,
     "ChronoSection": 2,
     "ChronoProject": 4,
-    "SelectedProject": 5
+    "SelectedProject": 5,
+    "DescriptionCatchy": "I need an intuitive way to make music",
+    "DescriptionLong": "We got inspired by the theremin to create a proximity based music synthesizer and arpeggiator that any one can play. Skip the piano lessons maybe?"
   },
   {
     "ProjectName": "Aava Bottle Design",
@@ -309,7 +347,7 @@
     "Type": "Product",
     "GlobalVisibility": "Yes",
     "Description": "Winning competition entry for a premium mineral water brand's new packaging",
-    "DescriptionLong": "<i>No tap water! Gimme mineral water</i><br>You know what? there just might be something for the water connoisseur. Aava intends to launch a new range of premium mineral water in sparkling and still varieties. And we won second place in their competition for the packaging design.",
+    "": "",
     "URL": "Aava",
     "LinkImage": "thumbnail.jpeg",
     "SelectImage": "select.png",
@@ -317,7 +355,9 @@
     "TypeProject": 2,
     "ChronoSection": 1,
     "ChronoProject": 2,
-    "SelectedProject": 6
+    "SelectedProject": 6,
+    "DescriptionCatchy": "No tap water! Gimme mineral water",
+    "DescriptionLong": "Actually, we there just might be something for the water connoisseur. Aava intends to launch a new range of premium mineral water in sparkling and still varieties. And we won second place in their competition for the packaging design."
   },
   {
     "ProjectName": "Skywalk",
@@ -325,7 +365,7 @@
     "Type": "Space",
     "GlobalVisibility": "Yes",
     "Description": "Winning entry for a pedestrian overbridge design competition at Pragati Maidan, New Delhi",
-    "DescriptionLong": "<i>Another foot-over bridge? Who wants to use those ugly things anyway?</i><br>Our point exactly, the upcoming 'skywalk' at Pragati Maidan wants to be a different kind of urban experience. The folks at Design Business Collaborative pitched a new way to design elevated passenger corridors. Currently under construction!",
+    "": "",
     "URL": "Skywalk",
     "LinkImage": "thumbnail.jpeg",
     "SelectImage": "select.png",
@@ -333,6 +373,8 @@
     "TypeProject": 1,
     "ChronoSection": 4,
     "ChronoProject": 1,
-    "SelectedProject": 7
+    "SelectedProject": 7,
+    "DescriptionCatchy": "Another foot-over bridge? Who wants to use those ugly things anyway?",
+    "DescriptionLong": "Our point exactly, the upcoming 'skywalk' at Pragati Maidan wants to be a different kind of urban experience. The folks at Design Business Collaborative pitched a new way to design elevated passenger corridors. Currently under construction!"
   }
 ]
