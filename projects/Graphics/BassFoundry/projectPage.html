@@ -1,73 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-        <title>Akshay Khurana: Portfolio</title>
-        <meta name="description" content="This is the portfolio of Akshay Khurana.">
-        <meta name="keywords" content="portfolio, akshay, khurana, design, architect, designer, interaction design">
-        <meta name="author" content="www.akshaykhurana.com">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-        <!-- Responsive and mobile friendly stuff -->
-        <meta name="HandheldFriendly" content="True">
-        <meta name="MobileOptimized" content="320">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Akshay Khurana: Portfolio</title>
+    <meta name="description" content="This is the portfolio of Akshay Khurana.">
+    <meta name="keywords" content="portfolio, akshay, khurana, design, architect, designer, interaction design, NID, SPA, National Institute of Design, School of Planning and Architecture">
+    <meta name="author" content="www.akshaykhurana.com">
 
-        <!-- Bootstrap -->
-        <link href="/css/bootstrap-reboot.css" rel="stylesheet">
-        <link href = "/css/bootstrap-grid.css" rel="stylesheet">
-        <link href = "/css/bootstrap.css" rel="stylesheet">
+    <!-- Responsive and mobile friendly stuff -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-        <!-- Animate.css -->
-        <link href="/css/animate.css" rel="stylesheet">
+    <!--Stylesheets -->
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/layoutStylesheet.css">
+    <link rel="stylesheet" href="/css/fontStylesheet.css">
+    <link rel="stylesheet" href="/css/colourStylesheet.css">
+    <link rel="stylesheet" href="/css/animationsStylesheet.css">
 
-        <!--Own Stylesheet and Fonts -->
-        <link rel="stylesheet" href="/css/ProjectStylesheet.css" media="all">  
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Fjord+One" rel="stylesheet">
 
-        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
+    <!--Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+</head>
 
-    </head>
-
-    <body>
-        <div class = "LoadingScreen">
-            <div class="container HFContainer">
-                <div class="row">
-                    <div class="col-12 IntroText">
-                        <a href="/index.html"><h1 id="shiny1">AKSHAY KHURANA</h1></a>
+<body>
+    <header class="colorYellow">
+        <div class="container">
+            <div class="logo">
+                <a href="/main.html"><img src="/images/logoLight.svg"></a>
+            </div>
+            <div class="nav">
+                <div class="flexRow hRight">
+                    <div class="toggleNav">
+                        <a href="/contact.html">
+                            <h2>INFO.</h2>
+                        </a>
                     </div>
-                    <div class="col-12 IntroText">
-                        <h2>WEB . GRAPHICS . SPACE . PRODUCTS</h2>
-                    </div>
+                    <div class="hamburger">M</div>
                 </div>
             </div>
         </div>
-        <div class = "PortraitWarning">
-            <div class="container HFContainer">
-                <div class="row">
-                    <div class="col-12 IntroText">
-                        <a href="/index.html"><h1 id="shiny2">AKSHAY KHURANA</h1></a>
-                    </div>
-                    <div class="col-12 IntroText">
-                        <h2>WEB . GRAPHICS . SPACE . PRODUCTS</h2>
-                    </div>
-                    <div class="col-8 offset-2 IntroText">
-                        <p>best viewed in portrait mode</p>
-                    </div>
-                </div>
+    </header>
+    <div class="overlayScreen overlayYellow" id="loadingScreen">
+        <div class="container vCenter hCenter">
+            <div class="textCenter">
+                <h1 id="shiny1">- graphics -</h1>
             </div>
         </div>
-
+    </div>
+    <div class="overlayScreen" id="portraitWarning">
+        <div class="container">
+            <div class="textCenter">
+                <p>This website is best viewed in <br>
+                    <emphasis class="largerText">portrait mode</emphasis>
+                </p>
+            </div>
+        </div>
+    </div>
+    <main>
+        <section class="introSection container">
+            <h1 class="projectTitle">Bass Foundry</h1>
+            <p class="projectSubtitle">2016<br>As 1.Studio for Bass Foundry</p>
+            <p class="projectDescription">
+                Logo and identity for a duo of DJs/EDM Music producers based in Delhi<br>
+                <a href="https://soundcloud.com/bass-foundry">Shameless soundcloud plug</a><br>
+                <a href="https://www.facebook.com/bassfoundrymusic/">Shameless facebook fan page plug</a></p>
+        </section>
+        <hr>
+        <section class="generalSection container">
+            <h4>What Was Asked</h4>
+            <p>The clients needed a unique identity to establish their newly formed group. For this, they envisaged a mascot that could serve as the face of the band. This mascot was to be a spheroid blob shaped figure so that it could some day be fashioned into a helmet for BassFoundry's live performances or be easily animated for the background at larger venues. Additionally, It was important for this graphic to be easily printed on merchandise that the duo intended to sell/distribute as part of their regular gigs.</p>
+        </section>
+        <hr>
+        <section class="generalSection container">
+            <h4>Figuring out the Visual Language</h4>
+            <p>Or rather, how I learned to love my new Surface Book.</p>
+            <p>I spent hours on the thing trying to figure out how to work with the surface pen. And somewhere down the line, I found I could do pencil sketches nearly as that on paper, on it. Henceforth, I took time out to learn the capabilities of the pen additionally to create artwork.</p>
+            <p><i>And that's how I rediscovered Photoshop</i></p>
+            <p class="tinyText">These sketches were done on a Surface Book with a Surface Pen.</p>
+        </section>
+        <section class="imageSection threeSection container">
+            <div class="imgCaptionBlock modalEnabled">
+                <img src="images/Initial.jpg " alt="Initial Refinement">
+                <p class="imgCaption ">Initial Refinement</p>
+            </div>
+            <div class="imgCaptionBlock modalEnabled">
+                <img src="images/Logo%20Exploration%202.jpg " alt="Colour options ">
+                <p class="imgCaption">Colour Options</p>
+            </div>
+            <div class="imgCaptionBlock modalEnabled">
+                <img src="images/Final.jpg" alt="Final Mascot ">
+                <p class="imgCaption">Final Mascot</p>
+            </div>
+        </section>
+        <hr>
+        <section class="generalSection container">
+            <h4>Making it Pixel Perfect</h4>
+            <p>Vectorising the artwork was more trouble than simply illustrating it within Photoshop with its sketchy linework. Plus, that gradient in the mouth was too difficult to render as a vector element. This took a while to figure out but I found the best solution to blend different offset containers within the artwork. Once that was done, I could recreate the artwork at multiple scales on demand.</p>
+            <p>For now, this project stands as is. I'm hoping to convince BassFoundry to let me have a crack at designing the helmet ;)</p>
+        </section>
+        <section class="imageSection threeSection container">
+            <div class="imgCaptionBlock modalEnabled">
+                <img src="images/vector%20black%20logo.jpg" alt="Black Mascot">
+                <p class="imgCaption ">black mascot after vectorisation</p>
+            </div>
+            <div class="imgCaptionBlock modalEnabled">
+                <img src="images/vector%20white%20logo.jpg" alt="White Mascot">
+                <p class=" imgCaption ">white mascot after vectorisation</p>
+            </div>
+              <div class="imgCaptionBlock modalEnabled">
+                <img src="images/with%20type%20both.jpg" alt="Black Mascot with Type">
+                <p class=" imgCaption ">logo and visual mark</p>
+            </div>
+        </section>
+        <section class="containerFull homeButton colorYellow">
+            <div class=homeButtonCenter>
+                <a href=/main.html><img src="/images/home.svg">
+                <p>home</p></a>
+            </div>
+        </section>
         <!-- The Modal -->
         <div id="modalDiv" class="modal">
             <!-- The Close Button -->
@@ -76,129 +134,18 @@
             <img class="modal-content" src="images/1%20Swift.jpg" id="modalImage">
             <!-- Modal Caption (Image Text) -->
             <div class="modal-caption" id="modalCaption">swift</div>
+
         </div>
+    </main>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-        <div class = "header">
-            <div class="container">
-                <div class="row HFContainer">
-                    <div class="col-8 col-md-10 HeaderTitle">
-                        <a href="/index.html"><h1 class="link">AKSHAY KHURANA</h1></a>
-                    </div>
-                    <div class="col-4 col-md-2 HeaderAbout">
-                        <a href="/contact.html"><h2 class="link">ABOUT</h2></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- Include shine.js-->
+    <script src="/shine.js-master/dist/shine.min.js"></script>
 
-        <div class= "mainContent">
-            <div class="container">
-                <div class="sections row">
-                    <div class="projectTitle col-12">
-                        <h3>Bass Foundry</h3>
-                    </div>
-                    <div class="projectSubtitle col-12">
-                        <h4>2016</h4>
-                        <h4>As 1.Studio for Bass Foundry</h4>
-                    </div>
-                    <div class="projectDescription col-12">
-                        <p>logo and identity design for a duo of DJs/EDM Music producers based in Delhi</p>
-                    </div>
-                </div>
-                <hr>
+    <!-- Import local javascripts -->
+    <script type="text/javascript" src="/js/allLoad.js"></script>
 
-                <div class="sections row">
-                    <div class="col-12 col-md-6"><h5>Brief</h5>
-                        <p>The clients needed a unique identity to establish their newly formed group. For this, they envisaged a mascot that would be <b>loud and rather aggressive looking</b>, in tune with the type of music that they created. It was important for this graphic to be easily printed on merchandise that the duo intended to sell/distribute as part of their regular gigs.</p>
-                        <p>Moreover, the mascot needed to be something that could later be easily <b>animated or programmed to LED panels</b> that could be worn on the body or scaled up for visual effect on larger stages.</p>
-                    </div>
-                </div>
-                <hr>
+</body>
 
-                <div class="sections row">
-                    <div class="col-12 col-md-6"><h5>Sketches</h5>
-                        <p>The process started with refining the initial sketch made by the band management. Out of all the candidates considered, the one shown below was chosen as the final candidate.</p>
-                        <p>These sketches were done on a Surface Book with a Surface Pen.</p>
-                    </div>
-                    <div class="row extraSpace">
-                        <div class="card col-4 modalEnabled">
-                            <img class="card-img-top" src="images/Initial.jpg" alt="Initial Refinement">
-                            <div class="card-block">
-                                <h6 class="card-title imgCaption">Initial Refinement</h6>
-                            </div>
-                        </div>
-                        <div class="card col-4 modalEnabled">
-                            <img class="card-img-top" src="images/Logo%20Exploration%202.jpg" alt="Colour options">
-                            <div class="card-block">
-                                <h6 class="card-title imgCaption">Colour Options</h6>
-                            </div>
-                        </div>
-                        <div class="card col-4 modalEnabled">
-                            <img class="card-img-top" src="images/Final.jpg" alt="Final Mascot">
-                            <div class="card-block">
-                                <h6 class="card-title imgCaption">Final Mascot</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <div class="sections row">
-                    <div class="col-12 col-md-6"><h5>Final graphics</h5>
-                        <p>These were refined as vector graphics in Illustrator. Options were created for graphics on dark and light backgrounds, type was added and a promotional GIF was created.</p>
-                    </div>
-                    <div class="row extraSpace">
-                        <div class="card col-12 col-md-8 offset-md-2 modalEnabled">
-                            <img class="card-img-top" src="images/vector%20black%20logo.jpg" alt="Black Mascot">
-                            <div class="card-block">
-                                <h6 class="card-title imgCaption">Black Mascot</h6>
-                            </div>
-                        </div>
-                        <div class="card col-12 col-md-8 offset-md-2 modalEnabled">
-                            <img class="card-img-top" src="images/vector%20black%20type.jpg" alt="Black Mascot with Type">
-                            <div class="card-block">
-                                <h6 class="card-title imgCaption">Black Mascot with Type</h6>
-                            </div>
-                        </div>
-                        <div class="card col-12 col-md-8 offset-md-2 modalEnabled">
-                            <img class="card-img-top" src="images/vector%20white%20logo.jpg" alt="White Mascot">
-                            <div class="card-block">
-                                <h6 class="card-title imgCaption">White Mascot</h6>
-                            </div>
-                        </div>
-                        <div class="card col-12 col-md-8 offset-md-2 modalEnabled">
-                            <img class="card-img-top" src="images/vector%20white%20type.jpg" alt="White Mascot with Type">
-                            <div class="card-block">
-                                <h6 class="card-title imgCaption">White Mascot with Type</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class = "footer">
-            <div class="container">
-                <div class="row HFContainer">
-                    <div class="col-3 bottomNavigation">
-                        <h2 class="link" id="prevNav"><a href="/projects/Graphics/Inktober/projectPage.html">PREVIOUS</a></h2>
-                    </div>
-                    <div class="col-3 offset-6 bottomNavigation">
-                        <h2 class="link" id="nextNav"><a href="/projects/Graphics/BookCovers/projectPage.html">NEXT</a></h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="/js/bootstrap.min.js"></script>
-
-        <!-- Include shine.js-->
-        <script src="/shine.js-master/dist/shine.min.js"></script>
-
-        <!-- Import local javascripts -->
-        <script type="text/javascript" src="/js/ProjectLoad.js"></script> 
-    </body>
 </html>

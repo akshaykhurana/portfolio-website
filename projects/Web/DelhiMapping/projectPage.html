@@ -1,84 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-        <title>Akshay Khurana: Portfolio</title>
-        <meta name="description" content="This is the portfolio of Akshay Khurana.">
-        <meta name="keywords" content="portfolio, akshay, khurana, design, architect, designer, interaction design">
-        <meta name="author" content="www.akshaykhurana.com">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-        <!-- Responsive and mobile friendly stuff -->
-        <meta name="HandheldFriendly" content="True">
-        <meta name="MobileOptimized" content="320">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Akshay Khurana: Portfolio</title>
+    <meta name="description" content="This is the portfolio of Akshay Khurana.">
+    <meta name="keywords" content="portfolio, akshay, khurana, design, architect, designer, interaction design, NID, SPA, National Institute of Design, School of Planning and Architecture">
+    <meta name="author" content="www.akshaykhurana.com">
 
-        <!-- Bootstrap -->
-        <link href="/css/bootstrap-reboot.css" rel="stylesheet">
-        <link href = "/css/bootstrap-grid.css" rel="stylesheet">
-        <link href = "/css/bootstrap.css" rel="stylesheet">
+    <!-- Responsive and mobile friendly stuff -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-        <!-- Animate.css -->
-        <link href="/css/animate.css" rel="stylesheet">
-
-        <!--Own Stylesheet and Fonts -->
-        <link rel="stylesheet" href="/css/ProjectStylesheet.css" media="all">  
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Fjord+One" rel="stylesheet">
-
-        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
-
-        <!--Mapbox APIs linked here-->
-        <link href='https://api.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.css' rel='stylesheet' />
-        <!--MapDiv resizing-->
-        <style type="text/css">
-            #mapDiv{
-                width: 100%;
-                height: 750px;
-            }
-        </style>
+    <!--Stylesheets -->
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/layoutStylesheet.css">
+    <link rel="stylesheet" href="/css/fontStylesheet.css">
+    <link rel="stylesheet" href="/css/colourStylesheet.css">
+    <link rel="stylesheet" href="/css/animationsStylesheet.css">
 
 
-    </head>
+    <!--Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sue+Ellen+Francisco" rel="stylesheet">
+</head>
 
-    <body>
-        <div class = "LoadingScreen">
-            <div class="container HFContainer">
-                <div class="row">
-                    <div class="col-12 IntroText">
-                        <a href="/index.html"><h1 id="shiny1">AKSHAY KHURANA</h1></a>
+<body>
+    <header class="colorGreen">
+        <div class="container">
+            <div class="logo">
+                <a href="/main.html"><img src="/images/logoLight.svg"></a>
+            </div>
+            <div class="nav">
+                <div class="flexRow hRight">
+                    <div class="toggleNav">
+                        <a href="/contact.html">
+                            <h2>INFO.</h2>
+                        </a>
                     </div>
-                    <div class="col-12 IntroText">
-                        <h2>WEB . GRAPHICS . SPACE . PRODUCTS</h2>
-                    </div>
+                    <div class="hamburger">M</div>
                 </div>
             </div>
         </div>
-        <div class = "PortraitWarning">
-            <div class="container HFContainer">
-                <div class="row">
-                    <div class="col-12 IntroText">
-                        <a href="/index.html"><h1 id="shiny2">AKSHAY KHURANA</h1></a>
-                    </div>
-                    <div class="col-12 IntroText">
-                        <h2>WEB . GRAPHICS . SPACE . PRODUCTS</h2>
-                    </div>
-                    <div class="col-8 offset-2 IntroText">
-                        <p>best viewed in portrait mode</p>
-                    </div>
-                </div>
+    </header>
+    <div class="overlayScreen overlayGreen" id="loadingScreen">
+        <div class="container vCenter hCenter">
+            <div class="textCenter">
+                <h1 id="shiny1">web</h1>
             </div>
         </div>
+    </div>
+    <div class="overlayScreen" id="portraitWarning">
+        <div class="container">
+            <div class="textCenter">
+                <p>This website is best viewed in <br>
+                    <emphasis class="largerText">portrait mode</emphasis>
+                </p>
+            </div>
+        </div>
+    </div>
+    <main>
+        <section class="introSection container">
+            <h1 class="projectTitle">Delhi's Disappearing Heritage</h1>
+            <p class="projectSubtitle">2017<br>Classroom project at NID, Bangalore (active)<br>
+                <br>Guided by Chakradhar Saswade(NID, Bangalore), <a href="http://amitkaps.com/">Amit Kapoor</a></p>
+            <p class="projectDescription">
+                A map-based data visualisation of Delhi's heritage sites as identified by INTACH</p>
+        </section>
+        <hr class="container">
+        <section class="generalSection container">
+            <h4>A Brief History of Time</h4>
+            <p>This started as a fun side project with Uttiya Bhattacharya while I was at Design business Collaborative circa 2015. He'd spent some time digitizing the INTACH database with exact geocodes instead of the physical maps they had available at that time. In this age of digital mapping solutions, we had with us, a wealth of public data that was difficult to access and ready to be deployed to the internet in an intuitive interface. </p>
+            <p>We wanted to build a map application that could help you find/enjoy/visit/document these monuments. Enter Mapbox, and within a few weeks, we were able to build a little prototype that we could use to test. (An old implementation is embedded below)</p>
+            <p>Cutting a long story short, I'd forgotten about this until our data visualisation module at NID Bangalore. So, I set about trying to gather some insight on the old database we'd used to create the first prototype.</p>
+        </section>
+        <section class="container">
+            <div class="cardSmall whiteText colorGreen cardPadded threeTwoSection">
+                <div class="leftPane">
+                    <h4>A quick note about INTACH</h4>
+                    <p><b>INTACH</b> is short for <b>The Indian National Trust for Art and Cultural Heritage</b> is a non-profit charitable organisation registered under the Societies' Registration Act, 1860. The organisation aims to stimulate and spearhead heritage awareness and conservation in India. Over the years, INTACH has taken up restoration and protection of hundreds of monuments that fall outside the scope of the Archaeological Survey of India and other government agencies</p>
+                    <p>As INTACH Delhi Chapter, it maintains an exhaustive listing of Delhi's heritage structures.</p>
+                    <p><a href="http://www.intachdelhichapter.org/">link to Intach Delhi Chapter</a></p>
+                    <p class="tinyText">The data for this visualisation was originally available on the INTACH Delhi website. It has since been published in a book: "Delhi, The Built Heritage: A Listing"</p>
+                </div>
+                <div class="Right Pane"><img src="images/Intach.png"></div>
+            </div>
+        </section>
+        <section class="generalSection container">
+            <h4>"I need more data"</h4>
+            <p>There were two problems that we ran into when trying to validate the data we'd picked off the INTACH website.</p>
+            <p class="listed">
+                1. It was difficult to find the listed monuments despite the geo-coordinates and the descriptions. The text descriptions were just not enough and oft, our markers were slightly off.<br> 2. We didn't have any imagery for the items in the listing.</p>
+            <p>This is where a little quick research at the NID library proved useful. The book titled <i>"Delhi, The Built Heritage: A Listing"</i> was available and had pretty much all the data that the now defunct website didn't. So, I started entering this manually into my old database. A process that took the better part of a month. I'm linking the final dataset here (sans images though, I'm still working on high-resolution scans of the print material)</p>
+            <p><a href="https://drive.google.com/open?id=1S3IjlCnyMqfvGOQ2_HZOXsWIqM4LgYi4">Google drive link to the complete database</a></p>
+        </section>
+        <section class="imageSection container threeSection">
+            <div class="imageCaptionBlock">
+                <img src="images/screengrab%20flash%20website.png" alt="Screengrab from the old INTACH website">
+                <p class="imgCaption">Listings on INTACH website</p>
+            </div>
+            <div class="imageCaptionBlock">
+                <img src="images/tidy%20dataset.png" alt="Tidy Dataset for visualisation">
+                <p class="imgCaption">Tidy dataset</p>
+            </div>
+        </section>
+        <hr class="container">
+        <section class="generalSection container">
+            <h4>Classroom Exploration 1</h4>
+            <p>This is one of the first exercises I did on the new Mapbox client. The colours are encoding the type of monument, on zooming in you can see its name and its importance (Historically, Architecturally or Archaeologically) coded as A B or C, where A is highly important, B is lesser, and you get the drift. Sorry about not having legends, I'm currently reworking this project.</p>
+        </section>
+        <section class="mapSection containerFull colorGreen">
+            <div id="mapDiv"></div>
+        </section>
+        <section class="twoSection container">
+            <div class="leftPane">
+                <h4>Classroom Exploration 2</h4>
+                <h5>Process Sketches: Layout</h5>
+                <p>The very first thing to solve is the size of the actual map element of the visualisation with respect to the rest of the elements. Not knowing the sizes of the other elements, I decided to quickly iterate through a couple of variations on a sidebar + main visualisation space<br><br>
+                    <b>Observations</b></p>
+                <p class="listed">
+                    1. Tooltips might work for the same reason as the first visualisation as they help users stay within the context and find information quickly. However, the <b>sheer volume of information to display makes tooltips impractical.</b> This will solve when the information schematic is more developed.<br><br> 2. <b>Legends and Filters</b> need to be solved individually before integration with the rest of the visualisation</p>
+            </div>
+            <div class="rightPane">
+                <div class="imgCaptionBlock modalEnabled">
+                    <img src="images/interface%20layouts.jpg" alt="interface layouts">
+                    <p class="imgCaption">Layout options</p>
+                </div>
+            </div>
+        </section>
+        <section class="twoSection container">
+            <div class="leftPane">
+                <h5>Process Sketches: Map Layout</h5>
+                <p>This one is easier because the map tool itself solves a lot of organisational problems. The timeline feature needs special attention. Also, the map needs to read differently at different zoom levels - Clustered at high zoom levels and be able to display individual structures at closer zoom.<br> The <b>glyphs themselves pose a problem</b>. Using glyphs makes the map extremely hard to read but on closer zoom levels, buildings do not have enough character to make visual distinctions easy.</p>
+            </div>
+            <div class="rightPane">
+                <div class="imgCaptionBlock modalEnabled">
+                    <img src="images/map.jpg" alt="map layout">
+                    <p class="imgCaption">Map layout</p>
+                </div>
+            </div>
+        </section>
+        <section class="generalSection container">
+            <h5>Process Sketches: Legends and Information Window</h5>
+            <p>This step is the densest in terms of information to be displayed and needs some kind of bucketing to display the various kinds of information that are relevant.
+            </p>
+        </section>
+        <section class="imageSection threeSection container">
+            <div class="imgCaptionBlock modalEnabled">
+                <img src="images/Legend%20ideation.jpg" alt="Ideation for legends and filters">
+                <p class="imgCaption">Timeline</p>
+            </div>
+            <div class="imgCaptionBlock modalEnabled">
+                <img src="images/Legend%20options.jpg" alt="Legend Layout Options">
+                <p class="imgCaption">Legend Layouts</p>
 
+            </div>
+            <div class="imgCaptionBlock modalEnabled">
+                <img src="images/Info%20card.jpg" alt="Information Window">
+                <p class="imgCaption">Information Window</p>
+            </div>
+        </section>
+        <hr class="container">
+        <section class="generalSection container">
+            <h4>Proposed Interactions</h4>
+            <p>Just trying my hand at building quick UIs in Photoshop to illustrate user journeys. One obvious problem jumps to attention with the very first visualisation: that the granularity of data is lost. For the final visualisation, I intend to rectify this by filtering data points as per the needs of different narratives. That should solve the problem of density of the scatterplot without having to bucket the items.</p>
+            <p>Also, these screens aren't my favourites either. I was exploring a grungy old-school aesthetic that would work like an old map you'd find in a thrift shop. Clearly, much fail. Expect a new look for the final visualisation whenever it happens</p>
+        </section>
+        <section class="imageSection frameLarge container">
+            <div class="imgCaptionBlock modalEnabled">
+                <img src="images/interaction%201.gif" alt="Timeline scrubbing">
+                <p class="imgCaption">Timeline scrubbing</p>
+            </div>
+            <div class="imgCaptionBlock modalEnabled">
+                <img src="images/interaction%202.gif" alt="">
+                <p class="imgCaption">Listing: On hover</p>
+            </div>
+            <div class="imgCaptionBlock modalEnabled">
+                <img src="images/interaction%203.jpg" alt="Listing: On click">
+                <p class="imgCaption">Listing: On click</p>
+            </div>
+
+        </section>
+        <hr class="container">
+        <section class="generalSection container">
+            <h4>Final Data Visualisation</h4>
+            <p>Coming Soon</p>
+        </section>
+        <section class="containerFull homeButton colorGreen">
+            <div class=homeButtonCenter>
+                <a href=/main.html><img src="/images/home.svg">
+                <p>home</p></a>
+            </div>
+        </section>
         <!-- The Modal -->
         <div id="modalDiv" class="modal">
             <!-- The Close Button -->
@@ -88,211 +207,40 @@
             <!-- Modal Caption (Image Text) -->
             <div class="modal-caption" id="modalCaption">swift</div>
         </div>
+    </main>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-        <div class = "header">
-            <div class="container">
-                <div class="row HFContainer">
-                    <div class="col-8 col-md-10 HeaderTitle">
-                        <a href="/index.html"><h1 class="link">AKSHAY KHURANA</h1></a>
-                    </div>
-                    <div class="col-4 col-md-2 HeaderAbout">
-                        <a href="/contact.html"><h2 class="link">ABOUT</h2></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- Include shine.js-->
+    <script src="/shine.js-master/dist/shine.min.js"></script>
 
-        <div class= "mainContent">
-            <div class="container">
-                <div class="sections row">
-                    <div class="projectTitle col-12">
-                        <h3>Delhi's Disappearing Heritage</h3>
-                    </div>
-                    <div class="projectSubtitle col-12">
-                        <h4>2017</h4>
-                        <h4>Classroom project at NID</h4>
-                        <h4>Guides: Chakradhar Saswade & Amit Kapoor</h4>
-                    </div>
-                    <div class="projectDescription col-12">
+    <!-- Import local javascripts -->
+    <script type="text/javascript" src="/js/allLoad.js"></script>
 
-                        <p>A data visualisation of delhi's heritage sites as identified by INTACH</p>
-                    </div>
-                </div>
-                <hr>
-                <div class="sections row">
-                    <div class="col-12 col-md-6">
-                        <h4>Brief</h4>
-                        <br>
-                        <p><b>INTACH</b> is short for <b>The Indian National Trust for Art and Cultural Heritage</b> is a non-profit charitable organisation registered under the Societies' Registration Act, 1860. The organisation aims to stimulate and spearhead heritage awareness and conservation in India. Over the years, INTACH has taken up restoration and protection of hundreds of monuments that fall outside the coverage of Archaeological Survey of India and other government agencies, and at times local authorities hand over the upkeep and restoration of heritage structures to INTACH directly.<br></p>
-                        <p>Their work as INTACH's Delhi chapter is important as it <b>maintains an exhaustive listing of some of Delhi's most important heritage structures</b> whether they are listed as ASI protected monuments or even smaller privately owned structures of historical or architectural significance.</p>
-                        <p>For this project, I aim to bring light to the massive repository of heritage data available to the public and to show its rise and potential fall if not given due importance in public discussion.</p>
-                        <p>This data for this visualisation was <b>originally available on the INTACH Delhi website. </b>It has since been published in a <b>book: "Delhi, The Built Heritage: A Listing"</b></p>
-                    </div>
-                    <div class="card col-6 offset-3 col-md-3 offset-md-2">
-                        <img class="card-img-top" src="images/book.jpg" alt="Delhi, The Built Heritage: A Listing">
-                        <div class="card-block">
-                            <h6 class="card-title imgCaption">Delhi, The Built Heritage: A Listing</h6>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <div class="sections row">
-                    <div class="col-12 col-md-6">
-                        <h4>Data Gathering</h4>
-                        <p>Most of the data for this visualisation was copied from the now-defunct INTACH flash based website that listed all the data publically. 
-                        </p>
-                        <p>It was later augmented with data from the book itself for updating the dataset to its current configuration.</p>
-                        <p>Furthermore, the following tasks needed to be done:</p>
-                        <p class="listed">
-                            1. <b>Find the actual latitude and longitude of the monuments</b> from the static maps given out by INTACH. This was done using Google Earth's custom maps and then converted to latitude-longitude coordinates that were fed into the database on excel.<br><br>
-                            2. <b>Copy the data as is</b> for each listing in a database format that could be used for further development. For this, Microsoft Excel was used to create a complete CSV file that listed the entire dataset in a format that could easily be read by a programming language like Javascript.<br><br>
-                            3. <b>Cross-reference the images for each listing </b>from the dataset with appropriate images that could be used to identify the monument being listed.
-                        </p>
-                        <p><b>All in all, a dataset containing ~1300 entries of heritage sites across Delhi was generated.</b></p>
-                    </div>
-                    <div class="card col-6 offset-3 offset-md-0 col-md-6 modalEnabled">
-                        <img class="card-img-top" src="images/screengrab%20flash%20website.png" alt="Screengrab from the old INTACH website">
-                        <div class="card-block">
-                            <h6 class="card-title imgCaption">Listings on INTACH website</h6>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <div class="sections row">
-                    <div class="col-12 col-md-6">
-                        <h5>Tidy Datasets</h5>
-                        <p>Data from all these sources was organised into a tidy, machine-readable dataset for manipulation using a map-based tool and a data visualisation tool like D3 or Vegalite.</p>
-                        <p>Screenshots from the final tidy data sets are as shown below:</p>
-                    </div>
-                    <div class="card col-6 offset-3 col-md-6 offset-md-0 modalEnabled">
-                        <img class="card-img-top" src="images/tidy%20dataset.png" alt="Tidy Dataset for visualisation">
-                        <div class="card-block">
-                            <h6 class="card-title imgCaption">Tidy dataset</h6>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <div class="sections row">
-                    <div class="col-12 col-md-6">
-                        <h5>Data Exploration</h5>
-                        <p>Since this visualisation was primarily an explorative exercise, it was important to  immediately create a map-based visualisation for seeing trends that could later be highlighted in the final form.</p>
-                        <p>For this reason, <a href="https://www.mapbox.com/">mapbox's</a> maps API was a perfect fit for generating a study map to identify strategies for visualising this data in a readable format.</p>
-                        <p>The original web development for the same is embedded below:</p>
-                    </div>
-                </div>
-                <div id="mapDiv"></div>
-                <hr>
-                <div class="sections row">
-                    <div class="col-12 col-md-6">
-                        <h5>Process Sketches</h5>
-                        <br>
-                        <h6>Step 1: Layout</h6>
-                        <p>The very first thing to solve is the size of the actual map element of the visualisation with respect to the rest of the elements. Not knowing the sizes of the other elements, I decided to quickly iterate through a couple of variations on a sidebar + main visualisation space<br><br>
-                            <b>Observations</b></p>
-                        <p class="listed">
-                            1. Tooltips might work for the same reason as the first visualisation as they help users stay within the context and find information quickly. However, the <b>sheer volume of information to display makes tooltips impractical.</b> This will solve when the information schematic is more developed.<br><br>
-                            2. <b>Legends and Filters</b> need to be solved individually before integration with the rest of the visualisation</p>
-                    </div>
-                    <div class="card col-6 col-md-6 modalEnabled">
-                        <img class="card-img-top" src="images/interface%20layouts.jpg" alt="interface layouts">
-                        <div class="card-block">
-                            <h6 class="card-title imgCaption">Layout options</h6>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <h6>Step 2: Map Element</h6>
-                        <p>This one is easier because the map tool itself solves a lot of organisational problems. The timeline feature needs special attention. Also, the map needs to read differently at different zoom levels - Clustered at high zoom levels and be able to display individual structures at closer zoom.
-                        </p>
-                        <p>The <b>glyphs themselves pose a problem</b>. Using glyphs makes the map extremely hard to read but on closer zoom levels, buildings do not have enough character to make visual distinctions easy.</p>
-                    </div>
-                    <div class="card col-6 col-md-6 modalEnabled">
-                        <img class="card-img-top" src="images/map.jpg" alt="map layout">
-                        <div class="card-block">
-                            <h6 class="card-title imgCaption">Map layout</h6>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <h6>Step 3: Legends and Information Window</h6>
-                        <p>This step is the densest in terms of information to be displayed and needs some kind of bucketing to display the various kinds of information that are relevant.
-                        </p>
-                    </div>
-                    <div class="row extraSpace">
-                        <div class="card col-6 col-md-4 modalEnabled">
-                            <img class="card-img-top" src="images/Legend%20ideation.jpg" alt="Ideation for legends and filters">
-                            <div class="card-block">
-                                <h6 class="card-title imgCaption">Legends and Filters</h6>
-                            </div>
-                        </div>
-                        <div class="card col-6 col-md-4 modalEnabled">
-                            <img class="card-img-top" src="images/Legend%20options.jpg" alt="Legend Layout Options">
-                            <div class="card-block">
-                                <h6 class="card-title imgCaption">Legend Layout Options</h6>
-                            </div>
-                        </div>
-                        <div class="card col-6 col-md-3 offset-md-1 modalEnabled">
-                            <img class="card-img-top" src="images/Info%20card.jpg" alt="Information Window">
-                            <div class="card-block">
-                                <h6 class="card-title imgCaption">Information Window</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <div class="row sections">
-                    <div class="col-12 col-md-6">
-                        <h5>Final Data Visualisation</h5>
-                        <p>Coming Soon</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- Mapbox API-->
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.css' rel='stylesheet' />
+    <script type="text/javascript">
+        mapboxgl.accessToken = 'pk.eyJ1IjoiYWtzaGF5a2h1cmFuYSIsImEiOiJjaWY3dXdkN3MxMzZ3czZsempwbWc0MnRoIn0.y7jHQWK5lONsJ_6u3EJSTg';
 
-        <div class = "footer">
-            <div class="container">
-                <div class="row HFContainer">
-                    <div class="col-3 bottomNavigation">
-                        <h2 class="link" id="prevNav"><a href="/projects/Web/RadioheadDataVisualisation/projectPage.html">PREVIOUS</a></h2>
-                    </div>
-                    <div class="col-3 offset-6 bottomNavigation">
-                        <h2 class="link" id="nextNav"><a href="/projects/Web/Karkat/projectPage.html">NEXT</a></h2>
-                    </div>
-                </div>
-            </div>
-        </div>
+        var bounds = [
+            [76.95, 28.45], // Southwest coordinates
+            [77.5, 28.8] // Northeast coordinates
+        ];
 
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        var map = new mapboxgl.Map({
+            container: 'mapDiv',
+            center: [77.156815, 28.562814],
+            zoom: 15,
+            style: 'mapbox://styles/akshaykhurana/cj6nn6osz0vu32ro5d3zdb9pr',
+            hash: true,
+            maxBounds: bounds
+        });
 
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="/js/bootstrap.min.js"></script>
+        map.on('load', function() {
 
-        <!-- Include shine.js-->
-        <script src="/shine.js-master/dist/shine.min.js"></script>
+        });
+    </script>
+</body>
 
-        <!-- Import local javascripts -->
-        <script type="text/javascript" src="/js/ProjectLoad.js"></script> 
-
-        <!-- Mapbox API-->
-        <script src='https://api.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.js'></script>
-        <script type="text/javascript">
-            mapboxgl.accessToken = 'pk.eyJ1IjoiYWtzaGF5a2h1cmFuYSIsImEiOiJjaWY3dXdkN3MxMzZ3czZsempwbWc0MnRoIn0.y7jHQWK5lONsJ_6u3EJSTg';
-
-            var bounds = [
-                [76.95, 28.45], // Southwest coordinates
-                [77.5, 28.8]  // Northeast coordinates
-            ];
-
-            var map = new mapboxgl.Map({
-                container: 'mapDiv',
-                center: [77.156815, 28.562814],
-                zoom: 15,
-                style: 'mapbox://styles/akshaykhurana/cj6nn6osz0vu32ro5d3zdb9pr',
-                hash: true,
-                maxBounds: bounds
-            });
-
-            map.on('load', function() {
-
-            });</script>
-    </body>
 </html>

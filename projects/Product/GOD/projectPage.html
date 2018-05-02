@@ -1,73 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-        <title>Akshay Khurana: Portfolio</title>
-        <meta name="description" content="This is the portfolio of Akshay Khurana.">
-        <meta name="keywords" content="portfolio, akshay, khurana, design, architect, designer, interaction design">
-        <meta name="author" content="www.akshaykhurana.com">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-        <!-- Responsive and mobile friendly stuff -->
-        <meta name="HandheldFriendly" content="True">
-        <meta name="MobileOptimized" content="320">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Akshay Khurana: Portfolio</title>
+    <meta name="description" content="This is the portfolio of Akshay Khurana.">
+    <meta name="keywords" content="portfolio, akshay, khurana, design, architect, designer, interaction design, NID, SPA, National Institute of Design, School of Planning and Architecture">
+    <meta name="author" content="www.akshaykhurana.com">
 
-        <!-- Bootstrap -->
-        <link href="/css/bootstrap-reboot.css" rel="stylesheet">
-        <link href = "/css/bootstrap-grid.css" rel="stylesheet">
-        <link href = "/css/bootstrap.css" rel="stylesheet">
+    <!-- Responsive and mobile friendly stuff -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-        <!-- Animate.css -->
-        <link href="/css/animate.css" rel="stylesheet">
+    <!--Stylesheets -->
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/layoutStylesheet.css">
+    <link rel="stylesheet" href="/css/fontStylesheet.css">
+    <link rel="stylesheet" href="/css/colourStylesheet.css">
+    <link rel="stylesheet" href="/css/animationsStylesheet.css">
 
-        <!--Own Stylesheet and Fonts -->
-        <link rel="stylesheet" href="/css/ProjectStylesheet.css" media="all">  
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Fjord+One" rel="stylesheet">
 
-        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
+    <!--Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sue+Ellen+Francisco" rel="stylesheet">
+</head>
 
-    </head>
-
-    <body>
-        <div class = "LoadingScreen">
-            <div class="container HFContainer">
-                <div class="row">
-                    <div class="col-12 IntroText">
-                        <a href="/index.html"><h1 id="shiny1">AKSHAY KHURANA</h1></a>
+<body>
+    <header class="colorRed">
+        <div class="container">
+            <div class="logo">
+                <a href="/main.html"><img src="/images/logoLight.svg"></a>
+            </div>
+            <div class="nav">
+                <div class="flexRow hRight">
+                    <div class="toggleNav filter activeFilter" id="fSelect">
+                        <h2>SELECTED WORK</h2>
                     </div>
-                    <div class="col-12 IntroText">
-                        <h2>WEB . GRAPHICS . SPACE . PRODUCTS</h2>
+                    <div class="toggleNav filter" id="fAll">
+                        <h2>ALL PROJECTS</h2>
                     </div>
+                    <div class="toggleNav">
+                        <a href="/contact.html">
+                            <h2>INFO.</h2>
+                        </a>
+                    </div>
+                    <div class="hamburger">M</div>
                 </div>
             </div>
         </div>
-        <div class = "PortraitWarning">
-            <div class="container HFContainer">
-                <div class="row">
-                    <div class="col-12 IntroText">
-                        <a href="/index.html"><h1 id="shiny2">AKSHAY KHURANA</h1></a>
-                    </div>
-                    <div class="col-12 IntroText">
-                        <h2>WEB . GRAPHICS . SPACE . PRODUCTS</h2>
-                    </div>
-                    <div class="col-8 offset-2 IntroText">
-                        <p>best viewed in portrait mode</p>
-                    </div>
-                </div>
+    </header>
+    <div class="overlayScreen overlayRed" id="loadingScreen">
+        <div class="container vCenter hCenter">
+            <div class="textCenter">
+                <h1 id="shiny1">products</h1>
             </div>
         </div>
-
+    </div>
+    <div class="overlayScreen" id="portraitWarning">
+        <div class="container">
+            <div class="textCenter">
+                <p>This website is best viewed in <br>
+                    <emphasis class="largerText">portrait mode</emphasis>
+                </p>
+            </div>
+        </div>
+    </div>
+    <main>
+        <section class="introSection container">
+            <h1 class="projectTitle">G.O.D</h1>
+            <p class="projectSubtitle">2016<br>Classroom project at NID, Bangalore<br> As a group with Milad Thaha, Manikanta Pollisetti, Devang Kantharia guided by Michael Longford (York University)</p>
+            <p class="projectDescription">
+                An exercise in Speculative Design aimed at teaching skills in rapid prototyping and out-of-the-box thinking. This module titled "FutureSense" was part of an interdisciplinary elective between the three NID campuses.</p>
+        </section>
+        <hr>
+        <section class="generalSection container">
+            <h4>Brief</h4>
+            <p>The brief for this module was to think way out-of-the-box and come up with a product that could manifest itself in a far-flung future.<br>In part, this is inspired by the work of <a href="http://www.dunneandraby.co.uk/content/home">Dunne and Raby</a> especially their work titled <a href="http://www.dunneandraby.co.uk/content/projects/510/0">"Designs for an Overpopulated Planet: Foragers, 2009"</a>. The dystopian worldview illustrated by Dunne and Raby coupled with recent developments in AI were fundamental to creating the backstory for this exploration.
+            </p>
+            <p>The point of this exercise is not to create believable technology but to induce a sense of discomfort in the audience visiting the exhibit by <b>exaggerating the technology of the future in a way that makes it uncomfortably real.</b> This effect is achieved by creating seemingly real artefacts that are loosely based on modern technologies.</p>
+            <p><b>This project was exhibited at the FutureSense exhibit at Gandhinagar at the end of the program module.</b></p>
+        </section>
+        <hr>
+        <section class="generalSection container">
+            <h4>Concept</h4>
+            <p>The project envisions a future where humans are connected as a hive mind to the internet through implants directly embedded in their bodies. In this day and age, <b>privacy</b> is of utmost concern but so is the importance of being <b>"always connected"</b></p>
+            <p>Here's a couple of pointers to make sense of the coming visuals:</p>
+            <p class="listed">
+                1. The hive mind is governed by an <b>all-powerful godlike AI aptly called G.O.D.</b> All humans connect to each other and G.O.D. through <b>devices that can alter their vision and auditory streams.</b><br><br> 2. Connected users experience G.O.D through a series of visions and auditory hallucinations commonly refered to as <b>"Visitations"</b><br><br> 3. Additionally, everyone has a <b>neural uplink</b> to GOD directly implanted into their spine to intercept and relay brain activity directly to the network. The uplink is only active when approved by the human and <b>all personal data remains safely stored in an internal organ</b> augmenting the liver.</p>
+        </section>
+        <hr>
+        <section class="generalSection container">
+            <h4>The Exhibit</h4>
+        </section>
+        <section class="imageSection frameLarge container">
+            <div class="imgCaptionBlock modalEnabled">
+                <img src="images/display%202.JPG" alt="The team">
+                <p class="imgCaption ">the team (L to R) Akshay Khurana, Milad Thaha, Manikanta Pollisetti, Devang Kantharia</p>
+            </div>
+            <div class="imgCaptionBlock modalEnabled">
+                <img src="images/display%201.JPG" alt="Thermocole + Putty models">
+                <p class="imgCaption">Thermocole + putty models</p>
+            </div>
+        </section>
+        <hr>
+        <section class="generalSection container">
+            <h4>Posters</h4>
+            <p>These posters were created as accompaniments to the mock prototypes</p>
+        </section>
+        <section class="imageSection frameLarge container">
+            <img src="images/poster%201.jpg" alt="Poster 1">
+            <img src="images/poster%202.jpg" alt="Poster 2">
+        </section>
+        <hr>
+        <section class="generalSection container">
+            <h4>Standalone Renders</h4>
+            <p>Modelled on Blender 3d by Milad Thaha</p>
+        </section>
+        <section class="imageSection frameMedium containerFull">
+            <div class="imgCaptionBlock modalEnabled">
+                <img src="images/earpiece.jpg" alt="Earpiece for G.O.D">
+                <p class="imgCaption">Earpiece for G.O.D</p>
+            </div>
+            <div class="imgCaptionBlock modalEnabled">
+                <img src="images/eyewear.jpg" alt="Eyewear for G.O.D">
+                <p class="imgCaption">Eyewear for G.O.D</p>
+            </div>
+            <div class="imgCaptionBlock modalEnabled">
+                <img src="images/uplink.jpg" alt="Neural uplink for G.O.D">
+                <p class="imgCaption">Neural uplink for G.O.D</p>
+            </div>
+            <div class="imgCaptionBlock modalEnabled">
+                <img src="images/liver.jpg" alt="Internal storage and computing for G.O.D">
+                <p class="imgCaption">Internal storage and computing for G.O.D</p>
+            </div>
+        </section>
+        <section class="containerFull homeButton colorRed">
+            <div class=homeButtonCenter>
+                <a href=/main.html><img src="/images/home.svg">
+                <p>home</p></a>
+            </div>
+        </section>
         <!-- The Modal -->
         <div id="modalDiv" class="modal">
             <!-- The Close Button -->
@@ -77,161 +155,13 @@
             <!-- Modal Caption (Image Text) -->
             <div class="modal-caption" id="modalCaption">swift</div>
         </div>
+    </main>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-        <div class = "header">
-            <div class="container">
-                <div class="row HFContainer">
-                    <div class="col-8 col-md-10 HeaderTitle">
-                        <a href="/index.html"><h1 class="link">AKSHAY KHURANA</h1></a>
-                    </div>
-                    <div class="col-4 col-md-2 HeaderAbout">
-                        <a href="/contact.html"><h2 class="link">ABOUT</h2></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- Include shine.js-->
+    <script src="/shine.js-master/dist/shine.min.js"></script>
 
-        <div class= "mainContent">
-            <div class="container">
-                <div class="sections row">
-                    <div class="projectTitle col-12">
-                        <h3>G.O.D</h3>
-                    </div>
-                    <div class="projectSubtitle col-12">
-                        <h4>2016</h4>
-                        <h4>Classroom project at NID</h4>
-                        <h4>Guide: Michael Longford</h4>
-                        <h4>As a group with Milad Thaha, Manikanta Pollisetti, Devang Kantharia</h4>
-                    </div>
-                    <div class="projectDescription col-12 col-md-6">
-                        <p>An exercise in Speculative Design aimed at teaching skills in rapid prototyping and out-of-the-box thinking. This module titled "FutureSense" was part of an interdisciplinary elective between the three NID campuses.</p>
-                    </div>
-                </div>
-                <hr>
-                <div class="sections row">
-                    <div class="col-12 col-md-6"><h5>Brief</h5>
-                        <p>The brief for this module was to think way out-of-the-box and come up with a product that could manifest itself in a far-flung future.<br><br>
-                            In part, this is inspired by the work of <a href="http://www.dunneandraby.co.uk/content/home">Dunne and Raby</a> especially their work titled <a href="http://www.dunneandraby.co.uk/content/projects/510/0">"Designs for an Overpopulated Planet: Foragers, 2009"</a>. The dystopian worldview illustrated by Dunne and Raby coupled with recent developments in AI were fundamental to creating the backstory for this exploration.
-                        </p>
-                        <p>The point of this exercise is not to create believable technology but to induce a sense of discomfort in the audience visiting the exhibit by <b>exaggerating the technology of the future in a way that makes it uncomfortably real.</b> This effect is achieved by creating seemingly real artefacts that are loosely based on modern technologies.</p>
-                        <p><b>This project was exhibited at the FutureSense exhibit at Gandhinagar at the end of the program module.</b></p>
-                    </div>
-                </div>
-                <hr>
-                <div class="sections row">
-                    <div class="col-12 col-md-6"><h5>Concept</h5>
-                        <p>The project envisions a future where humans are connected as a hive mind to the internet through implants directly embedded in their bodies. In this day and age, <b>privacy</b> is of utmost concern but so is the importance of being <b>"always connected"</b></p>
-                        <p>Here's a couple of pointers to make sense of the coming visuals:</p>
-                        <p class="listed">
-                            1. The hive mind is governed by an <b>all-powerful godlike AI aptly called G.O.D.</b> All humans connect to each other and G.O.D. through <b>devices that can alter their vision and auditory streams.</b><br><br>
-                            2. Connected users experience G.O.D through a series of visions and auditory hallucinations commonly refered to as <b>"Visitations"</b><br><br>
-                            3. Additionally, everyone has a <b>neural uplink</b> to GOD directly implanted into their spine to intercept and relay brain activity directly to the network. The uplink is only active when approved by the human and <b>all personal data remains safely stored in an internal organ</b> augmenting the liver.</p>
-                    </div>
-                </div>
-                <hr>
-                <div class="sections row">
-                    <div class="col-12">
-                        <h5>The Exhibit</h5>
-                    </div>
-                    <div class="col-12">
-                        <div class="row extraSpace">
-                            <div class="card col-6 col-md-6 col-lg-6 modalEnabled">
-                                <img class="card-img-top" src="images/display%202.JPG" alt="The team">
-                                <div class="card-block">
-                                    <h6 class="card-title imgCaption">The team</h6>
-                                </div>
-                            </div>
-                            <div class="card col-6 col-md-6 col-lg-6 modalEnabled">
-                                <img class="card-img-top" src="images/display%201.JPG" alt="Thermocole + Putty models">
-                                <div class="card-block">
-                                    <h6 class="card-title imgCaption">Thermocole + putty models</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sections row">
-                    <div class="col-12">
-                        <h5>Posters</h5>
-                    </div>
-                    <div class="col-12">
-                        <div class="row extraSpace">
-                            <div class="card col-6 col-md-4 offset-md-2 modalEnabled">
-                                <img class="card-img-top" src="images/poster%201.jpg" alt="Poster 1">
-                                <div class="card-block">
-                                    <h6 class="card-title imgCaption">Poster 1</h6>
-                                </div>
-                            </div>
-                            <div class="card col-6 col-md-4 modalEnabled">
-                                <img class="card-img-top" src="images/poster%202.jpg" alt="Poster 2">
-                                <div class="card-block">
-                                    <h6 class="card-title imgCaption">Poster 2</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sections row">
-                    <div class="col-12">
-                        <h5>Standalone Renders</h5>
-                        <p>Modelled on Blender 3d by Milad Thaha</p>
-                    </div>
-                    <div class="col-12">
-                        <div class="row extraSpace">
-                            <div class="card col-6 col-md-6 modalEnabled">
-                                <img class="card-img-top" src="images/earpiece.jpg" alt="Earpiece for G.O.D">
-                                <div class="card-block">
-                                    <h6 class="card-title imgCaption">Earpiece for G.O.D</h6>
-                                </div>
-                            </div>
-                            <div class="card col-6 col-md-6 modalEnabled">
-                                <img class="card-img-top" src="images/eyewear.jpg" alt="Eyewear for G.O.D">
-                                <div class="card-block">
-                                    <h6 class="card-title imgCaption">Eyewear for G.O.D</h6>
-                                </div>
-                            </div>
-                            <div class="card col-6 col-md-6 modalEnabled">
-                                <img class="card-img-top" src="images/uplink.jpg" alt="Neural uplink for G.O.D">
-                                <div class="card-block">
-                                    <h6 class="card-title imgCaption">Neural uplink for G.O.D</h6>
-                                </div>
-                            </div>
-                            <div class="card col-6 col-md-6 modalEnabled">
-                                <img class="card-img-top" src="images/liver.jpg" alt="Internal storage and computing for G.O.D">
-                                <div class="card-block">
-                                    <h6 class="card-title imgCaption">Internal storage and computing for G.O.D</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class = "footer">
-            <div class="container">
-                <div class="row HFContainer">
-                    <div class="col-3 bottomNavigation">
-                        <h2 class="link" id="prevNav"><a href="/projects/Product/Instrument/projectPage.html">PREVIOUS</a></h2>
-                    </div>
-                    <div class="col-3 offset-6 bottomNavigation">
-                        <h2 class="link" id="nextNav"><a href="/projects/Product/FiamaDiWills/projectPage.html">NEXT</a></h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="/js/bootstrap.min.js"></script>
-
-        <!-- Include shine.js-->
-        <script src="/shine.js-master/dist/shine.min.js"></script>
-
-        <!-- Import local javascripts -->
-        <script type="text/javascript" src="/js/ProjectLoad.js"></script> 
-    </body>
-</html>
+    <!-- Import local javascripts -->
+    <script type="text/javascript" src="/js/allLoad.js"></script>
+</body>

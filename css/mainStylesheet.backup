@@ -1,0 +1,488 @@
+/* CSS Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Scrollbar tweak */
+
+::-webkit-scrollbar {
+    width: .6rem;
+    background-color: #F0F0F0;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-
+    /*box-shadow: inset 0 0 6px rgba(0,0,0,0.3);*/
+    border-radius: 10px;
+    background-color: whitesmoke;
+    border: 1% solid transparent;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb {
+    /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);*/
+    border-radius: 12px;
+    background-color: dodgerblue;
+}
+
+
+/* Own Code */
+
+body {
+    overflow: hidden;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.overlayScreen {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    background-color: white;
+}
+
+.centeredText {
+    flex-grow: 1;
+    align-self: center;
+    text-align: center;
+    background-color: inherit;
+}
+
+#mainPage,
+#contactPage {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: grid;
+}
+
+#mainPage {
+    grid-template-columns: 1rem 1fr 1fr 1.25em;
+    grid-template-rows: 50px auto 40px;
+    grid-row-gap: .5rem;
+    grid-template-areas: ". nonCollapsible contact ." ". content content ." ". nav nav .";
+}
+
+#contactPage {
+    grid-template-columns: 1rem 1fr 1.25em;
+    grid-template-rows: 50px auto;
+    grid-row-gap: .5rem;
+    grid-template-areas: ". nonCollapsible ." ". content .";
+}
+
+#contactContent {
+    grid-area: content;
+    overflow-y: auto;
+}
+
+#loadingScreen {
+    z-index: 91;
+}
+
+#portraitWarning {
+    display: none;
+    z-index: 90;
+}
+
+.nonCollapsible,
+.contact,
+.nav {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.nonCollapsible {
+    grid-area: nonCollapsible;
+    border-bottom: solid;
+    border-width: thin;
+}
+
+.contact {
+    grid-area: contact;
+    justify-content: flex-end;
+    border-bottom: solid;
+    border-width: thin;
+}
+
+.nav {
+    grid-area: nav;
+    justify-content: flex-end;
+    border-top: solid;
+    border-width: thin;
+    z-index: 2;
+
+}
+
+.contact,
+.filter {
+    padding-left: 1rem;
+}
+
+#mainContent {
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+
+.sections {
+    width: 100%;
+    display: grid;
+    grid-gap: 1rem;
+    padding: 1.5rem 0rem;
+    border-bottom: solid;
+    border-width: thin;
+}
+
+.sections:last-child {
+    border-bottom: none;
+}
+
+.listing {
+    display: grid;
+}
+
+.card {
+    display: flex;
+    position: relative;
+    margin: 1rem;
+    box-shadow: 0px 5px 10px #888888;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.cardInfo {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: ".""title" "subtitle";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.cardInfoHover {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    left: 0px;
+    bottom: -20%;
+    background-color: white;
+    opacity: 0;
+    box-shadow: 0px 5px 10px #777777;
+    -webkit-transition: bottom .5s ease -1, opacity .5s ease;
+    -moz-transition: bottom .5s ease -1, opacity .5s ease;
+    transition: bottom .5s ease -1, opacity .5s ease;
+}
+
+.cardInfoHover > p {
+    padding: 1.5rem 1rem;
+    font-size: .9rem;
+}
+
+.infoSlide {
+    opacity: 100;
+    bottom: 10%;
+    -webkit-transition-duration: .2s;
+    -moz-transition-duration: .2s;
+    transition-duration: .2s;
+}
+
+.card-description {
+    padding: 0rem 1rem;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    padding-right: 1.5rem;
+}
+
+.sideTitle {
+    padding-top: 1rem;
+}
+
+.sideDescription {
+    padding-top: 2rem;
+}
+
+/* FONTS */
+
+h1 {
+    font-family: "Open Sans", "sans-serif";
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #5c6064;
+    letter-spacing: .1rem;
+}
+
+.IntroText h1 {
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-family: "Open Sans", serif;
+    font-weight: 600;
+    color: #5c6064;
+    font-size: .8rem;
+    letter-spacing: .1rem;
+}
+
+.filter > h2 {
+    color: #939EA5;
+}
+
+h3 {
+    font-family: "Open Sans", serif;
+    color: #9c9c9c;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1rem;
+    text-transform: lowercase;
+}
+
+h4 {
+    font-family: "Open Sans", serif;
+    font-weight: 600;
+    color: #5c6064;
+    font-size: 1rem;
+    line-height: 1rem;
+}
+
+p {
+    font-family: 'Fjord One', serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #838383;
+}
+
+.card-project {
+    grid-area: title;
+    text-align: right;
+    padding-right: 1rem;
+    align-content: center;
+}
+
+.card-subtitle {
+    grid-area: subtitle;
+    font-size: .9rem;
+    text-align: right;
+    padding-right: 1rem;
+}
+
+/* Hover Interactions */
+
+.activeFilter > h2 {
+    color: #00b3e4;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover,
+.link:hover > h2 {
+    color: dodgerblue;
+    cursor: pointer;
+}
+
+/* Only valid on contact page */
+
+#contactLeftPane {
+    grid-area: left;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    text-align: center;
+}
+
+#contentRightPane {
+    grid-area: right;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    background-color: aliceblue;
+}
+
+.aboutImg {
+    width: 50%;
+    border-radius: 50%;
+    margin: auto;
+    left: 15%;
+}
+
+.mailer {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactFields {
+    margin-bottom: .5rem;
+}
+
+.formButton {
+    width: 70%;
+    margin: auto;
+    margin-top: 1rem;
+    border-radius: .5rem
+}
+
+.socialMedia {
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* Responsive Stuff */
+
+/* Small devices (landscape phones, 576px and up) */
+
+@media (min-width: 576px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    h2 {
+        font-size: 1rem;
+    }
+    #portraitWarning {
+        display: flex;
+    }
+}
+
+@media (min-width: 768px) {
+    #mainPage {
+        grid-template-columns: auto 450px 300px auto;
+        grid-template-rows: 50px auto 40px;
+        grid-template-areas: ". nonCollapsible contact ." ". content content ." ". nav nav .";
+        grid-row-gap: .75rem;
+    }
+    #contactPage {
+        grid-template-columns: auto 750px auto;
+    }
+    .nonCollapsible,
+    .contact {
+        border-top: none;
+        border-bottom: solid;
+        border-width: thin;
+
+    }
+    .nav {
+        border-bottom: none;
+        border-top: solid;
+        border-width: thin;
+    }
+    .sections {
+        grid-template-columns: 3fr 1.25fr;
+        grid-auto-rows: max-content;
+        padding: 3rem 0;
+        grid-template-areas: "listing sidebar";
+    }
+    #portraitWarning {
+        display: none;
+    }
+    .sidebar {
+        grid-area: sidebar;
+        padding-left: 1rem;
+    }
+    .listing {
+        grid-area: listing;
+        grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+        grid-gap: 1rem;
+    }
+    .card {
+        margin: .5rem;
+        -webkit-transition: margin 1.5s ease;
+        transition: margin 1.5s ease;
+    }
+    .card:hover {
+        margin: .2rem;
+        box-shadow: 0px 5px 10px #999999;
+        -webkit-transition-duration: .2s;
+        transition-duration: .2s;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    .Filter > h2 {
+        font-size: .8rem;
+    }
+
+    h4 {
+        font-size: .8rem;
+        letter-spacing: -.05rem;
+    }
+
+    .IntroText h1 {
+        font-size: 3rem;
+    }
+    /* Contact Page */
+    #contactContent {
+        display: grid;
+        grid-template-columns: 3fr .5fr 2fr .5fr;
+        grid-gap: 1rem;
+        grid-template-areas: "left . right ."
+    }
+}
+
+@media (min-width: 992px) {
+    #mainPage {
+        grid-template-columns: auto 420px 400px 70px auto;
+        grid-template-rows: 50px 1fr 1%;
+        grid-template-areas: ". nonCollapsible nav contact ." ". content content content .";
+    }
+    #contactPage {
+        grid-template-columns: auto 890px auto;
+        grid-template-rows: 50px 1fr;
+    }
+    .nav {
+        border-top: none;
+        border-bottom: solid;
+        border-width: thin;
+    }
+    h4 {
+        font-size: 1rem;
+        letter-spacing: 0rem;
+    }
+    p {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+    .cardInfo > p {
+        font-size: 1rem;
+        line-height: 1.1;
+    }
+
+}
+
+@media (min-width: 1500px) {
+    #mainPage {
+        grid-template-columns: auto 780px 400px 70px auto;
+    }
+    #contactPage {
+        grid-template-columns: auto 1250px auto
+    }
+}

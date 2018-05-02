@@ -1,0 +1,751 @@
+/* CSS Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Scrollbar tweak */
+
+::-webkit-scrollbar {
+    width: .5rem;
+}
+
+/* Own Code */
+
+/* Global Styling */
+
+:root {
+    --containeriPad: 700px;
+    --containerDesktop: 800px;
+    --containerLarge: 1200px;
+    --container4k: 2400px;
+    --headerPhone: 35px;
+    --hideHeaderPhone: -35px;
+    --headeriPad: 40px;
+    --hideHeaderiPad: -45px;
+    --headerDesktop: 45px;
+    --hideHeaderDesktop: -45px;
+    --headerLarge: 50px;
+    --hideHeaderLarge: -60px;
+    --header4k: 75px;
+    --hideHeader4k: -90px;
+
+}
+
+body {
+    overflow: hidden;
+}
+
+main,
+.selectPage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: var(--headerPhone);
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+header,
+main,
+footer .overlayScreen,
+.floatingFilter {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    align-self: center;
+    display: block;
+    width: 100%;
+    padding: 0rem 1rem;
+}
+
+.containerFull {
+    align-self: center;
+    display: block;
+    width: 100%;
+    padding: 0rem .5rem;
+}
+
+.flexRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.hCenter {
+    align-items: center;
+}
+
+.hRight {
+    justify-content: flex-end;
+}
+
+.vCenter {
+    justify-content: center;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+.textRight {
+    text-align: right;
+}
+
+img {
+    max-width: 100%;
+}
+
+.circularImg {
+    border-radius: 50%;
+}
+
+section {
+    margin-top: 2rem;
+}
+
+/* Overlay Layouts */
+
+.overlayScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#firstLoader {
+    z-index: 99;
+}
+
+.gridLoader {
+    display: flex;
+    flex-direction: column;
+}
+
+.DPContainer {
+    padding-top: 2rem;
+    align-self: center;
+    width: 200px;
+}
+
+.introText {
+    text-align: center;
+}
+
+#loadingScreen {
+    z-index: 98;
+}
+
+#portraitWarning {
+    display: none;
+    z-index: 97;
+}
+
+.overlaySlideTop {
+    top: -110vh;
+}
+
+.imageCenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#loader {
+    padding: 2rem 0rem;
+    width: 400px;
+}
+
+#loaderLogo {
+    padding: 1rem 0rem;
+    width: 300px;
+}
+
+svg {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    display: inline-block;
+}
+
+/* Header Styling */
+
+header {
+    position: fixed;
+    height: var(--headerPhone);
+    width: 100%;
+    z-index: 10;
+}
+
+header .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+}
+
+.logo,
+.nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo {
+    flex-grow: 4;
+}
+
+.nav {
+    flex-grow: 1;
+}
+
+.logo img {
+    width: 225px;
+}
+
+.correctNavItems {
+    display: inline-block;
+}
+
+.toggleNav {
+    display: none;
+}
+
+.toggleNav h2 {
+    padding-left: 1rem;
+}
+
+/* Selected Page */
+
+.carouselGrid {
+    display: grid;
+    grid-template-rows: 1fr 10fr 4fr 1fr;
+    grid-template-areas: '.''carLeft''carRight''.';
+}
+
+.carouselLeft {
+    align-self: center;
+    grid-area: carLeft;
+}
+
+.carouselRight {
+    align-self: center;
+    grid-area: carRight;
+    padding: 2rem;
+}
+
+.carousel {
+    position: absolute;
+    top: 0px;
+    left: -00vw;
+    display: flex;
+    direction: row;
+    width: 700vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.carouselItem {
+    width: 100vw;
+    height: 100vh;
+}
+
+.carouselNav {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+
+#carouselNavLeft,
+#carouselNavRight {
+    width: 70px;
+    height: 70px;
+}
+
+.carouselState {
+    position: fixed;
+    bottom: 2px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.carouselStateButtons {
+    margin: 2px;
+    width: calc(100vw/7);
+    height: .5px;
+    opacity: .5;
+}
+
+.activeStateButton {
+    height: 15px;
+}
+
+.pageSlideLeft {
+    left: -100%;
+}
+
+
+/* Listing Page Styling */
+
+.filterButtons {
+    margin: 2rem 0rem 2rem 0rem;
+}
+
+#allPage {
+    z-index: 1;
+}
+
+#selectPage {
+    overflow-y: hidden;
+    z-index: 3;
+}
+
+.headerUp {
+    top: var(--hideHeaderPhone);
+}
+
+.filterButtons {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    align-items: baseline;
+}
+
+.filterButtons h2 {
+    padding: 0rem .5rem;
+}
+
+.turnOff {
+    display: none;
+}
+
+.sidebar {
+    padding-top: 6rem;
+}
+
+.sidebar > p {
+    padding: 2rem 0rem;
+}
+
+.listing {
+    padding: 0rem 2rem;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.card {
+    display: block;
+    margin: 0rem;
+    padding: .25rem;
+}
+
+.cardTop {}
+
+.cardText {
+    display: block;
+    width: 175px;
+    margin: 0rem 1rem;
+}
+
+.cardBottom {
+    position: relative;
+    height: 100%;
+}
+
+.cardImage {}
+
+.cardDescription {
+    justify-content: space-between;
+    width: 200px;
+    margin: 0rem 1rem;
+    z-index: 2;
+}
+
+section h3 {
+    padding-top: 3rem;
+}
+
+/*Contact Page Styling*/
+
+#contactLeftPane {
+    grid-area: leftPane;
+}
+
+#contactRightPane {
+    grid-area: rightPane;
+}
+
+#hi2 {
+    grid-area: hi2;
+}
+
+#mailer {
+    grid-area: mailer;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0rem;
+}
+
+.contactFields {
+    margin: .2rem;
+}
+
+.formButton {
+    margin-top: 1rem;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+#socialMedia {
+    margin-top: 1rem;
+    grid-area: socialMedia;
+    display: flex;
+    flex-direction: row;
+}
+
+.socialMediaButton {
+    width: 90%;
+    align-self: center;
+}
+
+/* Project pages styling*/
+
+.behanceLink,
+.underConstruction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 6rem 0rem;
+    width: 350px;
+}
+
+.homeButton {
+    margin: 0px;
+    padding-top: 3rem;
+    width: 100%;
+}
+
+.underConstruction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 0rem;
+}
+
+.underConstruction > img {
+    width: 300px;
+    align-self: center;
+}
+
+.homeButtonCenter > a > p,
+.behanceLink > p {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+.homeButtonCenter {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center''
+}
+
+.homeButtonCenter > a,
+.behanceLink > a,
+.homeButtonCenter > a > img,
+.behanceLink > a > img {
+    width: 50px;
+    align-self: center;
+}
+
+.introSection p,
+.generalSection p {
+    max-width: 600px;
+}
+
+.split2Section p {
+    max-width: 600px;
+}
+
+.imageSection {
+    display: grid;
+    padding: 0rem 2rem;
+    grid-gap: 10px;
+}
+
+.videoSection {
+    padding: 0rem;
+}
+
+.videoSection > iFrame {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+}
+
+.mapSection {
+    display: grid;
+    padding: 0rem 2.5vw;
+    width: 100%;
+    height: 100vw;
+}
+
+/* Responsive Stuff */
+
+@media (min-width: 576px) {
+    #portraitWarning {
+        display: flex;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: var(--containeriPad);
+    }
+    header {
+        height: var(--headeriPad);
+    }
+    main,
+    .selectPage {
+        padding-top: var(--headeriPad);
+    }
+    .introText {
+        grid-area: introText;
+        text-align: left;
+    }
+    .introText > p {
+        padding-bottom: .25rem;
+    }
+    #portraitWarning {
+        display: none;
+    }
+    .headerUp {
+        top: var(--hideHeaderiPad);
+    }
+    .toggleNav {
+        display: flex;
+    }
+    .hamburger {
+        display: none;
+    }
+    .logo Img {
+        width: 300px;
+    }
+    .carouselGrid {
+        grid-template-columns: 1fr 700px 1fr;
+        grid-row-gap: 25px;
+        grid-template-rows: 2fr 10fr 6fr 2fr;
+        grid-template-areas: '. . .''.  carLeft .''.  carRight .''. . .';
+    }
+    /*All Page */
+    .listing {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+    /* Contact Page*/
+    .gridContact {
+        width: 100%;
+        padding-top: 5rem;
+        display: grid;
+        grid-template-columns: .5fr 2.5fr .6fr 1.7fr .5fr;
+        grid-template-areas: '. leftPane . rightPane .';
+    }
+    /*Project Pages */
+    .imageSection {
+        display: grid;
+    }
+    .twoSection {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2rem;
+    }
+    .threeSection {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 2rem;
+    }
+    .twoOneSection {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-gap: 50px
+    }
+    .threeTwoSection {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        grid-gap: 50px
+    }
+    .twoSection p {
+        max-width: 100%;
+    }
+    .frameLarge {
+        grid-template-columns: repeat(auto-fill, minmax(.8fr, 1fr));
+    }
+    .frameMedium {
+        grid-template-columns: repeat(auto-fill, minmax(250px, .75fr));
+    }
+    .mapSection {
+        height: 100vh;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: var(--containerDesktop);
+    }
+    header {
+        height: var(--headerDesktop);
+    }
+    main,
+    .selectPage {
+        padding-top: var(--headerDesktop);
+    }
+    .floatingFilter {
+        top: calc(var(--headerDesktop) + 10px);
+    }
+    .headerUp {
+        top: var(--hideHeaderDesktop);
+    }
+    .carouselGrid {
+        grid-template-columns: 2fr 10fr 6fr 2fr;
+        grid-template-rows: 1.5fr 6fr 1.5fr;
+        grid-column-gap: 50px;
+        grid-template-areas: '. . .. .''. carLeft carRight .' '. .. . .';
+    }
+    /*All Page */
+    .listing {
+        grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+    }
+
+    /* Overlay Pages */
+    .gridLoader {
+        display: grid;
+        grid-template-columns: 1fr 2fr 2fr 1fr;
+        grid-column-gap: 5%;
+        grid-template-areas: '. DP introText .';
+    }
+    .DPContainer {
+        grid-area: DP;
+        width: 100%;
+        align-self: inherit;
+    }
+    /* Contact Page*/
+    .gridContact {
+        padding-top: 3rem;
+        grid-template-columns: .5fr 2.5fr .6fr 1.7fr .5fr;
+    }
+    #contactLeftPane img {
+        width: 90%;
+        padding: 0rem 4rem;
+    }
+
+    .frameLarge {
+        grid-template-columns: repeat(auto-fill, minmax(.8fr, 1fr));
+    }
+    .frameMedium {
+        grid-template-columns: repeat(auto-fill, minmax(300px, .75fr));
+    }
+}
+
+@media (min-width: 1339px) {
+    .container {
+        width: var(--containerLarge);
+        padding: 0rem 2.5rem;
+    }
+    header {
+        height: var(--headerLarge);
+    }
+    main,
+    .selectPage {
+        padding-top: var(--headerLarge);
+    }
+    .floatingFilter {
+        top: calc(var(--headerLarge) + 10px);
+    }
+    .headerUp {
+        top: var(--hideHeaderLarge);
+    }
+    /* Contact Page*/
+    .gridContact {
+        padding-top: 4rem;
+        grid-template-columns: 1fr 2.5fr .6fr 1.7fr 1fr;
+    }
+    /*All Page */
+    .listing {
+        grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+    }
+    /*Project Pages */
+    .introSection p,
+    .generalSection p {
+        max-width: 800px;
+    }
+    .frameLarge {
+        grid-template-columns: repeat(auto-fill, minmax(.8fr, 1fr));
+    }
+    .frameMedium {
+        grid-template-columns: repeat(auto-fill, minmax(300px, .75fr));
+    }
+    .cardSmall {
+        max-width: 900px;
+        position: relative;
+        left: 0px;
+    }
+    .cardSmall {
+        max-width: inherit;
+    }
+    .cardPadded {
+        margin-top: 1rem;
+        padding: 2rem;
+    }
+}
+
+@media (min-width: 2459px) {
+    .container {
+        width: var(--container4k);
+    }
+    header {
+        height: var(--header4k);
+    }
+    main,
+    .selectPage {
+        padding-top: var(--header4k);
+    }
+    .floatingFilter {
+        top: var(--header4k);
+    }
+    .headerUp {
+        top: var(--hideHeader4k);
+    }
+    /*Project Pages */
+}
+
+/*Override All*/
+.padTop{
+    padding-top: 3rem;
+    padding-bottom: 0rem;
+}
+#modalDiv {
+    display: none;
+}

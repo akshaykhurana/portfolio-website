@@ -1,0 +1,93 @@
+header {
+    transition: top 2s ease-in;
+    -webkit-transition: top 10s ease-in;
+    -moz-transition: top 10s ease-in;
+}
+
+.headerUp {
+    transition: top 2s ease-in;
+    -webkit-transition: top 2s ease-in;
+    -moz-transition: top 2s ease-in;
+}
+
+#firstLoader {
+    transition: top 1.75s ease-in-out, opacity 7.5s ease-in;
+    -webkit-transition: top 1.75s ease-in-out, opacity 7.5s ease-in;
+    -moz-transition: top 1.75s ease-in-out, opacity 7.5s ease-in;
+}
+
+#loadingScreen {
+    transition: top 1.5s ease-out;
+    -webkit-transition: top 1.5s ease-out;
+    -moz-transition: top 1.5s ease-out;
+}
+
+#selectPage {
+    transition: left 2s;
+    -webkit-transition: left 2s;
+    -moz-transition: left 2s;
+}
+
+.carousel {
+    transition: left 1s;
+    -webkit-transition: left 1s;
+    -moz-transition: left 1s;
+}
+
+/*Animated gradients*/
+
+.overlayBlue {
+    background: linear-gradient(0deg, #0057e7, #ff0066);
+    background-size: 400% 400%;
+    animation: passThrough 9s ease-in-out infinite;
+    -moz-animation: passThrough 9s ease-in-out infinite;
+    -webkit-animation: passThrough 9s ease-in-out infinite;
+}
+
+.overlayRed {
+    background: linear-gradient(0deg, #d62d20, #85ff00);
+    background-size: 400% 400%;
+    animation: passThrough 9s ease-in-out infinite;
+    -moz-animation: passThrough 9s ease-in-out infinite;
+    -webkit-animation: passThrough 9s ease-in-out infinite;
+}
+
+.overlayYellow {
+    background: linear-gradient(0deg, #ffa700, #00d6ff);
+    background-size: 400% 400%;
+    animation: passThrough 9s ease-in-out infinite;
+    -moz-animation: passThrough 9s ease-in-out infinite;
+    -webkit-animation: passThrough 9s ease-in-out infinite;
+}
+
+.overlayGreen {
+    background: linear-gradient(0deg, #008744, #ffd500);
+    background-size: 400% 400%;
+    animation: passThrough 9s ease-in-out infinite;
+    -moz-animation: passThrough 9s ease-in-out infinite;
+    -webkit-animation: passThrough 9s ease-in-out infinite;
+}
+
+@-webkit-keyframes passThrough {
+    0% {
+        background-position: 50% 0%
+    }
+    50% {
+        background-position: 50% 100%
+    }
+    100% {
+        background-position: 50% 0%
+    }
+}
+
+@keyframes passThrough {
+    0% {
+        background-position: 50% 0%
+    }
+    50% {
+        background-position: 50% 100%
+    }
+    100% {
+        background-position: 50% 0%
+    }
+}

@@ -1,22 +1,22 @@
 ﻿[
  {
-   "SectionName": "web",
-   "SectionDescription": "Experiments with code, web development, UI and data visualisations. I have always been interested in code and developing web experiences but never had any education in the same before 2016. This section is a showcase of newly acquired skills from my education at NID, Bangalore."
+   "SectionName": "all things web",
+   "SectionDescription": "code, websites, UI, data visualisations, mockups"
  },
  {
-   "SectionName": "product",
-   "SectionDescription": "It has been quite a journey, from designing built spaces to designing things at smaller scales. This section showcases ideas with a focus on industrial design, experience design and rapid prototyping."
+   "SectionName": "tangible things",
+   "SectionDescription": "industrial design, procedural 3d modelling, user testing, experience design, rapid prototyping, packaging design, branding, speculative design, arduino"
  },
  {
-   "SectionName": "graphics",
-   "SectionDescription": "I taught myself basic graphic design by making unending presentation drawings during my stint at architecture school. Over time, I've honed this ability by working in print design, web graphics and doing illustrations."
+   "SectionName": "visual design",
+   "SectionDescription": "print design, web graphics, illustrations, logos, branding, exhibition design"
  },
  {
    "SectionName": "space",
-   "SectionDescription": "You just can't take years of thinking in 3 dimensions out of an architecture school graduate. This section is a selection of some of my best work as an architect/ space designer."
+   "SectionDescription": "architecture, interior design, urban design"
  },
  {
    "SectionName": "others",
-   "SectionDescription": "Four sections and still, there are things that don't fit into any category. This section is a collection of all the things that give a wide berth to anything listed above."
+   "SectionDescription": "movie making, video editing, story-telling"
  }
 ]

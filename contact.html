@@ -1,142 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-        <title>Akshay Khurana: Portfolio</title>
-        <meta name="description" content="This is the portfolio of Akshay Khurana.">
-        <meta name="keywords" content="portfolio, akshay, khurana, design, architect, designer, interaction design, NID, SPA, National Institute of Design, School of Planning and Architecture">
-        <meta name="author" content="www.akshaykhurana.com">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-        <!-- Responsive and mobile friendly stuff -->
-        <meta name="HandheldFriendly" content="True">
-        <meta name="MobileOptimized" content="320">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Akshay Khurana: Portfolio</title>
+    <meta name="description" content="This is the portfolio of Akshay Khurana.">
+    <meta name="keywords" content="portfolio, akshay, khurana, design, architect, designer, interaction design, NID, SPA, National Institute of Design, School of Planning and Architecture">
+    <meta name="author" content="www.akshaykhurana.com">
 
-        <!-- Bootstrap -->
-        <link href="css/bootstrap-reboot.css" rel="stylesheet">
-        <link href = "css/bootstrap-grid.css" rel="stylesheet">
-        <link href = "css/bootstrap.css" rel="stylesheet">
+    <!-- Responsive and mobile friendly stuff -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-        <!-- Animate.css -->
-        <link href="css/animate.css" rel="stylesheet">
+    <!--Stylesheets -->
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/layoutStylesheet.css">
+    <link rel="stylesheet" href="/css/fontStylesheet.css">
+    <link rel="stylesheet" href="/css/colourStylesheet.css">
+    <link rel="stylesheet" href="/css/animationsStylesheet.css">
 
-        <!--Own Stylesheet and Fonts -->
-        <link rel="stylesheet" href="css/Main Stylesheet.css" media="all">  
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Fjord+One" rel="stylesheet">
 
-        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
+    <!--Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sue+Ellen+Francisco" rel="stylesheet">
+</head>
 
-    </head>
-
-    <body>
-        <div class = "PortraitWarning">
-            <div class="container HFContainer">
-                <div class="row">
-                    <div class="col-12 IntroText">
-                        <a href="index.html"><h1 id="shiny2">AKSHAY KHURANA</h1></a>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="/main.html"><img src="/images/logoLight.svg"></a>
+            </div>
+            <div class="nav turnOff">
+                <div class="flexRow hRight">
+                    <div class="toggleNav filter activeFilter" id="fSelect">
+                        <h2>SELECTED WORK</h2>
                     </div>
-                    <div class="col-12 IntroText">
-                        <h2>WEB . GRAPHICS . SPACE . PRODUCTS</h2>
+                    <div class="toggleNav filter" id="fAll">
+                        <h2>ALL PROJECTS</h2>
                     </div>
-                    <div class="col-8 offset-2 IntroText">
-                        <p>best viewed in portrait mode</p>
+                    <div class="toggleNav">
+                        <a href="/contact.html">
+                            <h2>INFO.</h2>
+                        </a>
                     </div>
+                    <div class="hamburger">M</div>
                 </div>
             </div>
         </div>
-        <div class = "header">
-            <div class="container">
-                <div class="row HFContainer">
-                    <div class="col-8 col-md-10 HeaderTitle">
-                        <a href="index.html"><h1 class="link">AKSHAY KHURANA</h1></a>
-                    </div>
+    </header>
+    <div class="overlayScreen" id="loadingScreen">
+        <div class="container vCenter hCenter">
+            <div class="textCenter">
+                <h1 class= "textDark" id="shiny1">AKSHAY KHURANA</h1>
+                <h2 class= "textDark">WEB . GRAPHICS . SPACE . PRODUCTS</h2>
+            </div>
+        </div>
+    </div>
+    <div class="overlayScreen" id="portraitWarning">
+        <div class="container">
+            <div class="textCenter">
+                <p>This website is best viewed in <br>
+                    <emphasis class="largerText">portrait mode</emphasis>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <main id="contactPage">
+        <div class="container">
+            <div class="gridContact">
+                <div id="contactLeftPane">
+                    <img class="circularImg" src="/images/Display Picture.jpg">
+
+                    <h4 class="textCenter">Jack of all trades, Master of some</h4>
+                    <p> This specimen studied Architecture at the School of Planning and Architecture, New Delhi and Interaction Design at National Institute of Design, Bangalore.
+                        <br> It prides itself on being a quick learner and loves new challenges. You will usually find it tinkering with any new toys it can get its hands on, both hardware and software.
+                        <br>Easily falls prey to: long intellectual discussions on futurism and our AI overlords, TED talks, music for musicians and lonely guitars</p>
+                    <p class="tinyText" id>This website was built by yours truly on native CSS, JS.<br><a href="http://bigspaceship.github.io/shine.js/">uses shine.js</a><br>
+                        <a href="https://medium.com/@mariusc23/hide-header-on-scroll-down-show-on-scroll-up-67bbaae9a78c">Header code inspired by Marius Craciunoiu</a><br>
+                        home logo created by corpus delicti from the Noun Project</p>
+                </div>
+                <div id="contactRightPane">
+                    <h6 id="hi2">Say hi!</h6>
+                    <p>Please leave a message if you'd like to collaborate or are a recruiter and need a CV.</p>
+                    <form id="mailer" method="POST" action="http://formspree.io/akshay.khura.na@gmail.com">
+                        <input class="contactFields" type="name" name="name" placeholder="Your name">
+                        <input class="contactFields" type="email" name="email" placeholder="Your email address">
+                        <textarea class="contactFields" name="message" placeholder="Your message"></textarea>
+                        <button class="formButton" type="submit"><img class="circularImg" src="/images/airplane.svg"></button>
+                    </form>
+                    <ul class="listNoBullets" id="socialMedia">
+                        <li class="noBullets">
+                            <a href="https://www.behance.net/akshaykhur6b35"><img class="circularImg socialMediaButton" src="/images/behance.svg"></a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/akshay-khurana-3098aa97"><img class="circularImg socialMediaButton" src="/images/linkedin.svg"></a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCpKIIIXARXv2tu2gtM0QX6g"><img class="circularImg socialMediaButton" src="/images/youtube.svg">
+                        </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/akshaykhurana/"><img class="circularImg socialMediaButton" src="/images/instagram.svg"></a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
+    </main>
 
-        <div class= "mainContent">
-            <div class="container">
-                <div class= "sections row">
-                    <div class="col-12 col-md-5 col-lg-5 leftPane">
-                        <div class="aboutMeDP">
-                            <img src="/images/Display Picture.jpg">
-                        </div>
-                        <div class= "aboutMeText">
-                            <h3>architect/designer</h3>
-                            <h2 class="JackOf">jack of all trades, master of some</h2>
-                            <p>This specimen studied architecture at the School of Planning and Architecture, New Delhi and Interaction Design at National Institute of Design, Bangalore.</p>
-                            <p>It prides itself on being a quick learner and loves new challenges. You will usually find it tinkering with any new toys it can get its hands on, both hardware and software.</p>
-                            <p>Easily falls prey to: long intellectual discussions on futurism and our AI overlords, TED talks, music for musicians and lonely guitars</p>
-                        </div>
-                        <div  class="midSeperator"><hr></div>
-                    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+        <!-- Include shine.js-->
+    <script src="/shine.js-master/dist/shine.min.js"></script>
 
-                    <div class="col-12 col-md-5 col-lg-4 offset-md-1  rightPane">
-                        <div class="contactDetails">
-                            <h3>Say hi!</h3>
+    <!-- Import local javascripts -->
+    <script type="text/javascript" src="/js/allLoad.js"></script>
 
-                            <form class="mailer" method="POST" action="http://formspree.io/akshay.khura.na@gmail.com">
-                                <input class="contactFields" type="name" name="name" placeholder="Your name">
-                                <input class="contactFields" type="email" name="email" placeholder="Your email address">
-                                <textarea class = "contactFields" name="message" placeholder="Your message"></textarea>
-                                <button class="formButtons" type="submit">Send</button>
-                            </form>
-                            <hr>
+</body>
 
-                        </div>
-                        <div class="socialMedia col-12">
-                            <div class="row">
-                                <div class="col-2 socialMediaButtons">
-                                    <a href="https://www.behance.net/akshaykhur6b35"><img src="/images/behance.svg"></a>
-                                </div>
-                                <div class="col-2 socialMediaButtons">
-                                    <a href="https://www.linkedin.com/in/akshay-khurana-3098aa97"><img src="/images/linkedin.svg"></a>
-                                </div>
-                                <div class="col-2 socialMediaButtons">
-                                    <a href="https://www.youtube.com/channel/UCpKIIIXARXv2tu2gtM0QX6g"><img src="/images/youtube.svg"></a>
-                                </div>
-                                <div class="col-2 socialMediaButtons">
-                                    <a href="https://www.instagram.com/akshaykhurana/"><img src="/images/instagram.svg"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="disclaimer col-12">
-                            <p>This website was built by yours truly from scratch using bootstrap 4, animation.css and shine.js </p>
-                        </div> 
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class = "footer">
-            <div class="container">
-                <div class="row HFContainer">
-                    <div class="col-12">
-                        <h2 class="tataText">thanks for visiting!</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="/js/bootstrap.min.js"></script>
-
-        <!-- Import local javascripts -->
-        <script type="text/javascript" src="/js/PortfolioLoad.js"></script>  
-    </body>
 </html>

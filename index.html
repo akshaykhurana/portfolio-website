@@ -1,238 +1,354 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-        <title>Akshay Khurana: Portfolio</title>
-        <meta name="description" content="This is the portfolio of Akshay Khurana.">
-        <meta name="keywords" content="portfolio, akshay, khurana, design, architect, designer, interaction design, NID, SPA, National Institute of Design, School of Planning and Architecture">
-        <meta name="author" content="www.akshaykhurana.com">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-        <!-- Responsive and mobile friendly stuff -->
-        <meta name="HandheldFriendly" content="True">
-        <meta name="MobileOptimized" content="320">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Akshay Khurana: Portfolio</title>
+    <meta name="description" content="This is the portfolio of Akshay Khurana.">
+    <meta name="keywords" content="portfolio, akshay, khurana, design, architect, designer, interaction design, NID, SPA, National Institute of Design, School of Planning and Architecture">
+    <meta name="author" content="www.akshaykhurana.com">
 
-        <!-- Bootstrap -->
-        <link href="css/bootstrap-reboot.css" rel="stylesheet">
-        <link href = "css/bootstrap-grid.css" rel="stylesheet">
-        <link href = "css/bootstrap.css" rel="stylesheet">
+    <!-- Responsive and mobile friendly stuff -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-        <!-- Animate.css -->
-        <link href="css/animate.css" rel="stylesheet">
+    <!--Stylesheets -->
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/layoutStylesheet.css">
+    <link rel="stylesheet" href="/css/fontStylesheet.css">
+    <link rel="stylesheet" href="/css/colourStylesheet.css">
+    <link rel="stylesheet" href="/css/animationsStylesheet.css">
 
-        <!--Own Stylesheet and Fonts -->
-        <link rel="stylesheet" href="css/Main Stylesheet.css" media="all">  
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Fjord+One" rel="stylesheet">
 
-        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
+    <!--Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sue+Ellen+Francisco" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
+</head>
 
-    </head>
-
-    <body>
-        <div class = "LoadingScreen">
-            <div class="container HFContainer">
-                <div class="row">
-                    <div class="col-12 IntroText">
-                        <a href="/index.html"><h1 id="shiny1">AKSHAY KHURANA</h1></a>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="/index.html"><img src="/images/logoLight.svg"></a>
+            </div>
+            <div class="nav">
+                <div class="flexRow hRight">
+                    <div class="toggleNav filter activeFilter" id="fSelect">
+                        <h2>SELECTED WORK</h2>
                     </div>
-                    <div class="col-12 IntroText">
-                        <h2>WEB . GRAPHICS . SPACE . PRODUCTS</h2>
+                    <div class="toggleNav filter" id="fAll">
+                        <h2>ALL PROJECTS</h2>
                     </div>
+                    <div class="toggleNav">
+                        <a href="/contact.html">
+                            <h2>INFO.</h2>
+                        </a>
+                    </div>
+                    <div class="hamburger">M</div>
                 </div>
             </div>
         </div>
-        <div class = "PortraitWarning">
-            <div class="container HFContainer">
-                <div class="row">
-                    <div class="col-12 IntroText">
-                        <a href="/index.html"><h1 id="shiny2">AKSHAY KHURANA</h1></a>
-                    </div>
-                    <div class="col-12 IntroText">
-                        <h2>WEB . GRAPHICS . SPACE . PRODUCTS</h2>
-                    </div>
-                    <div class="col-8 offset-2 IntroText">
-                        <p>best viewed in portrait mode</p>
-                    </div>
-                </div>
+    </header>
+
+    <div class="overlayScreen" id="firstLoader">
+        <div class="container gridLoader">
+            <div class="DPContainer"><img class="circularImg" src="images/Display%20Picture.jpg"></div>
+            <div class="introText ">
+                <h6 id="hi1">Jello!</h6>
+                <p>That's me, Akshay Khurana.<br>
+                    <p>I am an Architect/Designer</p>
+                    <p>I studied at the School of Planning and Architecture, New Delhi and then at the National Institute of Design, Bangalore</p>
+                    <p>This website serves as a journal for my wanderings through this vast network of mazes we collectively refer to as 'Design'.</p>
+                    <p class="tinyText">Last Updated: 30th April 2018</p>
             </div>
         </div>
-
-        <div class = "header">
-            <div class="container">
-                <div class="row HFContainer">
-                    <div class="col-8 col-md-10 HeaderTitle">
-                        <a href="/index.html"><h1 class="link">AKSHAY KHURANA</h1></a>
-                    </div>
-                    <div class="col-4 col-md-2 HeaderAbout">
-                        <a href="/contact.html"><h2 class="link">INFO.</h2></a>
-                    </div>
-                </div>
+    </div>
+    <div class="overlayScreen" id="portraitWarning">
+        <div class="container">
+            <div class="textCenter">
+                <p>This website is best viewed in <br>
+                    <emphasis class="largerText">portrait mode</emphasis>
+                </p>
             </div>
         </div>
+    </div>
 
-        <div class= "mainContent">
-            <div class="container">
-                <div class="row sections" id="S1">
-                    <div class="col-12 col-md-4 col-lg-4 col-xl-3 order-md-2 sidebar">
-                        <div class="col-12 sideTitle" id="S1T"><h3>dummy1</h3>
-                        </div>
-                        <div class="col-12 sideDescription" id="S1D"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.</p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-8 col-lg-8 col-xl-9 order-md-1 projectPane"> 
-                        <div class="row">
-                            <div class="col-12 col-md-6 col-xl-4 cardDiv" id="S1P1" ><div class="card"></div></div>
-                            <div class="col-12 col-md-6 col-xl-4 cardDiv" id="S1P2" ><div class="card"></div></div>
-                            <div class="col-12 col-md-6 col-xl-4 cardDiv" id="S1P3" ><div class="card"></div></div>
-                            <div class="col-12 col-md-6 col-xl-4 cardDiv" id="S1P4" ><div class="card"></div></div>
-                            <div class="col-12 col-md-6 col-xl-4 cardDiv" id="S1P5" ><div class="card"></div></div>
-                            <div class="col-12 col-md-6 col-xl-4 cardDiv" id="S1P6" ><div class="card"></div></div>
-                            <div class="col-12 col-md-6 col-xl-4 cardDiv" id="S1P7" ><div class="card"></div></div>
-                            <div class="col-12 col-md-6 col-xl-4 cardDiv" id="S1P8" ><div class="card"></div></div>
-                            <div class="col-12 col-md-6 col-xl-4 cardDiv" id="S1P9" ><div class="card"></div></div>
-                            <div class="col-12 col-md-6 col-xl-4 cardDiv" id="S1P10"><div class="card"></div></div>
-                            <div class="col-12 col-md-6 col-xl-4 cardDiv" id="S1P11"><div class="card"></div></div>
-                            <div class="col-12 col-md-6 col-xl-4 cardDiv" id="S1P12"><div class="card"></div></div>
-                        </div>
-                    </div>   
-                </div>
-                <hr id="Sep1">
-                <div class="row sections" id="S2">
-                    <div class="col-12 col-md-3 col-lg-4 col-xl-3 order-md-2 sidebar">
-                        <div class="col-12 sideTitle" id="S2T"><h3>dummy1</h3>
-                        </div>
-                        <div class="col-12 sideDescription" id="S2D"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.</p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-9 col-lg-8 col-xl-9 order-md-1 projectPane">
-                        <div class="row">
-                            <div class="col-12 col-md-6 col-xl-4 cardDiv" id="S2P1" ><div class="card"></div></div>
-                            <div class="col-12 col-md-6 col-xl-4 cardDiv" id="S2P2" ><div class="card"></div></div>
-                            <div class="col-12 col-md-6 col-xl-4 cardDiv" id="S2P3" ><div class="card"></div></div>
-                            <div class="col-12 col-md-6 col-xl-4 cardDiv" id="S2P4" ><div class="card"></div></div>
-                            <div class="col-12 col-md-6 col-xl-4 cardDiv" id="S2P5" ><div class="card"></div></div>
-                            <div class="col-12 col-md-6 col-xl-4 cardDiv" id="S2P6" ><div class="card"></div></div>
-                            <div class="col-12 col-md-6 col-xl-4 cardDiv" id="S2P7" ><div class="card"></div></div>
-                            <div class="col-12 col-md-6 col-xl-4 cardDiv" id="S2P8" ><div class="card"></div></div>
-                            <div class="col-12 col-md-6 col-xl-4 cardDiv" id="S2P9" ><div class="card"></div></div>
-                            <div class="col-12 col-md-6 col-xl-4 cardDiv" id="S2P10"><div class="card"></div></div>
-                            <div class="col-12 col-md-6 col-xl-4 cardDiv" id="S2P11"><div class="card"></div></div>
-                            <div class="col-12 col-md-6 col-xl-4 cardDiv" id="S2P12"><div class="card"></div></div>
-                        </div>
-                    </div>
-                </div>
-                <hr id="Sep2">
-                <div class="row sections" id="S3">
-                    <div class="col-12 col-md-3 col-lg-4 col-xl-3  order-md-2 sidebar">
-                        <div class="col-12 sideTitle" id="S3T"><h3>dummy1</h3>
-                        </div>
-                        <div class="col-12 sideDescription" id="S3D"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.</p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-9 col-lg-8 col-xl-9 order-md-1 projectPane">
-                        <div class="row">
-                            <div class="col-12 col-md-6 col-xl-4 cardDiv" id="S3P1" ><div class="card"></div></div>
-                            <div class="col-12 col-md-6 col-xl-4 cardDiv" id="S3P2" ><div class="card"></div></div>
-                            <div class="col-12 col-md-6 col-xl-4 cardDiv" id="S3P3" ><div class="card"></div></div>
-                            <div class="col-12 col-md-6 col-xl-4 cardDiv" id="S3P4" ><div class="card"></div></div>
-                            <div class="col-12 col-md-6 col-xl-4 cardDiv" id="S3P5" ><div class="card"></div></div>
-                            <div class="col-12 col-md-6 col-xl-4 cardDiv" id="S3P6" ><div class="card"></div></div>
-                            <div class="col-12 col-md-6 col-xl-4 cardDiv" id="S3P7" ><div class="card"></div></div>
-                            <div class="col-12 col-md-6 col-xl-4 cardDiv" id="S3P8" ><div class="card"></div></div>
-                            <div class="col-12 col-md-6 col-xl-4 cardDiv" id="S3P9" ><div class="card"></div></div>
-                            <div class="col-12 col-md-6 col-xl-4 cardDiv" id="S3P10"><div class="card"></div></div>
-                            <div class="col-12 col-md-6 col-xl-4 cardDiv" id="S3P11"><div class="card"></div></div>
-                            <div class="col-12 col-md-6 col-xl-4 cardDiv" id="S3P12"><div class="card"></div></div>
-                        </div>
-                    </div>
-                </div>
-                <hr id="Sep3">
-                <div class="row sections" id="S4">
-                    <div class="col-12 col-md-3 col-lg-3 col-xl-3 order-md-2 sidebar">
-                        <div class="col-12 sideTitle" id="S4T"><h3>dummy1</h3>
-                        </div>
-                        <div class="col-12 sideDescription" id="S4D"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.</p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-9 col-lg-8 col-xl-9 order-md-1 projectPane">
-                        <div class="row">
-                            <div class="col-12 col-md-6 col-xl-4 cardDiv" id="S4P1" ><div class="card"></div></div>
-                            <div class="col-12 col-md-6 col-xl-4 cardDiv" id="S4P2" ><div class="card"></div></div>
-                            <div class="col-12 col-md-6 col-xl-4 cardDiv" id="S4P3" ><div class="card"></div></div>
-                            <div class="col-12 col-md-6 col-xl-4 cardDiv" id="S4P4" ><div class="card"></div></div>
-                            <div class="col-12 col-md-6 col-xl-4 cardDiv" id="S4P5" ><div class="card"></div></div>
-                            <div class="col-12 col-md-6 col-xl-4 cardDiv" id="S4P6" ><div class="card"></div></div>
-                            <div class="col-12 col-md-6 col-xl-4 cardDiv" id="S4P7" ><div class="card"></div></div>
-                            <div class="col-12 col-md-6 col-xl-4 cardDiv" id="S4P8" ><div class="card"></div></div>
-                            <div class="col-12 col-md-6 col-xl-4 cardDiv" id="S4P9" ><div class="card"></div></div>
-                            <div class="col-12 col-md-6 col-xl-4 cardDiv" id="S4P10"><div class="card"></div></div>
-                            <div class="col-12 col-md-6 col-xl-4 cardDiv" id="S4P11"><div class="card"></div></div>
-                            <div class="col-12 col-md-6 col-xl-4 cardDiv" id="S4P12"><div class="card"></div></div>
-                        </div>
-                    </div>
-                </div>
-                <!--           <hr id="Sep4">
-<div class="row sections" id="S5">
-<div class="col-12 col-md-3 col-lg-4 col-xl-3 order-md-2 sidebar">
-<div class="col-12 sideTitle" id="S5T"><h3>dummy1</h3>
-</div>
-<div class="col-12 sideDescription" id="S5D"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.</p>
-</div>
-</div>
-<div class="col-12 col-md-9 col-lg-8 col-xl-9 order-md-1 projectPane">
-<div class="row">
-<div class="col-12 col-md-6 col-xl-4 cardDiv" id="S5P1" ><div class="card"></div></div>
-<div class="col-12 col-md-6 col-xl-4 cardDiv" id="S5P2" ><div class="card"></div></div>
-<div class="col-12 col-md-6 col-xl-4 cardDiv" id="S5P3" ><div class="card"></div></div>
-<div class="col-12 col-md-6 col-xl-4 cardDiv" id="S5P4" ><div class="card"></div></div>
-<div class="col-12 col-md-6 col-xl-4 cardDiv" id="S5P5" ><div class="card"></div></div>
-<div class="col-12 col-md-6 col-xl-4 cardDiv" id="S5P6" ><div class="card"></div></div>
-<div class="col-12 col-md-6 col-xl-4 cardDiv" id="S5P7" ><div class="card"></div></div>
-<div class="col-12 col-md-6 col-xl-4 cardDiv" id="S5P8" ><div class="card"></div></div>
-<div class="col-12 col-md-6 col-xl-4 cardDiv" id="S5P9" ><div class="card"></div></div>
-<div class="col-12 col-md-6 col-xl-4 cardDiv" id="S5P10"><div class="card"></div></div>
-<div class="col-12 col-md-6 col-xl-4 cardDiv" id="S5P11"><div class="card"></div></div>
-<div class="col-12 col-md-6 col-xl-4 cardDiv" id="S5P12"><div class="card"></div></div>
-</div>
-
-</div>
-</div>  
--->
+    <div class="selectPage" id="selectPage">
+        <div class="carousel containerFull">
+            <div class="carouselItem carouselGrid" id="c1">
             </div>
-        </div>
-
-        <div class = "footer">
-            <div class="container">
-                <div class="row HFContainer">
-                    <div class="col-12 Filter">
-                        <h2 class="link activeFilter" id="fType">TYPE</h2>
-                        <h2 class="link" id="fChronology">CHRONOLOGY</h2>
-                    </div>
+            <div class="carouselItem carouselGrid" id="c2">
+                <div class="carouselRight">
+                    <h4 class="carouselTitle"></h4>
+                    <p class="carouselSub"></p>
+                    <p class="carouselDesc"></p>
                 </div>
             </div>
+            <div class="carouselItem carouselGrid" id="c3">3</div>
+            <div class="carouselItem carouselGrid" id="c4">4</div>
+            <div class="carouselItem carouselGrid" id="c5">5</div>
+            <div class="carouselItem carouselGrid" id="c6">6</div>
+            <div class="carouselItem carouselGrid" id="c7">7</div>
         </div>
+        <div class="carouselNav hCenter">
+            <div id="carouselNavLeft"><img src=/images/leftArrow.svg></div>
+            <div id="carouselNavRight"><img src=/images/rightArrow.svg></div>
+        </div>
+        <div class="carouselState">
+            <div class="carouselStateButtons activeStateButton" id="cB1"></div>
+            <div class="carouselStateButtons" id="cB2"></div>
+            <div class="carouselStateButtons" id="cB3"></div>
+            <div class="carouselStateButtons" id="cB4"></div>
+            <div class="carouselStateButtons" id="cB5"></div>
+            <div class="carouselStateButtons" id="cB6"></div>
+            <div class="carouselStateButtons" id="cB7"></div>
+        </div>
+    </div>
 
+    <main id="allPage">
+        <section class="flexRow filterButtons container">
+            <p>view by</p>
+            <div class="filter activeFilter" id="fType">
+                <h2>Type</h2>
+            </div>/
+            <div class="filter" id="fChronology">
+                <h2>Chronology</h2>
+            </div>
+        </section>
+        <section class="container sidebar" id="S1D">
+            <h3 class="sideTitle" id="S1T">dummy1</h3>
+            <p class="sideDescription" id="S1d">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.</p>
+        </section>
+
+        <section class="containerFull listing" id="S1L">
+            <div class="card" id="S1P1">
+                <div class="cardInfo">card 1</div>
+            </div>
+            <div class="card" id="S1P2">
+                <div class="cardInfo">card 2</div>
+            </div>
+            <div class="card" id="S1P3">
+                <div class="cardInfo">card 3</div>
+            </div>
+            <div class="card" id="S1P4">
+                <div class="cardInfo">card 4</div>
+            </div>
+            <div class="card" id="S1P5">
+                <div class="cardInfo">card 5</div>
+            </div>
+            <div class="card" id="S1P6">
+                <div class="cardInfo">card 6</div>
+            </div>
+            <div class="card" id="S1P7">
+                <div class="cardInfo">card 7</div>
+            </div>
+            <div class="card" id="S1P8">
+                <div class="cardInfo">card 8</div>
+            </div>
+            <div class="card" id="S1P9">
+                <div class="cardInfo">card 9</div>
+            </div>
+            <div class="card" id="S1P10">
+                <div class="cardInfo">card 10</div>
+            </div>
+            <div class="card" id="S1P11">
+                <div class="cardInfo">card 11</div>
+            </div>
+            <div class="card" id="S1P12">
+                <div class="cardInfo">card 12</div>
+            </div>
+        </section>
+        <section class="container sidebar" id="S2D">
+            <h3 class="sideTitle" id="S2T">dummy1</h3>
+
+            <p class="sideDescription" id="S2d">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.</p>
+
+        </section>
+        <section class="containerFull listing" id="S2L">
+            <div class="card" id="S2P1">
+                <div class="cardInfo"></div>
+            </div>
+            <div class="card" id="S2P2">
+                <div class="cardInfo"></div>
+            </div>
+            <div class="card" id="S2P3">
+                <div class="cardInfo"></div>
+            </div>
+            <div class="card" id="S2P4">
+                <div class="cardInfo"></div>
+            </div>
+            <div class="card" id="S2P5">
+                <div class="cardInfo"></div>
+            </div>
+            <div class="card" id="S2P6">
+                <div class="cardInfo"></div>
+            </div>
+            <div class="card" id="S2P7">
+                <div class="cardInfo"></div>
+            </div>
+            <div class="card" id="S2P8">
+                <div class="cardInfo"></div>
+            </div>
+            <div class="card" id="S2P9">
+                <div class="cardInfo"></div>
+            </div>
+            <div class="card" id="S2P10">
+                <div class="cardInfo"></div>
+            </div>
+            <div class="card" id="S2P11">
+                <div class="cardInfo"></div>
+            </div>
+            <div class="card" id="S2P12">
+                <div class="cardInfo"></div>
+            </div>
+        </section>
+        <section class="container sidebar" id="S3D">
+            <h3 class="sideTitle" id="S3T">dummy1</h3>
+
+            <p class="sideDescription" id="S3d">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.</p>
+        </section>
+        <section class="containerFull listing" id="S3L">
+            <div class="card" id="S3P1">
+                <div class="cardInfo"></div>
+            </div>
+            <div class="card" id="S3P2">
+                <div class="cardInfo"></div>
+            </div>
+            <div class="card" id="S3P3">
+                <div class="cardInfo"></div>
+            </div>
+            <div class="card" id="S3P4">
+                <div class="cardInfo"></div>
+            </div>
+            <div class="card" id="S3P5">
+                <div class="cardInfo"></div>
+            </div>
+            <div class="card" id="S3P6">
+                <div class="cardInfo"></div>
+            </div>
+            <div class="card" id="S3P7">
+                <div class="cardInfo"></div>
+            </div>
+            <div class="card" id="S3P8">
+                <div class="cardInfo"></div>
+            </div>
+            <div class="card" id="S3P9">
+                <div class="cardInfo"></div>
+            </div>
+            <div class="card" id="S3P10">
+                <div class="cardInfo"></div>
+            </div>
+            <div class="card" id="S3P11">
+                <div class="cardInfo"></div>
+            </div>
+            <div class="card" id="S3P12">
+                <div class="cardInfo"></div>
+            </div>
+        </section>
+        <section class="container sidebar" id="S4D">
+            <h3 class=" sideTitle" id="S4T">dummy1</h3>
+            <p class=" sideDescription" id="S4d">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.</p>
+
+        </section>
+        <section class="containerFull listing" id="S4L">
+            <div class="card" id="S4P1">
+                <div class="cardInfo"></div>
+            </div>
+            <div class="card" id="S4P2">
+                <div class="cardInfo"></div>
+            </div>
+            <div class="card" id="S4P3">
+                <div class="cardInfo"></div>
+            </div>
+            <div class="card" id="S4P4">
+                <div class="cardInfo"></div>
+            </div>
+            <div class="card" id="S4P5">
+                <div class="cardInfo"></div>
+            </div>
+            <div class="card" id="S4P6">
+                <div class="cardInfo"></div>
+            </div>
+            <div class="card" id="S4P7">
+                <div class="cardInfo"></div>
+            </div>
+            <div class="card" id="S4P8">
+                <div class="cardInfo"></div>
+            </div>
+            <div class="card" id="S4P9">
+                <div class="cardInfo"></div>
+            </div>
+            <div class="card" id="S4P10">
+                <div class="cardInfo"></div>
+            </div>
+            <div class="card" id="S4P11">
+                <div class="cardInfo"></div>
+            </div>
+            <div class="card" id="S4P12">
+                <div class="cardInfo"></div>
+            </div>
+        </section>
+        <section class="container sidebar" id="S5D">
+            <h3 class="sideTitle" id="S5T">
+                dummy1</h3>
+            <p class="sideDescription" id="S5d">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.</p>
+        </section>
+        <section class="containerFull listing" id="S5L">
+            <div class="card" id="S5P1">
+                <div class="cardInfo"></div>
+            </div>
+            <div class="card" id="S5P2">
+                <div class="cardInfo"></div>
+            </div>
+            <div class="card" id="S5P3">
+                <div class="cardInfo"></div>
+            </div>
+            <div class="card" id="S5P4">
+                <div class="cardInfo"></div>
+            </div>
+            <div class="card" id="S5P5">
+                <div class="cardInfo"></div>
+            </div>
+            <div class="card" id="S5P6">
+                <div class="cardInfo"></div>
+            </div>
+            <div class="card" id="S5P7">
+                <div class="cardInfo"></div>
+            </div>
+            <div class="card" id="S5P8">
+                <div class="cardInfo"></div>
+            </div>
+            <div class="card" id="S5P9">
+                <div class="cardInfo"></div>
+            </div>
+            <div class="card" id="S5P10">
+                <div class="cardInfo"></div>
+            </div>
+            <div class="card" id="S5P11">
+                <div class="cardInfo"></div>
+            </div>
+            <div class="card" id="S5P12">
+                <div class="cardInfo"></div>
+            </div>
+        </section>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="/js/bootstrap.min.js"></script>
-
         <!-- Include shine.js-->
         <script src="/shine.js-master/dist/shine.min.js"></script>
-
         <!-- Import local javascripts -->
-        <script type="text/javascript" src="/js/PortfolioLoad.js"></script> 
-    </body>
+        <script type="text/javascript" src="/js/PortfolioLoad.js"></script>
+    </main>
+</body>
+
 </html>

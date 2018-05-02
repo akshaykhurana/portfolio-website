@@ -1,14 +1,18 @@
 ﻿[
  {
+   "SectionName": 2018,
+   "SectionDescription": "Showcase of research done at NID, Bangalore<br>apps, UI, code, web, procedural 3d modelling, packaging design, branding, user research, system design, apps, UI"
+ },
+ {
    "SectionName": 2017,
-   "SectionDescription": "Showcase of projects done during the second and third semesters at NID, Bengaluru in the Interaction Design course."
+   "SectionDescription": "Showcase of research done at NID, Bangalore<br>code, web, products, product interactions, rapid prototyping, user testing, packaging design, illustrations, branding"
  },
  {
    "SectionName": 2016,
-   "SectionDescription": "Showcase of projects done during the first semester at NID, Bengaluru in the Interaction Design course and as a designer in my own practice."
+   "SectionDescription": "Showcase of research done at NID Bangalore, and prior to it. <br>architecture, interior design, graphics, logos, print layouts, code, procedural 3d Modelling, "
  },
  {
    "SectionName": 2015,
-   "SectionDescription": "Showcase of projects done prior to joining NID, Bengaluru. At this time, I worked primarily as an architect but also did some graphic and web design in my own practice."
+   "SectionDescription": "Showcase of projects done prior to joining NID, Bangalore.<br>architecture, graphics, code, exhibition design"
  }
 ]

@@ -1,136 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-        <title>Akshay Khurana: Portfolio</title>
-        <meta name="description" content="This is the portfolio of Akshay Khurana.">
-        <meta name="keywords" content="portfolio, akshay, khurana, design, architect, designer, interaction design">
-        <meta name="author" content="www.akshaykhurana.com">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-        <!-- Responsive and mobile friendly stuff -->
-        <meta name="HandheldFriendly" content="True">
-        <meta name="MobileOptimized" content="320">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Akshay Khurana: Portfolio</title>
+    <meta name="description" content="This is the portfolio of Akshay Khurana.">
+    <meta name="keywords" content="portfolio, akshay, khurana, design, architect, designer, interaction design, NID, SPA, National Institute of Design, School of Planning and Architecture">
+    <meta name="author" content="www.akshaykhurana.com">
 
-        <!-- Bootstrap -->
-        <link href="/css/bootstrap-reboot.css" rel="stylesheet">
-        <link href = "/css/bootstrap-grid.css" rel="stylesheet">
-        <link href = "/css/bootstrap.css" rel="stylesheet">
+    <!-- Responsive and mobile friendly stuff -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-        <!-- Animate.css -->
-        <link href="/css/animate.css" rel="stylesheet">
+    <!--Stylesheets -->
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/layoutStylesheet.css">
+    <link rel="stylesheet" href="/css/fontStylesheet.css">
+    <link rel="stylesheet" href="/css/colourStylesheet.css">
+    <link rel="stylesheet" href="/css/animationsStylesheet.css">
 
-        <!--Own Stylesheet and Fonts -->
-        <link rel="stylesheet" href="/css/ProjectStylesheet.css" media="all">  
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Fjord+One" rel="stylesheet">
 
-        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
+    <!--Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sue+Ellen+Francisco" rel="stylesheet">
+</head>
 
-    </head>
-
-    <body>
-        <div class = "LoadingScreen">
-            <div class="container HFContainer">
-                <div class="row">
-                    <div class="col-12 IntroText">
-                        <a href="/index.html"><h1 id="shiny1">AKSHAY KHURANA</h1></a>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="/main.html"><img src="/images/logoLight.svg"></a>
+            </div>
+            <div class="nav">
+                <div class="flexRow hRight">
+                    <div class="toggleNav">
+                        <a href="/contact.html">
+                            <h2>INFO.</h2>
+                        </a>
                     </div>
-                    <div class="col-12 IntroText">
-                        <h2>WEB . GRAPHICS . SPACE . PRODUCTS</h2>
-                    </div>
+                    <div class="hamburger">M</div>
                 </div>
             </div>
         </div>
-        <div class = "PortraitWarning">
-            <div class="container HFContainer">
-                <div class="row">
-                    <div class="col-12 IntroText">
-                        <a href="/index.html"><h1 id="shiny2">AKSHAY KHURANA</h1></a>
-                    </div>
-                    <div class="col-12 IntroText">
-                        <h2>WEB . GRAPHICS . SPACE . PRODUCTS</h2>
-                    </div>
-                    <div class="col-8 offset-2 IntroText">
-                        <p>best viewed in portrait mode</p>
-                    </div>
-                </div>
+    </header>
+    <div class="overlayScreen" id="loadingScreen">
+        <div class="container vCenter hCenter">
+            <div class="textCenter">
+                <h1 class="textDark" id="shiny1">other stuff</h1>
             </div>
         </div>
-
-        <div class = "header">
-            <div class="container">
-                <div class="row HFContainer">
-                    <div class="col-8 col-md-10 HeaderTitle">
-                        <a href="/index.html"><h1 class="link">AKSHAY KHURANA</h1></a>
-                    </div>
-                    <div class="col-4 col-md-2 HeaderAbout">
-                        <a href="/contact.html"><h2 class="link">ABOUT</h2></a>
-                    </div>
-                </div>
+    </div>
+    <div class="overlayScreen" id="portraitWarning">
+        <div class="container">
+            <div class="textCenter">
+                <p>This website is best viewed in <br>
+                    <emphasis class="largerText">portrait mode</emphasis>
+                </p>
             </div>
         </div>
+    </div>
+    <main>
+        <section class="introSection container">
+            <h1 class="projectTitle">Enough</h1>
+            <p class="projectSubtitle">2016</p>
+            <p class="projectDescription">
+                Classroom project at National Institute of Design, Bangalore<br> Collaborators: <a href="http://prabhakarbind.com/">Prabhakar Bind</a>, <a href="http://prateekverma.co.in/about.html">Prateek Verma</a><br> A short movie for the Swachh Bharat Mission and the Indian Railways
+            </p>
+        </section>
+        <hr class="container">
 
-        <div class= "mainContent">
-            <div class="container">
-                <div class="sections row">
-                    <div class="projectTitle col-12">
-                        <h3>Enough</h3>
-                    </div>
-                    <div class="projectSubtitle col-12">
-                         <h4>2016</h4>
-                        <h4>Classroom project at NID</h4>
-                        <h4>Group with Prabhakar Bind and Prateek Verma</h4>
-                    </div>
-                    <div class="projectDescription col-12">
-                        <h4>2016</h4>
-                        <h4>Classroom project at NID</h4>
-                        <h4>As a group with Prabhakar Bind and Prateek Verma</h4>
-                        <p>An ad movie for the Swachh Bharat Mission and the indian Railways</p>
-                    </div>
-                </div>
-                <hr>
-                <div class="sections row">
-                    <div class="d-flex justify-content-center underConstruction col-12 col-md-4 offset-md-4">
-                        <img src="/images/under_construction.gif">
-                    </div>
+        <section class="generalSection container">
+            <h4>"Why are we making movies?"</h4>
+            <p>Tough one. But here's what basically happened: we were assigned the task of ideating about a concept that would bring the Swachh Bharat Initiative to the Indian Railways. This was done at a time when we were learning about photography, videography and taking crash courses on video editing in Premier Pro.</p>
+            <h5>And what do we film?</h5>
+            <p>Prateek & Prabhakar came up with a short story based on the life of our protagonist <i>Raghu</i>. <i>Raghu</i> works as railway attendant and lives in a run-down apartment, all alone. He's your regular average joe with a slight twist. <i>Raghu</i> calls an apple an apple, there's no two ways about it. This should set up an interesting conversation with someone who chooses to annoy him. So that's what we need next.</p>
+            <p>Enter, man1. He doesn't really need a name. We just need to show him as someone who pisses off <i>Raghu</i> with a snarky comment. That should lead to some tension that could be resolved later. We'll work out the details later.</p>
+            <p>Whew! so that's the plan then? Onward to the shoot.</p>
+        </section>
+        <hr class="container">
+        <section class="twoSection container">
+            <div class="leftPane">
+                <h4>Filmmaking 101: Ground Rules</h4>
+                <h5>At the Railway Station</h5>
+                <p>This is when we figured how difficult making a movie is. There's all sorts of lighting conditions and the interior of a train is terribly tight. Not exactly meant for setting up an array of cameras on tripods. So, what do we do? we improvise with handheld shots in the interiors and use tripods to shoot exterior scenes.</p>
+                <p>The problem is, all of <i>Raghu's</i> scenes need to be shot in that one day, because we borrowed a cleaner's uniform that needs to be returned ASAP. So, we shoot a whole lot of footage with a bunch of cameras and hope we can salvage all this later.</p>
+                <p>Also, dialogue was sketchy at this point so the actors decided to improvise based on a rough understanding of the storyboards and the scripts.</p>
+                <h5>Filming at NID</h5>
+                <p>By this time we decided to extend the script to include a new character to resolve the story line as it emerged. This person was to be the Station Master at the station that was <i>Raghu's</i> home station. A conversation between the two would expose Raghu's internal dilemma about his own job and his frustration with the general public who have an apathetic view of the railway system and tend to misuse it.</p>
+                <p>In hindsight, this is where we learnt of the importance of recording sound through an external microphone. The hum of the autofocus motor and ambient noise killed the audio experience of the interior scenes.</p>
+            </div>
+            <div class="rightPane">
+                <div class="imgCaptionBlock modalEnabled">
+                    <img src="images/shoot.jpg" alt="shoot at the Railway Station">
+                    <p class="imgCaption">Shooting at the Station</p>
                 </div>
             </div>
-        </div>
-
-        <div class = "footer">
-            <div class="container">
-                <div class="row HFContainer">
-                    <div class="col-3 bottomNavigation">
-                        <h2 class="link" id="prevNav">PREVIOUS</h2>
-                    </div>
-                    <div class="col-3 offset-6 bottomNavigation">
-                        <h2 class="link" id="nextNav">NEXT</h2>
-                    </div>
+        </section>
+        <hr class="container">
+        <section class="twoSection container">
+            <div class="leftPane">
+                <h4>The Noobs Edition to Video and Audio Editing</h4>
+                <p>By this time we are already missing deadlines and a lot of work still needs to be done. Editing for one, is tougher than we imagined. We lose a good number editing the pandora's box of footage we'd managed to accrue.</p>
+                <p>Most of the time in editing is wasted on moving frame by frame through the footage and matching up cuts to make the end result less choppy. Also, we try our hand at match cuts to remove sections of long shots for a crisp playback. Add some video effects, crops, re-scaling, colour edits and voila! it still doesn't work because of one big issue: the audio.</p>
+                <p>We manage to add some audio effects and reduce the background noise to an acceptable level but not without losing entire chunks of dialogue. The video needs an overdub or a reshoot but time is running out and there's a bunch of new things to learn.</p>
+                <p>Possible things to add: music and a dubbed audio track for some of the dialogue.</p>
+                <p>Meanwhile, the short is up on Youtube. (Embedded below)</p>
+            </div>
+            <div class="rightPane">
+                <div class="imgCaptionBlock modalEnabled">
+                    <img src="images/edit.jpg" alt="video editing">
+                    <p class="imgCaption">Premier Pro 101</p>
                 </div>
             </div>
+        </section>
+
+        <section class="videoSection containerFull">
+            <iframe src="https://www.youtube.com/embed/fBLwoBqdk8c" frameborder="0" allow="encrypted-media" allowfullscreen class="videoEmbed"></iframe>
+        </section>
+        <section class="containerFull homeButton colorGrey">
+            <div class=homeButtonCenter>
+                <a href=/main.html><img src="/images/home.svg">
+                <p>home</p></a>
+            </div>
+        </section>
+        <!-- The Modal -->
+        <div id="modalDiv" class="modal">
+            <!-- The Close Button -->
+            <span class="close">&times;</span>
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" src="images/1%20Swift.jpg" id="modalImage">
+            <!-- Modal Caption (Image Text) -->
+            <div class="modal-caption" id="modalCaption">swift</div>
         </div>
-
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="/js/bootstrap.min.js"></script>
-
-        <!-- Include shine.js-->
-        <script src="/shine.js-master/dist/shine.min.js"></script>
-
-        <!-- Import local javascripts -->
-        <script type="text/javascript" src="/js/ProjectLoad.js"></script> 
-    </body>
+    </main>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include shine.js-->
+    <script src="/shine.js-master/dist/shine.min.js"></script>
+    <!-- Import local javascripts -->
+    <script type="text/javascript" src="/js/allLoad.js"></script>
+</body>
 </html>

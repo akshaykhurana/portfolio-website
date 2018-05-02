@@ -1,70 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-        <title>Akshay Khurana: Portfolio</title>
-        <meta name="description" content="This is the portfolio of Akshay Khurana.">
-        <meta name="keywords" content="portfolio, akshay, khurana, design, architect, designer, interaction design">
-        <meta name="author" content="www.akshaykhurana.com">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-        <!-- Responsive and mobile friendly stuff -->
-        <meta name="HandheldFriendly" content="True">
-        <meta name="MobileOptimized" content="320">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Akshay Khurana: Portfolio</title>
+    <meta name="description" content="This is the portfolio of Akshay Khurana.">
+    <meta name="keywords" content="portfolio, akshay, khurana, design, architect, designer, interaction design, NID, SPA, National Institute of Design, School of Planning and Architecture">
+    <meta name="author" content="www.akshaykhurana.com">
 
-        <!-- Bootstrap -->
-        <link href="/css/bootstrap-reboot.css" rel="stylesheet">
-        <link href = "/css/bootstrap-grid.css" rel="stylesheet">
-        <link href = "/css/bootstrap.css" rel="stylesheet">
+    <!-- Responsive and mobile friendly stuff -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-        <!-- Animate.css -->
-        <link href="/css/animate.css" rel="stylesheet">
+    <!--Stylesheets -->
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/layoutStylesheet.css">
+    <link rel="stylesheet" href="/css/fontStylesheet.css">
+    <link rel="stylesheet" href="/css/colourStylesheet.css">
+    <link rel="stylesheet" href="/css/animationsStylesheet.css">
 
-        <!--Own Stylesheet and Fonts -->
-        <link rel="stylesheet" href="/css/ProjectStylesheet.css" media="all">  
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Fjord+One" rel="stylesheet">
 
-        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
+    <!--Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sue+Ellen+Francisco" rel="stylesheet">
+</head>
 
-    </head>
-
-    <body>
-        <div class = "LoadingScreen">
-            <div class="container HFContainer">
-                <div class="row">
-                    <div class="col-12 IntroText">
-                        <a href="/index.html"><h1 id="shiny1">AKSHAY KHURANA</h1></a>
+<body>
+   <header class="colorRed">
+        <div class="container">
+            <div class="logo">
+                <a href="/main.html"><img src="/images/logoLight.svg"></a>
+            </div>
+            <div class="nav">
+                <div class="flexRow hRight">
+                    <div class="toggleNav">
+                        <a href="/contact.html">
+                            <h2>INFO.</h2>
+                        </a>
                     </div>
-                    <div class="col-12 IntroText">
-                        <h2>WEB . GRAPHICS . SPACE . PRODUCTS</h2>
-                    </div>
+                    <div class="hamburger">M</div>
                 </div>
             </div>
         </div>
-        <div class = "PortraitWarning">
-            <div class="container HFContainer">
-                <div class="row">
-                    <div class="col-12 IntroText">
-                        <a href="/index.html"><h1 id="shiny2">AKSHAY KHURANA</h1></a>
-                    </div>
-                    <div class="col-12 IntroText">
-                        <h2>WEB . GRAPHICS . SPACE . PRODUCTS</h2>
-                    </div>
-                    <div class="col-8 offset-2 IntroText">
-                        <p>best viewed in portrait mode</p>
-                    </div>
-                </div>
+    </header>
+    <div class="overlayScreen overlayRed" id="loadingScreen">
+        <div class="container vCenter hCenter">
+            <div class="textCenter">
+                <h1 id="shiny1">products</h1>
+            </div>
+        </div>
+    </div>
+    <div class="overlayScreen" id="portraitWarning">
+        <div class="container">
+            <div class="textCenter">
+                <p>This website is best viewed in <br>
+                    <emphasis class="largerText">portrait mode</emphasis>
+                </p>
+            </div>
+        </div>
+    </div>
+    <main>
+        <section class="introSection container">
+            <h1 class="projectTitle">Fiama di Wills</h1>
+            <p class="projectSubtitle">2017<br>As a group with <a href="https://www.behance.net/RuchitaRajan">Ruchita Rajan</a> and <a href="https://www.behance.net/shobhana">Shobhana Sridhar</a></p>
+            <p class="projectDescription">
+                Winning competition entry for a packaging redesign competition hosted by Fiama Di Wills for their shower gel product.<br>Second Runner-Up</p>
+        </section>
+        <hr class="container">
+        <section class="imageSection frameLarge containerFull">
+            <img src="images/aqua%20board.jpg" alt="mood board">
+        </section>
+        <section class="generalSection container">
+            <h4>Concept</h4>
+            <p>The Fiama Di Wills woman is a confident and independent person. She knows what she wants and she works hard for it. She likes to experiment and try out new things, to break from the mundane. The shower is a quiet space that starts and ends her daily routine. It rejuvenates and kickstarts her day, it calms and helps her unwind at the end of it. Showers are her me time. Keeping this in mind, our packaging form and graphics have water at the core. Water as the refresher, the source of life, the mighty river, the calm ocean.
+            </p>
+        </section>
+        <hr class="container">
+        <section class="generalSection container">
+            <h4>Packaging</h4>
+            <p>The problem statement asked for a design that would:</p>
+            <p class="listed">
+                - dispense about 5ml of shower gel since most people do not know how to use the correct amount of product<br> - be able to sit on the variety of surfaces that exist in the Indian bathroom or be able to be mounted in a case where a shelf is not available<br> - redefine the form without changing it drastically<br> stand out amidst competition on a store shelf<br>
+            </p>
+        </section>
+        <hr class="container">
+        <section class="generalSection container">
+            <h4>Design decisions</h4>
+            <p>For our design we decided to keep the shape of the bottle close to the standard dimensions of a shower gel packaging and retain material properties but make the following changes:</p>
+            <p class="listed">
+                - shape the bottle like a teardrop (or as close to it as possible) to keep with the concept of being close to water <br> - design the bottle with a flat bottom and hooked, rounded top that can be placed on any surface or hung from any available hook <br> - make the hook slightly elastic that would allow it to open and close somewhat like a keychain to enable a firm grip on wherever it is hung from<br> - design a pressable button like indent on the front of the bottle that holds just about 4ml of shower gel. this button when depressed, will dispense the right amount of liquid<br>
+            </p>
+        </section>
+        <section class="imageSection threeSection container">
+            <div class="imgCaptionBlock modalEnabled">
+                <img class="card-img-top" src="images/Render%201.jpg" alt="side view">
+                <p class="imgCaption">side view</p>
+            </div>
+            <div class="imgCaptionBlock modalEnabled">
+                <img class="card-img-top" src="images/Render%202.jpg" alt="side view">
+                <p class="imgCaption">front view</p>
+            </div>
+            <div class="imgCaptionBlock modalEnabled">
+                <img class="card-img-top" src="images/Render%203.jpg" alt="side view">
+                <p class="imgCaption">perspective view</p>
+            </div>
+        </section>
+        <hr class="container">
+        <section class="generalSection container">
+            <h4>Packaging in Context</h4>
+            <p>Lorem Ipsum will do for now.</p>
+        </section>
+        <section class="imageSection frameLarge containerFull">
+            <div class="imgCaptionBlock modalEnabled">
+                <img src="images/Packaging%20comparison.jpg">
+            </div>
+        </section>
+        <div class="containerFull homeButton colorRed">
+            <div class=homeButtonCenter>
+                <a href=/main.html><img src="/images/home.svg">
+                <p>home</p></a>
             </div>
         </div>
         <!-- The Modal -->
@@ -76,133 +136,16 @@
             <!-- Modal Caption (Image Text) -->
             <div class="modal-caption" id="modalCaption">swift</div>
         </div>
-        <div class = "header">
-            <div class="container">
-                <div class="row HFContainer">
-                    <div class="col-8 col-md-10 HeaderTitle">
-                        <a href="/index.html"><h1 class="link">AKSHAY KHURANA</h1></a>
-                    </div>
-                    <div class="col-4 col-md-2 HeaderAbout">
-                        <a href="/contact.html"><h2 class="link">ABOUT</h2></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+    </main>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-        <div class= "mainContent">
-            <div class="container">
-                <div class="sections row">
-                    <div class="projectTitle col-12">
-                        <h3>Fiama di Wills</h3>
-                    </div>
-                    <div class="projectSubtitle col-12">
-                        <h4>2017</h4>
-                        <h4>Group with Ruchita Rajan and Shobhana Sridhar</h4>
-                    </div>
-                    <div class="projectDescription col-12 col-md-6">
-                        <p>Competition entry for a packaging redesign competition hosted by Fiama Di Wills for their shower gel product </p>
-                    </div>
-                </div>
-                <hr>
-                <div class="sections row">
-                    <div class="col-12 col-md-6">
-                        <img src="images/aqua%20board.jpg">
-                    </div>
-                    <div class="col-12 col-md-6"><h5>Concept</h5>
-                        <p>The Fiama Di Wills woman is a confident and
-                            independent person. She knows what she wants and
-                            she works hard for it. She likes to experiment and
-                            try out new things, to break from the mundane.
-                            The shower is a quiet space that starts and ends her
-                            daily routine. It rejuvenates and kickstarts her day, it
-                            calms and helps her unwind at the end of it.
-                            Showers are her me time.
-                            Keeping this in mind, our packaging form and
-                            graphics have water at the core. Water as the
-                            refresher, the source of life, the mighty river, the
-                            calm ocean.
-                        </p>
-                    </div>
-                </div>
-                <hr>
-                <div class="sections row">
-                    <div class="col-12 col-md-6"><h5>Packaging</h5>
-                        <p>The problem statement asked for a design that would:</p>
-                        <p class="listed">
-                            - dispense about 5ml of shower gel since most people do not know how to use the correct amount of product<br>
-                            - be able to sit on the variety of surfaces that exist in the Indian bathroom or be able to be mounted in a case where a shelf is not available<br>
-                            - redefine the form without changing it drastically<br>
-                            stand out amidst competition on a store shelf<br>
-                        </p>
-                    </div>
-                </div>
-                <hr>
-                <div class="sections row">
-                    <div class="col-12 col-md-6"><h5>Design decisions</h5>
-                        <p>For our design we decided to keep the shape of the bottle close to the standard dimensions of a shower gel packaging and retain material properties but make the following changes:</p>
-                        <p class="listed">
-                            - shape the bottle like a teardrop (or as close to it as possible) to keep with the concept of being close to water <br>
-                            - design the bottle with a flat bottom and hooked, rounded top that can be placed on any surface or hung from any available hook <br>
-                            - make the hook slightly elastic that would allow it to open and close somewhat like a keychain to enable a firm grip on wherever it is hung from<br>
-                            - design a pressable button like indent on the front of the bottle that holds just about 4ml of shower gel. this button when depressed, will dispense the right amount of liquid<br>
-                        </p>
-                    </div>
-                    <div class="row extraSpace">
-                        <div class="card col-12 col-md-4 col-lg-4 modalEnabled">
-                            <img class="card-img-top" src="images/Render%201.jpg" alt="side view">
-                            <div class="card-block">
-                                <h6 class="card-title imgCaption">side view</h6>
-                            </div>
-                        </div>
-                        <div class="card col-12 col-md-4 col-lg-4 modalEnabled">
-                            <img class="card-img-top" src="images/Render%202.jpg" alt="front view">
-                            <div class="card-block">
-                                <h6 class="card-title imgCaption">front view</h6>
-                            </div>
-                        </div>
-                        <div class="card col-12 col-md-4 col-lg-4 modalEnabled">
-                            <img class="card-img-top" src="images/Render%203.jpg" alt="perspective">
-                            <div class="card-block">
-                                <h6 class="card-title imgCaption">perspective</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <div class="sections row">
-                    <div class="col-12 col-md-6">
-                        <h5>Comparison with other brands</h5>
-                    </div>
-                    <div class="col-12 extraSpace">
-                        <img src="images/Packaging%20comparison.jpg">
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- Include shine.js-->
+    <script src="/shine.js-master/dist/shine.min.js"></script>
 
-        <div class = "footer">
-            <div class="container">
-                <div class="row HFContainer">
-                    <div class="col-3 bottomNavigation">
-                        <h2 class="link" id="prevNav"><a href="/projects/Product/GOD/projectPage.html">PREVIOUS</a></h2>
-                    </div>
-                    <div class="col-3 offset-6 bottomNavigation">
-                        <h2 class="link" id="nextNav"><a href="/projects/Product/FocusPen/projectPage.html">NEXT</a></h2>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- Import local javascripts -->
+    <script type="text/javascript" src="/js/allLoad.js"></script>
 
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</body>
 
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="/js/bootstrap.min.js"></script>
-
-        <!-- Include shine.js-->
-        <script src="/shine.js-master/dist/shine.min.js"></script>
-
-        <!-- Import local javascripts -->
-        <script type="text/javascript" src="/js/ProjectLoad.js"></script> 
-    </body>
 </html>

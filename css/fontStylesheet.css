@@ -1,0 +1,190 @@
+h1 {
+    font-family: 'Lato';
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.IntroText h1 {
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-family: "Lato", serif;
+    font-weight: 600;
+    font-size: .8rem;
+    letter-spacing: .1rem;
+}
+
+h3 {
+    font-family: "Lato", serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1rem;
+    text-transform: lowercase;
+}
+
+h4 {
+    font-family: "Lato", serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    padding: 1rem 0rem;
+}
+
+h5 {
+    font-family: "Lato", serif;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 1rem 0rem;
+}
+
+h6 {
+    font-family: "Sue Ellen Francisco", cursive;
+    font-weight: 900;
+    font-size: 5rem;
+    padding-bottom: 2rem;
+}
+
+p {
+    font-family: 'Lato', serif;
+    font-weight: 100;
+    font-size: .95rem;
+    line-height: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+emphasis {
+    font-weight: 600;
+}
+
+hr {
+    margin: 1rem 0rem;
+}
+
+.tinyText {
+    margin-top: 1rem;
+    font-size: .7rem;
+}
+
+.largerText {
+    font-size: 1.2rem;
+}
+
+#hi1,
+#hi2 {
+    font-weight: 900;
+}
+.carousel h4 {
+    font-size: 2rem;
+}
+
+.carousel .carouselSub {
+    font-size: 1.25rem;
+}
+.carousel i{
+    font-size: 1.25rem;
+    
+}
+.carousel p{
+    font-size: 1rem;
+}
+.imgCaption {
+    font-size: .9rem;
+    text-align: center;
+}
+
+.filterButtons h2 {
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: 0rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ProjectPages */
+
+.listNoBullets {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: underline;
+}
+a:hover{
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: line-through;
+}
+.homeButton a{
+    text-decoration: none;
+}
+
+.cardSmall a,
+.cardLarge a {
+    color: #dddddd;
+}
+
+.cardSmall a:hover,
+.cardLarge a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+
+}
+
+
+/*Cards on All Page*/
+
+.card a, header a {
+    text-decoration: none;
+}
+
+.cardTitle {
+    text-align: left;
+}
+
+.cardSub {
+    margin-top: -10px;
+    font-size: .8rem;
+    text-align: left;
+}
+
+.cardDescription {
+    font-size: .9rem;
+}
+
+@media (min-width: 768px) {
+    /*All Fonts*/
+    h1 {
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: .75rem;
+    }
+    h4 {
+        font-size: 1.5rem;
+    }
+    p {
+        font-size: .9rem;
+    }
+    .card h4 {
+        font-size: 1.25rem;
+    }
+    /*Overlay Screen*/
+    #hi1 {
+        font-size: 4rem;
+    }
+}
+
+@media (min-width: 992px) {
+    /*Overlay Screen*/
+    #hi1 {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 1339px) {}
+
+@media (min-width: 2459px) {}
