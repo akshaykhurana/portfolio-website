@@ -192,7 +192,7 @@ function refreshProjects(filter) {
 
     // Remove loading screen
     //Ensure timing for bare minimum animation
-    var delayMillis = 1000; //4 second
+    var delayMillis = 4000; //4 second
     if (loadingscreenActive == 1) {
         setTimeout(function () {
             console.log("Calling all Overlay screen removal");
