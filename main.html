@@ -51,7 +51,24 @@
                             <h2>INFO.</h2>
                         </a>
                     </div>
-                    <div class="hamburger">M</div>
+                    <div id="hamburger">
+                        <input type="checkbox" />
+                        <!--spans acting like a hamburger menu-->
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <ul id="menu">
+                            <a href="#">
+                                <li>selected works</li>
+                            </a>
+                            <a href="#">
+                                <li>all projects</li>
+                            </a>
+                            <a href="/contact.html">
+                                <li>Info</li>
+                            </a>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -75,7 +92,6 @@
     </div>
 
     <div class="selectPage" id="selectPage">
-        <div class="selectPage" id="selectPage">
         <div class="carousel containerFull">
             <div class="carouselItem carouselGrid" id="c1"></div>
             <div class="carouselItem carouselGrid" id="c2"></div>
@@ -101,13 +117,13 @@
     </div>
 
     <main id="allPage">
-        <section class="container flexRow filterButtons ">
-            <p>view by:</p>
+        <section class="flexRow filterButtons container">
+            <p>view by</p>
             <div class="filter activeFilter" id="fType">
-                <h2>type</h2>
+                <h2>Type</h2>
             </div>/
             <div class="filter" id="fChronology">
-                <h2>chronology</h2>
+                <h2>Chronology</h2>
             </div>
         </section>
         <section class="container sidebar" id="S1D">
