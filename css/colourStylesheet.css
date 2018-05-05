@@ -79,7 +79,8 @@ header h2 {
 }
 
 .activeFilter > h2,
-.activeFilter, .activeFilter>p {
+.activeFilter,
+.activeFilter > p {
     color: dodgerBlue;
 }
 
@@ -144,9 +145,10 @@ a:hover > h2,
 }
 
 #c3 {
-    background: #00d2ff;
-    background: -webkit-linear-gradient(to top, #3a7bd5, #00d2ff);
-    background: linear-gradient(to top, #3a7bd5, #00d2ff);
+    background: #12deff;
+    background: -webkit-linear-gradient(to bottom, #12deff, #c0c0aa);
+    background: linear-gradient(to bottom, #12deff, #c0c0aa);
+
 }
 
 #c4 {
