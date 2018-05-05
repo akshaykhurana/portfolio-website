@@ -232,6 +232,7 @@ function refreshProjects(filter) {
         $("#selectPage").removeClass("pageSlideLeft");
         $("#floatingSelect").addClass("activeFilter");
         $("#floatingAll").removeClass("activeFilter");
+        $('#hamburgerCheck').attr('checked', false);
     });
     $("#floatingAll").on('click', function () {
         $("#fAll").addClass("activeFilter");
@@ -239,6 +240,7 @@ function refreshProjects(filter) {
         $("#selectPage").addClass("pageSlideLeft");
         $("#floatingAll").addClass("activeFilter");
         $("#floatingSelect").removeClass("activeFilter");
+        $('#hamburgerCheck').attr('checked', false);
     });
     $("#fType").on('click', function () {
         $("#fType").addClass("activeFilter");
