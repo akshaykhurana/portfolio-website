@@ -102,10 +102,11 @@ h6 {
     text-align: center;
 }
 
+.filterButtons p,
 .filterButtons h2 {
-    font-weight: 400;
-    font-size: 1rem;
+    font-size: 1.5rem;
     letter-spacing: 0rem;
+    font-weight: 800;
 }
 
 a,

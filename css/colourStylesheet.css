@@ -66,9 +66,18 @@ header h2 {
     color: white;
 }
 
+.filterButtons>p {
+    opacity: .30;
+}
+
 .filterButtons h2 {
     color: darkgrey;
 }
+
+.filterButtons .filter:hover {
+    opacity: 1;
+}
+
 
 .overlayScreen h1 {
     color: white;
@@ -211,5 +220,9 @@ a:hover > h2,
 }
 
 #menu {
-    background-color: white;
+    background-color: whitesmoke;
+    border-bottom: solid;
+    border-left: solid;
+    border-color: black;
+    border-width: thin;
 }

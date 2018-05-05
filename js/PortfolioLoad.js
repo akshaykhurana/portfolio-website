@@ -36,10 +36,8 @@ $(document).ready(function () {
     });
 
     var shine1 = new Shine(document.getElementById('shiny1'), null, null, "textShadow");
-    var shine2 = new Shine(document.getElementById('shiny2'), null, null);
 
     shine1.config = config;
-    shine2.config = config;
 
     //Shine update function
     function update() {
@@ -69,7 +67,7 @@ function dataLoad(refreshViewCallback) {
         removeInvisible();
         //Add Selected works to a new listing variable called selectedListing
         populateSelection();
-        console.log(selectIDs);
+        //console.log(selectIDs);
     });
     //Load Type Descriptions into local JSON
     $.getJSON("js/TypeDescriptions.json", function (json) {
@@ -82,9 +80,22 @@ function dataLoad(refreshViewCallback) {
         ChronoDescriptions = json;
         console.log("JSON Chrono has been loaded locally");
         //console.log(ChronoDescriptions);
-        //Execute callback
-        refreshViewCallback(filter);
+
     });
+    //Check every 250ms if it worked
+    var delaying = setInterval(function () {
+        checkLoad()
+    }, 300);
+    function checkLoad() {
+        //Execute function once conditions are met
+        if (listing.length && TypeDescriptions.length && ChronoDescriptions.length) {
+            refreshViewCallback(filter);
+            stopInterval();
+        }
+    }
+    function stopInterval() {
+        clearInterval(delaying);
+    }
 }
 
 //External function to remove invisible projects
@@ -254,7 +265,7 @@ function refreshProjects(filter) {
         filter = "chronology";
         refreshProjects(filter, animateOverlay);
     });
-    // console.log("Button toggles working");
+    console.log("Button toggles working");
 
     //Execute non JS dependent animations
     console.log("Queueing animations");
@@ -308,7 +319,6 @@ function publishCarousel(entry, ID) {
     //console.log("trying to add data to " + ID);
     selectThumbPath = pathFind(entry, "selectThumb");
     projectURL = pathFind(entry, "links");
-    console.log(ID);
     projectTitle = entry.ProjectName;
     projectSub = entry.Year;
     projectDesc = entry.DescriptionLong;
@@ -353,13 +363,13 @@ function publishDataAllPage(entry, ID, filter) {
         entry.ProjectName +
         "</h4>" +
         "<p class=\"cardSub\">" +
-        projectSub + "</p></div></a>"
+        projectSub + "</p><p class = \"cardDescription\">" +
+        entry.Description + "</p></div></a>"
     );
     //Construct the image and description (bottom half)
     $(ID).append("<div class = cardBottom><a href = \"" +
         projectURL +
-        "\"><p class = \"cardDescription\">" +
-        entry.Description + "</p><img class=\"cardImage\" src=" +
+        "\"><img class=\"cardImage\" src=" +
         thumbPath + "></a>");
 }
 
@@ -449,6 +459,8 @@ function animations() {
             console.log("adding class");
             $('header').addClass('headerUp');
             hiddenHeader = 1;
+            /* Hide hamburger menu just in case it isn't*/
+            $('#hamburgerCheck').attr('checked', false);
         } else {
             // Scroll Up
             if (currentScrollTop < lastScrollTop && hiddenHeader == 1) {
