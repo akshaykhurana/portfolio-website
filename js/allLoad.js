@@ -81,7 +81,7 @@ $(document).ready(function () {
 
     // Remove loading screen
     //Ensure timing for bare minimum animation
-    var delayMillis = 3000; //1 second only
+    var delayMillis = 3000; //3 second only
     if (loadingscreenActive == 1) {
         setTimeout(function () {
             //console.log("Calling all Overlay screen removal");

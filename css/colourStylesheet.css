@@ -59,7 +59,7 @@ h3 {
 }
 
 p {
-    color: #838383;
+    color: #5c6064;
 }
 
 header h2 {
@@ -79,7 +79,7 @@ header h2 {
 }
 
 .activeFilter > h2,
-.activeFilter {
+.activeFilter, .activeFilter>p {
     color: dodgerBlue;
 }
 
@@ -93,7 +93,8 @@ header h2 {
 
 a:hover,
 a:hover > h2,
-.filter:hover {
+.filter:hover,
+#menu a p:hover {
     color: dodgerblue;
     cursor: pointer;
 }
@@ -201,7 +202,12 @@ a:hover > h2,
 .carousel h4 {
     color: white;
 }
-.carouselLink>div{
+
+.carouselLink > div {
     border: solid;
     border-color: white;
+}
+
+#menu {
+    background-color: white;
 }

@@ -133,18 +133,32 @@ section {
 }
 
 .gridLoader {
-    display: flex;
-    flex-direction: column;
-}
-
-.DPContainer {
-    padding-top: 2rem;
-    align-self: center;
-    width: 200px;
+    display: grid;
+    grid-template-columns: 1rem 1fr 1rem;
+    grid-template-areas: '. DP .''. introText .';
 }
 
 .introText {
-    text-align: center;
+    grid-area: introText;
+}
+
+.DPContainer {
+    grid-area: DP;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    grid-gap: 1rem;
+}
+
+.DPContainer > img {
+    width: 50vw;
+    height: 50vw;
+}
+
+.introText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #loadingScreen {
@@ -233,89 +247,24 @@ header .container {
 
 #hamburger {
     display: block;
-    background-color: mediumaquamarine;
-}
-
-#hamburger span {
-    display: block;
-    width: 24px;
-    height: 3px;
-    margin-bottom: 5px;
-    position: relative;
-    top: -30px;
-    left: 8px;
-    background: #ffffff;
-    border-radius: 0px;
-    transition: transform .5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-    opacity 0.55s ease;
-}
-
-#hamburger input {
-    display: block;
-    width: var(--headerPhone);
-    height: var(--headerPhone);
-    position: relative;
-    cursor: pointer;
-    opacity: 0;
-    /* hide and place over hamburger */
-    z-index: 5;
-    -webkit-touch-callout: none;
-}
-
-#hamburger span:first-child {
-    transform-origin: 100% 0%;
-    background-color: red;
-
-}
-
-#hamburger span:nth-child(2) {
-    transform-origin: 100% 0%;
-    background-color: blue;
-}
-
-#hamburger span:nth-child(3) {
-    transform-origin: 100% 0%;
-    background-color: red;
-}
-
-#hamburger span:nth-child(4) {
-    transform-origin: 100% 0%;
-    background-color: green;
-}
-
-
-/*Transform to a cross*/
-
-#hamburger input:checked ~ span {
-    opacity: 1;
-    transform: rotate(-45deg);
-    background: #ffffff;
-}
-
-#hamburger input:checked ~ span:nth-last-child(3) {
-    opacity: .5;
-    transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-#hamburger input:checked ~ span:nth-last-child(2) {
-    transform: rotate(45deg);
 }
 
 #menu {
     position: absolute;
-    top: var(--headerPhone);
+    top: 0px;
     right: 0px;
     width: 200px;
-    padding: 10px;
+    padding: 1rem;
+    padding-top: 4rem;
     list-style-type: none;
-    transform: translate(100%, 0);
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    z-index: 5;
+}
+#menu p{
+    text-align: right;
+    padding-right: 10px;
 }
 
-#hamburger input:checked ~ ul {
-    transform: none;
-}
+/* Page Styligns start here*/
 
 #allPage {
     z-index: 1;
@@ -637,13 +586,7 @@ section h3 {
     .selectPage {
         padding-top: var(--headeriPad);
     }
-    .introText {
-        grid-area: introText;
-        text-align: left;
-    }
-    .introText > p {
-        padding-bottom: .25rem;
-    }
+
     #portraitWarning {
         display: none;
     }
@@ -763,8 +706,16 @@ section h3 {
     }
     .DPContainer {
         grid-area: DP;
-        width: 100%;
-        align-self: inherit;
+        flex-direction: column;
+    }
+
+    .DPContainer > img {
+        max-width: 100%;
+        width: inherit;
+        height: inherit;
+    }
+    .introText {
+        grid-area: introText;
     }
     /* Contact Page*/
     .gridContact {
@@ -866,6 +817,7 @@ section h3 {
 #modalDiv {
     display: none;
 }
-.hamburger{
+
+.hamburger {
     display: none;
 }

@@ -68,6 +68,69 @@ header {
     -webkit-animation: passThrough 9s ease-in-out infinite;
 }
 
+/*Floating Menu animation*/
+
+#hamburger span {
+    display: block;
+    width: 24px;
+    height: 3px;
+    margin-bottom: 5px;
+    position: relative;
+    top: -30px;
+    left: 8px;
+    background: #ffffff;
+    border-radius: 0px;
+    transition: transform .5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    opacity 0.55s ease;
+    z-index: 11;
+}
+
+#hamburger input {
+    display: block;
+    width: var(--headerPhone);
+    height: var(--headerPhone);
+    position: relative;
+    cursor: pointer;
+    opacity: 0;
+    /* hide and place over hamburger */
+    z-index: 5;
+    -webkit-touch-callout: none;
+    z-index: 13;
+}
+
+#hamburger span:nth-child(3), #hamburger span:nth-child(4), #hamburger span:nth-child(2){
+    transform-origin: 23px 1px;
+    background-color: white;
+    z-index: 12;
+}
+
+/*Transform to a cross*/
+
+#hamburger input:checked ~ span {
+    transform: rotate(-45deg) translate(-2.4px, -2.4px);
+    background: #222222;
+}
+
+#hamburger input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#hamburger input:checked ~ span:nth-last-child(2) {
+    transform: rotate(45deg) translate(-2.4px, 2.4px);
+}
+
+#menu {
+    transform: translate(100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#hamburger input:checked ~ ul {
+    transform: none;
+}
+
+
 @-webkit-keyframes passThrough {
     0% {
         background-position: 50% 0%

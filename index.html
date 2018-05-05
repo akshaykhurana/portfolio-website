@@ -36,7 +36,7 @@
     <header>
         <div class="container">
             <div class="logo">
-                <a href="/index.html"><img src="/images/logoLight.svg"></a>
+                <a href="/index.html"><img src="/images/logoDark.jpg"></a>
             </div>
             <div class="nav">
                 <div class="flexRow hRight">
@@ -51,6 +51,30 @@
                             <h2>INFO.</h2>
                         </a>
                     </div>
+                    <div id="hamburger">
+                        <input type="checkbox" />
+                        <!--spans acting like a hamburger menu-->
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <ul id="menu">
+                            <a class="activeFilter" id="floatingSelect">
+                                <p>
+                                    selected work
+                                </p>
+                            </a>
+                            <a id="floatingAll">
+                                <p>
+                                    all projects
+                                </p>
+                            </a>
+                            <a href="/contact.html">
+                                <p class="/contact.html">
+                                    info
+                                </p>
+                            </a>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -58,7 +82,7 @@
 
     <div class="overlayScreen" id="firstLoader">
         <div class="container gridLoader">
-            <div class="DPContainer"><img class="circularImg" src="images/Display%20Picture.jpg"></div>
+            <div class="DPContainer"><img class="circularImg" id="shiny2" src="images/Display%20Picture.jpg"></div>
             <div class="introText">
                 <h6 id="hi1">Jello!</h6>
                 <p>That's me, Akshay Khurana.<br>
@@ -102,7 +126,6 @@
             <div class="carouselStateButtons" id="cB7"></div>
         </div>
     </div>
-
     <main id="allPage">
         <section class="flexRow filterButtons container">
             <p>view by</p>

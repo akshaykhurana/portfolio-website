@@ -36,8 +36,10 @@ $(document).ready(function () {
     });
 
     var shine1 = new Shine(document.getElementById('shiny1'), null, null, "textShadow");
+    var shine2 = new Shine(document.getElementById('shiny2'), null, null);
 
     shine1.config = config;
+    shine2.config = config;
 
     //Shine update function
     function update() {
@@ -192,7 +194,7 @@ function refreshProjects(filter) {
 
     // Remove loading screen
     //Ensure timing for bare minimum animation
-    var delayMillis = 4000; //4 second
+    var delayMillis = 6000; //6 second
     if (loadingscreenActive == 1) {
         setTimeout(function () {
             console.log("Calling all Overlay screen removal");
@@ -218,13 +220,25 @@ function refreshProjects(filter) {
         $("#fSelect").addClass("activeFilter");
         $("#fAll").removeClass("activeFilter");
         $("#selectPage").removeClass("pageSlideLeft");
-        $(".floatingFilter").addClass("turnOff");
     });
     $("#fAll").on('click', function () {
         $("#fAll").addClass("activeFilter");
         $("#fSelect").removeClass("activeFilter");
         $("#selectPage").addClass("pageSlideLeft");
-        $(".floatingFilter").removeClass("turnOff");
+    });
+    $("#floatingSelect").on('click', function () {
+        $("#fSelect").addClass("activeFilter");
+        $("#fAll").removeClass("activeFilter");
+        $("#selectPage").removeClass("pageSlideLeft");
+        $("#floatingSelect").addClass("activeFilter");
+        $("#floatingAll").removeClass("activeFilter");
+    });
+    $("#floatingAll").on('click', function () {
+        $("#fAll").addClass("activeFilter");
+        $("#fSelect").removeClass("activeFilter");
+        $("#selectPage").addClass("pageSlideLeft");
+        $("#floatingAll").addClass("activeFilter");
+        $("#floatingSelect").removeClass("activeFilter");
     });
     $("#fType").on('click', function () {
         $("#fType").addClass("activeFilter");
