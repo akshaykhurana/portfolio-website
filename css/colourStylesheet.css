@@ -66,7 +66,7 @@ header h2 {
     color: white;
 }
 
-.filterButtons>p {
+.filterButtons > p {
     opacity: .30;
 }
 
@@ -225,4 +225,11 @@ a:hover > h2,
     border-left: solid;
     border-color: black;
     border-width: thin;
+}
+
+#modalDiv {
+    background-color: rgb(0,0,0,.85);
+}
+.modalCaption{
+    color: white;
 }

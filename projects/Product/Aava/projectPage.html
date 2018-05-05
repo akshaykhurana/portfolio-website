@@ -81,7 +81,7 @@
                 <p>We decided to follow the same design process as the last time and provide a solution that was comprehensive (not just do the packaging but also reinterpret the brand). With Fiama di Wills, we weren't allowed to change the logo or any other brand visual mark that accompanied the shower gel line-up. With Aava, there was an obvious problem with the current brand language and without it, we couldn't go about designing new packaging. So, we reset our own brief and tackled the logo and brand language first.</p>
             </div>
             <div class="rightPane">
-                <div class="imgCaptionBlock modalEnabled">
+                <div class="imgCaptionBlock">
                     <img class="card-img-top" src="images/aava%20current.jpg" alt="current packaging and logo">
                     <p class="imgCaption">current packaging and logo</p>
                 </div>
@@ -97,7 +97,7 @@
                 <p>Good, so we get what Aava could be in the Indian market, an aspirational brand of water like a Perrier or Evain. That leaves only our already accounted for, mammoth in the room: their visual language is not befitting such an aspirational brand. Sigh.</p>
             </div>
             <div class="rightPane">
-                <div class="imgCaptionBlock modalEnabled">
+                <div class="imgCaptionBlock">
                     <img src="images/competitors.jpg" alt="competitors">
                     <p class="imgCaption">competition: local & global</p>
                 </div>
@@ -125,15 +125,15 @@
             <p>Also, we fixed on a variant of Avenir as the typeface for all body text. Having reached here, it was now easier to develop the packaging graphics as per the client's needs. We used the droplet as the visual mark and embedded all of the necessary information into it. (I'm not attaching the labels we created though)</p>
         </section>
         <section class="imageSection container threeSection">
-            <div class="imgCaptionBlock modalEnabled">
+            <div class="imgCaptionBlock">
                 <img src="images/tesselation%201.jpg" alt="sample tesselation">
                 <p class="imgCaption">sample tesselation 1</p>
             </div>
-            <div class="imgCaptionBlock modalEnabled">
+            <div class="imgCaptionBlock">
                 <img src="images/tesselation%202.jpg" alt="sample tesselation">
                 <p class="imgCaption">sample tesselation 2</p>
             </div>
-            <div class="imgCaptionBlock modalEnabled">
+            <div class="imgCaptionBlock">
                 <img src="images/tesselation%203.jpg" alt="sample tesselation">
                 <p class="imgCaption">sample tesselation 3</p>
             </div>
@@ -158,7 +158,7 @@
                     <img src="images/grasshopper%20interface.png" alt="grasshopper setup">
                     <p class="imgCaption">grasshopper setup</p>
                 </div>
-                <div class="imgCaptionBlock modalEnabled">
+                <div class="imgCaptionBlock">
                     <img src="images/solving%20animated.gif" alt="galapagos solver">
                     <p class="imgCaption">how the galapagos solver looks in the rhino viewport</p>
                 </div>
@@ -210,16 +210,17 @@
                 <p>home</p></a>
             </div>
         </div>
-        <!-- The Modal -->
-        <div id="modalDiv" class="modal">
-            <!-- The Close Button -->
-            <span class="close">&times;</span>
-            <!-- Modal Content (The Image) -->
-            <img class="modal-content" src="images/1%20Swift.jpg" id="modalImage">
-            <!-- Modal Caption (Image Text) -->
-            <div class="modal-caption" id="modalCaption">swift</div>
-        </div>
     </main>
+    <!-- The Modal -->
+        <div class="modal" id="modalDiv" >
+            <!-- The Close Button -->
+            <div id="modalClose"><img src="/images/modalClose.svg"></div>
+            <!-- Modal Content (The Image) -->
+            <img class="modalContent" src="" id="modalImage">
+            <!-- Modal Caption (Image Text) -->
+            <p class="modalCaption" id="modalCaption"></p>
+        </div>
+        
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 

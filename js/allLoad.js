@@ -37,6 +37,7 @@ $(document).ready(function () {
         shine1.draw();
     }
     update();
+    
     // Hide Header on on scroll down
     var didScroll, lastScrollTop = 0,
         delta = 5,
@@ -78,7 +79,34 @@ $(document).ready(function () {
 
         lastScrollTop = currentScrollTop;
     }
+    //Modal
+    var modal = document.getElementById('modalDiv');
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    $(".modalEnabled").click( function(){
+        var modalImgSrc = $(this).children("img").attr("src");
+        var captionText = $(this).children("img").attr("alt");
+    //    console.log("Caption is: " + captionText);
+    //    console.log(modalImgSrc);
+        modal.style.display = "flex";
 
+        $("#modalImage").attr("src", modalImgSrc);
+        $("#modalCaption").empty();   
+        $("#modalCaption").append(captionText);   
+    });
+    // Get the  element that closes the modal
+    var close = $("#modalClose");
+    // When the user clicks on <span> (x), close the modal
+    close.click(function() { 
+        modal.style.display = "none";
+        console.log("modalclose being clicked!");
+    });
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    
     // Remove loading screen
     //Ensure timing for bare minimum animation
     var delayMillis = 3000; //3 second only
