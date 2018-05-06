@@ -150,8 +150,8 @@ section {
 }
 
 .DPContainer > img {
-    width: 50vw;
-    height: 50vw;
+    width: 40vw;
+    height: 40vw;
 }
 
 .introText {
@@ -455,9 +455,11 @@ section h3:first-child {
 
 .formButton {
     margin-top: 1rem;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
+    width: 100%;
+    height: 50px;
+}
+.formButton>img{
+    width: 40px;
 }
 
 #socialMedia {
@@ -465,11 +467,14 @@ section h3:first-child {
     grid-area: socialMedia;
     display: flex;
     flex-direction: row;
+    align-self: flex-start;
+    justify-content: space-between;
 }
 
 .socialMediaButton {
-    width: 90%;
-    align-self: center;
+    width: 100%;
+    max-width: 50px;
+    margin-right: 5px;
 }
 
 /* Project pages styling*/
@@ -663,6 +668,9 @@ section h3:first-child {
         width: 70px;
         height: 70px;
     }
+    .carouselLink > div{
+        margin-top: 1rem;
+    }
     /*All Page */
     .listing {
         grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -670,13 +678,18 @@ section h3:first-child {
     .cardTop {
         min-height: 250px;
     }
-    will-change :/* Contact Page*/
+    /* Contact Page*/
     .gridContact {
         width: 100%;
         padding-top: 5rem;
         display: grid;
         grid-template-columns: .5fr 2.5fr .6fr 1.7fr .5fr;
         grid-template-areas: '. leftPane . rightPane .';
+    }
+    #contactRightPane{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
     /*Project Pages */
     .imageSection {

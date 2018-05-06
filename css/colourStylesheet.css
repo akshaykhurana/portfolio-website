@@ -143,8 +143,8 @@ a:hover > h2,
 
 #c1 {
     background: #e65c00;
-    background: -webkit-linear-gradient(to top, #F9D423, #e65c00);
-    background: linear-gradient(to top, #F9D423, #e65c00);
+    background: -webkit-linear-gradient(to bottom, #fed732, #f26617);
+    background: linear-gradient(to bottom, #fed732, #f26617);
 }
 
 #c2 {
@@ -154,9 +154,9 @@ a:hover > h2,
 }
 
 #c3 {
-    background: #12deff;
-    background: -webkit-linear-gradient(to bottom, #12deff, #c0c0aa);
-    background: linear-gradient(to bottom, #12deff, #c0c0aa);
+    background: #bc00ff;
+    background: -webkit-linear-gradient(to bottom, #45e6e1, #bc00ff);
+    background: linear-gradient(to bottom, #45e6e1, #bc00ff);
 
 }
 
@@ -228,8 +228,9 @@ a:hover > h2,
 }
 
 #modalDiv {
-    background-color: rgb(0,0,0,.85);
+    background-color: rgb(0, 0, 0, .85);
 }
-.modalCaption{
+
+.modalCaption {
     color: white;
 }
