@@ -3,7 +3,7 @@
 $(document).ready(function () {
 
     //Show General Loading Screen Hide FirstLoader If Any
-    animateOverlay("#loadingScreen", 1);
+    animateOverlay("#loadingScreen", 0, 'Y', '-120vh');
     loadingscreenActive = 1;
     console.log($(document).height());
     console.log("Shine First Start");
@@ -37,7 +37,7 @@ $(document).ready(function () {
         shine1.draw();
     }
     update();
-    
+
     // Hide Header on on scroll down
     var didScroll, lastScrollTop = 0,
         delta = 5,
@@ -71,7 +71,7 @@ $(document).ready(function () {
             hiddenHeader = 1;
         } else {
             // Scroll Up
-            if (currentScrollTop < lastScrollTop && hiddenHeader==1) {
+            if (currentScrollTop < lastScrollTop && hiddenHeader == 1) {
                 $('header').removeClass('headerUp');
                 hiddenHeader = 0;
             }
@@ -82,55 +82,68 @@ $(document).ready(function () {
     //Modal
     var modal = document.getElementById('modalDiv');
     // Get the image and insert it inside the modal - use its "alt" text as a caption
-    $(".modalEnabled").click( function(){
+    $(".modalEnabled").click(function () {
         var modalImgSrc = $(this).children("img").attr("src");
         var captionText = $(this).children("img").attr("alt");
-    //    console.log("Caption is: " + captionText);
-    //    console.log(modalImgSrc);
+        //    console.log("Caption is: " + captionText);
+        //    console.log(modalImgSrc);
         modal.style.display = "flex";
 
         $("#modalImage").attr("src", modalImgSrc);
-        $("#modalCaption").empty();   
-        $("#modalCaption").append(captionText);   
+        $("#modalCaption").empty();
+        $("#modalCaption").append(captionText);
     });
     // Get the  element that closes the modal
     var close = $("#modalClose");
     // When the user clicks on <span> (x), close the modal
-    close.click(function() { 
+    close.click(function () {
         modal.style.display = "none";
         console.log("modalclose being clicked!");
     });
     // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
+    window.onclick = function (event) {
         if (event.target == modal) {
             modal.style.display = "none";
         }
     }
-    
+
     // Remove loading screen
     //Ensure timing for bare minimum animation
     var delayMillis = 3000; //3 second only
     if (loadingscreenActive == 1) {
         setTimeout(function () {
             //console.log("Calling all Overlay screen removal");
-            animateOverlay("#firstLoader", 0);
-            animateOverlay("#loadingScreen", 0);
+            animateOverlay("#loadingScreen", 0, 'Y', '-120vh');
             loadingscreenActive = 0;
             firstLoadActive = 0;
         }, delayMillis);
     }
 })
 
-
 //Self written function to toggle on and off
-function animateOverlay(what, param) {
+function animateOverlay(what, state, axis, value) {
     //console.log("Trying to animate: " + what + ", how: " + param);
-    switch (param) {
+    var translateCommand;
+    switch (axis) {
+        case 'X':
+            translateCommand = 'translateX';
+            break;
+        case 'Y':
+            translateCommand = 'translateY';
+            break;
+    }
+    switch (state) {
         case 0:
-            $(what).addClass('overlaySlideTop');
+            $(what).css('-moz-transform', translateCommand + '(' + value + ')');
+            $(what).css('-webkit-transform', translateCommand + '(' + value + ')');
+            $(what).css('-ms-transform', translateCommand + '(' + value + ')');
+            $(what).css('transform', translateCommand + '(' + value + ')');
             break;
         case 1:
-            $(what).removeClass('overlaySlideTop');
+            $(what).css('-moz-transform', translateCommand + '(0px)');
+            $(what).css('-webkit-transform', translateCommand + '(0px)');
+            $(what).css('-ms-transform', translateCommand + '(0px)');
+            $(what).css('transform', translateCommand + '(0px)');
             break;
     }
 }

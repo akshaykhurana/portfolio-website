@@ -16,8 +16,8 @@ filter = 'type';
 $(document).ready(function () {
 
     //Show Loading screen and immediately remove secondary loading screen
-    animateOverlay("#firstLoader", 1);
-    animateOverlay("#loadingScreen", 0);
+    animateOverlay("#firstLoader", 1, 'Y', '-120vh');
+    animateOverlay("#loadingScreen", 0, 'Y', '-120vh');
     loadingscreenActive = 1;
 
     //Immediately load data (loading screen removed in stack)
@@ -86,6 +86,7 @@ function dataLoad(refreshViewCallback) {
     var delaying = setInterval(function () {
         checkLoad()
     }, 300);
+
     function checkLoad() {
         //Execute function once conditions are met
         if (listing.length && TypeDescriptions.length && ChronoDescriptions.length) {
@@ -93,6 +94,7 @@ function dataLoad(refreshViewCallback) {
             stopInterval();
         }
     }
+
     function stopInterval() {
         clearInterval(delaying);
     }
@@ -209,8 +211,8 @@ function refreshProjects(filter) {
     if (loadingscreenActive == 1) {
         setTimeout(function () {
             console.log("Calling all Overlay screen removal");
-            animateOverlay("#firstLoader", 0);
-            animateOverlay("#loadingScreen", 0);
+            animateOverlay("#firstLoader", 0, 'Y', '-120vh');
+            animateOverlay("#loadingScreen", 0, 'Y', '-120vh');
             loadingscreenActive = 0;
             firstLoadActive = 0;
         }, delayMillis);
@@ -230,28 +232,28 @@ function refreshProjects(filter) {
     $("#fSelect").on('click', function () {
         $("#fSelect").addClass("activeFilter");
         $("#fAll").removeClass("activeFilter");
-        $("#selectPage").removeClass("pageSlideLeft");
+        animateOverlay("#selectPage", 1, 'X', '-120vw');
     });
     $("#fAll").on('click', function () {
         $("#fAll").addClass("activeFilter");
         $("#fSelect").removeClass("activeFilter");
-        $("#selectPage").addClass("pageSlideLeft");
+        animateOverlay("#selectPage", 0, 'X', '-120vw');
     });
     $("#floatingSelect").on('click', function () {
         $("#fSelect").addClass("activeFilter");
         $("#fAll").removeClass("activeFilter");
-        $("#selectPage").removeClass("pageSlideLeft");
         $("#floatingSelect").addClass("activeFilter");
         $("#floatingAll").removeClass("activeFilter");
         $('#hamburgerCheck').attr('checked', false);
+        animateOverlay("#selectPage", 0, 'X', '-120vw');
     });
     $("#floatingAll").on('click', function () {
         $("#fAll").addClass("activeFilter");
         $("#fSelect").removeClass("activeFilter");
-        $("#selectPage").addClass("pageSlideLeft");
         $("#floatingAll").addClass("activeFilter");
         $("#floatingSelect").removeClass("activeFilter");
         $('#hamburgerCheck').attr('checked', false);
+        animateOverlay("#selectPage", 1, 'X', '-120vw');
     });
     $("#fType").on('click', function () {
         $("#fType").addClass("activeFilter");
@@ -468,7 +470,6 @@ function animations() {
                 hiddenHeader = 0;
             }
         }
-
         lastScrollTop = currentScrollTop;
     }
 }
@@ -493,9 +494,12 @@ function navigateCarousel(direction) {
     if (carouselCounter > 1) {
         newLeftValue = -1 * (carouselCounter - 1) + '00vw';
     } else if (carouselCounter == 7) {
-        newLeftValue = 0 + '00vw';
+        newLeftValue = "00vw";
     }
-    $(".carousel").css("left", newLeftValue);
+
+    $(".carousel").css('-moz-transform', 'translateX(' + newLeftValue);
+    $(".carousel").css('-webkit-transform', 'translateX(' + newLeftValue);
+    $(".carousel").css('-webkit-transform', 'translateX(' + newLeftValue);
     //Dot problems
     var newDotID = constructID(carouselCounter, null, "carouselButton");
     //move the Coloured dot
@@ -504,14 +508,29 @@ function navigateCarousel(direction) {
 }
 
 //Self written function to toggle on and off
-function animateOverlay(what, param) {
+function animateOverlay(what, state, axis, value) {
     //console.log("Trying to animate: " + what + ", how: " + param);
-    switch (param) {
+    var translateCommand;
+    switch (axis) {
+        case 'X':
+            translateCommand = 'translateX';
+            break;
+        case 'Y':
+            translateCommand = 'translateY';
+            break;
+    }
+    switch (state) {
         case 0:
-            $(what).addClass('overlaySlideTop');
+            $(what).css('-moz-transform', translateCommand + '(' + value + ')');
+            $(what).css('-webkit-transform', translateCommand + '(' + value + ')');
+            $(what).css('-ms-transform', translateCommand + '(' + value + ')');
+            $(what).css('transform', translateCommand + '(' + value + ')');
             break;
         case 1:
-            $(what).removeClass('overlaySlideTop');
+            $(what).css('-moz-transform', translateCommand + '(0px)');
+            $(what).css('-webkit-transform', translateCommand + '(0px)');
+            $(what).css('-ms-transform', translateCommand + '(0px)');
+            $(what).css('transform', translateCommand + '(0px)');
             break;
     }
 }

@@ -27,11 +27,11 @@ header {
     -webkit-transition: left 2s;
     -moz-transition: left 2s;
 }
-
-.carousel {
-    transition: left 1s;
-    -webkit-transition: left 1s;
-    -moz-transition: left 1s;
+.carousel{
+    transition: transform .5s ease-in-out .05s;
+}
+#loadingScreen, #firstLoader, #selectPage{
+    transition: transform 1s ease-in-out;
 }
 
 /*Animated gradients*/

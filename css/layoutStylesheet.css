@@ -121,6 +121,10 @@ section {
     left: 0;
     width: 100vw;
     height: 100vh;
+    -ms-transform: translateY(0vh);
+    -webkit-transform: translateY(0vh);
+    -moz-transform: translateY(0vh);
+    transform: translateY(0vh);
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -167,10 +171,6 @@ section {
 #portraitWarning {
     display: none;
     z-index: 96;
-}
-
-.overlaySlideTop {
-    top: -110vh;
 }
 
 .imageCenter {
@@ -280,7 +280,10 @@ header .container {
 
 .carousel {
     position: absolute;
-    left: -00vw;
+    -ms-transform: translateX(-00vw);
+    -webkit-transform: translateX(-00vw);
+    -moz-transform: translateX(-00vw);
+    transform: translateX(-00vw);
     display: flex;
     direction: row;
     width: 700%;
@@ -360,11 +363,6 @@ header .container {
 .activeStateButton {
     height: 15px;
 }
-
-.pageSlideLeft {
-    left: -100%;
-}
-
 
 /* Listing Page Styling */
 
@@ -458,7 +456,8 @@ section h3:first-child {
     width: 100%;
     height: 50px;
 }
-.formButton>img{
+
+.formButton > img {
     width: 40px;
 }
 
@@ -560,7 +559,9 @@ section h3:first-child {
     width: 100%;
     height: 100vw;
 }
+
 /* Modal properties*/
+
 .modalEnabled {
     cursor: pointer;
 }
@@ -577,13 +578,16 @@ section h3:first-child {
     z-index: 99;
     overflow-y: scroll;
 }
-#modalDiv img{
+
+#modalDiv img {
     max-height: 90vh;
 }
-.modalCaption{
+
+.modalCaption {
     padding-top: 1rem;
 }
-#modalClose{
+
+#modalClose {
     position: fixed;
     top: 10px;
     right: 20px;
@@ -668,7 +672,7 @@ section h3:first-child {
         width: 70px;
         height: 70px;
     }
-    .carouselLink > div{
+    .carouselLink > div {
         margin-top: 1rem;
     }
     /*All Page */
@@ -686,7 +690,7 @@ section h3:first-child {
         grid-template-columns: .5fr 2.5fr .6fr 1.7fr .5fr;
         grid-template-areas: '. leftPane . rightPane .';
     }
-    #contactRightPane{
+    #contactRightPane {
         display: flex;
         flex-direction: column;
         justify-content: center;
