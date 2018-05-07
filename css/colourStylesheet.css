@@ -189,8 +189,8 @@ a:hover > h2,
 
 }
 
-#carouselNavLeft:hover,
-#carouselNavRight:hover {
+#carouselNavLeft>img:hover,
+#carouselNavRight>img:hover {
     box-shadow: 0px 8px 20px #222222;
 }
 

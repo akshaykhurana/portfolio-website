@@ -143,6 +143,10 @@ section {
 
 .introText {
     grid-area: introText;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
 
 .DPContainer {
@@ -156,12 +160,6 @@ section {
 .DPContainer > img {
     width: 40vw;
     height: 40vw;
-}
-
-.introText {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 #loadingScreen {
@@ -257,7 +255,7 @@ header .container {
     padding: 1rem;
     padding-top: 125px;
     list-style-type: none;
-    z-index: 5;
+    z-index: 3;
 }
 
 #menu p {
@@ -273,7 +271,7 @@ header .container {
 
 #selectPage {
     overflow-y: hidden;
-    z-index: 3;
+    z-index: 2;
 }
 
 /* Selected Page */
@@ -312,7 +310,6 @@ header .container {
     align-self: center;
     grid-area: carRight;
     padding: 2rem;
-    z-index: 6;
 }
 
 .carouselItem {
@@ -320,28 +317,28 @@ header .container {
     height: 100vh;
 }
 
-/*Fixing the issue with the no click links*/
-
 .carouselLink > div {
     width: 100%;
     padding: .5rem 0rem;
     text-align: center;
 }
 
+/*Fixing the issue with the no click links*/
+
 .carouselNav {
     position: fixed;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 330px;
-    width: 100%;
+    top: 180px;
+    height: 40px;
+    width: 40px;
 }
 
-#carouselNavLeft,
+#carouselNavLeft {
+    left: 0px;
+}
+
 #carouselNavRight {
-    width: 40px;
-    height: 40px;
-    z-index: 4;
+    right: 0px;
 }
 
 .carouselState {
@@ -607,14 +604,6 @@ section h3:first-child {
         align-self: center;
         grid-area: carLeft;
     }
-    .carouselNav {
-        position: fixed;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        height: 330px;
-        width: 100%;
-    }
 }
 
 @media (min-width: 576px) {
@@ -664,24 +653,27 @@ section h3:first-child {
         display: block;
     }
     .carouselNav {
+        top: 0px;
+        width: 70px;
         height: 100%;
         align-items: center;
-    }
-    #carouselNavLeft,
-    #carouselNavRight {
-        width: 70px;
-        height: 70px;
+        justify-content: center;
+        align-self: center;
+
     }
     .carouselLink > div {
         margin-top: 1rem;
     }
+
     /*All Page */
     .listing {
         grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     }
+
     .cardTop {
         min-height: 250px;
     }
+
     /* Contact Page*/
     .gridContact {
         width: 100%;
@@ -690,46 +682,57 @@ section h3:first-child {
         grid-template-columns: .5fr 2.5fr .6fr 1.7fr .5fr;
         grid-template-areas: '. leftPane . rightPane .';
     }
+
     #contactRightPane {
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
+
     /*Project Pages */
     .imageSection {
         display: grid;
     }
+
     .twoSection {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 2rem;
     }
+
     .threeSection {
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 2rem;
     }
+
     .twoOneSection {
         display: grid;
         grid-template-columns: 2fr 1fr;
         grid-gap: 50px
     }
+
     .threeTwoSection {
         display: grid;
         grid-template-columns: 3fr 2fr;
         grid-gap: 50px
     }
+
     .twoSection p {
         max-width: 100%;
     }
+
     .frameLarge {
         grid-template-columns: repeat(auto-fill, minmax(.8fr, 1fr));
     }
+
     .frameMedium {
         grid-template-columns: repeat(auto-fill, minmax(250px, .75fr));
     }
+
     .mapSection {
         height: 100vh;
     }
+
 }
 
 @media (min-width: 992px) {
@@ -778,7 +781,7 @@ section h3:first-child {
         height: inherit;
     }
     .introText {
-        grid-area: introText;
+        text-align: left;
     }
     /* Contact Page*/
     .gridContact {
