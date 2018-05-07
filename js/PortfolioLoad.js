@@ -245,7 +245,7 @@ function refreshProjects(filter) {
         $("#floatingSelect").addClass("activeFilter");
         $("#floatingAll").removeClass("activeFilter");
         $('#hamburgerCheck').attr('checked', false);
-        animateOverlay("#selectPage", 0, 'X', '-120vw');
+        animateOverlay("#selectPage", 1, 'X', '-120vw');
     });
     $("#floatingAll").on('click', function () {
         $("#fAll").addClass("activeFilter");
@@ -253,7 +253,7 @@ function refreshProjects(filter) {
         $("#floatingAll").addClass("activeFilter");
         $("#floatingSelect").removeClass("activeFilter");
         $('#hamburgerCheck').attr('checked', false);
-        animateOverlay("#selectPage", 1, 'X', '-120vw');
+        animateOverlay("#selectPage", 0, 'X', '-120vw');
     });
     $("#fType").on('click', function () {
         $("#fType").addClass("activeFilter");
