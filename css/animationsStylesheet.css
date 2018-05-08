@@ -10,62 +10,33 @@ header {
     -moz-transition: top 2s ease-in;
 }
 
-#firstLoader {
-    transition: top 1.75s ease-in-out, opacity 7.5s ease-in;
-    -webkit-transition: top 1.75s ease-in-out, opacity 7.5s ease-in;
-    -moz-transition: top 1.75s ease-in-out, opacity 7.5s ease-in;
-}
-
-#loadingScreen {
-    transition: top 1.5s ease-out;
-    -webkit-transition: top 1.5s ease-out;
-    -moz-transition: top 1.5s ease-out;
-}
-
-#selectPage {
-    transition: left 2s;
-    -webkit-transition: left 2s;
-    -moz-transition: left 2s;
-}
-.carousel{
+.carousel {
     transition: transform .5s ease-in-out .05s;
 }
-#loadingScreen, #firstLoader, #selectPage{
-    transition: transform 1s ease-in-out;
+
+/*curtainup animation for overlay screens (not inclusing portrait warning)*/
+
+#loadingScreen,
+#firstLoader {
+    transition: transform 1.5s cubic-bezier(.54, .33, .57, .9);
+}
+
+/*Left swipe animation for selected projects*/
+
+#selectPage {
+    transition: transform 1.0s cubic-bezier(.48, .01, .57, .99);
 }
 
 /*Animated gradients*/
 
-.overlayBlue {
-    background: linear-gradient(0deg, #0057e7, #ff0066);
-    background-size: 400% 400%;
-    animation: passThrough 9s ease-in-out infinite;
-    -moz-animation: passThrough 9s ease-in-out infinite;
-    -webkit-animation: passThrough 9s ease-in-out infinite;
-}
-
-.overlayRed {
-    background: linear-gradient(0deg, #d62d20, #85ff00);
-    background-size: 400% 400%;
-    animation: passThrough 9s ease-in-out infinite;
-    -moz-animation: passThrough 9s ease-in-out infinite;
-    -webkit-animation: passThrough 9s ease-in-out infinite;
-}
-
-.overlayYellow {
-    background: linear-gradient(0deg, #ffa700, #00d6ff);
-    background-size: 400% 400%;
-    animation: passThrough 9s ease-in-out infinite;
-    -moz-animation: passThrough 9s ease-in-out infinite;
-    -webkit-animation: passThrough 9s ease-in-out infinite;
-}
-
+.overlayBlue,
+.overlayRed,
+.overlayYellow,
 .overlayGreen {
-    background: linear-gradient(0deg, #008744, #ffd500);
     background-size: 400% 400%;
-    animation: passThrough 9s ease-in-out infinite;
-    -moz-animation: passThrough 9s ease-in-out infinite;
-    -webkit-animation: passThrough 9s ease-in-out infinite;
+    animation: passThrough 7.5s ease-in-out infinite;
+    -moz-animation: passThrough 7.5s ease-in-out infinite;
+    -webkit-animation: passThrough 7.5s ease-in-out infinite;
 }
 
 /*Floating Menu animation*/
@@ -99,7 +70,9 @@ header {
     z-index: 13;
 }
 
-#hamburger span:nth-child(3), #hamburger span:nth-child(4), #hamburger span:nth-child(2){
+#hamburger span:nth-child(3),
+#hamburger span:nth-child(4),
+#hamburger span:nth-child(2) {
     transform-origin: 23px 1px;
     background-color: white;
     z-index: 12;

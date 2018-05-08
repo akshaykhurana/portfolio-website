@@ -15,7 +15,7 @@ filter = 'type';
 //Wait for Page Load
 $(document).ready(function () {
 
-    //Show Loading screen and immediately remove secondary loading screen
+    //Show Loading screen or first load screen
     animateOverlay("#firstLoader", 1, 'Y', '-120vh');
     animateOverlay("#loadingScreen", 0, 'Y', '-120vh');
     loadingscreenActive = 1;

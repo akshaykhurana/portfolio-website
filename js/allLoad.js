@@ -3,9 +3,9 @@
 $(document).ready(function () {
 
     //Show General Loading Screen Hide FirstLoader If Any
-    animateOverlay("#loadingScreen", 0, 'Y', '-120vh');
+    animateOverlay("#loadingScreen", 1, 'Y', '-120vh');
     loadingscreenActive = 1;
-    console.log($(document).height());
+    //console.log($(document).height());
     console.log("Shine First Start");
     // Shine elements
     var config = new shinejs.Config({
@@ -109,10 +109,10 @@ $(document).ready(function () {
 
     // Remove loading screen
     //Ensure timing for bare minimum animation
-    var delayMillis = 3000; //3 second only
+    var delayMillis = 3000; //stable at 3
     if (loadingscreenActive == 1) {
         setTimeout(function () {
-            //console.log("Calling all Overlay screen removal");
+            console.log("Calling all Overlay screen removal");
             animateOverlay("#loadingScreen", 0, 'Y', '-120vh');
             loadingscreenActive = 0;
             firstLoadActive = 0;

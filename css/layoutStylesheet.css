@@ -883,3 +883,18 @@ section h3:first-child {
 .hamburger {
     display: none;
 }
+
+.imgCaptionBlock {
+    width: 100%;
+}
+
+
+.frameLargest{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+.frameLargest > img {
+    max-height: 90vh;
+    object-fit: contain;
+}

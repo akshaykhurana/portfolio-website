@@ -73,9 +73,76 @@
         </section>
         <hr class="container">
         <section class="generalSection container">
-           <h4>Brief</h4>
-           <p>The brief asked for </p>
-            
+            <h4>Brief</h4>
+            <p>The brief asked for a possible design solution for an app that could help groups of people coordinate their efforts when planning a get-together. To this end, I ended up doing a quick research on what causes group activities to become bothersome and proposed a mobile application that could resolve the problem.</p>
+        </section>
+        <hr class="container">
+        <section class="twoSection container">
+            <div class="leftPane">
+                <h4>So when did we last go out?</h4>
+                <p><i>(Or trying to figure out what people do when they go out in groups)</i><br> I'm not much of a group meet-up person. (So, if I don't understand you group-types, pardon me.) I prefer smaller meeting and most of us seem to manage those pretty well without additional assistance. In my experience, Whatsapp does a great job of being a platform for quick conversations and data sharing. It does miss a lot of functionality that other messenger apps implement of syncing calendars and such, but I don't miss that for small, intimate gatherings. I suppose you wouldn't either?</p>
+                <p><i>Or do you?</i><br>Quick interviews revealed some interesting insights that were worth investigating. Large groups coalesce from smaller intimate subgroups (this presumption does not scale well, especially at large formal gatherings.) These subgroups are comprised of two or more of the following stereotypical characters:</p>
+                <p class="listed">
+
+                    1. The <i>'Enthu'</i> one: Short for the enthusiastic one who sets the ball rolling. He/she finds something that a bunch of them could do together.<br> 2. The Naysayer: Likely introvert or socially awkward kid. He's gonna be the most difficult to convince. Usually targeted through peer pressure into behaving like an extrovert.<br> 3. The 'Happy to Join' ones: these are the kids who're happy with Enthu's initiative and are going to tag along.<br> 4. The Reluctant Types: They've got something better to do but Enthu is a chill guy and they like humouring him every now and then.
+                </p>
+                <p>The flow of information can be summed up as follows:<br>find event -> exchange info about it -> agree to attend -> actually attend -> reminisce about it later</p>
+            </div>
+            <div class="rightPane">
+                <div class="imgCaptionBlock">
+                    <img src="images/stick-figures.jpg" alt="types of people">
+                    <p class="imgCaption">the 4 types of people I encountered</p>
+                </div>
+            </div>
+        </section>
+        <hr class="container">
+        <section class="twoSection container">
+            <div class="leftPane">
+                <h4>Okay, so what does this tell me?</h4>
+                <p>Well, for a start I can start looking at how Enthu comes up with these crazy cool ideas and how he tells his friends about it. Unsurprisingly, It all boils down to one of two things: either Enthu is a genuinely cool person with a knack for organising fun get-togethers or he is a social media addict/ movie buff/ band geek/ comic-con cosplayer that needs a wingmen/ wingwomen. He contacts them through some kind of communication media and pitches his stellar plan.</p>
+                <p>After sorting through their individual commitments some of them agree (read: numerous whatsapp texts) and eventually take time out on that fateful Friday night to catch up with 'Enthu' in some obscure part of town to do things that at least one of them will regret later.</p>
+                <p>The first bit of trouble is remembering the time and place correctly. The second, is that endless barrage of texts that 'Enthu' or the 'Happy to Go' people send out checking up on everybody.</p>
+                <p>And there's always that one person who is way too late or quietly bails out towards the end.</p>
+            </div>
+            <div class="rightPane">
+                <div class="imgCaptionBlock">
+                    <img src="images/wakeup.jpg" alt="waking up for that movie night">
+                    <p class="imgCaption">waking up for the event</p>
+                </div>
+            </div>
+        </section>
+        <hr class="container">
+        <section class="generalSection container">
+            <h4>But I need an app</h4>
+            <p>Right! So took to my notebook and figured out what an AI assitant for this might sound like. Somewhere simultaneously, I was doing some lo-fi wireframes. I'm attaching a few images from them right below this text-block. Eventually, I took my magic brain cauldron, stirred in all the above ingredients and created a quick solving spell. Then, I let my hands work under the influence of the quick solving spell, to come up with the narrative shown below the notes.</p>
+        </section>
+        <section class="imageSection threeSection container">
+            <div class="imgCaptionBlock modalEnabled">
+                <img src="images/notes%201.jpg" alt="notebook sketches">
+                <p class="imgCaption">that's what my notebooks look like 1</p>
+            </div>
+            <div class="imgCaptionBlock modalEnabled">
+                <img src="images/notes%202.jpg" alt="notebook sketches">
+                <p class="imgCaption">that's what my notebooks look like 2</p>
+            </div>
+            <div class="imgCaptionBlock modalEnabled">
+                <img src="images/notes%203.jpg" alt="notebook sketches">
+                <p class="imgCaption">that's what my notebooks look like 3</p>
+            </div>
+        </section>
+        <section class="imageSection containerFull">
+           <div class="frameLargest">
+            <img src="images/narrative/Document_Page_02.png">
+            <img src="images/narrative/Document_Page_03.png">
+            <img src="images/narrative/Document_Page_04.png">
+            <img src="images/narrative/Document_Page_05.png">
+            <img src="images/narrative/Document_Page_06.png">
+            <img src="images/narrative/Document_Page_07.png">
+            <img src="images/narrative/Document_Page_08.png">
+            <img src="images/narrative/Document_Page_09.png">
+            <img src="images/narrative/Document_Page_10.png">
+            <img src="images/narrative/Document_Page_11.png">
+            </div>
         </section>
         <section class="containerFull homeButton colorGreen">
             <div class=homeButtonCenter>
@@ -83,16 +150,16 @@
                 <p>home</p></a>
             </div>
         </section>
-        <!-- The Modal -->
-        <div id="modalDiv" class="modal">
-            <!-- The Close Button -->
-            <span class="close">&times;</span>
-            <!-- Modal Content (The Image) -->
-            <img class="modal-content" src="images/1%20Swift.jpg" id="modalImage">
-            <!-- Modal Caption (Image Text) -->
-            <div class="modal-caption" id="modalCaption">swift</div>
-        </div>
     </main>
+    <!-- The Modal -->
+    <div class="modal" id="modalDiv">
+        <!-- The Close Button -->
+        <div id="modalClose"><img src="/images/modalClose.svg"></div>
+        <!-- Modal Content (The Image) -->
+        <img class="modalContent" src="" id="modalImage">
+        <!-- Modal Caption (Image Text) -->
+        <p class="modalCaption" id="modalCaption"></p>
+    </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include shine.js-->

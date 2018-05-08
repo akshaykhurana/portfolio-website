@@ -19,9 +19,29 @@
     background-color: dodgerblue;
 }
 
+/*All Overlay Screens and their gradients */
+
 .overlayScreen {
     background-color: white;
 }
+
+.overlayBlue {
+    background: linear-gradient(0deg, #0057e7, #ff0066);
+}
+
+.overlayRed {
+    background: linear-gradient(0deg, #d62d20, #85ff00);
+}
+
+.overlayYellow {
+    background: linear-gradient(0deg, #ffa700, #00d6ff);
+}
+
+.overlayGreen {
+    background: linear-gradient(0deg, #008744, #ffd500);
+}
+
+/*Header styling*/
 
 header {
     background-color: black;
@@ -108,7 +128,7 @@ a:hover > h2,
     color: dodgerblue;
     cursor: pointer;
 }
-
+/*Listing Page Card styling*/
 .card {
     border: dotted;
     border-width: thick;
@@ -125,14 +145,6 @@ a:hover > h2,
     box-shadow: 0px 8px 20px #888888;
 }
 
-.testColor1 {
-    background-color: aqua;
-}
-
-.testColor2 {
-    background-color: red;
-}
-
 .formButton {
     background-color: yellowgreen;
 }
@@ -141,6 +153,7 @@ a:hover > h2,
     cursor: pointer;
 }
 
+/*Carousel gradients*/
 #c1 {
     background: #e65c00;
     background: -webkit-linear-gradient(to bottom, #fed732, #f26617);
@@ -182,11 +195,10 @@ a:hover > h2,
 #c7 {
     background-color: #7893ff;
 }
-
+/*Carousel other elements*/
 #carouselNavLeft,
 #carouselNavRight {
     cursor: pointer;
-
 }
 
 #carouselNavLeft>img:hover,
