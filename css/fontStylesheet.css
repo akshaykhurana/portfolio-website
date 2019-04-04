@@ -41,8 +41,8 @@ h4 {
 
 h5 {
     font-family: Lato, serif;
-    font-weight: 700;
-    font-size: 1rem;
+    font-weight: 300;
+    font-size: 1.5rem;
     padding: 1rem 0
 }
 
@@ -67,9 +67,7 @@ emphasis {
     font-size: 1.2rem
 }
 
-h6 {
-    font-size: 3rem
-}
+
 
 #floatingMenu h2,
 #floatingMenu a {
