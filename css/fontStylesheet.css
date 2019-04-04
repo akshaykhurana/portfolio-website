@@ -12,7 +12,7 @@ p {
 
 h1 {
     font-family: Lato, serif;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 2rem
 }
 
@@ -26,14 +26,14 @@ h2 {
 h3 {
     font-family: Lato, serif;
     font-size: 3.5rem;
-    font-weight: 700;
+    font-weight: 900;
     line-height: 3.5rem;
     text-transform: lowercase
 }
 
 h4 {
     font-family: Lato, serif;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 2rem;
     line-height: 3rem;
     padding: 2rem 0
@@ -41,21 +41,21 @@ h4 {
 
 h5 {
     font-family: Lato, serif;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1rem;
     padding: 1rem 0
 }
 
 p {
     font-family: Lato, serif;
-    font-weight: 200;
+    font-weight: 300;
     font-size: 1rem;
     line-height: 1.618rem;
     padding-bottom: 1rem
 }
 
 emphasis {
-    font-weight: 600
+    font-weight: 400
 }
 
 .tinyText {
@@ -73,7 +73,7 @@ h6 {
 #floatingMenu h2,
 #floatingMenu a {
     font-size: 1.25rem;
-    font-weight: 500;
+    font-weight: 400;
     line-height: .5rem;
     text-decoration: none;
 }
@@ -86,7 +86,7 @@ h6 {
 
 #contactPage h2 {
     font-size: 1.25rem;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 #contactSocialMedia p {
@@ -97,7 +97,7 @@ h6 {
 
 #archiveDisclaimer {
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 2rem;
 }
 
