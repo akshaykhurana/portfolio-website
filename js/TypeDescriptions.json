@@ -1,22 +1,27 @@
 ﻿[
- {
-   "SectionName": "all things web",
-   "SectionDescription": "code, websites, UI, data visualisations, mockups"
- },
- {
-   "SectionName": "tangible things",
-   "SectionDescription": "industrial design, procedural 3d modelling, user testing, experience design, rapid prototyping, packaging design, branding, speculative design, arduino"
- },
- {
-   "SectionName": "visual design",
-   "SectionDescription": "print design, web graphics, illustrations, logos, branding, exhibition design"
- },
- {
-   "SectionName": "space",
-   "SectionDescription": "architecture, interior design, urban design"
- },
- {
-   "SectionName": "others",
-   "SectionDescription": "movie making, video editing, story-telling"
- }
+  {
+    "SectionNumber": 1,
+    "SectionName": "all things web",
+    "SectionDescription": "code, websites, UI, data visualisations, mockups"
+  },
+  {
+    "SectionNumber": 2,
+    "SectionName": "tangible things",
+    "SectionDescription": "industrial design, procedural 3d modelling, user testing, experience design, rapid prototyping, packaging design, branding, speculative design, arduino"
+  },
+  {
+    "SectionNumber": 3,
+    "SectionName": "visual design",
+    "SectionDescription": "print design, web graphics, illustrations, logos, branding, exhibition design"
+  },
+  {
+    "SectionNumber": 4,
+    "SectionName": "space",
+    "SectionDescription": "architecture, interior design, urban design"
+  },
+  {
+    "SectionNumber": 5,
+    "SectionName": "others",
+    "SectionDescription": "movie making, video editing, story-telling"
+  }
 ]

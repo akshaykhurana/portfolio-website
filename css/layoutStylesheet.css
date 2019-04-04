@@ -1,121 +1,106 @@
-/* CSS Reset */
-
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box
 }
-
-/* Scrollbar tweak */
 
 ::-webkit-scrollbar {
-    width: .5rem;
+    width: .5rem
 }
 
-/* Own Code */
-
-/* Global Styling */
-
 :root {
-    --containeriPad: 700px;
-    --containerDesktop: 800px;
-    --containerLarge: 1200px;
-    --container4k: 2400px;
-    --headerPhone: 40px;
-    --hideHeaderPhone: -45px;
-    --headeriPad: 40px;
-    --hideHeaderiPad: -45px;
-    --headerDesktop: 45px;
-    --hideHeaderDesktop: -45px;
-    --headerLarge: 50px;
-    --hideHeaderLarge: -60px;
-    --header4k: 75px;
-    --hideHeader4k: -90px;
+    --containeriPad: 600px;
+    --containerDesktop: 720px;
+    --containerLarge: 900px;
+    --container4k: 720px;
+    --headerPhone: 60px;
+    --hideHeaderPhone: -65px;
+    --headeriPad: 60px;
+    --hideHeaderiPad: -65px;
+    --headerDesktop: 150px;
+    --hideHeaderDesktop: -160px;
+    --headerLarge: 150px;
+    --hideHeaderLarge: -160px;
+    --header4k: 150px;
+    --hideHeader4k: -160px
+}
 
+#introPage,
+.gallery,
+.videoGallery,
+.introSection,
+.overlayScreen,
+.projectIntro,
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+#loadingScreen > img {
+    padding-top: 2rem
+}
+
+.reloadWarning {
+    padding-top: 2rem;
+    min-height: 50px
 }
 
 body {
-    overflow: hidden;
+    overflow-x: hidden
 }
 
-main,
-.selectPage {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding-top: var(--headerPhone);
-    overflow-x: hidden;
-    overflow-y: scroll;
+main {
+    position: relative;
+    width: 100%
 }
 
-header,
-main,
-footer .overlayScreen {
-    display: flex;
-    flex-direction: column;
+.longform {
+    padding: 2rem 0 4rem 0;
+    margin: 4rem auto
+}
+
+.gallery,
+.videoGallery {
+    position: relative;
+    z-index: 15;
+    margin: 4rem auto;
+}
+
+.gallery {
+    padding: 2rem;
 }
 
 .container {
-    align-self: center;
-    display: block;
     width: 100%;
-    padding: 0rem 1rem;
+    padding: 0 1rem;
+    margin: 0 auto;
 }
 
 .containerFull {
-    align-self: center;
-    display: block;
     width: 100%;
-    padding: 0rem .5rem;
+    padding: 0 .5rem
 }
 
-.flexRow {
-    display: flex;
-    flex-direction: row;
-}
-
-.flexColumn {
-    display: flex;
-    flex-direction: column;
-}
-
-.hCenter {
-    align-items: center;
-}
-
-.hRight {
-    justify-content: flex-end;
-}
-
-.vCenter {
-    justify-content: center;
-}
-
-.textCenter {
-    text-align: center;
-}
-
-.textRight {
-    text-align: right;
+.centerItem {
+    align-self: center
 }
 
 img {
     max-width: 100%;
-    max-height: 100vh;
     object-fit: contain;
 }
 
-.circularImg {
-    border-radius: 50%;
-}
-
 section {
-    margin-top: 2rem;
+    margin: 3rem auto
 }
 
-/* Overlay Layouts */
+.flexColRow {
+    height: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column
+}
 
 .overlayScreen {
     position: fixed;
@@ -123,467 +108,378 @@ section {
     left: 0;
     width: 100vw;
     height: 100vh;
-    -ms-transform: translateY(0vh);
-    -webkit-transform: translateY(0vh);
-    -moz-transform: translateY(0vh);
-    transform: translateY(0vh);
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    overflow: hidden;
-}
-
-#firstLoader {
-    z-index: 98;
-}
-
-.gridLoader {
-    display: grid;
-    grid-template-columns: 1rem 1fr 1rem;
-    grid-template-areas: '. DP .''. introText .';
-}
-
-.introText {
-    grid-area: introText;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-}
-
-.DPContainer {
-    grid-area: DP;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    grid-gap: 1rem;
-}
-
-.DPContainer > img {
-    width: 40vw;
-    height: 40vw;
+    justify-content: center
 }
 
 #loadingScreen {
-    z-index: 97;
+    z-index: 99
 }
 
 #portraitWarning {
     display: none;
-    z-index: 96;
+    z-index: 98
 }
-
-.imageCenter {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#loader {
-    padding: 2rem 0rem;
-    width: 400px;
-}
-
-#loaderLogo {
-    padding: 1rem 0rem;
-    width: 300px;
-}
-
-svg {
-    width: 100px;
-    height: 100px;
-    margin: 20px;
-    display: inline-block;
-}
-
-/* Header Styling */
 
 header {
     position: fixed;
+    top: 0;
     height: var(--headerPhone);
     width: 100%;
-    z-index: 95;
-}
-
-header .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    height: 100%;
-}
-
-.logo,
-.nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.logo {
-    flex-grow: 4;
-}
-
-.nav {
-    flex-grow: 1;
+    z-index: 20;
 }
 
 .logo img {
-    width: 225px;
-}
-
-.correctNavItems {
-    display: inline-block;
-}
-
-.toggleNav {
-    display: none;
-}
-
-.toggleNav h2 {
-    padding-left: 1rem;
+    width: 60px
 }
 
 #hamburger {
     display: block;
-}
-
-#menu {
     position: absolute;
-    top: 0px;
-    right: 0px;
-    width: 175px;
-    height: 270px;
-    padding: 1rem;
-    padding-top: 125px;
-    list-style-type: none;
-    z-index: 3;
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    right: 10px
 }
 
-#menu p {
-    text-align: right;
-    padding-right: 10px;
-}
-
-/* Page Styligns start here*/
-
-#allPage {
-    z-index: 1;
-}
-
-#selectPage {
-    overflow-y: hidden;
-    z-index: 2;
-}
-
-/* Selected Page */
-
-.carousel {
-    position: absolute;
-    -ms-transform: translateX(-00vw);
-    -webkit-transform: translateX(-00vw);
-    -moz-transform: translateX(-00vw);
-    transform: translateX(-00vw);
-    display: flex;
-    direction: row;
-    width: 700%;
-    height: inherit;
-    margin: 0;
-    padding: 0;
-}
-
-.carouselGrid {
+#hamburger span {
     display: block;
+    width: 27px;
+    height: 3px;
+    margin-bottom: 6px;
+    position: relative;
+    top: -30.5px;
+    left: 6.5px;
+    z-index: 12
 }
 
-.carouselLeft {
-    height: 185px;
-    align-self: center;
-    grid-area: carLeft;
+#hamburger input {
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    z-index: 15
 }
 
-.carouselLeft img {
-    width: 100%;
-    height: inherit;
-    object-fit: contain;
+#hamburger span:nth-child(2),
+#hamburger span:nth-child(3),
+#hamburger span:nth-child(4) {
+    z-index: 14
 }
 
-.carouselRight {
-    align-self: center;
-    grid-area: carRight;
-    padding: 2rem;
-}
-
-.carouselItem {
+#hamburgerMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
+    padding: 6rem 0 3rem 0;
+    list-style-type: none;
+    background: #ededed;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    z-index: 13
 }
 
-.carouselLink > div {
-    width: 100%;
-    padding: .5rem 0rem;
-    text-align: center;
+#hamburgerMenu p {
+    text-align: center
 }
 
-/*Fixing the issue with the no click links*/
-
-.carouselNav {
-    position: fixed;
-    display: flex;
-    top: 180px;
-    height: 40px;
-    width: 40px;
-}
-
-#carouselNavLeft {
-    left: 0px;
-}
-
-#carouselNavRight {
-    right: 0px;
-}
-
-.carouselState {
-    position: fixed;
-    bottom: 2px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    width: 100%;
-}
-
-.carouselStateButtons {
-    margin: 2px;
-    width: calc(100vw/7);
-    height: .5px;
-    opacity: .5;
-}
-
-.activeStateButton {
-    height: 15px;
-}
-
-/* Listing Page Styling */
-
-.filterButtons {
-    margin: 2rem 0rem 2rem 0rem;
-}
-
-.headerUp {
-    top: var(--hideHeaderPhone);
-}
-
-.filterButtons {
-    padding-top: 0rem;
-    padding-bottom: 2rem;
-    align-items: baseline;
-}
-
-.filterButtons h2 {
-    padding: 0rem .5rem;
-}
-
-.turnOff {
+#floatingMenu,
+.floatingMenuAside {
     display: none;
 }
 
-.sidebar {
-    padding-top: 0rem;
+footer {
+    padding: 4rem 0 2rem 0
 }
 
-.sidebar > p {
-    padding: 2rem 0rem;
+#footerSocialMedia {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    margin: 0 auto;
 }
 
-.listing {
+.socialMediaButton {
+    width: 50px
+}
+
+.textCenter {
+    text-align: center
+}
+
+.imgCaptionBlock {
+    width: 100%
+}
+
+
+#footerDisclaimer {
+    margin-top: 1.5rem
+}
+
+#showcasePage {
+    padding-bottom: 5rem
+}
+
+#showcaseIntro {
+    padding-top: 6rem
+}
+
+#guideDiscovery {
+    padding: 9rem 0
+}
+
+#introDP {
+    width: 300px;
+    height: 300px;
+    align-self: center;
+    margin-top: 7rem;
+}
+
+#introText {
+    margin: 3rem 0rem;
+    width: 300px;
+    text-align: center
+}
+
+.callToAction {
+    display: flex;
+    justify-content: space-around;
+    margin: 6rem auto
+}
+
+.callToAction h1 {
+    padding-bottom: .5rem
+}
+
+.callUmm,
+.callYes {
+    padding: 1rem;
+    min-width: 125px
+}
+
+.showcaseGrid {
+    padding: 0 2rem;
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: repeat(auto-fill, minmax(275px, 1fr))
+}
+
+.showcaseLeft {
+    align-self: center
+}
+
+.showcaseLeft img {
+    width: 100%;
+    height: inherit;
+    object-fit: contain
+}
+
+.showcaseRight {
+    align-self: center
+}
+
+.showcaseLink > div {
+    text-align: left
+}
+
+#archivePage {
+    padding: 4rem 0
+}
+
+#floatingMenu hr {
+    margin: 1rem 0rem;
+}
+
+#floatingMenu .subMenuTitle {
+    margin-top: 2rem;
+}
+
+.headerUp {
+    top: var(--hideHeaderPhone)
+}
+
+/* Archive page*/
+
+#archiveIntro {
+    margin-top: 100px;
     padding: 0rem 2rem;
+}
+
+#archiveDisclaimer {
+    margin-top: 200px;
+}
+
+.sidebar {
+    padding: 0rem 2rem;
+}
+
+#archiveIntro p:nth-child(2) {
+    margin-top: 6em;
+}
+
+#archiveIntro h2 {
+    display: inline-block;
+    padding-bottom: 3rem;
+}
+
+.listingGrid {
+    padding: 0 2rem;
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr))
 }
 
 .card {
     display: block;
-    flex-direction: column;
     align-content: flex-start;
-    margin: 0rem;
-    padding: .25rem;
+    margin: 0;
+    padding: .25rem
 }
 
 .cardTop {
-    min-height: 200px;
+    min-height: 200px
 }
 
 .cardText {
     display: block;
     max-width: 180px;
-    margin-left: 1rem;
+    margin-left: 1rem
 }
 
-section h3:first-child {
-    padding-top: 4rem;
-}
-
-
-/*Contact Page Styling*/
-
-#contactLeftPane {
-    grid-area: leftPane;
-}
-
-#contactRightPane {
-    grid-area: rightPane;
-}
-
-#hi2 {
-    grid-area: hi2;
-}
+/* Contact Page */
 
 #mailer {
-    grid-area: mailer;
     display: flex;
     flex-direction: column;
-    padding: 1rem 0rem;
 }
 
 .contactFields {
-    margin: .2rem;
+    margin: .25rem;
+    padding: .25rem 0rem .2rem .25rem;
 }
 
 .formButton {
-    margin-top: 1rem;
+    margin-top: .25rem;
     width: 100%;
-    height: 50px;
+    height: 50px
 }
 
-.formButton > img {
-    width: 40px;
+#contactSocialMedia {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
 }
 
-#socialMedia {
-    margin-top: 1rem;
-    grid-area: socialMedia;
+#contactSocialMedia a {
     display: flex;
     flex-direction: row;
-    align-self: flex-start;
-    justify-content: space-between;
+    align-items: center;
+    margin-top: .5rem;
 }
 
-.socialMediaButton {
-    width: 100%;
-    max-width: 50px;
-    margin-right: 5px;
+#contactSocialMedia p {
+    padding: 0rem 0px 0rem 1rem;
 }
 
-/* Project pages styling*/
+/* Contact Page*/
 
-.behanceLink,
-.underConstruction {
+#contactPage .container {
+    margin-top: 6rem;
+}
+
+/* Project pages*/
+
+#projectViewSwitch .container {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 6rem 2rem;
-    width: 350px;
-    min-height: 200px;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 4rem auto;
 }
 
-.homeButton {
-    margin: 0px;
-    padding-top: 3rem;
+#projectViewSwitch h2 {
+    padding: 1rem;
+    min-width: 150px;
+}
+
+.poster img {
     width: 100%;
+    margin-top: -4px;
 }
 
-.underConstruction {
+.projectIntro {
+    margin: 100px 0 50px 0
+}
+
+.projectIntro .container {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 2rem 0rem;
+    flex-direction: column
 }
 
-.underConstruction > img {
-    width: 300px;
-    align-self: center;
+.projectIntroText {
+    max-width: 400px;
+    padding: 0 1rem
 }
 
-.homeButtonCenter > a > p,
-.behanceLink > p {
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 50px;
+.projectTitle {
+    margin-bottom: 2rem
 }
 
-.homeButtonCenter {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-content: center''
-}
-
-.homeButtonCenter > a,
-.behanceLink > a,
-.homeButtonCenter > a > img,
-.behanceLink > a > img {
-    width: 50px;
-    align-self: center;
-}
-
-.introSection p,
-.generalSection p {
-    max-width: 600px;
-}
-
-.split2Section p {
-    max-width: 600px;
+.heroImage {
+    width: 100%
 }
 
 .imageSection {
     display: grid;
-    padding: 0rem 2rem;
-    grid-gap: 10px;
+    padding: 0 2rem;
+    grid-gap: 10px
 }
 
-.videoSection {
-    padding: 0rem;
-}
-
-.videoSection > iFrame {
-    display: grid;
+iFrame,
+video {
     width: 100%;
-    height: 100vh;
+    min-height: 600px;
+    max-height: 100vh;
 }
 
 .mapSection {
     display: grid;
-    padding: 0rem 2.5vw;
+    padding: 0 2.5vw;
     width: 100%;
-    height: 100vw;
+    height: 100vw
 }
 
-/* Modal properties*/
+.cardLarge {
+    padding: 2rem
+}
+
+.cardLarge .rightPane {
+    padding-top: 2rem
+}
 
 .modalEnabled {
-    cursor: pointer;
+    cursor: pointer
 }
 
 #modalDiv {
     position: fixed;
-    top: 0px;
+    top: 0;
     width: 100vw;
     height: 100vh;
     display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 99;
-    overflow-y: scroll;
+    z-index: 90;
+    overflow-y: scroll
 }
 
 #modalDiv img {
-    max-height: 90vh;
+    max-height: 90vh
 }
 
 .modalCaption {
-    padding-top: 1rem;
+    padding-top: 1rem
 }
 
 #modalClose {
@@ -592,302 +488,294 @@ section h3:first-child {
     right: 20px;
     width: 50px;
     height: 50px;
-    cursor: pointer;
+    cursor: pointer
 }
 
-
-/* Responsive Stuff */
-
-/*Fixing small phone problems with carousel*/
-
-@media (min-width: 359px) {
-    .carouselLeft {
-        height: 250px;
-        align-self: center;
-        grid-area: carLeft;
+@media screen and (max-width:575px) {
+    #switchingLogo {
+        content: url(/images/LogoSmallDark.svg)
     }
 }
 
-@media (min-width: 576px) {
+@media screen and (min-width:768px) and (max-width:991px) {
+    #switchingLogo {
+        content: url(/images/LogoSmallDark.svg)
+    }
+}
+
+@media screen and (min-width:576px) and (max-width:767px) {
     #portraitWarning {
-        display: flex;
+        display: flex
     }
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width:768px) {
     .container {
-        width: var(--containeriPad);
+        padding: 0;
+        width: var(--containeriPad)
     }
     header {
-        height: var(--headeriPad);
+        height: var(--headeriPad)
     }
-    main,
-    .selectPage {
-        padding-top: var(--headeriPad);
-    }
-
     #portraitWarning {
-        display: none;
+        display: none
     }
     .headerUp {
-        top: var(--hideHeaderiPad);
+        top: var(--hideHeaderiPad)
     }
-    .toggleNav {
-        display: flex;
+    .longform {
+        width: calc(var(--containeriPad) + 120px)
     }
-    #hamburger {
+    #introPage {
+        height: 95vh;
+        min-height: 900px
+    }
+    .showcaseLeft {
+        height: 300px
+    }
+    .showcaseDesc {
+        display: block
+    }
+    .showcaseLink > div {
+        margin-top: 1rem
+    }
+    .showcaseGrid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr))
+    }
+    #projectViewSwitch h2,
+    .callUmm,
+    .callYes {
+        padding: 1rem;
+        min-width: 250px
+    }
+    .listingGrid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr))
+    }
+    .cardTop {
+        min-height: 250px
+    }
+    . #archiveDisclaimer {
         display: none;
     }
-    .logo Img {
-        width: 300px;
+    #archiveIntro .container {
+        margin: 9rem 0rem;
     }
-    .carouselGrid {
+    #archiveIntro h2 {
+        padding: 0rem;
+        margin: 0rem;
+    }
+    .projectIntro {
+        height: 80vh;
+        min-height: 600px;
+        margin-top: 150px;
+        flex-direction: row
+    }
+    .projectIntro .containerFull {
         display: grid;
-        grid-template-columns: 1fr 700px 1fr;
-        grid-row-gap: 25px;
-        grid-template-rows: 2fr 10fr 6fr 2fr;
-        grid-template-areas: '. . .''.  carLeft .''.  carRight .''. . .';
-    }
-    .carouselLeft {
-        height: 600px;
-    }
-    .carouselDesc {
-        display: block;
-    }
-    .carouselNav {
-        top: 0px;
-        width: 70px;
-        height: 100%;
-        align-items: center;
-        justify-content: center;
-        align-self: center;
-
-    }
-    .carouselLink > div {
-        margin-top: 1rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'text image';
+        grid-gap: 20px
     }
 
-    /*All Page */
-    .listing {
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    }
-
-    .cardTop {
-        min-height: 250px;
-    }
-
-    /* Contact Page*/
-    .gridContact {
+    .heroImage {
         width: 100%;
-        padding-top: 5rem;
-        display: grid;
-        grid-template-columns: .5fr 2.5fr .6fr 1.7fr .5fr;
-        grid-template-areas: '. leftPane . rightPane .';
+        grid-area: image;
+        max-width: 600px;
+        align-self: center
     }
-
-    #contactRightPane {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+    .projectIntroText {
+        display: block;
+        grid-area: text;
+        text-align: right
     }
-
-    /*Project Pages */
-    .imageSection {
-        display: grid;
-    }
-
     .twoSection {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-gap: 2rem;
+        grid-gap: 2rem
     }
-
     .threeSection {
         grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 2rem;
+        grid-gap: 2rem
     }
-
     .twoOneSection {
         display: grid;
         grid-template-columns: 2fr 1fr;
         grid-gap: 50px
     }
-
     .threeTwoSection {
         display: grid;
         grid-template-columns: 3fr 2fr;
         grid-gap: 50px
     }
-
-    .twoSection p {
-        max-width: 100%;
+    .fullFrame img {
+        width: 100%;
     }
-
-    .frameLarge {
-        grid-template-columns: repeat(auto-fill, minmax(.8fr, 1fr));
-    }
-
     .frameMedium {
-        grid-template-columns: repeat(auto-fill, minmax(250px, .75fr));
+        grid-template-columns: repeat(auto-fill, minmax(250px, .75fr))
     }
-
+    .frameSmall {
+        grid-template-columns: repeat(auto-fill, minmax(200px, .3fr))
+    }
     .mapSection {
-        height: 100vh;
+        height: 100vh
     }
-
+    #contactGrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 50px;
+    }
 }
 
-@media (min-width: 992px) {
+@media screen and (min-width:992px) {
     .container {
-        width: var(--containerDesktop);
+        width: var(--containerDesktop)
     }
     header {
         height: var(--headerDesktop);
+        z-index: 10;
     }
-    main,
-    .selectPage {
-        padding-top: var(--headerDesktop);
+    .flexColRow {
+        flex-direction: row
     }
     .headerUp {
-        top: var(--hideHeaderDesktop);
+        top: var(--hideHeaderDesktop)
     }
-    .carouselGrid {
-        grid-template-columns: 2fr 10fr 6fr 2fr;
-        grid-template-rows: 1.5fr 6fr 1.5fr;
-        grid-column-gap: 50px;
-        grid-template-areas: '. . .. .''. carLeft carRight .' '. .. . .';
+    #hamburger {
+        display: none
     }
-    .carouselLeft {
-        height: auto;
+    #floatingMenu {
+        display: block;
+        position: fixed;
+        top: 175px;
+        padding-left: 30px;
+        width: 175px;
+        z-index: 5;
     }
-    /*All Page */
-    .listing {
-        grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+    .floatingMenuAside {
+        opacity: 0;
+        transform: translate(-100%, 0);
     }
-
-    /* Overlay Pages */
-    .gridLoader {
-        display: grid;
-        grid-template-columns: 1fr 2fr 2fr 1fr;
-        grid-column-gap: 5%;
-        grid-template-areas: '. DP introText .';
+    #projectViewSwitch {
+        display: none;
     }
-    .DPContainer {
-        grid-area: DP;
-        flex-direction: column;
+    .showcaseLeft {
+        height: auto
     }
-
-    .DPContainer > img {
-        max-width: 100%;
-        width: inherit;
-        height: inherit;
+    .longform {
+        width: calc(var(--containerDesktop) + 150px)
     }
-    .introText {
-        text-align: left;
+    .logo Img {
+        width: 150px
     }
-    /* Contact Page*/
-    .gridContact {
-        padding-top: 3rem;
-        grid-template-columns: .5fr 2.5fr .6fr 1.7fr .5fr;
+    #introDP,
+    #introText {
+        margin: 0
     }
-    #contactLeftPane img {
-        width: 90%;
-        padding: 0rem 4rem;
+    #introText {
+        width: 500px;
+        padding-left: 50px;
+        text-align: left
     }
-
+    .callToAction h1 {
+        padding: 2rem 0 .25rem 0
+    }
+    .callToAction p {
+        opacity: 0
+    }
+    .showcaseGrid {
+        grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+        padding: 0 170px
+    }
+    .showcaseRight {
+        max-width: 300px
+    }
+    .listingGrid {
+        grid-template-columns: repeat(auto-fill, minmax(225px, 1fr))
+    }
+    .projectIntro .containerFull {
+        grid-template-columns: 1fr 450px 450px 1fr;
+        grid-template-areas: '. text image .'
+    }
     .frameLarge {
-        grid-template-columns: repeat(auto-fill, minmax(.8fr, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(.8fr, 1fr))
     }
     .frameMedium {
-        grid-template-columns: repeat(auto-fill, minmax(300px, .75fr));
+        grid-template-columns: repeat(auto-fill, minmax(300px, .75fr))
+    }
+    #archiveIntro {
+        display: none;
+    }
+    #archivePage .containerFull {
+        width: calc(var(--containerDesktop) + (100vw - var(--containerDesktop))/2);
+        margin-left: calc((100vw - var(--containerDesktop))/2);
+    }
+    #archivePage {
+        width: 100%;
+        top: 0px;
+        grid-template-columns: 1fr var(--containerDesktop) 1fr;
+        grid-template-areas: ". archiveList .";
+    }
+    #archivePage section {
+        grid-area: archiveList;
     }
 }
 
-@media (min-width: 1339px) {
+@media screen and (min-width:1339px) {
     .container {
-        width: var(--containerLarge);
-        padding: 0rem 2.5rem;
+        width: var(--containerLarge)
     }
     header {
-        height: var(--headerLarge);
-    }
-    main,
-    .selectPage {
-        padding-top: var(--headerLarge);
+        height: var(--headerLarge)
     }
     .headerUp {
-        top: var(--hideHeaderLarge);
+        top: var(--hideHeaderLarge)
     }
-    /* Contact Page*/
-    .gridContact {
-        padding-top: 4rem;
-        grid-template-columns: 1fr 2.5fr .6fr 1.7fr 1fr;
+    .longform {
+        width: calc(var(--containerLarge) + 150px)
     }
-    /*All Page */
-    .listing {
-        grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+    .showcaseGrid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
+    }
+    .showcaseRight {
+        max-width: 380px
+    }
+    .listingGrid {
+        grid-template-columns: repeat(auto-fill, minmax(275px, 1fr))
     }
     .cardTop {
-        min-height: 200px;
+        min-height: 200px
     }
     .cardText {
-        max-width: 240px;
+        max-width: 240px
     }
-    /*Project Pages */
-    .introSection p,
-    .generalSection p {
-        max-width: 800px;
+    .projectIntro .containerFull {
+        grid-template-columns: 1fr 300px 600px 1fr;
+        grid-template-areas: '. text image .'
     }
-    .frameLarge {
-        grid-template-columns: repeat(auto-fill, minmax(.8fr, 1fr));
-    }
-    .frameMedium {
-        grid-template-columns: repeat(auto-fill, minmax(300px, .75fr));
-    }
-    .cardSmall {
-        max-width: 900px;
-        position: relative;
-        left: 0px;
-    }
-    .cardSmall {
-        max-width: inherit;
-    }
-    .cardPadded {
-        margin-top: 1rem;
-        padding: 2rem;
+    #archivePage .containerFull {
+        width: calc(var(--containerLarge) + (100vw - var(--containerLarge))/2);
+        margin-left: calc((100vw - var(--containerLarge))/2);
     }
 }
 
-@media (min-width: 2459px) {
+@media screen and (min-width:2459px) {
     .container {
-        width: var(--container4k);
+        width: var(--container4k)
     }
     header {
-        height: var(--header4k);
-    }
-    main,
-    .selectPage {
-        padding-top: var(--header4k);
+        height: var(--header4k)
     }
     .headerUp {
-        top: var(--hideHeader4k);
+        top: var(--hideHeader4k)
     }
-    /*Project Pages */
-}
-
-/*Override All*/
-
-.padTop {
-    padding-top: 3rem;
-    padding-bottom: 0rem;
-}
-.padNone{
-    padding: 0px;
-}
-.hamburger {
-    display: none;
-}
-
-.imgCaptionBlock {
-    width: 100%;
+    .longform {
+        width: calc(var(--container4k) + 150px)
+    }
+    .showcaseGrid {
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr))
+    }
+    #archivePage .containerFull {
+        width: calc(var(--containerLarge) + (100vw - var(--containerLarge))/2);
+        margin-left: calc((100vw - var(--containerLarge))/2);
+    }
 }

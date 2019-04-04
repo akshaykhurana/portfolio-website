@@ -1,149 +1,213 @@
+let projectView = "";
+
 //MAIN FUNCTIONS
 //Wait for Page Load
 $(document).ready(function () {
+    //Show Loading screen
+    loadingScreen.reveal();
+    loadingScreen.reloadWarn();
+    header.animate();
 
-    //Show General Loading Screen Hide FirstLoader If Any
-    animateOverlay("#loadingScreen", 1, 'Y', '-120vh');
-    loadingscreenActive = 1;
-    //console.log($(document).height());
-    console.log("Shine First Start");
-    // Shine elements
-    var config = new shinejs.Config({
-        numSteps: 7,
-        opacity: 0.095,
-        opacityPow: 2,
-        offset: .10,
-        offsetPow: 1.8,
-        blur: 50,
-        blurPow: 1.5,
-        shadowRGB: new shinejs.Color(20, 20, 20)
-    });
+    //Call Modals
+    modal.activate();
 
-    var shine1 = new Shine(document.getElementById('shiny1'), null, null, "textShadow");
+    console.log("Loading animations");
+    header.animate();
+    hamburgerMenu.activate();
+    floatingMenu.filter();
+    floatingMenu.activate();
+    loadingScreen.remove();
 
-    shine1.config = config;
+});
 
-    //Shine update function
-    function update() {
-        window.requestAnimationFrame(update);
-        var time, speed, phase, radiusX, radiusY;
-        time = new Date().getTime();
-        speed = 0.00025; // 1 = 1000 rotations/s
-        phase = time * speed * 2.0 * Math.PI;
-        radiusX = window.innerWidth * 0.6;
-        radiusY = window.innerHeight * 0.6;
-        shine1.light.position.x = radiusX + radiusX * Math.cos(phase);
-        shine1.light.position.y = radiusY + radiusY * Math.sin(phase * 0.7);
-        shine1.draw();
-    }
-    update();
+//CONSTRUCTORS/FACTORIES
 
-    // Hide Header on on scroll down
-    var didScroll, lastScrollTop = 0,
-        delta = 5,
-        hiddenHeader = 0,
-        headerHeight = $('header').outerHeight();
+let header = {
+    //Non-data dependent animations
+    animate: function () {
+        let didScroll, lastScrollTop = 0,
+            delta = 5,
+            hiddenHeader = 0,
+            headerHeight = $('header').outerHeight();
+        $(document).scroll(function (event) {
+            didScroll = true;
+            //console.log("scrolling now");
+        });
+        setInterval(function () {
+            if (didScroll) {
+                hasScrolled();
+                didScroll = false;
+            }
+        }, 250);
 
-    $('main').scroll(function (event) {
-        didScroll = true;
-    });
-
-    setInterval(function () {
-        if (didScroll) {
-            hasScrolled();
-            didScroll = false;
+        function hasScrolled() {
+            let currentScrollTop = $(this).scrollTop();
+            // Make sure they scroll more than delta
+            if (Math.abs(lastScrollTop - currentScrollTop) <= delta)
+                return;
+            // If they scrolled down and are past the navbar, add class .nav-up.
+            // This is necessary so you never see what is "behind" the navbar.
+            if (currentScrollTop > lastScrollTop && currentScrollTop > headerHeight && hiddenHeader == 0) {
+                // Scroll Down
+                //console.log("adding class");
+                $('header').addClass('headerUp');
+                //show Floating Menu if any
+                floatingMenu.ID.addClass('floatingMenuAside');
+                hiddenHeader = 1;
+                // Hide hamburger menu just in case it isn't
+                $('#hamburgerCheck').attr('checked', false);
+            } else {
+                // Scroll Up
+                if (currentScrollTop < lastScrollTop && hiddenHeader == 1) {
+                    $('header').removeClass('headerUp');
+                    //hide Floating Menu if any
+                    floatingMenu.ID.removeClass('floatingMenuAside');
+                    hiddenHeader = 0;
+                }
+            }
+            lastScrollTop = currentScrollTop;
         }
-    }, 250);
+        console.log("Header is now animated");
+    }
+}
+let floatingMenu = {
+    ID: $("#floatingMenu"),
+    defaultView: null,
+    filter: function () {
+        //Remove empty Behance links
+        if ($("#behanceLink").attr("href", "")) {
+            $("#behanceLink").hide();
+            $("#mBehanceLink").hide();
+        }
+        if ($(".poster").is(':empty') || $(".process").is(':empty')) {
+            $(".projectFilter").hide();
+            $("#floatingMenu hr").hide();
+        }
+    },
+    activate: function () {
+        if ($("#mfPoster").hasClass("activeFilter")) {
+            republish("poster");
+        } else if ($("#mfProcess").hasClass("activeFilter")) {
+            republish("process");
+        }
 
-    function hasScrolled() {
-        //console.log("Calling scroll function");
-        var currentScrollTop = $('main').scrollTop();
-        // Make sure they scroll more than delta
-        if (Math.abs(lastScrollTop - currentScrollTop) <= delta)
-            return;
+        //Click events
+        $("#mfPoster").on('click', function () {
+            republish("poster");
+        });
+        $("#fPoster").on('click', function () {
+            republish("poster");
+        });
+        $("#mfProcess").on('click', function () {
+            republish("process");
+        });
+        $("#fProcess").on('click', function () {
+            republish("process");
+        });
 
-        // If they scrolled down and are past the navbar, add class .nav-up.
-        // This is necessary so you never see what is "behind" the navbar.
-        if (currentScrollTop > lastScrollTop && currentScrollTop > headerHeight && hiddenHeader == 0) {
-            // Scroll Down
-            console.log("adding class");
-            $('header').addClass('headerUp');
-            hiddenHeader = 1;
-        } else {
-            // Scroll Up
-            if (currentScrollTop < lastScrollTop && hiddenHeader == 1) {
-                $('header').removeClass('headerUp');
-                hiddenHeader = 0;
+        function republish(entry) {
+            switch (entry) {
+                case "poster":
+                    $("#fPoster").addClass("activeFilter");
+                    $("#mfPoster").addClass("activeFilter");
+                    $("#fProcess").removeClass("activeFilter");
+                    $("#mfProcess").removeClass("activeFilter");
+                    projectView = "poster";
+                    $(".process").fadeOut();
+                    $(".poster").fadeIn();
+                    break;
+                case "process":
+                    $("#fProcess").addClass("activeFilter");
+                    $("#mfProcess").addClass("activeFilter");
+                    $("#fPoster").removeClass("activeFilter");
+                    $("#mfPoster").removeClass("activeFilter");
+                    projectView = "poster";
+                    $(".poster").fadeOut();
+                    $(".process").fadeIn();
+                    break;
             }
         }
-
-        lastScrollTop = currentScrollTop;
     }
-    //Modal
-    var modal = document.getElementById('modalDiv');
-    // Get the image and insert it inside the modal - use its "alt" text as a caption
-    $(".modalEnabled").click(function () {
-        var modalImgSrc = $(this).children("img").attr("src");
-        var captionText = $(this).children("img").attr("alt");
-        //    console.log("Caption is: " + captionText);
-        //    console.log(modalImgSrc);
-        modal.style.display = "flex";
+}
 
-        $("#modalImage").attr("src", modalImgSrc);
-        $("#modalCaption").empty();
-        $("#modalCaption").append(captionText);
-    });
-    // Get the  element that closes the modal
-    var close = $("#modalClose");
-    // When the user clicks on <span> (x), close the modal
-    close.click(function () {
-        modal.style.display = "none";
-        console.log("modalclose being clicked!");
-    });
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
+//OBJECT LITERALS
+
+let hamburgerMenu = {
+    ID: $("#hamburgerMenu"),
+    checkbox: $("#hamburgerCheck")[0],
+    activate: function () {
+        this.checkbox.checked = false;
+        this.toggle();
+    },
+    toggle: function () {
+        console.log("Hamburger checkbox clicked");
+        if (this.checkbox.checked == true) {
+            this.ID.fadeIn();
+        } else if (this.checkbox.checked == false) {
+            this.ID.fadeOut();
         }
     }
+}
 
-    // Remove loading screen
-    //Ensure timing for bare minimum animation
-    var delayMillis = 3000; //stable at 3
-    if (loadingscreenActive == 1) {
+let loadingScreen = {
+    ID: $('#loadingScreen'),
+    state: false,
+    reloadWarn: function () {
+        $(".reloadWarning")[0].style.opacity = 0;
         setTimeout(function () {
-            console.log("Calling all Overlay screen removal");
-            animateOverlay("#loadingScreen", 0, 'Y', '-120vh');
-            loadingscreenActive = 0;
-            firstLoadActive = 0;
-        }, delayMillis);
-    }
-})
+            $(".reloadWarning")[0].style.opacity = 1;
 
-//Self written function to toggle on and off
-function animateOverlay(what, state, axis, value) {
-    //console.log("Trying to animate: " + what + ", how: " + param);
-    var translateCommand;
-    switch (axis) {
-        case 'X':
-            translateCommand = 'translateX';
-            break;
-        case 'Y':
-            translateCommand = 'translateY';
-            break;
+        }, 3000);
+    },
+    reveal: function () {
+        this.ID.fadeIn();
+        this.state = true;
+        // No scroll while active
+        $('body').css("overflow-y", 'hidden');
+        console.log("Loading screen active");
+    },
+    remove: function () {
+        let self = this;
+        //Set a delayed timeout of 2 seconds
+        setTimeout(function () {
+            self.ID.fadeOut();
+            self.state = false;
+            //Enable scrolling
+            $('body').css("overflow-y", 'auto');
+            console.log("Loading screen removed");
+
+        }, 1500);
     }
-    switch (state) {
-        case 0:
-            $(what).css('-moz-transform', translateCommand + '(' + value + ')');
-            $(what).css('-webkit-transform', translateCommand + '(' + value + ')');
-            $(what).css('-ms-transform', translateCommand + '(' + value + ')');
-            $(what).css('transform', translateCommand + '(' + value + ')');
-            break;
-        case 1:
-            $(what).css('-moz-transform', translateCommand + '(0px)');
-            $(what).css('-webkit-transform', translateCommand + '(0px)');
-            $(what).css('-ms-transform', translateCommand + '(0px)');
-            $(what).css('transform', translateCommand + '(0px)');
-            break;
+}
+
+let modal = {
+    ID: $("#modalDiv")[0],
+    activate: function () {
+        let self = this.ID;
+        $(".modalEnabled").click(function () {
+            console.log("click detect");
+            // Get the image, use its "alt" text as a caption
+            let modalImgSrc = $(this).children("img").attr("src");
+            let captionText = $(this).children("img").attr("alt");
+            //console.log("Caption is: " + captionText);
+            //console.log(modalImgSrc);
+            self.style.display = "flex";
+            //Add this data to the Modal
+            $("#modalImage").attr("src", modalImgSrc);
+            $("#modalCaption").empty();
+            $("#modalCaption").append(captionText);
+        });
+        // Get the x element that closes the modal then close it
+        var close = $("#modalClose");
+        close.click(function () {
+            self.style.display = "none";
+            //console.log("modalclose being clicked!");
+        });
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == self) {
+                self.style.display = "none";
+            }
+        }
     }
 }

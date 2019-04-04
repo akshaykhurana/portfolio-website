@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title>Akshay Khurana: Portfolio</title>
+    <title>Akshay Khurana: Portfolio - dFrost 2017</title>
     <meta name="description" content="This is the portfolio of Akshay Khurana.">
     <meta name="keywords" content="portfolio, akshay, khurana, design, architect, designer, interaction design, NID, SPA, National Institute of Design, School of Planning and Architecture">
     <meta name="author" content="www.akshaykhurana.com">
@@ -25,36 +25,13 @@
     <link rel="stylesheet" href="/css/colourStylesheet.css">
     <link rel="stylesheet" href="/css/animationsStylesheet.css">
 
-
     <!--Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 </head>
+<link rel="icon" type="image/png" href="/favicon.png">
 
 <body>
-    <header class="colorYellow">
-        <div class="container">
-            <div class="logo">
-                <a href="/main.html"><img src="/images/logoDark.png"></a>
-            </div>
-            <div class="nav">
-                <div class="flexRow hRight">
-                    <div class="toggleNav">
-                        <a href="/contact.html">
-                            <h2>INFO.</h2>
-                        </a>
-                    </div>
-                    <div class="hamburger">M</div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <div class="overlayScreen overlayYellow" id="loadingScreen">
-        <div class="container vCenter hCenter">
-            <div class="textCenter">
-                <h1 id="shiny1">- graphics -</h1>
-            </div>
-        </div>
-    </div>
+    <!--Loading screens-->
     <div class="overlayScreen" id="portraitWarning">
         <div class="container">
             <div class="textCenter">
@@ -64,41 +41,108 @@
             </div>
         </div>
     </div>
-    <main>
-        <section class="introSection container">
-
-            <h1 class="projectTitle">dFrost 2017</h1>
-            <p class="projectSubtitle">2017<br> As a group with Shobhana Sridhar, Ruchita Rajan, Nutan Ghotke, Suraj Barthy, Santhoshram E N, Ankita Mitra</p>
-            <p class="projectDescription">
-                The entirety of the graphic and print design for NID's Design Fest 2017 titled <i>"dFrost: Beyond the Event Horizon"</i>. This year's event was built around the theme of breaking the event horizon and exploring the beyonds.</p>
-        </section>
-        <hr>
-        <section class="behanceLink container">
-            <p> This project is entirely on behance.net. Click the button to follow.</p>
-            <a href="https://www.behance.net/gallery/59216697/dFrost-17-Branding" target="_blank"><img class="behanceLogo" src="/images/behance.svg"></a>
-        </section>
-        <section class="containerFull homeButton colorYellow">
-            <div class=homeButtonCenter>
-                <a href=/main.html><img src="/images/home.svg">
-                <p>home</p></a>
+    <div class="overlayScreen" id="loadingScreen">
+        <img src="/images/Loader.gif">
+        <p class="textCenter reloadWarning">this seems to be taking longer than usual<br>try reloading this page</p>
+    </div>
+    <!--Header code-->
+    <header>
+        <div class="containerFull">
+            <div class="logo">
+                <a href="/index.html"><img id="switchingLogo" src="/images/LogoVisual.svg"></a>
             </div>
-        </section>
-        <!-- The Modal -->
-        <div id="modalDiv" class="modal">
-            <!-- The Close Button -->
-            <span class="close">&times;</span>
-            <!-- Modal Content (The Image) -->
-            <img class="modal-content" src="images/1%20Swift.jpg" id="modalImage">
-            <!-- Modal Caption (Image Text) -->
-            <div class="modal-caption" id="modalCaption">swift</div>
+            <div class="nav">
+                <div id="hamburger">
+                    <input type="checkbox" id="hamburgerCheck" onclick="hamburgerMenu.toggle()">
+                    <!--spans acting like a hamburger menu-->
+                    <span class="topbar"></span>
+                    <span class="middlebar"></span>
+                    <span class="bottombar"></span>
+                    <ul id="hamburgerMenu">
+                        <a href="/index.html">
+                            <p>home</p>
+                        </a>
+                        <a href="/contact.html">
+                            <p>contact</p>
+                        </a>
+                        <a href="https://www.behance.net/gallery/59216697/dFrost-17-Branding" id="mBehanceLink" target="_blank">
+                            <p>behance link</p>
+                        </a>
+                    </ul>
+                </div>
+            </div>
         </div>
+    </header>
+    <div id="floatingMenu">
+        <ul>
+            <a href="/archive.html">
+                <h2>archives</h2>
+            </a>
+            <a href="/contact.html">
+                <h2>contact</h2>
+            </a>
+            <hr>
+            <h2 class="projectFilter" id="fPoster">poster</h2>
+            <h2 class="projectFilter activeFilter" id="fProcess">process</h2>
+            <a href="https://www.behance.net/gallery/59216697/dFrost-17-Branding" id="behanceLink" target="_blank">
+                <h2>behance link</h2>
+            </a>
+        </ul>
+    </div>
+    <main>
+        <div class="projectIntro">
+            <div class="containerFull">
+                <img class="heroImage" src="Hero%20Image.png">
+                <div class="projectIntroText">
+                    <h1 class="projectTitle">dFrost 2017</h1>
+                    <p class="projectSubtitle">2017<br> As a group with Shobhana Sridhar, Ruchita Rajan, Nutan Ghotke, Suraj Barthy, Santhoshram E N, Ankita Mitra</p>
+                    <p class="projectDescription">
+                        Graphic design, layouts, print, identity for <i>"dFrost: Beyond the Event Horizon" </i>held in March in 2017</p>
+                </div>
+            </div>
+        </div>
+        <div id="projectViewSwitch">
+            <div class="container">
+                <h2 class="projectFilter textCenter" id="mfPoster">poster</h2>
+                <h2 class="projectFilter textCenter activeFilter" id="mfProcess">process</h2>
+            </div>
+        </div>
+        <div class="poster"></div>
+        <div class="process">
+            <div class="gallery">
+                <section class="imageSection fullFrame containerFull">
+                    <img src="images/dFrost%201.jpg" alt="swift">
+                    <img src="images/dFrost%202.jpg" alt="swift">
+                </section>
+            </div>
+        </div>
+        <footer>
+            <div class="container">
+                <div id="footerSocialMedia">
+                    <a href="https://www.behance.net/akshaykhur6b35" target="_blank"><img class="socialMediaButton" src="/images/Social_Behance%20dark.svg"></a>
+                    <a href="https://www.facebook.com/akshaykhurana.design/" target="_blank"><img class="socialMediaButton" src="/images/Social_Facebook%20dark.svg"></a>
+                    <a href="https://www.instagram.com/akshaykhurana.design/" target="_blank"><img class="socialMediaButton" src="/images/Social_Instagram%20dark.svg"></a>
+                    <a href="https://www.linkedin.com/in/akshay-khurana/" target="_blank"><img class="socialMediaButton" src="/images/Social_Linkedin%20dark.svg"></a>
+                    <a href="https://www.youtube.com/channel/UCpKIIIXARXv2tu2gtM0QX6g" target="_blank"><img class="socialMediaButton" src="/images/Social_Youtube%20dark.svg"></a>
+                </div>
+                <p id="footerDisclaimer" class="tinyText textCenter lightGreyText">
+                    <i>Copyright © 2019 Akshay Khurana.</i><br>All rights reserved.<br> This website was built using HTML5, CSS, JS.<br> No additional plugins have been used in the code
+                </p>
+            </div>
+        </footer>
     </main>
+    <!-- The Modal -->
+    <div class="modal" id="modalDiv">
+        <!-- The Close Button -->
+        <div id="modalClose"><img src="/images/modalClose.svg"></div>
+        <!-- Modal Content (The Image) -->
+        <img class="modalContent" src="" id="modalImage">
+        <!-- Modal Caption (Image Text) -->
+        <p class="modalCaption" id="modalCaption"></p>
+    </div>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
-    <!-- Include shine.js-->
-    <script src="/shine.js-master/dist/shine.min.js"></script>
-
     <!-- Import local javascripts -->
     <script type="text/javascript" src="/js/allLoad.js"></script>
 

@@ -1,129 +1,55 @@
 header {
-    transition: top 2s ease-in;
-    -webkit-transition: top 10s ease-in;
-    -moz-transition: top 10s ease-in;
+    transition: top .2s ease-in;
+    -webkit-transition: top .2s ease-in;
+    -moz-transition: top .2s ease-in;
 }
 
-.headerUp {
-    transition: top 2s ease-in;
-    -webkit-transition: top 2s ease-in;
-    -moz-transition: top 2s ease-in;
+#floatingMenu {
+    transition: transform .2s ease-in, opacity .2s ease;
+    -webkit-transition: transform .2s ease-in, opacity .2s ease;
+    -moz-transition: transform .2s ease-in, opacity .2s ease;
 }
 
-.carousel {
-    transition: transform .5s ease-in-out .05s;
+#hamburger {
+    -webkit-user-select: none;
+    user-select: none
 }
-
-/*curtainup animation for overlay screens (not inclusing portrait warning)*/
-
-#loadingScreen,
-#firstLoader {
-    transition: transform 1.5s cubic-bezier(.54, .33, .57, .9);
-}
-
-/*Left swipe animation for selected projects*/
-
-#selectPage {
-    transition: transform 1.0s cubic-bezier(.48, .01, .57, .99);
-}
-
-/*Animated gradients*/
-
-.overlayBlue,
-.overlayRed,
-.overlayYellow,
-.overlayGreen {
-    background-size: 400% 400%;
-    animation: passThrough 7.5s ease-in-out infinite;
-    -moz-animation: passThrough 7.5s ease-in-out infinite;
-    -webkit-animation: passThrough 7.5s ease-in-out infinite;
-}
-
-/*Floating Menu animation*/
 
 #hamburger span {
-    display: block;
-    width: 24px;
-    height: 3px;
-    margin-bottom: 5px;
-    position: relative;
-    top: -30px;
-    left: 8px;
-    background: #ffffff;
-    border-radius: 0px;
-    transition: transform .5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-    opacity 0.55s ease;
-    z-index: 11;
+    background: #fff;
+    border-radius: 3px;
+    transition: transform .5s cubic-bezier(.77, .2, .05, 1), background .5s cubic-bezier(.77, .2, .05, 1), opacity .55s ease
 }
 
 #hamburger input {
-    display: block;
-    width: var(--headerPhone);
-    height: var(--headerPhone);
-    position: relative;
     cursor: pointer;
     opacity: 0;
-    /* hide and place over hamburger */
-    z-index: 5;
-    -webkit-touch-callout: none;
-    z-index: 13;
+    -webkit-touch-callout: none
 }
 
+#hamburger span:nth-child(2),
 #hamburger span:nth-child(3),
-#hamburger span:nth-child(4),
-#hamburger span:nth-child(2) {
-    transform-origin: 23px 1px;
-    background-color: white;
-    z-index: 12;
+#hamburger span:nth-child(4) {
+    transform-origin: top left
 }
 
-/*Transform to a cross*/
-
-#hamburger input:checked ~ span {
-    transform: rotate(-45deg) translate(-2.4px, -2.4px);
-    background: #222222;
+#hamburger input:checked ~ span:nth-child(2) {
+    transform: rotate(45deg) translate(3.2px, -2.8px);
+    background-color: #a9a9a9
 }
 
-#hamburger input:checked ~ span:nth-last-child(3) {
-    opacity: 0;
-    transform: rotate(0deg) scale(0.2, 0.2);
+#hamburger input:checked ~ span:nth-child(3) {
+    transform: rotate(0) scale(.2, .2);
+    opacity: 0
 }
 
-#hamburger input:checked ~ span:nth-last-child(2) {
-    transform: rotate(45deg) translate(-2.4px, 2.4px);
+#hamburger input:checked ~ span:nth-child(4) {
+    transform: rotate(-45deg) translate(1.1px, 2.8px);
+    background-color: #a9a9a9
 }
 
-#menu {
-    transform: translate(100%, 0);
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-}
-
-#hamburger input:checked ~ ul {
-    transform: none;
-}
-
-
-@-webkit-keyframes passThrough {
-    0% {
-        background-position: 50% 0%
-    }
-    50% {
-        background-position: 50% 100%
-    }
-    100% {
-        background-position: 50% 0%
-    }
-}
-
-@keyframes passThrough {
-    0% {
-        background-position: 50% 0%
-    }
-    50% {
-        background-position: 50% 100%
-    }
-    100% {
-        background-position: 50% 0%
+@media screen and (min-width:992px) {
+    #switchingLogo:hover {
+        content: url(/images/LogoBig.svg)
     }
 }

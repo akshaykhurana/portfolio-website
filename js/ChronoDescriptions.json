@@ -1,18 +1,27 @@
 ﻿[
- {
-   "SectionName": 2018,
-   "SectionDescription": "Showcase of research done at NID, Bangalore<br>apps, UI, code, web, procedural 3d modelling, packaging design, branding, user research, system design, apps, UI"
- },
- {
-   "SectionName": 2017,
-   "SectionDescription": "Showcase of research done at NID, Bangalore<br>code, web, products, product interactions, rapid prototyping, user testing, packaging design, illustrations, branding"
- },
- {
-   "SectionName": 2016,
-   "SectionDescription": "Showcase of research done at NID Bangalore, and prior to it. <br>architecture, interior design, graphics, logos, print layouts, code, procedural 3d Modelling, "
- },
- {
-   "SectionName": 2015,
-   "SectionDescription": "Showcase of projects done prior to joining NID, Bangalore.<br>architecture, graphics, code, exhibition design"
- }
+  {
+    "SectionNumber": 1,
+    "SectionName": 2019,
+    "SectionDescription": "Showcase of research done during Internship at Samsung R&D and as 1.Studio<br>apps, UX, UI, code, web, identity design, branding, user research,"
+  },
+  {
+    "SectionNumber": 2,
+    "SectionName": 2018,
+    "SectionDescription": "Showcase of research done at NID, Bangalore<br>apps, UI, code, web, procedural 3d modelling, packaging design, branding, user research, system design"
+  },
+  {
+    "SectionNumber": 3,
+    "SectionName": 2017,
+    "SectionDescription": "Showcase of research done at NID, Bangalore<br>code, web, products, product interactions, rapid prototyping, user testing, packaging design, illustrations, branding"
+  },
+  {
+    "SectionNumber": 4,
+    "SectionName": 2016,
+    "SectionDescription": "Showcase of projects as 1.Studio and as a student at School of Planning and Architecture, New Delhi.<br>architecture, interior design, graphics, logos, print layouts, code, procedural 3d Modelling,"
+  },
+  {
+    "SectionNumber": 5,
+    "SectionName": 2015,
+    "SectionDescription": "Showcase of projects as 1.Studio and as a student at School of Planning and Architecture, New Delhi.<br>architecture, graphics, code, exhibition design"
+  }
 ]

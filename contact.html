@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title>Akshay Khurana: Portfolio</title>
+    <title>Akshay Khurana: Portfolio - Inktober 2017</title>
     <meta name="description" content="This is the portfolio of Akshay Khurana.">
     <meta name="keywords" content="portfolio, akshay, khurana, design, architect, designer, interaction design, NID, SPA, National Institute of Design, School of Planning and Architecture">
     <meta name="author" content="www.akshaykhurana.com">
@@ -25,44 +25,13 @@
     <link rel="stylesheet" href="/css/colourStylesheet.css">
     <link rel="stylesheet" href="/css/animationsStylesheet.css">
 
-
     <!--Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Sue+Ellen+Francisco" rel="stylesheet">
 </head>
+<link rel="icon" type="image/png" href="/favicon.png">
 
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <a href="/main.html"><img src="/images/logoDark.png"></a>
-            </div>
-            <div class="nav turnOff">
-                <div class="flexRow hRight">
-                    <div class="toggleNav filter activeFilter" id="fSelect">
-                        <h2>SELECTED WORK</h2>
-                    </div>
-                    <div class="toggleNav filter" id="fAll">
-                        <h2>ALL PROJECTS</h2>
-                    </div>
-                    <div class="toggleNav">
-                        <a href="/contact.html">
-                            <h2>INFO.</h2>
-                        </a>
-                    </div>
-                    <div class="hamburger">M</div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <div class="overlayScreen" id="loadingScreen">
-        <div class="container vCenter hCenter">
-            <div class="textCenter">
-                <h1 class="textDark" id="shiny1">AKSHAY KHURANA</h1>
-                <h2 class="textDark">WEB . GRAPHICS . SPACE . PRODUCTS</h2>
-            </div>
-        </div>
-    </div>
+    <!--Loading screens-->
     <div class="overlayScreen" id="portraitWarning">
         <div class="container">
             <div class="textCenter">
@@ -72,40 +41,65 @@
             </div>
         </div>
     </div>
-
-    <main id="contactPage">
-        <div class="container">
-            <div class="gridContact">
-                <div id="contactLeftPane">
-                    <img class="circularImg" src="/images/Display Picture.jpg">
-
-                    <h4 class="textCenter">Jack of all trades, Master of some</h4>
-                    <p> This specimen studied Architecture at the School of Planning and Architecture, New Delhi and Interaction Design at National Institute of Design, Bangalore.
-                        <br> It prides itself on being a quick learner and loves new challenges. You will usually find it tinkering with any new toys it can get its hands on, both hardware and software.
-                        <br>Easily falls prey to: long intellectual discussions on futurism and our AI overlords, TED talks, music for musicians and lonely guitars</p>
-                    <p class="tinyText" id>This website was built by yours truly on native CSS, JS.<br><a href="http://bigspaceship.github.io/shine.js/">uses shine.js</a><br>
-                        <a href="https://medium.com/@mariusc23/hide-header-on-scroll-down-show-on-scroll-up-67bbaae9a78c">Header code inspired by Marius Craciunoiu</a><br> home logo created by corpus delicti from the Noun Project</p>
+    <div class="overlayScreen" id="loadingScreen">
+        <img src="/images/Loader.gif">
+        <p class="textCenter reloadWarning">this seems to be taking longer than usual<br>try reloading this page</p>
+    </div>
+    <!--Header code-->
+    <header>
+        <div class="containerFull">
+            <div class="logo">
+                <a href="/index.html"><img id="switchingLogo" src="/images/LogoBig.svg"></a>
+            </div>
+            <div class="nav">
+                <div id="hamburger">
+                    <input type="checkbox" id="hamburgerCheck" onclick="hamburgerMenu.toggle()">
+                    <!--spans acting like a hamburger menu-->
+                    <span class="topbar"></span>
+                    <span class="middlebar"></span>
+                    <span class="bottombar"></span>
+                    <ul id="hamburgerMenu">
+                        <a href="/index.html">
+                            <p>home</p>
+                        </a>
+                    </ul>
                 </div>
-                <div id="contactRightPane">
-                    <h6 id="hi2">Say hi!</h6>
-                    <p>I'm currently looking for an internship/ collaboration opportunity in July 2018. Please leave a message if you're looking to hire/ collaborate.</p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="contactPage">
+            <div class="container" id="contactGrid">
+                <section id="contactLeftBLock">
+                    <h1 id="hi2">About Me</h1>
+                    <h2>Jack of all trades, Master of some</h2>
+                    <p>I studied Architecture at the School of Planning and Architecture, New Delhi and Interaction Design at National Institute of Design, Bangalore. Co-founded 1.Studio in 2013.</p>
+                    <p> I am constantly learning new skills and absorbing information like a sponge from whatever I can get my hands on. Currently obsessed with podcasts from the intellectual dark web.</p>
+                    <h2>How to find me in the urban wild:</h2>
+                    <p><i>Natural Habitat : </i>Locked in a dim room with warm lighting, tinkering with whatever I am currently obsessed with or intently looking at a screen or obsessively cleaning things.<br>
+                        <br><i>Easily falls prey to : </i> Long discussions on futurism, politics, technology, our AI overlords to-be, the intellectual dark web, Youtube, TED, food videos on the interweb, music for musicians and lonely guitars<br>
+                        <br>Known to make cover songs on his acoustic guitar and post them on his youtube channel every-sometimes. </p>
+                </section>
+                <section id="contactRightBlock">
+                    <h1 id="hi3">Say hi!</h1>
+                    <p>I'm currently looking for a full-time role as a UX Designer/Product Designer. Please leave a message if you're looking to hire/ collaborate.</p>
                     <form id="mailer" method="POST" action="http://formspree.io/akshay.khura.na@gmail.com">
                         <input class="contactFields" type="name" name="name" placeholder="Your name">
                         <input class="contactFields" type="email" name="email" placeholder="Your email address">
                         <textarea class="contactFields" name="message" placeholder="Your message"></textarea>
-                        <button class="formButton" type="submit"><img src="/images/airplane.svg"></button>
+                        <button class="formButton" type="submit">send</button>
                     </form>
-                    <div id="socialMedia">
-                        <a href="https://www.behance.net/akshaykhur6b35"><img class="circularImg socialMediaButton" src="/images/behance.svg"></a>
-                        <a href="https://www.linkedin.com/in/akshay-khurana-3098aa97"><img class="circularImg socialMediaButton" src="/images/linkedin.svg"></a>
-                        <a href="https://www.youtube.com/channel/UCpKIIIXARXv2tu2gtM0QX6g"><img class="circularImg socialMediaButton" src="/images/youtube.svg"></a>
-                        <a href="https://www.instagram.com/akshaykhurana/"><img class="circularImg socialMediaButton" src="/images/instagram.svg"></a>
+                    <div id="contactSocialMedia">
+                        <a href="https://www.behance.net/akshaykhur6b35" target="_blank"><img class="socialMediaButton" src="/images/Social_Behance%20light.svg"><p>/akshaykhur6b35/</p></a>
+                        <a href="https://www.facebook.com/akshaykhurana.design/" target="_blank"><img class="socialMediaButton" src="/images/Social_Facebook%20Light.svg"><p>/akshaykhurana.design</p></a>
+                        <a href="https://www.instagram.com/akshaykhurana.design/" target="_blank"><img class="socialMediaButton" src="/images/Social_Instagram%20light.svg"><p>/akshaykhurana.design</p></a>
+                        <a href="https://www.linkedin.com/in/akshay-khurana/" target="_blank"><img class="socialMediaButton" src="/images/Social_Linkedin%20light.svg"><p>/akshay-khurana</p></a>
+                        <a href="https://www.youtube.com/channel/UCpKIIIXARXv2tu2gtM0QX6g" target="_blank"><img class="socialMediaButton" src="/images/Social_Youtube%20light.svg"><p>Man In The Corner</p></a>
                     </div>
-                </div>
+                </section>
             </div>
         </div>
     </main>
-
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 

@@ -25,8 +25,8 @@
         gtag('js', new Date());
 
         gtag('config', 'UA-129072151-1');
-
     </script>
+
 
     <!-- Responsive and mobile friendly stuff -->
     <meta name="HandheldFriendly" content="True">
@@ -44,67 +44,12 @@
 
     <!--Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Sue+Ellen+Francisco" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
 </head>
 
-<body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <a href="/index.html"><img src="/images/logoDark.png"></a>
-            </div>
-            <div class="nav">
-                <div class="flexRow hRight">
-                    <div class="toggleNav filter activeFilter" id="fSelect">
-                        <h2>SELECTED WORK</h2>
-                    </div>
-                    <div class="toggleNav filter" id="fAll">
-                        <h2>ALL PROJECTS</h2>
-                    </div>
-                    <div class="toggleNav">
-                        <a href="/contact.html">
-                            <h2>INFO.</h2>
-                        </a>
-                    </div>
-                    <div id="hamburger">
-                        <input type="checkbox" id="hamburgerCheck" />
-                        <!--spans acting like a hamburger menu-->
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <ul id="menu">
-                            <a class="activeFilter" id="floatingSelect">
-                                <p>selected work
-                                </p>
-                            </a>
-                            <a id="floatingAll">
-                                <p>all projects</p>
-                            </a>
-                            <a href="/contact.html">
-                                <p class="/contact.html">
-                                    info
-                                </p>
-                            </a>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+<link rel="icon" type="image/png" href="/favicon.png">
 
-    <div class="overlayScreen" id="firstLoader">
-        <div class="container gridLoader">
-            <div class="DPContainer"><img class="circularImg" src="images/Display%20Picture.jpg"></div>
-            <div class="introText">
-                <h6 id="hi1">Jello!</h6>
-                <p>That's me, Akshay Khurana.<br>
-                    <p>I am an Architect & a Designer</p>
-                    <p>This website serves as a journal for my wanderings through this vast network of mazes we collectively refer to as 'Design'.</p>
-                    <p class="tinyText">Last Updated: 30th April 2018</p>
-            </div>
-        </div>
-    </div>
+<body>
+    <!--Loading screens and header code-->
     <div class="overlayScreen" id="portraitWarning">
         <div class="container">
             <div class="textCenter">
@@ -114,142 +59,103 @@
             </div>
         </div>
     </div>
-
-    <div class="selectPage" id="selectPage">
-        <div class="carousel containerFull">
-            <div class="carouselItem carouselGrid" id="c1"></div>
-            <div class="carouselItem carouselGrid" id="c2"></div>
-            <div class="carouselItem carouselGrid" id="c3"></div>
-            <div class="carouselItem carouselGrid" id="c4"></div>
-            <div class="carouselItem carouselGrid" id="c5"></div>
-            <div class="carouselItem carouselGrid" id="c6"></div>
-            <div class="carouselItem carouselGrid" id="c7"></div>
-        </div>
-        <div class="carouselNav" id="carouselNavLeft"><img src=/images/leftArrow.svg></div>
-        <div class="carouselNav" id="carouselNavRight"><img src=/images/rightArrow.svg></div>
-        <div class="carouselState">
-            <div class="carouselStateButtons activeStateButton" id="cB1"></div>
-            <div class="carouselStateButtons" id="cB2"></div>
-            <div class="carouselStateButtons" id="cB3"></div>
-            <div class="carouselStateButtons" id="cB4"></div>
-            <div class="carouselStateButtons" id="cB5"></div>
-            <div class="carouselStateButtons" id="cB6"></div>
-            <div class="carouselStateButtons" id="cB7"></div>
-        </div>
+    <div class="overlayScreen" id="loadingScreen">
+        <img src="/images/Loader.gif">
+        <p class="textCenter reloadWarning">this seems to be taking longer than usual<br> try reloading this page</p>
     </div>
-    <main id="allPage">
-        <section class="flexRow filterButtons container">
-            <p>view by</p>
-            <div class="filter activeFilter" id="fType">
-                <h2>Type</h2>
+    <!--Header code-->
+    <header>
+        <div class="containerFull">
+            <div class="logo">
+                <a href="/index.html"><img id="switchingLogo" src="/images/LogoBig.svg"></a>
             </div>
-            <h2>/</h2>
-            <div class="filter" id="fChronology">
-                <h2>Chronology</h2>
+            <div class="nav">
+                <div id="hamburger">
+                    <input type="checkbox" id="hamburgerCheck" onclick="hamburgerMenu.toggle()">
+                    <!--spans acting like a hamburger menu-->
+                    <span class="topbar"></span>
+                    <span class="middlebar"></span>
+                    <span class="bottombar"></span>
+                    <ul id="hamburgerMenu">
+                        <a href="/index.html">
+                            <p>home</p>
+                        </a>
+                        <a href="/archive.html">
+                            <p>archives</p>
+                        </a>
+                        <a href="/contact.html">
+                            <p>contact</p>
+                        </a>
+                    </ul>
+                </div>
             </div>
-        </section>
-        <section class="container sidebar" id="S1D">
-            <h3 class="sideTitle" id="S1T">dummy1</h3>
-            <p class="sideDescription" id="S1d">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.</p>
-        </section>
-        <section class="containerFull listing" id="S1L">
-            <div class="card" id="S1P1">card 1</div>
-            <div class="card" id="S1P2">card 2</div>
-            <div class="card" id="S1P3">card 3</div>
-            <div class="card" id="S1P4">card 4</div>
-            <div class="card" id="S1P5">card 5</div>
-            <div class="card" id="S1P6">card 6</div>
-            <div class="card" id="S1P7">card 7</div>
-            <div class="card" id="S1P8">card 8</div>
-            <div class="card" id="S1P9">card 9</div>
-            <div class="card" id="S1P10">card 10</div>
-            <div class="card" id="S1P11">card 11</div>
-            <div class="card" id="S1P12">card 12</div>
-        </section>
-        <section class="container sidebar" id="S2D">
-            <h3 class="sideTitle" id="S2T">dummy1</h3>
-            <p class="sideDescription" id="S2d">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.</p>
-        </section>
-        <section class="containerFull listing" id="S2L">
-            <div class="card" id="S2P1">card 1</div>
-            <div class="card" id="S2P2">card 2</div>
-            <div class="card" id="S2P3">card 3</div>
-            <div class="card" id="S2P4">card 4</div>
-            <div class="card" id="S2P5">card 5</div>
-            <div class="card" id="S2P6">card 6</div>
-            <div class="card" id="S2P7">card 7</div>
-            <div class="card" id="S2P8">card 8</div>
-            <div class="card" id="S2P9">card 9</div>
-            <div class="card" id="S2P10">card 10</div>
-            <div class="card" id="S2P11">card 11</div>
-            <div class="card" id="S2P12">card 12</div>
-        </section>
-        <section class="container sidebar" id="S3D">
-            <h3 class="sideTitle" id="S3T">dummy1</h3>
-            <p class="sideDescription" id="S3d">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.</p>
-        </section>
-        <section class="containerFull listing" id="S3L">
-            <div class="card" id="S3P1">card 1</div>
-            <div class="card" id="S3P2">card 2</div>
-            <div class="card" id="S3P3">card 3</div>
-            <div class="card" id="S3P4">card 4</div>
-            <div class="card" id="S3P5">card 5</div>
-            <div class="card" id="S3P6">card 6</div>
-            <div class="card" id="S3P7">card 7</div>
-            <div class="card" id="S3P8">card 8</div>
-            <div class="card" id="S3P9">card 9</div>
-            <div class="card" id="S3P10">card 10</div>
-            <div class="card" id="S3P11">card 11</div>
-            <div class="card" id="S3P12">card 12</div>
-        </section>
-        <section class="container sidebar" id="S4D">
-            <h3 class=" sideTitle" id="S4T">dummy1</h3>
-            <p class=" sideDescription" id="S4d">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.</p>
-        </section>
-        <section class="containerFull listing" id="S4L">
-            <div class="card" id="S4P1">card 1</div>
-            <div class="card" id="S4P2">card 2</div>
-            <div class="card" id="S4P3">card 3</div>
-            <div class="card" id="S4P4">card 4</div>
-            <div class="card" id="S4P5">card 5</div>
-            <div class="card" id="S4P6">card 6</div>
-            <div class="card" id="S4P7">card 7</div>
-            <div class="card" id="S4P8">card 8</div>
-            <div class="card" id="S4P9">card 9</div>
-            <div class="card" id="S4P10">card 10</div>
-            <div class="card" id="S4P11">card 11</div>
-            <div class="card" id="S4P12">card 12</div>
-        </section>
-        <section class="container sidebar" id="S5D">
-            <h3 class="sideTitle" id="S5T">
-                dummy1</h3>
-            <p class="sideDescription" id="S5d">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.</p>
-        </section>
-        <section class="containerFull listing" id="S5L">
-            <div class="card" id="S5P1">card 1</div>
-            <div class="card" id="S5P2">card 2</div>
-            <div class="card" id="S5P3">card 3</div>
-            <div class="card" id="S5P4">card 4</div>
-            <div class="card" id="S5P5">card 5</div>
-            <div class="card" id="S5P6">card 6</div>
-            <div class="card" id="S5P7">card 7</div>
-            <div class="card" id="S5P8">card 8</div>
-            <div class="card" id="S5P9">card 9</div>
-            <div class="card" id="S5P10">card 10</div>
-            <div class="card" id="S5P11">card 11</div>
-            <div class="card" id="S5P12">card 12</div>
-        </section>
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <!-- Include shine.js-->
-        <script src="/shine.js-master/dist/shine.min.js"></script>
-        <!-- Import local javascripts -->
-        <script type="text/javascript" src="/js/PortfolioLoad.js"></script>
+        </div>
+    </header>
+
+    <main>
+        <div id="introPage">
+            <div class="flexColRow container">
+                <img id="introDP" src="images/Display%20Picture.jpg">
+                <div id="introText">
+                    <h1>Jello</h1>
+                    <p>I am a multi-disciplinary designer, trained in Architecture and Interaction Design.<br> This is a collection of my work since 2013.</p>
+                    <p class="tinyText">Last Updated: 30th April 2019</p>
+                </div>
+            </div>
+        </div>
+        <div id="showcasePage">
+            <div id="showcaseIntro">
+            </div>
+            <div class="showcaseGrid containerFull">
+                <div class="showcaseCard" id="s1"></div>
+                <div class="showcaseCard" id="s2"></div>
+                <div class="showcaseCard" id="s3"></div>
+                <div class="showcaseCard" id="s4"></div>
+                <div class="showcaseCard" id="s5"></div>
+                <div class="showcaseCard" id="s6"></div>
+                <div class="showcaseCard" id="s7"></div>
+                <div class="showcaseCard" id="s8"></div>
+                <div class="showcaseCard" id="s9"></div>
+                <div class="showcaseCard" id="s10"></div>
+            </div>
+        </div>
+        <div id="guideDiscovery">
+            <h1 class="textCenter">like my work?</h1>
+            <div class="container callToAction">
+                <a href="/archive.html">
+                    <div class="callUmm">
+                        <h1 class="textCenter">umm</h1>
+                        <p class="textCenter">see more</p>
+                    </div>
+                </a>
+                <a href="/contact.html">
+                    <div class="callYes">
+                        <h1 class="textCenter">yes</h1>
+                        <p class="textCenter">let's talk</p>
+                    </div>
+                </a>
+            </div>
+        </div>
     </main>
+
+    <footer>
+        <div class="container">
+            <div id="footerSocialMedia">
+                <a href="https://www.behance.net/akshaykhur6b35" target="_blank"><img class="socialMediaButton" src="/images/Social_Behance%20dark.svg"></a>
+                <a href="https://www.facebook.com/akshaykhurana.design/" target="_blank"><img class="socialMediaButton" src="/images/Social_Facebook%20dark.svg"></a>
+                <a href="https://www.instagram.com/akshaykhurana.design/" target="_blank"><img class="socialMediaButton" src="/images/Social_Instagram%20dark.svg"></a>
+                <a href="https://www.linkedin.com/in/akshay-khurana/" target="_blank"><img class="socialMediaButton" src="/images/Social_Linkedin%20dark.svg"></a>
+                <a href="https://www.youtube.com/channel/UCpKIIIXARXv2tu2gtM0QX6g" target="_blank"><img class="socialMediaButton" src="/images/Social_Youtube%20dark.svg"></a>
+            </div>
+            <p id="footerDisclaimer" class="tinyText textCenter lightGreyText">
+                <i>Copyright © 2019 Akshay Khurana.</i><br>All rights reserved.<br> This website was built using HTML5, CSS, JS.<br> No additional plugins have been used in the code
+            </p>
+        </div>
+    </footer>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Import local javascripts -->
+    <script type="text/javascript" src="/js/LandingPageLoad.js"></script>
 </body>
 
 </html>
