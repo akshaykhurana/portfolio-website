@@ -1,18 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 23.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 850.4 850.4" style="enable-background:new 0 0 850.4 850.4;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#FFFFFF;}
-	.st1{font-family:'Futura-ExtraBold';}
-	.st2{font-size:194.8549px;}
-	.st3{fill:none;stroke:#FFFFFF;stroke-width:40;stroke-miterlimit:10;}
 </style>
-<g id="Construction">
+<g>
+	<g>
+		<g>
+			<path class="st0" d="M522,362.3h-56.5l51.1-146.9h59L628,362.3h-56.5l-4.9-18.3h-40.3L522,362.3z M557.2,309.1l-6.2-25.9
+				c-0.9-3.9-2-9.9-3.3-18.1l-0.2-0.8h-1.9l-9.7,44.8L557.2,309.1L557.2,309.1z"/>
+		</g>
+		<g>
+			<path class="st0" d="M241.2,474.9h52l-1.2,63.7h1.2c0.6-3.5,2.7-8.3,6.2-14.4l1.2-2.1l25.7-47.2h58.3l-46,71.5l50.9,75.4h-62
+				l-25.3-44.4c-0.6-1.2-1.7-2.9-3.1-5.1c-3.4-5.2-5.3-9.2-5.8-12.1H292l1.2,61.6h-52L241.2,474.9L241.2,474.9z"/>
+		</g>
+		<g>
+			<path class="st0" d="M745.9,745.9H104.5V104.5h641.3L745.9,745.9L745.9,745.9z M144.5,705.9h561.3V144.5H144.5V705.9z"/>
+		</g>
+		<g>
+			<circle class="st0" cx="301.2" cy="334.9" r="27.4"/>
+		</g>
+		<g>
+			<circle class="st0" cx="546.7" cy="594.4" r="27.4"/>
+		</g>
+	</g>
 </g>
-<text transform="matrix(1 0 0 1 466.1124 362.6914)" class="st0 st1 st2">A</text>
-<text transform="matrix(1 0 0 1 228.1783 622.1758)" class="st0 st1 st2">K</text>
-<rect x="124" y="124.9" class="st3" width="601.3" height="601.3"/>
-<circle class="st0" cx="300.7" cy="335.3" r="27.4"/>
-<circle class="st0" cx="546.2" cy="594.7" r="27.4"/>
 </svg>
