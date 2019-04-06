@@ -158,7 +158,8 @@ a:hover > h4,
 .callUmm:hover > h1,
 .callUmm:hover > p,
 .callYes:hover > h1,
-.callYes:hover > p {
+.callYes:hover > p,
+.formButton:hover {
     color: #fff;
     opacity: 1
 }
@@ -178,8 +179,17 @@ a:hover > h4,
     box-shadow: 0 8px 20px #888
 }
 
+.contactFields,
 .formButton {
-    background-color: #9acd32
+    border: solid;
+    border-width: 2px;
+    background-color: #f2f2f2;
+    border-color: #777777;
+}
+
+.formButton:hover {
+    background-color: dodgerblue;
+    border-color: white;
 }
 
 #archiveDisclaimer {

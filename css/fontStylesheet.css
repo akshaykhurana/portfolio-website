@@ -67,8 +67,6 @@ emphasis {
     font-size: 1.2rem
 }
 
-
-
 #floatingMenu h2,
 #floatingMenu a {
     font-size: 1.25rem;
@@ -92,6 +90,10 @@ emphasis {
     font-size: .80rem;
     margin: 0;
     line-height: 0rem;
+}
+
+.formButton {
+    font-weight: 600;
 }
 
 #archiveDisclaimer {
@@ -190,5 +192,5 @@ header a {
 ::placeholder {
     font-family: Lato, serif;
     font-size: .9rem;
-    opacity: .75;
+    opacity: .8;
 }
