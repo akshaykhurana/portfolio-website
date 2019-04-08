@@ -117,7 +117,7 @@ function listItem(data) {
                 data.Year + "</p><p class=\"showcaseCatchy\">" +
                 data.DescriptionCatchy + "<p class=\"showcaseDesc\">" +
                 data.DescriptionLong + "</p><a class=\"showcaseLink\" href=\"" +
-                projectURL + "\"><div><p>view project</p></div></a>");
+                projectURL + "\"><p>view project</p></a>");
         };
 }
 
@@ -125,8 +125,8 @@ function listItem(data) {
 let hamburgerMenu = {
     ID: $("#hamburgerMenu"),
     checkbox: $("#hamburgerCheck")[0],
-    activate: function(){
-        this.checkbox.checked=false;
+    activate: function () {
+        this.checkbox.checked = false;
         this.toggle();
     },
     toggle: function () {

@@ -75,6 +75,10 @@ emphasis {
     text-decoration: none;
 }
 
+.showcaseLink p {
+    font-weight: 700;
+}
+
 #hi1,
 #hi2,
 #hi3 {

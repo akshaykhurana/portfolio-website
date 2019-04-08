@@ -112,6 +112,10 @@ a:hover > h4,
     color: #777777;
 }
 
+.showcaseLink > p:hover {
+    color: dodgerblue;
+}
+
 .cardLarge a:hover,
 .cardSmall a:hover {
     color: #d3d3d3
@@ -126,8 +130,9 @@ a:hover > h4,
 }
 
 #introText > h1,
-#guideDiscovery > h1 {
-    text-shadow: 0 1px .5px #ccc;
+#guideDiscovery > h1,
+#contactPage h1 {
+    text-shadow: 0 2px 2px #ccc;
 }
 
 #projectViewSwitch h2 {
@@ -207,4 +212,8 @@ a:hover > h4,
 
 .modalCaption {
     color: #fff
+}
+
+.socialMediaButton:hover {
+    box-shadow: 0px 0px 6px 2px #aaa;
 }
