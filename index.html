@@ -9,7 +9,8 @@
 
     <title>Akshay Khurana: Portfolio</title>
     <meta name="description" content="This is the portfolio of Akshay Khurana.">
-    <meta name="keywords" content="portfolio, akshay, khurana, design, architect, designer, interaction design, NID, SPA, National Institute of Design, School of Planning and Architecture">
+    <meta name="keywords"
+        content="portfolio, akshay, khurana, design, product designer, web3 designer, ui/ux designer, uc designer, ui designer, bangalore, india">
     <meta name="author" content="www.akshaykhurana.com">
 
     <!--Google Analytics-->
@@ -28,7 +29,6 @@
 
     </script>
 
-
     <!-- Responsive and mobile friendly stuff -->
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
@@ -36,127 +36,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     <!--Stylesheets -->
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/layoutStylesheet.css">
-    <link rel="stylesheet" href="/css/fontStylesheet.css">
-    <link rel="stylesheet" href="/css/colourStylesheet.css">
-    <link rel="stylesheet" href="/css/animationsStylesheet.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/custom.css">
 
-
-    <!--Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,900" rel="stylesheet">
 </head>
 
 <link rel="icon" type="image/png" href="/favicon.png">
 
 <body>
-    <!--Loading screens and header code-->
-    <div class="overlayScreen" id="portraitWarning">
-        <div class="container">
-            <div class="textCenter">
-                <p>This website is best viewed in <br>
-                    <emphasis class="largerText">portrait mode</emphasis>
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="overlayScreen" id="loadingScreen">
-        <img src="/images/Loader.gif">
-        <p class="textCenter reloadWarning">this seems to be taking longer than usual<br> try reloading this page</p>
-    </div>
-    <!--Header code-->
-    <header>
-        <div class="containerFull">
-            <div class="logo">
-                <a href="/index.html"><img id="switchingLogo" src="/images/LogoBig.svg"></a>
-            </div>
-            <div class="nav">
-                <div id="hamburger">
-                    <input type="checkbox" id="hamburgerCheck" onclick="hamburgerMenu.toggle()">
-                    <!--spans acting like a hamburger menu-->
-                    <span class="topbar"></span>
-                    <span class="middlebar"></span>
-                    <span class="bottombar"></span>
-                    <ul id="hamburgerMenu">
-                        <a href="/index.html">
-                            <p>home</p>
-                        </a>
-                        <a href="/archive.html">
-                            <p>archives</p>
-                        </a>
-                        <a href="/contact.html">
-                            <p>contact</p>
-                        </a>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </header>
-
     <main>
-        <div id="introPage">
-            <div class="flexColRow container">
-                <img id="introDP" src="images/Display%20Picture.jpg">
-                <div id="introText">
-                    <h1>Jello</h1>
-                    <p>I am a multi-disciplinary designer, trained in Architecture and Interaction Design.<br> This is a collection of my work since 2013.</p>
-                    <p class="tinyText">Last Updated: 4th April 2019</p>
+        <section class="main-hero">
+            <div class="default-container">
+                <div class="grid-3col">
+                    <image class="logo-hero" src="./images/logo128.svg"></image>
+                    <div class="flex-v24">
+                        <h1 class="d1 txt-inv-hi">Hello!</h1>
+                        <p class="body-big txt-inv-med">Pardon the virtual dust, this design portfolio is undergoing a
+                            renaissance.<br>
+                            In the meantime, you can sample a curated selection of my recent design works via PDF.</p>
+                        <p class="overline-small txt-inv-med">Last Updated: May 2024</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div id="showcasePage">
-            <div id="showcaseIntro">
-            </div>
-            <div class="showcaseGrid containerFull">
-                <div class="showcaseCard" id="s1"></div>
-                <div class="showcaseCard" id="s2"></div>
-                <div class="showcaseCard" id="s3"></div>
-                <div class="showcaseCard" id="s4"></div>
-                <div class="showcaseCard" id="s5"></div>
-                <div class="showcaseCard" id="s6"></div>
-                <div class="showcaseCard" id="s7"></div>
-                <div class="showcaseCard" id="s8"></div>
-                <div class="showcaseCard" id="s9"></div>
-                <div class="showcaseCard" id="s10"></div>
-            </div>
-        </div>
-        <div id="guideDiscovery">
-            <h1 class="textCenter">like my work?</h1>
-            <div class="container callToAction">
-                <a href="/archive.html">
-                    <div class="callUmm">
-                        <h1 class="textCenter">umm</h1>
-                        <p class="textCenter">see more</p>
-                    </div>
-                </a>
-                <a href="/contact.html">
-                    <div class="callYes">
-                        <h1 class="textCenter">yes</h1>
-                        <p class="textCenter">let's talk</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </main>
 
-    <footer>
-        <div class="container">
-            <div id="footerSocialMedia">
-                <a href="https://www.behance.net/akshaykhur6b35" target="_blank"><img class="socialMediaButton" src="/images/Social_Behance%20dark.svg"></a>
-                <a href="https://www.facebook.com/akshaykhurana.design/" target="_blank"><img class="socialMediaButton" src="/images/Social_Facebook%20dark.svg"></a>
-                <a href="https://www.instagram.com/akshaykhurana.design/" target="_blank"><img class="socialMediaButton" src="/images/Social_Instagram%20dark.svg"></a>
-                <a href="https://www.linkedin.com/in/akshay-khurana/" target="_blank"><img class="socialMediaButton" src="/images/Social_Linkedin%20dark.svg"></a>
-                <a href="https://www.youtube.com/channel/UCpKIIIXARXv2tu2gtM0QX6g" target="_blank"><img class="socialMediaButton" src="/images/Social_Youtube%20dark.svg"></a>
-            </div>
-            <p id="footerDisclaimer" class="tinyText textCenter lightGreyText">
-                <i>Copyright © 2019 Akshay Khurana.</i><br>All rights reserved.<br> This website was built using HTML5, CSS, JS.<br> No additional plugins have been used in the code
-            </p>
-        </div>
-    </footer>
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Import local javascripts -->
-    <script type="text/javascript" src="/js/LandingPageLoad.js"></script>
+            <footer>
+                <div class="container">
+                    <div id="footerSocialMedia">
+                        <a href="https://www.linkedin.com/in/akshay-khurana/" target="_blank"><img
+                                class="socialMediaButton" src="/images/Social_Linkedin%20dark.svg"></a>
+                    </div>
+                    <p id="footerDisclaimer" class="tinyText textCenter lightGreyText">
+                        Copyright © 224 Akshay Khurana. All rights reserved.
+                    </p>
+                </div>
+            </footer>
+            <!-- jQuery -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </body>
 
 </html>
