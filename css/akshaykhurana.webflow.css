@@ -5,7 +5,7 @@
   --emp-inv-md: #fafafa99;
   --act-p-def: #303030;
   --act-s-hov: #5e5e5e26;
-  --act-s-foc: #5e5e5e40;
+  --act-s-foc: #5e5e5e33;
   --act-d-s-foc: #ababab33;
   --act-d-s-hov: #ababab26;
   --emp-inv-hi: #fafafacc;
@@ -445,13 +445,6 @@ figcaption {
   color: var(--emp-inv-hi);
 }
 
-.imagegallery {
-  object-position: 50% 0%;
-  width: 100%;
-  margin-bottom: 24px;
-  overflow: hidden;
-}
-
 .email-link {
   opacity: .75;
   color: var(--black-text\<deleted\|variable-54012a6c\>);
@@ -603,15 +596,6 @@ figcaption {
 
 .wrappernavout {
   margin-top: 64px;
-}
-
-.galleryframe {
-  object-fit: contain;
-  object-position: 50% 50%;
-  width: 100%;
-  max-height: 90vh;
-  margin-bottom: 32px;
-  overflow: hidden;
 }
 
 .imageprojecthero {
@@ -1780,10 +1764,6 @@ figcaption {
     max-width: 1128px;
   }
 
-  .galleryframe {
-    object-fit: cover;
-  }
-
   .container-s {
     max-width: 760px;
   }
@@ -2417,10 +2397,6 @@ figcaption {
 
   .navbardefault {
     height: 50px;
-  }
-
-  .imagegallery {
-    margin-bottom: 15px;
   }
 
   .email-link {
