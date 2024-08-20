@@ -1189,8 +1189,7 @@ figcaption {
   color: var(--act-d-p-dis);
 }
 
-.btn-m.btn-outline.dark.disabled:hover {
-  border-color: var(--act-d-p-dis);
+.btn-m.btn-outline.dark.disabled:hover, .btn-m.btn-outline.dark.disabled:focus {
   background-color: #0000;
 }
 
@@ -2352,6 +2351,12 @@ figcaption {
   .section-sneak {
     grid-column-gap: 64px;
     grid-row-gap: 64px;
+  }
+
+  .img-hero {
+    object-fit: cover;
+    width: auto;
+    height: 100%;
   }
 
   .flex-h16.skills {
