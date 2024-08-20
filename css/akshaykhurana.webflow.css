@@ -307,6 +307,10 @@ figcaption {
   background-color: #ffffffe6;
 }
 
+.btn-l.btn-outline:hover {
+  color: var(--act-p-def);
+}
+
 .paragraph-bigger {
   opacity: 1;
   margin-bottom: 10px;
