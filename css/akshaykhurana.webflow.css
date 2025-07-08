@@ -1,3 +1,35 @@
+@font-face {
+  font-family: Futura PT;
+  src: url('../fonts/FuturaPTMedium.otf') format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Futura PT;
+  src: url('../fonts/FuturaPTDemi.otf') format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Futura PT;
+  src: url('../fonts/FuturaPTBook.otf') format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Futura PT;
+  src: url('../fonts/FuturaPTBookOblique.otf') format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
 :root {
   --emp-md: #111111b8;
   --emp-hi: #111111de;
@@ -498,8 +530,15 @@ figcaption {
   display: flex;
 }
 
+.container-s.cta {
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  display: flex;
+}
+
 .section-info-hero {
-  background-image: url('../images/Hero-Image.png');
+  background-image: url('../images/Hero-Image_1.avif');
   background-position: 0 100%;
   background-repeat: no-repeat;
   background-size: 720px;
@@ -556,7 +595,7 @@ figcaption {
   display: flex;
 }
 
-.flex-v40.skills {
+.flex-v40.skills, .flex-v40.center {
   justify-content: flex-start;
   align-items: center;
 }
@@ -621,6 +660,10 @@ figcaption {
   color: var(--emp-inv-md);
 }
 
+.body-l.emp-inv-med.restrict-48 {
+  max-width: 48ch;
+}
+
 .body-s {
   color: var(--emp-md);
   text-align: left;
@@ -644,7 +687,7 @@ figcaption {
   line-height: 16px;
 }
 
-.overline-m.emp-iv-lo {
+.overline-m.emp-inv-lo {
   color: var(--emp-inv-lo);
 }
 
@@ -659,10 +702,6 @@ figcaption {
 
 .d2.invert {
   color: var(--emp-inv-hi);
-}
-
-.d2.invert.center {
-  text-align: center;
 }
 
 .d2.special {
@@ -712,6 +751,7 @@ figcaption {
 
 .container-l {
   flex: 0 auto;
+  width: 856px;
   max-width: 856px;
   margin-left: auto;
   margin-right: auto;
@@ -965,8 +1005,11 @@ figcaption {
 }
 
 .section-home-hero {
-  min-height: 66vh;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
   padding-top: 80px;
+  display: flex;
 }
 
 .btn-stack {
@@ -1030,15 +1073,7 @@ figcaption {
   color: var(--act-d-p-dis);
 }
 
-.btn-m.btn-outline.dark.disabled:hover, .btn-m.btn-outline.dark.disabled:focus {
-  background-color: #0000;
-}
-
-.btn-m.btn-outline.dark.disabled:focus-visible {
-  background-color: #0000;
-}
-
-.btn-m.btn-outline.dark.disabled[data-wf-focus-visible] {
+.btn-m.btn-outline.dark.disabled:hover, .btn-m.btn-outline.dark.disabled:focus, .btn-m.btn-outline.dark.disabled:focus-visible, .btn-m.btn-outline.dark.disabled[data-wf-focus-visible] {
   background-color: #0000;
 }
 
@@ -1149,9 +1184,10 @@ figcaption {
   padding-right: 8px;
 }
 
-.flexv48 {
+.flex-v48 {
   grid-column-gap: 48px;
   grid-row-gap: 48px;
+  width: 100%;
 }
 
 .card-casestudy {
@@ -1165,7 +1201,7 @@ figcaption {
 }
 
 .img-case {
-  background-image: url('../images/MODS.jpg');
+  background-image: url('../images/MODS_1.avif');
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1291,6 +1327,11 @@ figcaption {
   grid-row-gap: 16px;
 }
 
+.flex-v16.center {
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .subsection-default {
   grid-column-gap: 40px;
   grid-row-gap: 40px;
@@ -1379,6 +1420,10 @@ figcaption {
   background-color: var(--mean-d-r);
 }
 
+.section-default {
+  width: 100%;
+}
+
 .section-default.last {
   margin-bottom: 0;
 }
@@ -1432,13 +1477,23 @@ figcaption {
 
 .section-cta {
   background-color: var(--base);
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 560px;
   padding-top: 80px;
   padding-bottom: 80px;
+  display: flex;
   box-shadow: 0 2px 5px #0003;
 }
 
 .section-cta.dark {
   background-color: var(--base-d);
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 560px;
+  display: flex;
 }
 
 .text-cta-changing {
@@ -1448,6 +1503,7 @@ figcaption {
 }
 
 .block-cta-text {
+  align-self: center;
   width: 100%;
   height: 120px;
 }
@@ -1457,16 +1513,11 @@ figcaption {
   grid-row-gap: 120px;
   justify-content: flex-start;
   align-items: center;
-  padding-top: 120px;
-  padding-bottom: 120px;
 }
 
-.section-full {
+.flex-cta {
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
 }
 
 @media screen and (min-width: 1280px) {
@@ -1548,6 +1599,7 @@ figcaption {
   }
 
   .container-l {
+    width: 1176px;
     max-width: 1176px;
   }
 
@@ -1590,6 +1642,11 @@ figcaption {
     grid-column-gap: var(--gap-grid-h-m);
     grid-row-gap: var(--gap-grid-h-m);
   }
+
+  .main-dark {
+    grid-column-gap: 160px;
+    grid-row-gap: 160px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -1619,6 +1676,7 @@ figcaption {
   }
 
   .container-l {
+    width: 1440px;
     max-width: 1288px;
   }
 
@@ -1681,8 +1739,8 @@ figcaption {
   }
 
   .main-dark {
-    grid-column-gap: 160px;
-    grid-row-gap: 160px;
+    grid-column-gap: 240px;
+    grid-row-gap: 240px;
   }
 }
 
@@ -1837,6 +1895,7 @@ figcaption {
   }
 
   .container-l {
+    width: 1640px;
     max-width: 1640px;
   }
 
@@ -1938,7 +1997,9 @@ figcaption {
   }
 
   .section-home-hero {
-    padding-top: 160px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
   }
 
   .block-home-intro {
@@ -2058,8 +2119,8 @@ figcaption {
   }
 
   .main-dark {
-    grid-column-gap: 200px;
-    grid-row-gap: 200px;
+    grid-column-gap: 300px;
+    grid-row-gap: 300px;
   }
 }
 
@@ -2135,6 +2196,7 @@ figcaption {
   }
 
   .container-l {
+    width: 696px;
     max-width: 696px;
   }
 
@@ -2251,6 +2313,8 @@ figcaption {
   }
 
   .container-l {
+    width: 100%;
+    max-width: 100%;
     padding-left: 24px;
     padding-right: 24px;
   }
@@ -2351,11 +2415,6 @@ figcaption {
     grid-column-gap: 80px;
     grid-row-gap: 80px;
   }
-
-  .section-full {
-    margin-top: 120px;
-    margin-bottom: 64px;
-  }
 }
 
 @media screen and (max-width: 479px) {
@@ -2411,6 +2470,10 @@ figcaption {
     height: 32px;
     padding-left: 16px;
     padding-right: 16px;
+  }
+
+  .section-cta.dark {
+    min-height: 480px;
   }
 }
 

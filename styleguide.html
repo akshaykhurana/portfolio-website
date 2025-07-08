@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Thu Sep 26 2024 05:17:24 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Tue Jul 08 2025 18:31:38 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="6092eb3c40f323eec0d02783" data-wf-site="6092eb3b40f3235c74d0277c">
 <head>
   <meta charset="utf-8">
@@ -195,7 +195,7 @@
   </div>
   <section class="section-cta">
     <div class="w-layout-blockcontainer container-s w-container">
-      <div class="w-layout-vflex">
+      <div class="w-layout-vflex flex-cta">
         <div class="block-cta-text">
           <h1 id="typed-text-cta" class="d1"><span class="text-cta-changing">Liked something you saw?</span></h1>
           <div class="w-embed w-script">
@@ -215,15 +215,15 @@
       </div>
     </div>
   </section>
-  <section class="section-cta dark">
-    <div class="w-layout-blockcontainer container-s w-container">
-      <div class="w-layout-vflex">
+  <div class="section-cta dark">
+    <div class="w-layout-blockcontainer container-s cta w-container">
+      <div class="w-layout-vflex flex-cta">
         <div class="block-cta-text">
-          <h1 id="typed-text-cta" class="d1 invert"><span class="text-cta-changing">Liked something you saw?</span></h1>
-          <div class="w-embed w-script">
+          <h3 class="d1 invert"><span id="typed-text-cta">Like something you saw?</span></h3>
+          <div id="typed-text-cta" class="w-embed w-script">
             <script>
-  const typed = new Typed('#typed-text-cta', {
-    strings: ['Liked something you saw?', 'Want to work together?', 'Just want to say hi?'],
+  const typedCTA = new Typed('#typed-text-cta', {
+    strings: ['Liked something you saw?', 'Want to work together?', 'Just want to say hi?',],
     typeSpeed: 66,
     loop: true,
     showCursor: false,
@@ -236,7 +236,7 @@
         </a>
       </div>
     </div>
-  </section>
+  </div>
   <div class="section-footer">
     <div class="container-footer w-container">
       <div class="w-layout-grid grid-footer">
